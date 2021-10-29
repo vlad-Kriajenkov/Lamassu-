@@ -1,0 +1,514 @@
+.conatiner {
+
+    &__analyties {
+        max-width: 1100px;
+        margin: 0px auto;
+    }
+}
+.analyties {
+  
+
+    &__title {
+        margin: 20px 0px 20px 0px;
+        h1{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            color:  #da6e00;
+        }
+       
+
+    }
+
+    &__operationAndСommission {
+        
+    }
+}
+.analytiesFlexContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* График Bubble */
+.operationAndСommission {
+
+    &__operationStatistics {
+        box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
+        border-radius: 6px;
+        padding: 15px;
+        width: 550px;
+    }
+}
+.operationStatistics {
+
+    &__boxTitle {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    &__boxInfoOperationAndVolume {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    &__chart {
+        background: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        color:  #da6e00;
+        width: 500px;
+    }
+}
+.boxTitle {
+
+    &__title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 100;
+        font-size: 12px;
+        color:  #da6e00;
+    }
+
+    &__buttonFilter {
+      
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.buttonFilter {
+
+    &__style {
+        margin-left: 10px;
+        background: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 100;
+        font-size: 10px;
+        color:  #da6e00;
+    }
+}
+.boxInfoOperationAndVolume {
+
+    &__boxInfoOperation {
+    }
+
+    &__boxInfoVolume {
+        margin-left: 20px;
+    }
+}
+.boxInfoOperation {
+
+    &__title {
+        background: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        color:  #da6e00;
+    }
+
+    &__name {
+        background: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        color:  #da6e00;
+    }
+}
+.boxInfoVolume {
+    
+    &__title {
+        background: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        color:  #da6e00;
+    }
+    &__name {
+        background: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        color:  #da6e00;
+    }
+}
+
+#bubbleChart{
+    margin-top: 10px;
+    background: #fafbff;
+}
+
+// .system {
+
+//     &__notificationAndСondition {
+//         box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
+//         border-radius: 6px;
+//         padding: 15px;
+//     }
+// }
+
+
+/* График Line*/
+.operationAndСommission {
+
+    &__profitFromCommission {
+        box-shadow: 0px 2px 20px rgb(0 0 0 / 25%);
+        border-radius: 6px;
+        padding: 15px;
+        width: 550px;
+        margin-top: 10px;
+    }
+}
+.profitFromCommission {
+
+    &__boxTitle {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    &__boxInfoOperationAndVolume {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    &__chart {
+        background: none;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        color: #da6e00;
+        width: 500px;
+    }
+}
+.boxTitle {
+
+    &__title {
+        
+    }
+
+    &__buttonFilter {
+    }
+}
+.buttonFilter {
+
+    &__style {
+    }
+}
+.boxInfoOperationAndVolume {
+
+    &__boxInfoOperation {
+    }
+
+    &__boxInfoVolume {
+    }
+}
+.boxInfoOperation {
+
+    &__title {
+    }
+
+    &__name {
+    }
+}
+.boxInfoVolume {
+
+    &__title {
+    }
+
+    &__name {
+    }
+}
+
+// #lineChart{
+//     margin-top: 10px;
+//     background: #fafbff;
+// }
+
+/* Блок Оповещания*/
+
+.system {
+
+    &__notificationAndСondition {
+    }
+}
+.notificationAndСondition {
+
+    &__notification {
+        box-shadow: 0px 2px 20px rgb(0 0 0 / 25%);
+        border-radius: 6px;
+        padding: 15px;
+        width: 530px;
+    }
+
+    &__СonditionSystem {
+        box-shadow: 0px 2px 20px rgb(0 0 0 / 25%);
+        border-radius: 6px;
+        padding: 15px;
+        width: 530px;
+        margin-top: 10px;
+    }
+}
+.notification {
+
+    &__title {
+        h1{
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 100;
+            font-size: 12px;
+            color: #da6e00;
+        }
+    }
+
+    &__infoBody {
+        margin-top: 15px;
+    }
+}
+.infoBody {
+
+    &__notInfo {
+        height: 80px;
+        display: block;
+        p{
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 100;
+            font-size: 10px;
+            color: silver;
+        }
+    }
+
+    &__weHaveInfo {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.weHaveInfo {
+
+    &__cashboxEmpty {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(240 241 246);
+        margin-top: 5px;
+        padding: 5px;
+        border-radius: 6px;
+    }
+
+    &__warningInfo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(240 241 246);
+        margin-top: 5px;
+        padding: 5px;
+        border-radius: 6px;
+    }
+    &__buttonShowAll{
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 100;
+        font-size: 9px;
+        color: #da6e00;
+        width: 100px;
+        margin: 10px auto 0px auto;
+        background: none;
+
+    }
+}
+.cashboxEmpty {
+
+    &__img {
+    }
+}
+.truckEmpty {
+
+    &__infoText {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 100;
+        font-size: 9px;
+        color: #da6e00;
+        margin-left: 10px;
+    }
+
+    &__buttonLink {
+        background: url('/assets/img/Analiticyse/link.svg') no-repeat;
+        width: 12px;
+        height: 12px;
+        margin-right: 25px;
+    }
+
+    &__buttonCancel {
+        background: url('/assets/img/Analiticyse/cancel.svg') no-repeat;
+        width: 12px;
+        height: 12px;
+    }
+}
+.cashboxEmptyFlex{
+    display: flex;
+    align-items: center;
+}
+.warningInfo {
+
+    &__img {
+      
+    }
+
+    &__infoText {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 100;
+        font-size: 9px;
+        color: #da6e00;
+        margin-left: 10px;
+    }
+
+    &__buttonLink {
+        background: url('/assets/img/Analiticyse/link.svg') no-repeat;
+        width: 12px;
+        height: 12px;
+        margin-right: 25px;
+    }
+
+    &__buttonCancel {
+        background: url('/assets/img/Analiticyse/cancel.svg') no-repeat;
+        width: 12px;
+        height: 12px;
+    }
+}
+
+/* Блок Состояние Системы */
+
+.notificationAndСondition {
+
+    &__СonditionSystem {
+    }
+}
+.СonditionSystem {
+
+    &_title {
+    }
+
+    &__columnNames {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__warning {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__normalCondition {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__buttonShowAll {
+    }
+}
+.columnNames {
+
+    &__car {
+    }
+
+    &__status {
+        margin-right: 60px;
+    }
+
+    &__hryvnia {
+        width: 18px;
+    }
+
+    &__coins {
+        width: 20px;
+    }
+
+    &__dollar {
+        width: 20px;
+    }
+}
+.columnNamesFlexBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 150px;
+
+}
+.warning {
+
+    &__nameCar {
+    }
+
+    &__infoWarning {
+        margin-right: 46px;
+        display: flex;
+    }
+
+    &__Hryvnia {
+    }
+
+    &__Coins {
+    }
+
+    &__Dollar {
+    }
+}
+.warningFlexBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 150px;
+
+}
+.infoWarningr {
+
+    &__name {
+    }
+}
+.infoWarning {
+
+    &__buttonAddWarning {
+    }
+}
+.normalCondition {
+
+    &__nameCar {
+    }
+
+    &__nameStatus {
+        margin-right: 60px;
+    }
+
+    &__Hryvnia {
+    }
+
+    &__Coins {
+    }
+
+    &__Dollar {
+    }
+}
+.normalConditionFlexBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 150px;
+}
+

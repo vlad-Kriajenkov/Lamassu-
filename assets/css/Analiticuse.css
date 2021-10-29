@@ -1,0 +1,443 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,100&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+header {
+  background: #da6e00;
+}
+
+.container__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0px auto;
+}
+
+.header__logoAndNav {
+  display: flex;
+  align-items: center;
+  width: 52%;
+}
+.header__addMashineAndnotification {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 17%;
+}
+
+.logoAndNav__nav {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.nav__link {
+  color: white;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+}
+.addMashineAndnotification__buttonAdd {
+  width: 141px;
+  height: 26px;
+  border-radius: 10px;
+  color: white;
+  background: #cc9999;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+}
+.addMashineAndnotification__buttonnotification {
+  background: url("/assets/img/Analiticyse/notification.svg");
+  width: 18px;
+  height: 18px;
+}
+
+.conatiner__analyties {
+  max-width: 1100px;
+  margin: 0px auto;
+}
+
+.analyties__title {
+  margin: 20px 0px 20px 0px;
+}
+.analyties__title h1 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  color: #da6e00;
+}
+.analytiesFlexContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* График Bubble */
+.operationAndСommission__operationStatistics {
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  padding: 15px;
+  width: 550px;
+}
+
+.operationStatistics__boxTitle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.operationStatistics__boxInfoOperationAndVolume {
+  display: flex;
+  margin-bottom: 20px;
+}
+.operationStatistics__chart {
+  background: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  color: #da6e00;
+  width: 500px;
+}
+
+.boxTitle__title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 12px;
+  color: #da6e00;
+}
+.boxTitle__buttonFilter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonFilter__style {
+  margin-left: 10px;
+  background: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: #da6e00;
+}
+
+.boxInfoOperationAndVolume__boxInfoVolume {
+  margin-left: 20px;
+}
+
+.boxInfoOperation__title {
+  background: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  color: #da6e00;
+}
+.boxInfoOperation__name {
+  background: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  color: #da6e00;
+}
+
+.boxInfoVolume__title {
+  background: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  color: #da6e00;
+}
+.boxInfoVolume__name {
+  background: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  color: #da6e00;
+}
+
+#bubbleChart {
+  margin-top: 10px;
+  background: #fafbff;
+}
+
+/* График Line*/
+.operationAndСommission__profitFromCommission {
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  padding: 15px;
+  width: 550px;
+  margin-top: 10px;
+}
+
+.profitFromCommission__boxTitle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.profitFromCommission__boxInfoOperationAndVolume {
+  display: flex;
+  margin-bottom: 20px;
+}
+.profitFromCommission__chart {
+  background: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  color: #da6e00;
+  width: 500px;
+}
+
+/* Блок Оповещания*/
+.notificationAndСondition__notification {
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  padding: 15px;
+  width: 530px;
+}
+.notificationAndСondition__СonditionSystem {
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  padding: 15px;
+  width: 530px;
+  margin-top: 10px;
+}
+
+.notification__title h1 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 12px;
+  color: #da6e00;
+}
+.notification__infoBody {
+  margin-top: 15px;
+}
+
+.infoBody__notInfo {
+  height: 80px;
+  display: block;
+}
+.infoBody__notInfo p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: silver;
+}
+.infoBody__weHaveInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.weHaveInfo__cashboxEmpty {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f1f6;
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 6px;
+}
+.weHaveInfo__warningInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f1f6;
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 6px;
+}
+.weHaveInfo__buttonShowAll {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 9px;
+  color: #da6e00;
+  width: 100px;
+  margin: 10px auto 0px auto;
+  background: none;
+}
+
+.truckEmpty__infoText {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 9px;
+  color: #da6e00;
+  margin-left: 10px;
+}
+.truckEmpty__buttonLink {
+  background: url("/assets/img/Analiticyse/link.svg") no-repeat;
+  width: 12px;
+  height: 12px;
+  margin-right: 25px;
+}
+.truckEmpty__buttonCancel {
+  background: url("/assets/img/Analiticyse/cancel.svg") no-repeat;
+  width: 12px;
+  height: 12px;
+}
+
+.cashboxEmptyFlex {
+  display: flex;
+  align-items: center;
+}
+
+.warningInfo__infoText {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 9px;
+  color: #da6e00;
+  margin-left: 10px;
+}
+.warningInfo__buttonLink {
+  background: url("/assets/img/Analiticyse/link.svg") no-repeat;
+  width: 12px;
+  height: 12px;
+  margin-right: 25px;
+}
+.warningInfo__buttonCancel {
+  background: url("/assets/img/Analiticyse/cancel.svg") no-repeat;
+  width: 12px;
+  height: 12px;
+}
+
+/* Блок Состояние Системы */
+.СonditionSystem__columnNames {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.СonditionSystem__warning {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.СonditionSystem__normalCondition {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.columnNames__status {
+  margin-right: 60px;
+}
+.columnNames__hryvnia {
+  width: 18px;
+}
+.columnNames__coins {
+  width: 20px;
+}
+.columnNames__dollar {
+  width: 20px;
+}
+
+.columnNamesFlexBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 150px;
+}
+
+.warning__infoWarning {
+  margin-right: 46px;
+  display: flex;
+}
+.warningFlexBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 150px;
+}
+
+.normalCondition__nameStatus {
+  margin-right: 60px;
+}
+.normalConditionFlexBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 150px;
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/Analiticuse.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container__header">
+            <div class="header__logoAndNav">
+                <img src="/assets/img/Analiticyse/Logo.svg" alt="Logo" width="100px" class="logoAndNav__imgNav">
+                <nav class="logoAndNav__nav">
+                    <a href="#" class="nav__link">Операции</a>
+                    <a href="#" class="nav__link">Обслуживание</a>
+                    <a href="#" class="nav__link">Настройки </a>
+                    <a href="#" class="nav__link">Дополнительно</a>
+                </nav>
+                
+            </div>
+            <div class="header__addMashineAndnotification">
+                <button class="addMashineAndnotification__buttonAdd">
+                    <img src="/assets/img/Analiticyse/add.png" alt="Add" width="15px">
+                    Добавить Машину
+                </button>
+                <button class="addMashineAndnotification__buttonnotification"></button>
+            </div>
+        </div>  
+    </header>
+    <main>
+        <div class="conatiner__analyties">
+            <div class="analyties__title">
+                <h1>Аналитика</h1>
+            </div>
+            <div class="analyties">
+                <div class="analytiesFlexContainer">
+                    <div class="analyties__operationAndСommission">
+                        <div class="operationAndСommission__operationStatistics">
+                            <div class="operationStatistics__boxTitle">
+                                <div class="boxTitle__title">Статистика оперций</div>
+                                <form class="boxTitle__buttonFilter">
+                                    <button class="buttonFilter__style" value="" >Месяц</button>
+                                    <button class="buttonFilter__style" value="" >Неделя</button>
+                                    <button class="buttonFilter__style" value="" >День</button>
+                                </form>
+                            </div>
+                            <div class="operationStatistics__boxInfoOperationAndVolume">
+                                <div class="boxInfoOperationAndVolume__boxInfoOperation">
+                                    <p class="boxInfoOperation__title">157</p>
+                                    <p class="boxInfoOperation__name">Оперций</p>
+                                </div>
+                                <div class="boxInfoOperationAndVolume__boxInfoVolume">
+                                    <p class="boxInfoVolume__title" >39.300</p> 
+                                    <p class="boxInfoVolume__name">Объёь в гривнах</p>
+                                </div>
+                            </div>
+                            <div class="operationStatistics__chart">
+                                Операции
+                                <canvas id="bubbleChart" ></canvas>
+                            </div>
+                        </div>
+                        <div class="operationAndСommission__profitFromCommission">
+                            <div class="profitFromCommission__boxTitle">
+                                <div class="boxTitle__title">Прибыль от комисии </div>
+                                <form class="boxTitle__buttonFilter">
+                                    <button class="buttonFilter__style" value="" >Месяц</button>
+                                    <button class="buttonFilter__style" value="" >Неделя</button>
+                                    <button class="buttonFilter__style" value="" >День</button>
+                                </form>
+                            </div>
+                            <div class="profitFromCommission__chart">  
+                                <canvas id="lineChart" ></canvas>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="system__notificationAndСondition">
+                        <div class="notificationAndСondition__notification" >
+                            <div class="notification__title">
+                                <h1 class="">Оповещания(0)</h1>
+                            </div>
+                            <div class="notification__infoBody">
+                                <div class="infoBody__notInfo">
+                                    <p>Новых предупреждений нет. Ваша система работает без сбоев.</p>
+                                </div>
+                                <div class="infoBody__weHaveInfo">
+                                    <div class="weHaveInfo__cashboxEmpty">
+                                        <div class="cashboxEmptyFlex">
+                                            <img src="/assets/img/Analiticyse/cashbox-empty.svg" alt="cashboxEmpty" class="cashboxEmpty__img">
+                                            <p class="truckEmpty__infoText">francesinha-трак. Обналичивание-кассета 2 почти пуст</p>
+                                        </div>
+                                        <div class="cashboxEmptyFlex">
+                                            <button class="truckEmpty__buttonLink"></button>
+                                            <button class="truckEmpty__buttonCancel"></button>
+                                        </div>
+                                       
+                                    </div>
+                                    <div class="weHaveInfo__warningInfo">
+                                        <div class="cashboxEmptyFlex">
+                                            <img src="/assets/img/Analiticyse/warning.svg" alt="" class="warningInfo__img" width="17px">
+                                            <p class="warningInfo__infoText">Остаток наличных биткойнов низкий</p>
+                                        </div>
+                                        <div class="cashboxEmptyFlex">
+                                            <button class="warningInfo__buttonLink"></button>
+                                            <button class="warningInfo__buttonCancel"></button>
+                                        </div>
+                                    </div>
+                                    <div class="weHaveInfo__warningInfo">
+                                        <div class="cashboxEmptyFlex">
+                                            <img src="/assets/img/Analiticyse/warning.svg" alt="" class="warningInfo__img" width="17px">
+                                            <p class="warningInfo__infoText">Остаток наличных биткойнов низкий</p>
+                                        </div>
+                                        <div class="cashboxEmptyFlex">
+                                            <button class="warningInfo__buttonLink"></button>
+                                            <button class="warningInfo__buttonCancel"></button>
+                                        </div>
+                                    </div>
+                                    <div class="weHaveInfo__warningInfo">
+                                        <div class="cashboxEmptyFlex">
+                                            <img src="/assets/img/Analiticyse/warning.svg" alt="" class="warningInfo__img" width="17px">
+                                            <p class="warningInfo__infoText">Остаток наличных биткойнов низкий</p>
+                                        </div>
+                                        <div class="cashboxEmptyFlex">
+                                            <button class="warningInfo__buttonLink"></button>
+                                            <button class="warningInfo__buttonCancel"></button>
+                                        </div>
+                                    </div>
+                                    <button class="weHaveInfo__buttonShowAll">Показать все(4)</button>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="notificationAndСondition__СonditionSystem">
+                            <div class="СonditionSystem_title">
+                                <h1>Состояние системы</h1>
+                            </div>
+                            <div class="СonditionSystem__columnNames">
+                                <div class="columnNames__car">Машина</div>
+                                <div class="columnNames__status">Cтатус</div>
+                                <div class="columnNamesFlexBox">
+                                    <div class="columnNames__hryvnia">
+                                        <img src="/assets/img/Analiticyse/Hryvnia_symbol.svg" alt="Hryvnia">
+                                    </div>
+                                    <div class="columnNames__coins"> 
+                                        <img src="/assets/img/Analiticyse/twostacksofcoins.svg" alt="Coins">
+                                    </div>
+                                    <div class="columnNames__dollar">
+                                        <img src="/assets/img/Analiticyse/americandollarsymbol.svg" alt="Dollar">
+                                    </div>
+                                </div>    
+                            </div>
+                            <div class="СonditionSystem__warning">
+                                <div class="warning__nameCar"><p>francesinha-трак</p></div>
+                                <div class="warning__infoWarning">
+                                    <p class="infoWarningr__name">Сеть потерена</p>
+                                    <button class="infoWarning__buttonAddWarning">+1</button>
+                                </div>
+                                <div class="warningFlexBox">
+                                    <div class="warning__Hryvnia"><p>56%</p></div>
+                                    <div class="warning__Coins">21%</div>
+                                    <div class="warning__Dollar">19%</div>
+                                </div>
+                            </div>
+                            <div class="СonditionSystem__normalCondition">
+                                <div class="normalCondition__nameCar"><p>francesinha-трак</p></div>
+                                <div class="normalCondition__nameStatus"><p>Полностью работающая</p></div>
+                                <div class="normalConditionFlexBox">
+                                    <div class="normalCondition__Hryvnia"><p>56%</p></div>
+                                    <div class="normalCondition__Coins">21%</div>
+                                    <div class="normalCondition__Dollar">19%</div>
+                                </div>
+                            </div>
+                            <button class="СonditionSystem__buttonShowAll">Показать все(6)</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="analyties__charts"></div>
+        </div>
+    </main>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>   
+<script src="/assets/js/Chart.js"></script>
+
+</body>
+</html>
