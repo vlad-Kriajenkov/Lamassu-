@@ -349,13 +349,13 @@ header {
   margin-left: 10px;
 }
 .truckEmpty__buttonLink {
-  background: url("/assets/img/Analiticyse/link.svg") no-repeat;
+  background: url("/assets/img/Analiticyse/button/link.svg") no-repeat;
   width: 12px;
   height: 12px;
   margin-right: 25px;
 }
 .truckEmpty__buttonCancel {
-  background: url("/assets/img/Analiticyse/cancel.svg") no-repeat;
+  background: url("/assets/img/Analiticyse/button/cancel.svg") no-repeat;
   width: 12px;
   height: 12px;
 }
@@ -374,13 +374,13 @@ header {
   margin-left: 10px;
 }
 .warningInfo__buttonLink {
-  background: url("/assets/img/Analiticyse/link.svg") no-repeat;
+  background: url("/assets/img/Analiticyse/button/link.svg") no-repeat;
   width: 12px;
   height: 12px;
   margin-right: 25px;
 }
 .warningInfo__buttonCancel {
-  background: url("/assets/img/Analiticyse/cancel.svg") no-repeat;
+  background: url("/assets/img/Analiticyse/button/cancel.svg") no-repeat;
   width: 12px;
   height: 12px;
 }
