@@ -1,3 +1,24 @@
+%Boreder{
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    padding: 15px;
+}
+
+%TitleParagraph{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 12px;
+    color:  #da6e00;
+}
+%TextSubparagraphs{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 10px;
+    color:  #da6e00;
+}
+
 .conatiner {
 
     &__analyties {
@@ -34,9 +55,7 @@
 .operationAndСommission {
 
     &__operationStatistics {
-        box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
-        border-radius: 6px;
-        padding: 15px;
+        @extend %Boreder;
         width: 550px;
     }
 }
@@ -66,11 +85,7 @@
 .boxTitle {
 
     &__title {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 100;
-        font-size: 12px;
-        color:  #da6e00;
+        @extend %TitleParagraph;
     }
 
     &__buttonFilter {
@@ -84,11 +99,7 @@
     &__style {
         margin-left: 10px;
         background: none;
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 100;
-        font-size: 10px;
-        color:  #da6e00;
+       @extend %TextSubparagraphs;
     }
 }
 .boxInfoOperationAndVolume {
@@ -159,9 +170,7 @@
 .operationAndСommission {
 
     &__profitFromCommission {
-        box-shadow: 0px 2px 20px rgb(0 0 0 / 25%);
-        border-radius: 6px;
-        padding: 15px;
+        @extend %Boreder;
         width: 550px;
         margin-top: 10px;
     }
@@ -189,70 +198,15 @@
         width: 500px;
     }
 }
-.boxTitle {
-
-    &__title {
-        
-    }
-
-    &__buttonFilter {
-    }
-}
-.buttonFilter {
-
-    &__style {
-    }
-}
-.boxInfoOperationAndVolume {
-
-    &__boxInfoOperation {
-    }
-
-    &__boxInfoVolume {
-    }
-}
-.boxInfoOperation {
-
-    &__title {
-    }
-
-    &__name {
-    }
-}
-.boxInfoVolume {
-
-    &__title {
-    }
-
-    &__name {
-    }
-}
-
-// #lineChart{
-//     margin-top: 10px;
-//     background: #fafbff;
-// }
-
-/* Блок Оповещания*/
-
-.system {
-
-    &__notificationAndСondition {
-    }
-}
 .notificationAndСondition {
 
     &__notification {
-        box-shadow: 0px 2px 20px rgb(0 0 0 / 25%);
-        border-radius: 6px;
-        padding: 15px;
+        @extend %Boreder;
         width: 530px;
     }
 
     &__СonditionSystem {
-        box-shadow: 0px 2px 20px rgb(0 0 0 / 25%);
-        border-radius: 6px;
-        padding: 15px;
+        @extend %Boreder;
         width: 530px;
         margin-top: 10px;
     }
@@ -261,11 +215,7 @@
 
     &__title {
         h1{
-            font-family: "Montserrat";
-            font-style: normal;
-            font-weight: 100;
-            font-size: 12px;
-            color: #da6e00;
+            @extend %TitleParagraph;
         }
     }
 
@@ -279,10 +229,7 @@
         height: 80px;
         display: block;
         p{
-            font-family: "Montserrat";
-            font-style: normal;
-            font-weight: 100;
-            font-size: 10px;
+           @extend %TextSubparagraphs;
             color: silver;
         }
     }
@@ -317,11 +264,8 @@
         border-radius: 6px;
     }
     &__buttonShowAll{
-        font-family: "Montserrat";
-        font-style: normal;
-        font-weight: 100;
+        @extend %TextSubparagraphs;
         font-size: 9px;
-        color: #da6e00;
         width: 100px;
         margin: 10px auto 0px auto;
         background: none;
@@ -336,11 +280,8 @@
 .truckEmpty {
 
     &__infoText {
-        font-family: "Montserrat";
-        font-style: normal;
-        font-weight: 100;
+        @extend %TextSubparagraphs;
         font-size: 9px;
-        color: #da6e00;
         margin-left: 10px;
     }
 
@@ -368,11 +309,8 @@
     }
 
     &__infoText {
-        font-family: "Montserrat";
-        font-style: normal;
-        font-weight: 100;
+        @extend %TextSubparagraphs;
         font-size: 9px;
-        color: #da6e00;
         margin-left: 10px;
     }
 
@@ -389,17 +327,25 @@
         height: 12px;
     }
 }
+#showAllInfoWarning{
+    display: none;
+}
 
 /* Блок Состояние Системы */
 
 .notificationAndСondition {
 
     &__СonditionSystem {
+        display: flex;
+        flex-direction: column;
     }
 }
 .СonditionSystem {
 
     &_title {
+        h1{
+            @extend %TitleParagraph;
+        }
     }
 
     &__columnNames {
@@ -411,27 +357,47 @@
     &__warning {
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: center;
+        margin-top: 5px;
+        background-color: #f0f1f6;
+        padding: 5px 0px 5px 5px;
+        border-radius: 6px;
     }
 
     &__normalCondition {
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: center;
+        margin-top: 5px;
+        background-color: #f0f1f6;
+        padding: 5px 0px 5px 5px;
+        border-radius: 6px;
     }
 
-    &__buttonShowAll {
+    &__buttonShowAll{
+        @extend %TextSubparagraphs;
+        font-size: 9px;
+        width: 100px;
+        margin: 10px auto 0px auto;
+        background: none;
+
     }
 }
 .columnNames {
 
     &__car {
+        @extend %TitleParagraph;
+        width: 25%;
     }
 
     &__status {
-        margin-right: 60px;
+        @extend %TitleParagraph;
+        width: 30%;       
     }
-
+    &__connection{
+        @extend %TitleParagraph;
+        width: 15%;
+    }
     &__hryvnia {
         width: 18px;
     }
@@ -448,19 +414,23 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 150px;
+    width: 30%
 
 }
 .warning {
 
     &__nameCar {
+        @extend %TextSubparagraphs;
+        width: 25%;
     }
 
     &__infoWarning {
-        margin-right: 46px;
+        width: 30%;
         display: flex;
     }
-
+    &__connection{
+        width: 15%;
+    }
     &__Hryvnia {
     }
 
@@ -468,32 +438,56 @@
     }
 
     &__Dollar {
+        color:red;
     }
 }
 .warningFlexBox{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 150px;
+    width: 30%;
 
 }
 .infoWarningr {
 
     &__name {
+        @extend %TextSubparagraphs;
+        background: #ffdcda;
+        padding: 5px;
+        border-radius: 5px;
     }
 }
 .infoWarning {
 
     &__buttonAddWarning {
+        @extend %TextSubparagraphs;
+        background: #ffdcda;
+        padding: 4px;
+        border-radius: 5px;
+        margin-left: 5px;
     }
 }
 .normalCondition {
 
     &__nameCar {
+        width: 25%;
+        @extend %TextSubparagraphs;
+        
     }
 
     &__nameStatus {
-        margin-right: 60px;
+        width: 30%;
+        display: flex;
+        p{
+            @extend %TextSubparagraphs;
+            color:#49db88;
+            background:#d1f5d9;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    }
+    &__connection{
+        width: 15%;
     }
 
     &__Hryvnia {
@@ -509,6 +503,185 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 150px;
+    width: 30%;
 }
+#СonditionSystemShow{
+    display: none;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 17px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {display:none;}
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(255, 60, 60);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 2px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  /*  График Статистика Марженальности */
+
+.analyties{
+    
+    &__marginStatistics {
+        @extend %Boreder;
+        width: 800px;
+        margin: 10px auto 0px 0px;
+    }
+}
+
+.boxTitle {
+    &__Filter {
+        display: flex;
+        justify-content: space-around;
+        margin: 10px 0px 10px 0px ;
+    }
+}
+
+/* Пункт Недельная Операция */
+.analyties {
+
+    &__weeklyOperation {
+        @extend %Boreder;
+        width: 800px;
+        margin: 10px 0px 0px auto;
+    }
+}
+.weeklyOperation {
+
+    &__boxTitle {
+    }
+
+    &__chart {
+    }
+}
+.boxTitle {
+
+    &__title {
+    }
+
+    &__formFilter {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0px 10px 0px;
+    }
+}
+.dropdown {
+    margin-right: 10px;
+}
+.filterBox {
+    margin-right: 10px;
+}
+
+/* Пункт Средний Показатель Машын*/
+.Filter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.filterBox{
+    margin: 5px;
+}
+.dropdown{
+    margin: 5px;
+}
+
+.AverageСarStats {
+    @extend %Boreder;
+    margin: 10px 0px 10px 0px;
+    margin-bottom: 20px;
+		&__Filter {
+		}
+
+		&__nmae {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            background: #da6e00;
+            border-radius: 6px;
+            height: 40px;
+            
+            color: white;
+            p{
+                @extend %TitleParagraph;
+                color: white;
+                width: 50%;
+            }
+		}
+        &__meaning{
+            text-align: center;
+            display: flex;
+            align-items: center;
+            height: 30px;
+            p{
+                @extend %TextSubparagraphs;
+                font-size: 12px;
+                width: 50%;
+            }
+        }
+}
+.Filter{
+    &__title{
+        @extend %TitleParagraph;
+        margin-bottom: 10px;
+    }
+}
+/*Пунтк Сравнение по периодам*/
+.analyties {
+
+    &__periodComparison {
+        @extend %Boreder;
+        width: 800px;
+        margin: 10px auto 0px 0px;
+    }
+}
+
 
