@@ -177,6 +177,7 @@
 .operationAndСommission {
 
     &__profitFromCommission {
+        position: relative;
         @extend %Boreder;
         width: 550px;
         margin-top: 10px;
@@ -196,6 +197,7 @@
     }
 
     &__chart {
+        
         background: none;
         font-family: "Montserrat";
         font-style: normal;
@@ -205,6 +207,72 @@
         width: 500px;
     }
 }
+
+.profitFromCommission {
+    
+    &__infoStatic {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 20%;
+        left: 15%;
+        width: 77%;
+    }
+}
+.infoStatic {
+
+    &__Currency {
+        display: flex;
+        h1{
+            @extend %TitleParagraph;
+            color:black;
+        }
+        h1:first-child{
+            margin-right: 3px;
+        }
+    }
+
+    &__profit {
+        display: flex;
+    }
+}
+.profit {
+
+    &__img {
+        background: url('/assets/img/Analiticyse/dashboard/equal.svg') no-repeat;
+        width: 12px;
+        height: 12px;
+        margin-right: 3px;
+        
+    }
+
+    &__value {
+        @extend %TitleParagraph;
+        color:black;
+    }
+
+    &__img.upCommission{
+        background:url("/assets/img/Analiticyse/dashboard/up.svg");
+        width: 12px;
+        height: 12px;
+        margin-right: 3px;
+    }
+    &__value.upCommission{
+        color:#49db88;
+    }
+    &__img.downCommission{
+        background:url("/assets/img/Analiticyse/dashboard/down.svg");
+        width: 12px;
+        height: 12px;
+        margin-right: 3px;
+    }
+    &__value.downCommission{
+        color:rgb(199, 40, 0);
+    }
+}
+
+
+/* Пунтк Оповещания  */
 .notificationAndСondition {
 
     &__notification {
