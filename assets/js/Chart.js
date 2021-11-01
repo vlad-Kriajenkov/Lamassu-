@@ -5,26 +5,30 @@ const operationStatisticsСhart = new Chart(ctx, {
         type: 'bubble',
         data:  {
         labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10','11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', ],
-        
         datasets: [{
-            label: 'of Votes',
-            data: [36, 48, 34, 50, 11, 56, 87, 3, 32, 92, 70, 23, 91, 25, 19, 22, 43, 97, 55, 41, 52, 74, 81, 20, 40, 83, 38, 9, 93, 15, 96, 86, 6, 21, 42, 53, 59, 16, 10, 33, 76, 39, 60, 85, 94, 68, 45, 54, 44, 57],
+            label: 'In',
+            data: [48, 61, 23, 7, 4, 44, 72, 80, 3, 99, 49, 61, 1, 1, 73, 56, 39, 86, 62, 20, 97, 19, 7, 35, 44, 37, 73, 79, 53, 58],
             backgroundColor: [
                 'rgba(91, 104, 255)',
-                'rgba(89, 224, 224)',
-
+                
             ],
             borderColor: [
                 'rgba(34, 43, 94, 1)',
-                // 'rgba(54, 162, 235, 1)',
-                // 'rgba(255, 206, 86, 1)',
-                // 'rgba(75, 192, 192, 1)',bubbleChart
-                // 'rgba(153, 102, 255, 1)',lineChart
-                // 'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        },{
+          label: 'Out',
+            data: [1, 90, 71, 74, 7, 31, 96, 81, 20, 9, 76, 40, 40, 95, 89, 4, 52, 75, 36, 11, 67, 90, 70, 59, 36, 49, 23, 87, 64, 64],
+            backgroundColor: [
+                'rgba(89, 224, 224)',
+            ],
+            borderColor: [
+                'rgba(34, 43, 94, 1)',
             ],
             borderWidth: 1
         }],
     },
+    
         options: {
           responsive: true,
           plugins: {
@@ -42,9 +46,10 @@ const operationStatisticsСhart = new Chart(ctx, {
             y:{
               title: {
                 display: true,
-                text: 'Кол-во Операций'
+                text: 'Кол-во Операций',
               },
             },
+            
           }
         },
 });
@@ -55,32 +60,20 @@ const ctx2 = document.getElementById('profitFromCommissionСhart').getContext('2
 const profitFromCommissionСhart = new Chart(ctx2, {
   
         type: 'line',
-        data:  { labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10','11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', ],
+        data:  { 
+        labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10','11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', ],
         datasets: [{
-            label: 'of Votes',
+            label: 'Операций',
             data: [46, 21, 43, 30, 17, 99, 68, 55, 63, 20, 53, 29, 12, 22, 33, 4, 62, 81, 74, 58, 16, 67, 89, 71, 15, 35, 34, 56, 19, 73],
-            // backgroundColor: [
-            //     'rgba(255, 99, 132, 0.2)',
-            //     'rgba(54, 162, 235, 0.2)',
-            //     'rgba(255, 206, 86, 0.2)',
-            //     'rgba(75, 192, 192, 0.2)',
-            //     'rgba(153, 102, 255, 0.2)',
-            //     'rgba(255, 159, 64, 0.2)'
-            // ],
             borderColor: [
                 'rgba(34, 43, 94, 1)',
-                // 'rgba(54, 162, 235, 1)',
-                // 'rgba(255, 206, 86, 1)',
-                // 'rgba(75, 192, 192, 1)',
-                // 'rgba(153, 102, 255, 1)',
-                // 'rgba(255, 159, 64, 1)'
             ],
-            borderWidth: 1
+            borderWidth: 1,
+            pointRadius: 1 
         }],
     },
 
         options: {
-         
           responsive: true,
           plugins: {
             legend: {
@@ -126,23 +119,12 @@ const marginStatisticsChart = new Chart(ctx3, {
         datasets: [{
             label: 'Truck 1. Средний чек Операции',
             data: [46, 21, 43, 30, 17, 99, 68, 55, 63, 20, 53, 29, 12, 22, 33, 4, 62, 81, 74, 58, 16, 67, 89, 71, 15, 35, 34, 56, 19, 73],
-            // backgroundColor: [
-            //     'rgba(255, 99, 132, 0.2)',
-            //     'rgba(54, 162, 235, 0.2)',
-            //     'rgba(255, 206, 86, 0.2)',
-            //     'rgba(75, 192, 192, 0.2)',
-            //     'rgba(153, 102, 255, 0.2)',
-            //     'rgba(255, 159, 64, 0.2)'
-            // ],
+           
             borderColor: [
                 'rgba(34, 43, 94, 1)',
-                // 'rgba(54, 162, 235, 1)',
-                // 'rgba(255, 206, 86, 1)',
-                // 'rgba(75, 192, 192, 1)',
-                // 'rgba(153, 102, 255, 1)',
-                // 'rgba(255, 159, 64, 1)'
             ],
-            borderWidth: 1
+            borderWidth: 1,
+            pointRadius: 1 
         }],
     },
 
@@ -161,6 +143,7 @@ const marginStatisticsChart = new Chart(ctx3, {
           },
           scales: {
             y:{
+              
               title: {
                 display: true,
                 text: 'Основной Показатель (Средний чек)'
@@ -274,30 +257,16 @@ const periodComparison = new Chart(ctx5, {
         type: 'line',
         data:  { labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10','11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', ],
         datasets: [{
-            label: 'of Votes',
+            label: 'Сумма операция в USD',
             data: [46, 21, 43, 30, 17, 99, 68, 55, 63, 20, 53, 29, 12, 22, 33, 4, 62, 81, 74, 58, 16, 67, 89, 71, 15, 35, 34, 56, 19, 73],
-            // backgroundColor: [
-            //     'rgba(255, 99, 132, 0.2)',
-            //     'rgba(54, 162, 235, 0.2)',
-            //     'rgba(255, 206, 86, 0.2)',
-            //     'rgba(75, 192, 192, 0.2)',
-            //     'rgba(153, 102, 255, 0.2)',
-            //     'rgba(255, 159, 64, 0.2)'
-            // ],
             borderColor: [
                 'rgba(34, 43, 94, 1)',
-                // 'rgba(54, 162, 235, 1)',
-                // 'rgba(255, 206, 86, 1)',
-                // 'rgba(75, 192, 192, 1)',
-                // 'rgba(153, 102, 255, 1)',
-                // 'rgba(255, 159, 64, 1)'
             ],
-            borderWidth: 1
+            borderWidth: 1,
+            pointRadius: 1 
         }],
     },
-
         options: {
-         
           responsive: true,
           plugins: {
             legend: {
@@ -311,15 +280,14 @@ const periodComparison = new Chart(ctx5, {
           scales: {
             y:{
               ticks: {
-                // Include a dollar sign in the ticks
-                callback: function(value, index, values) {
+                callback: function(value,) {
                     return  value + ' $';
                 }
               },
               suggestedMax: 200,
               title: {
                 display: true,
-                text: 'Кол-во Операций'
+                text: 'Сумма операция в USD'
               },
               grid:{
               display: false,

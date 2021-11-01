@@ -13,7 +13,7 @@
             <div class="header__logoAndNav">
                 <a href="#"><img src="/assets/img/Analiticyse/header/Logo.svg" alt="Logo" width="100px" class="logoAndNav__imgNav"></a>
                 <nav class="logoAndNav__nav">
-                    <a href="#" class="nav__link">Операции</a>
+                    <a href="#" class="nav__link active">Операции</a>
                     <a href="#" class="nav__link">Обслуживание</a>
                     <a href="#" class="nav__link">Настройки </a>
                     <a href="#" class="nav__link">Дополнительно</a>
@@ -41,9 +41,9 @@
                             <div class="operationStatistics__boxTitle">
                                 <div class="boxTitle__title">Статистика оперций</div>
                                 <form class="boxTitle__buttonFilter">
-                                    <button class="buttonFilter__style" value="" >Месяц</button>
-                                    <button class="buttonFilter__style" value="" >Неделя</button>
-                                    <button class="buttonFilter__style" value="" >День</button>
+                                    <button class="buttonFilter__style active" value="month" >Месяц</button>
+                                    <button class="buttonFilter__style" value="week" >Неделя</button>
+                                    <button class="buttonFilter__style" value="day" >День</button>
                                 </form>
                             </div>
                             <div class="operationStatistics__boxInfoOperationAndVolume">
@@ -65,9 +65,9 @@
                             <div class="profitFromCommission__boxTitle">
                                 <div class="boxTitle__title">Прибыль от комисии </div>
                                 <form class="boxTitle__buttonFilter">
-                                    <button class="buttonFilter__style" value="" >Месяц</button>
-                                    <button class="buttonFilter__style" value="" >Неделя</button>
-                                    <button class="buttonFilter__style" value="" >День</button>
+                                    <button class="buttonFilter__style active" value="month" >Месяц</button>
+                                    <button class="buttonFilter__style" value="week" >Неделя</button>
+                                    <button class="buttonFilter__style" value="day" >День</button>
                                 </form>
                             </div>
                             <div class="profitFromCommission__chart">  
@@ -189,13 +189,13 @@
                                 <div class="columnNames__connection">Связь</div>
                                 <div class="columnNamesFlexBox">
                                     <div class="columnNames__hryvnia">
-                                        <img src="/assets/img/Analiticyse/сurrency/Hryvnia_symbol.svg" alt="Hryvnia">
+                                        <img src="/assets/img/Analiticyse/сurrency/Hryvnia_symbol.svg" width="18px" alt="Hryvnia">
                                     </div>
                                     <div class="columnNames__coins"> 
-                                        <img src="/assets/img/Analiticyse/сurrency/twostacksofcoins.svg" alt="Coins">
+                                        <img src="/assets/img/Analiticyse/сurrency/twostacksofcoins.svg" width="20px" alt="Coins">
                                     </div>
                                     <div class="columnNames__dollar">
-                                        <img src="/assets/img/Analiticyse/сurrency/americandollarsymbol.svg" alt="Dollar">
+                                        <img src="/assets/img/Analiticyse/сurrency/americandollarsymbol.svg" width="20px" alt="Dollar">
                                     </div>
                                 </div>    
                             </div>
@@ -351,7 +351,11 @@
             <div class="AverageСarStats">
                 <div class="AverageСarStats__Filter">
                     <div class="Filter__title" >Статистика среднего показателся Машины</div>
-                    <form class="Filter">
+                    <button id="myBtn"></button>
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <form class="Filter">
                         <div class="filterBox">
                             <span>
                                 <input type="text" placeholder="Ведите День" name="Day" id="Day">
@@ -449,6 +453,9 @@
                             </ul>
                         </div>
                     </form>
+                        </div>
+                    </div>
+                    
                 </div>
                 <div class="AverageСarStats__nmae">
                     <p>Cредний чек(операции)</p>
@@ -500,93 +507,100 @@
             <div class="AverageСarStats">
                 <div class="AverageСarStats__Filter">
                     <div class="Filter__title" >Статистика не рабочего стостояния Машины за «Период»</div>
-                    <form class="Filter">
-                        <div class="filterBox">
-                            <span>
-                                <input type="text" placeholder="Ведите День" name="Day" id="Day">
-                            </span>
+                    <button id="myBtn"></button>
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <form class="Filter">
+                                <div class="filterBox">
+                                    <span>
+                                        <input type="text" placeholder="Ведите День" name="Day" id="Day">
+                                    </span>
+                                </div>
+                                <div class="dropdown">
+                                    <div class="select">
+                                        <span>Неделя Месяца</span>
+                                        <i class="fa fa-chevron-left"></i>
+                                    </div>
+                                    <input type="hidden" name="gender">
+                                    <ul class="dropdown-menu">
+                                        <li id="FirstWeek">Первая</li>
+                                        <li id="SecondWeek">Вторая</li>
+                                        <li id="ThirdWeek">Третия</li>
+                                        <li id="FourthWeek">Четвертая</li>
+                                    </ul>
+                                </div> <div class="dropdown">
+                                    <div class="select">
+                                        <span>Месяц</span>
+                                        <i class="fa fa-chevron-left"></i>
+                                    </div>
+                                    <input type="hidden" name="gender">
+                                    <ul class="dropdown-menu">
+                                        <li id="January">Январь </li>
+                                        <li id="February">Февраль </li>
+                                        <li id="March">Март </li>
+                                        <li id="April">Апрель </li>
+                                        <li id="May">Май </li>
+                                        <li id="June">Июнь</li>
+                                        <li id="July">Июль</li>
+                                        <li id="August">Август</li>
+                                        <li id="September">Сентябрь </li>
+                                        <li id="October">Октябрь </li>
+                                        <li id="November">Ноябрь </li>
+                                        <li id="December">Декабрь </li>
+                                    </ul>
+                                </div> 
+                                <div class="dropdown">
+                                    <div class="select">
+                                        <span>Квартал</span>
+                                        <i class="fa fa-chevron-left"></i>
+                                    </div>
+                                    <input type="hidden" name="gender">
+                                    <ul class="dropdown-menu">
+                                        <li id="FirstQuarter">I</li>
+                                        <li id="SecondQuarter">II</li>
+                                        <li id="ThirdQuarter">III</li>
+                                        <li id="FourthQuarter">IV</li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown">
+                                    <div class="select">
+                                        <span>Год</span>
+                                        <i class="fa fa-chevron-left"></i>
+                                    </div>
+                                    <input type="hidden" name="gender">
+                                    <ul class="dropdown-menu">
+                                        <li id="2010">2010</li>
+                                        <li id="2011">2011</li>
+                                        <li id="2012">2012</li>
+                                        <li id="2013">2013</li>
+                                        <li id="2014">2014</li>
+                                        <li id="2015">2015</li>
+                                        <li id="2016">2016</li>
+                                        <li id="2017">2017</li>
+                                        <li id="2018">2018</li>
+                                        <li id="2019">2019</li>
+                                        <li id="2020">2020</li>
+                                        <li id="2021">2021</li>
+                                        <li id="2022">2022</li>
+                                        <li id="2023">2023</li>
+                                    </ul>
+                                </div>
+                                <div class="filterBox">
+                                    <label>
+                                        Все машины
+                                        <input type="checkbox" name="AllCar" id="AllCar">
+                                    </label>       
+                                </div>
+                                <div class="filterBox">
+                                    <span>
+                                        <input type="text" placeholder="Наименование Машины" name="OneCar" id="OneCar">
+                                    </span>  
+                                </div>
+                            </form>
                         </div>
-                        <div class="dropdown">
-                            <div class="select">
-                                <span>Неделя Месяца</span>
-                                <i class="fa fa-chevron-left"></i>
-                            </div>
-                            <input type="hidden" name="gender">
-                            <ul class="dropdown-menu">
-                                <li id="FirstWeek">Первая</li>
-                                <li id="SecondWeek">Вторая</li>
-                                <li id="ThirdWeek">Третия</li>
-                                <li id="FourthWeek">Четвертая</li>
-                            </ul>
-                        </div> <div class="dropdown">
-                            <div class="select">
-                                <span>Месяц</span>
-                                <i class="fa fa-chevron-left"></i>
-                            </div>
-                            <input type="hidden" name="gender">
-                            <ul class="dropdown-menu">
-                                <li id="January">Январь </li>
-                                <li id="February">Февраль </li>
-                                <li id="March">Март </li>
-                                <li id="April">Апрель </li>
-                                <li id="May">Май </li>
-                                <li id="June">Июнь</li>
-                                <li id="July">Июль</li>
-                                <li id="August">Август</li>
-                                <li id="September">Сентябрь </li>
-                                <li id="October">Октябрь </li>
-                                <li id="November">Ноябрь </li>
-                                <li id="December">Декабрь </li>
-                            </ul>
-                        </div> 
-                        <div class="dropdown">
-                            <div class="select">
-                                <span>Квартал</span>
-                                <i class="fa fa-chevron-left"></i>
-                            </div>
-                            <input type="hidden" name="gender">
-                            <ul class="dropdown-menu">
-                                <li id="FirstQuarter">I</li>
-                                <li id="SecondQuarter">II</li>
-                                <li id="ThirdQuarter">III</li>
-                                <li id="FourthQuarter">IV</li>
-                            </ul>
-                        </div>
-                        <div class="dropdown">
-                            <div class="select">
-                                <span>Год</span>
-                                <i class="fa fa-chevron-left"></i>
-                            </div>
-                            <input type="hidden" name="gender">
-                            <ul class="dropdown-menu">
-                                <li id="2010">2010</li>
-                                <li id="2011">2011</li>
-                                <li id="2012">2012</li>
-                                <li id="2013">2013</li>
-                                <li id="2014">2014</li>
-                                <li id="2015">2015</li>
-                                <li id="2016">2016</li>
-                                <li id="2017">2017</li>
-                                <li id="2018">2018</li>
-                                <li id="2019">2019</li>
-                                <li id="2020">2020</li>
-                                <li id="2021">2021</li>
-                                <li id="2022">2022</li>
-                                <li id="2023">2023</li>
-                            </ul>
-                        </div>
-                        <div class="filterBox">
-                            <label>
-                                Все машины
-                                <input type="checkbox" name="AllCar" id="AllCar">
-                            </label>       
-                        </div>
-                        <div class="filterBox">
-                            <span>
-                                <input type="text" placeholder="Наименование Машины" name="OneCar" id="OneCar">
-                            </span>  
-                        </div>
-                    </form>
+                    </div>
+                    
                 </div>
                 <div class="AverageСarStats__nmae">
                     <p>Среднее время офлайна </p>
@@ -600,84 +614,36 @@
                     <p>3дн,18ч,56мин,13с</p>
                     <p>3дн,18ч,56мин,13с</p>
                 </div>
-            </div>
+            </div>      
 
-            <div class="AverageСarStats">
-                <div class="AverageСarStats__Filter">
-                    <div class="Filter__title" >Топ 1 Машин</div>
-                    <form class="Filter">
-                        <div class="filterBox">
-                            <span>
-                                <input type="text" placeholder="Ведите День" name="Day" id="Day">
-                            </span>
-                        </div>
+            <div class="analyties__periodComparison">
+                <div class="periodComparison__boxTitle">
+                    <div class="boxTitle__title">Сравнение по периодам</div>
+                    <form class="boxTitle__Filter">
                         <div class="dropdown">
                             <div class="select">
-                                <span>Неделя Месяца</span>
+                                <span>Дата</span>
                                 <i class="fa fa-chevron-left"></i>
                             </div>
                             <input type="hidden" name="gender">
                             <ul class="dropdown-menu">
-                                <li id="FirstWeek">Первая</li>
-                                <li id="SecondWeek">Вторая</li>
-                                <li id="ThirdWeek">Третия</li>
-                                <li id="FourthWeek">Четвертая</li>
-                            </ul>
-                        </div> <div class="dropdown">
-                            <div class="select">
-                                <span>Месяц</span>
-                                <i class="fa fa-chevron-left"></i>
-                            </div>
-                            <input type="hidden" name="gender">
-                            <ul class="dropdown-menu">
-                                <li id="January">Январь </li>
-                                <li id="February">Февраль </li>
-                                <li id="March">Март </li>
-                                <li id="April">Апрель </li>
-                                <li id="May">Май </li>
-                                <li id="June">Июнь</li>
-                                <li id="July">Июль</li>
-                                <li id="August">Август</li>
-                                <li id="September">Сентябрь </li>
-                                <li id="October">Октябрь </li>
-                                <li id="November">Ноябрь </li>
-                                <li id="December">Декабрь </li>
-                            </ul>
-                        </div> 
-                        <div class="dropdown">
-                            <div class="select">
-                                <span>Квартал</span>
-                                <i class="fa fa-chevron-left"></i>
-                            </div>
-                            <input type="hidden" name="gender">
-                            <ul class="dropdown-menu">
-                                <li id="FirstQuarter">I</li>
-                                <li id="SecondQuarter">II</li>
-                                <li id="ThirdQuarter">III</li>
-                                <li id="FourthQuarter">IV</li>
+                                <li id="day">День</li>
+                                <li id="week">Неделя</li>
+                                <li id="month">Месяц</li>
+                                <li id="year">Год</li>
                             </ul>
                         </div>
                         <div class="dropdown">
                             <div class="select">
-                                <span>Год</span>
+                                <span>Основной показатель</span>
                                 <i class="fa fa-chevron-left"></i>
                             </div>
                             <input type="hidden" name="gender">
                             <ul class="dropdown-menu">
-                                <li id="2010">2010</li>
-                                <li id="2011">2011</li>
-                                <li id="2012">2012</li>
-                                <li id="2013">2013</li>
-                                <li id="2014">2014</li>
-                                <li id="2015">2015</li>
-                                <li id="2016">2016</li>
-                                <li id="2017">2017</li>
-                                <li id="2018">2018</li>
-                                <li id="2019">2019</li>
-                                <li id="2020">2020</li>
-                                <li id="2021">2021</li>
-                                <li id="2022">2022</li>
-                                <li id="2023">2023</li>
+                                <li id="averageTransactionReceipt">Cуммы операций в USD</li>
+                                <li id="numberOperations">Cуммы операций в EUR</li>
+                                <li id="transactionsDay">Прибыль в UAH</li>
+                                <li id="profitAmount">Средний показатель % маржи</li>
                             </ul>
                         </div>
                         <div class="filterBox">
@@ -688,10 +654,140 @@
                         </div>
                         <div class="filterBox">
                             <span>
-                                <input type="text" placeholder="Название Машины" name="OneCar" id="OneCar">
+                                <input type="text" placeholder="Наименование Машины" name="OneCar" id="OneCar">
                             </span>  
-                        </div>
+                        </div> 
                     </form>
+                </div>
+                <div class="periodComparison__chart">
+                    <canvas id="periodComparison" ></canvas>
+                </div>
+                <div class="periodComparisonСarStats">
+                    <div onclick="periodComparisonShow()" class="periodComparisonСarStats__nmae">
+                        <p>Дата</p>
+                        <p>Машина</p>
+                        <p>Показатель</p>
+                    </div>
+                    <div id="periodComparisonShow">
+                        <div class="periodComparisonСarStats__meaning">
+                            <p>24.07.2021</p>
+                            <p>truck-Man</p>
+                            <p>2.500 USD</p>
+                        </div>
+                        <div class="periodComparisonСarStats__meaning">
+                            <p>24.07.2021</p>
+                            <p>truck-Man</p>
+                            <p>2.500 USD</p>
+                        </div> 
+                        <div class="periodComparisonСarStats__meaning">
+                            <p>24.07.2021</p>
+                            <p>truck-Man</p>
+                            <p>2.500 USD</p>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+
+        
+
+            <div class="AverageСarStats">
+                <div class="AverageСarStats__Filter">
+                    <div class="Filter__title" >Топ 1 Машин</div>
+                    <button id="myBtn"></button>
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>         
+                            <form class="Filter">
+                                <div class="filterBox">
+                                    <span>
+                                        <input type="text" placeholder="Ведите День" name="Day" id="Day">
+                                    </span>
+                                </div>
+                                <div class="dropdown">
+                                    <div class="select">
+                                        <span>Неделя Месяца</span>
+                                        <i class="fa fa-chevron-left"></i>
+                                    </div>
+                                    <input type="hidden" name="gender">
+                                    <ul class="dropdown-menu">
+                                        <li id="FirstWeek">Первая</li>
+                                        <li id="SecondWeek">Вторая</li>
+                                        <li id="ThirdWeek">Третия</li>
+                                        <li id="FourthWeek">Четвертая</li>
+                                    </ul>
+                                </div> <div class="dropdown">
+                                    <div class="select">
+                                        <span>Месяц</span>
+                                        <i class="fa fa-chevron-left"></i>
+                                    </div>
+                                    <input type="hidden" name="gender">
+                                    <ul class="dropdown-menu">
+                                        <li id="January">Январь </li>
+                                        <li id="February">Февраль </li>
+                                        <li id="March">Март </li>
+                                        <li id="April">Апрель </li>
+                                        <li id="May">Май </li>
+                                        <li id="June">Июнь</li>
+                                        <li id="July">Июль</li>
+                                        <li id="August">Август</li>
+                                        <li id="September">Сентябрь </li>
+                                        <li id="October">Октябрь </li>
+                                        <li id="November">Ноябрь </li>
+                                        <li id="December">Декабрь </li>
+                                    </ul>
+                                </div> 
+                                <div class="dropdown">
+                                    <div class="select">
+                                        <span>Квартал</span>
+                                        <i class="fa fa-chevron-left"></i>
+                                    </div>
+                                    <input type="hidden" name="gender">
+                                    <ul class="dropdown-menu">
+                                        <li id="FirstQuarter">I</li>
+                                        <li id="SecondQuarter">II</li>
+                                        <li id="ThirdQuarter">III</li>
+                                        <li id="FourthQuarter">IV</li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown">
+                                    <div class="select">
+                                        <span>Год</span>
+                                        <i class="fa fa-chevron-left"></i>
+                                    </div>
+                                    <input type="hidden" name="gender">
+                                    <ul class="dropdown-menu">
+                                        <li id="2010">2010</li>
+                                        <li id="2011">2011</li>
+                                        <li id="2012">2012</li>
+                                        <li id="2013">2013</li>
+                                        <li id="2014">2014</li>
+                                        <li id="2015">2015</li>
+                                        <li id="2016">2016</li>
+                                        <li id="2017">2017</li>
+                                        <li id="2018">2018</li>
+                                        <li id="2019">2019</li>
+                                        <li id="2020">2020</li>
+                                        <li id="2021">2021</li>
+                                        <li id="2022">2022</li>
+                                        <li id="2023">2023</li>
+                                    </ul>
+                                </div>
+                                <div class="filterBox">
+                                    <label>
+                                        Все машины
+                                        <input type="checkbox" name="AllCar" id="AllCar">
+                                    </label>       
+                                </div>
+                                <div class="filterBox">
+                                    <span>
+                                        <input type="text" placeholder="Название Машины" name="OneCar" id="OneCar">
+                                    </span>  
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="AverageСarStats__nmae">
                     <p>Самая прибыльная машина  </p>
@@ -730,55 +826,214 @@
                 </div>
             </div>
 
-            <div class="analyties__periodComparison">
-                <div class="periodComparison__boxTitle">
-                    <div class="boxTitle__title">Сравнение по периодам</div>
-                    <form class="boxTitle__Filter">
-                        <div class="dropdown">
-                            <div class="select">
-                                <span>Дата</span>
-                                <i class="fa fa-chevron-left"></i>
-                            </div>
-                            <input type="hidden" name="gender">
-                            <ul class="dropdown-menu">
-                                <li id="day">День</li>
-                                <li id="week">Неделя</li>
-                                <li id="month">Месяц</li>
-                                <li id="year">Год</li>
-                            </ul>
-                        </div>
-                        <div class="dropdown">
-                            <div class="select">
-                                <span>Основной показатель</span>
-                                <i class="fa fa-chevron-left"></i>
-                            </div>
-                            <input type="hidden" name="gender">
-                            <ul class="dropdown-menu">
-                                <li id="averageTransactionReceipt">Cуммы операций в USD</li>
-                                <li id="numberOperations">Cуммы операций в EUR</li>
-                                <li id="transactionsDay">Прибыль в UAN</li>
-                                <li id="profitAmount">Средний показатель % маржи</li>
-                            </ul>
-                        </div>
-                        <div class="filterBox">
-                            <label>
-                                Все машины
-                                <input type="checkbox" name="AllCar" id="AllCar">
-                            </label>       
-                        </div>
-                        <div class="filterBox">
-                            <span>
-                                <input type="text" placeholder="Наименование Машины" name="OneCar" id="OneCar">
-                            </span>  
-                        </div> 
-                    </form>
+            
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer__box">
+            <div class="box__cash">
+                <div class="cash">
+                    <h1 class="cash__title">Курс чёрного рынка</h1>
+                    <div class="cash__container">
+                        <span class="cash_inCash">
+                            <img src="/assets/img/Analiticyse/direction/cash-in.svg" alt="in">
+                            <p>26,230</p>
+                            <p>USD</p>
+                        </span>
+                        <span class="cash_outCash">
+                            <img src="/assets/img/Analiticyse/direction/cash-out.svg" alt="out">
+                            <p>26,405</p>
+                            <p>USD</p>
+                        </span>
+                    </div>
                 </div>
-                <div class="periodComparison__chart">
-                    <canvas id="periodComparison" ></canvas>
+                <div class="cash">
+                    <h1 class="cash__title">Курс Межбанка</h1>
+                    <div class="cash__container">
+                        <span class="cash_inCash">
+                            <img src="/assets/img/Analiticyse/direction/cash-in.svg" alt="in">
+                            <p>26,230</p>
+                            <p>USD</p>
+                        </span>
+                        <span class="cash_outCash">
+                            <img src="/assets/img/Analiticyse/direction/cash-out.svg" alt="out">
+                            <p>26,405</p>
+                            <p>USD</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="cash">
+                    <h1 class="cash__title">Курс НБУ</h1>
+                    <span class="cash_inCash">
+                        <img src="/assets/img/Analiticyse/direction/cash-in.svg" alt="in">
+                        <p>26,230</p>
+                        <p>USD</p>
+                    </span>
+                </div>
+            </div>
+            <div class="box__cash">
+                <div class="cash">
+                    <h1 class="cash__title">Курс чёрного рынка</h1>
+                    <div class="cash__container">
+                        <span class="cash_inCash">
+                            <img src="/assets/img/Analiticyse/direction/cash-in.svg" alt="in">
+                            <p>26,230</p>
+                            <p>EUR</p>
+                        </span>
+                        <span class="cash_outCash">
+                            <img src="/assets/img/Analiticyse/direction/cash-out.svg" alt="out">
+                            <p>26,405</p>
+                            <p>EUR</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="cash">
+                    <h1 class="cash__title">Курс Межбанка</h1>
+                    <div class="cash__container">
+                        <span class="cash_inCash">
+                            <img src="/assets/img/Analiticyse/direction/cash-in.svg" alt="in">
+                            <p>26,230</p>
+                            <p>EUR</p>
+                        </span>
+                        <span class="cash_outCash">
+                            <img src="/assets/img/Analiticyse/direction/cash-out.svg" alt="out">
+                            <p>26,405</p>
+                            <p>EUR</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="cash">
+                    <h1 class="cash__title">Курс НБУ</h1>
+                    <span class="cash_inCash">
+                        <img src="/assets/img/Analiticyse/direction/cash-in.svg" alt="in">
+                        <p>26,230</p>
+                        <p>EUR</p>
+                    </span>
+                </div>
+            </div>
+            <div class="box__cash">
+                <div class="cash">
+                    <h1 class="cash__title">Курс чёрного рынка</h1>
+                    <div class="cash__container">
+                        <span class="cash_inCash">
+                            <img src="/assets/img/Analiticyse/direction/cash-in.svg" alt="in">
+                            <p>26,230</p>
+                            <p>EUR</p>
+                        </span>
+                        <span class="cash_outCash">
+                            <img src="/assets/img/Analiticyse/direction/cash-out.svg" alt="out">
+                            <p>26,405</p>
+                            <p>EUR</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="cash">
+                    <h1 class="cash__title">Курс Межбанка</h1>
+                    <div class="cash__container">
+                        <span class="cash_inCash">
+                            <img src="/assets/img/Analiticyse/direction/cash-in.svg" alt="in">
+                            <p>26,230</p>
+                            <p>EUR</p>
+                        </span>
+                        <span class="cash_outCash">
+                            <img src="/assets/img/Analiticyse/direction/cash-out.svg" alt="out">
+                            <p>26,405</p>
+                            <p>EUR</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="cash">
+                    <h1 class="cash__title">Курс НБУ</h1>
+                    <span class="cash_inCash">
+                        <img src="/assets/img/Analiticyse/direction/cash-in.svg" alt="in">
+                        <p>26,230</p>
+                        <p>EUR</p>
+                    </span>
+                </div>
+            </div>
+            <div class="box__cash">
+                <div class="cash">
+                    <h1 class="cash__title">Курс чёрного рынка</h1>
+                    <div class="cash__container">
+                        <span class="cash_inCash">
+                            <img src="/assets/img/Analiticyse/direction/cash-in.svg" alt="in">
+                            <p>26,230</p>
+                            <p>EUR</p>
+                        </span>
+                        <span class="cash_outCash">
+                            <img src="/assets/img/Analiticyse/direction/cash-out.svg" alt="out">
+                            <p>26,405</p>
+                            <p>EUR</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="cash">
+                    <h1 class="cash__title">Курс Межбанка</h1>
+                    <div class="cash__container">
+                        <span class="cash_inCash">
+                            <img src="/assets/img/Analiticyse/direction/cash-in.svg" alt="in">
+                            <p>26,230</p>
+                            <p>EUR</p>
+                        </span>
+                        <span class="cash_outCash">
+                            <img src="/assets/img/Analiticyse/direction/cash-out.svg" alt="out">
+                            <p>26,405</p>
+                            <p>EUR</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="cash">
+                    <h1 class="cash__title">Курс НБУ</h1>
+                    <span class="cash_inCash">
+                        <img src="/assets/img/Analiticyse/direction/cash-in.svg" alt="in">
+                        <p>26,230</p>
+                        <p>EUR</p>
+                    </span>
+                </div>
+            </div>
+            <div class="box__cash">
+                <div class="cash">
+                    <h1 class="cash__title">Курс чёрного рынка</h1>
+                    <div class="cash__container">
+                        <span class="cash_inCash">
+                            <img src="/assets/img/Analiticyse/direction/cash-in.svg" alt="in">
+                            <p>26,230</p>
+                            <p>EUR</p>
+                        </span>
+                        <span class="cash_outCash">
+                            <img src="/assets/img/Analiticyse/direction/cash-out.svg" alt="out">
+                            <p>26,405</p>
+                            <p>EUR</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="cash">
+                    <h1 class="cash__title">Курс Межбанка</h1>
+                    <div class="cash__container">
+                        <span class="cash_inCash">
+                            <img src="/assets/img/Analiticyse/direction/cash-in.svg" alt="in">
+                            <p>26,230</p>
+                            <p>EUR</p>
+                        </span>
+                        <span class="cash_outCash">
+                            <img src="/assets/img/Analiticyse/direction/cash-out.svg" alt="out">
+                            <p>26,405</p>
+                            <p>EUR</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="cash">
+                    <h1 class="cash__title">Курс НБУ</h1>
+                    <span class="cash_inCash">
+                        <img src="/assets/img/Analiticyse/direction/cash-in.svg" alt="in">
+                        <p>26,230</p>
+                        <p>EUR</p>
+                    </span>
                 </div>
             </div>
         </div>
-    </main>
+    </footer>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
@@ -786,5 +1041,6 @@
 <script src="/assets/js/Chart.js"></script>
 <script src="/assets/js/showAllInfoWarning.js"></script>
 <script src="/assets/js/filter/filter.js"></script>
+<script src="/assets/js/filter/modalFilter.js"></script>
 </body>
 </html>

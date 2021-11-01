@@ -49,11 +49,16 @@ header{
         font-style: normal;
         font-weight: 100;
         font-size: 10px;
+        padding-bottom: 3px;
+        border-bottom: 3px solid transparent;
 
 
     }
     &__link:hover {
-       
+        border-bottom: 3px solid white;
+    }
+    &__link.active {
+        border-bottom: 3px solid white;
     }
 }
 .addMashineAndnotification {

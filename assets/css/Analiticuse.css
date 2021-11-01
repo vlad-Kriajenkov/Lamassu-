@@ -109,7 +109,16 @@ header {
   font-style: normal;
   font-weight: 100;
   font-size: 10px;
+  padding-bottom: 3px;
+  border-bottom: 3px solid transparent;
 }
+.nav__link:hover {
+  border-bottom: 3px solid white;
+}
+.nav__link.active {
+  border-bottom: 3px solid white;
+}
+
 .addMashineAndnotification__buttonAdd {
   width: 141px;
   height: 26px;
@@ -133,7 +142,7 @@ header {
   padding: 15px;
 }
 
-.Filter__title, .AverageСarStats__nmae p, .columnNames__connection, .columnNames__status, .columnNames__car, .СonditionSystem_title h1, .notification__title h1, .boxTitle__title {
+.periodComparisonСarStats__nmae p, .Filter__title, .AverageСarStats__nmae p, .columnNames__connection, .columnNames__status, .columnNames__car, .СonditionSystem_title h1, .notification__title h1, .boxTitle__title {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
@@ -141,7 +150,7 @@ header {
   color: #da6e00;
 }
 
-.AverageСarStats__meaning p, .normalCondition__nameStatus p, .normalCondition__nameCar, .infoWarning__buttonAddWarning, .infoWarningr__name, .warning__nameCar, .СonditionSystem__buttonShowAll, .warningInfo__infoText, .truckEmpty__infoText, .weHaveInfo__buttonShowAll, .infoBody__notInfo p, .buttonFilter__style {
+.periodComparisonСarStats__meaning p, .AverageСarStats__meaning p, .normalCondition__nameStatus p, .normalCondition__nameCar, .infoWarning__buttonAddWarning, .infoWarningr__name, .warning__nameCar, .СonditionSystem__buttonShowAll, .warningInfo__infoText, .truckEmpty__infoText, .weHaveInfo__buttonShowAll, .infoBody__notInfo p, .buttonFilter__style {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
@@ -201,6 +210,13 @@ header {
 .buttonFilter__style {
   margin-left: 10px;
   background: none;
+  border-bottom: 3px solid transparent;
+}
+.buttonFilter__style:hover {
+  border-bottom: 3px solid #da6e00;
+}
+.buttonFilter__style.active {
+  border-bottom: 3px solid #da6e00;
 }
 
 .boxInfoOperationAndVolume__boxInfoVolume {
@@ -579,7 +595,9 @@ input:checked + .slider:before {
 .Filter {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  width: 500px;
+  margin: 0px auto;
 }
 
 .filterBox {
@@ -593,6 +611,12 @@ input:checked + .slider:before {
 .AverageСarStats {
   margin: 10px 0px 10px 0px;
   margin-bottom: 20px;
+}
+.AverageСarStats__Filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
 }
 .AverageСarStats__nmae {
   text-align: center;
@@ -622,10 +646,41 @@ input:checked + .slider:before {
   margin-bottom: 10px;
 }
 
-/*Пунтк Сравнение по периодам*/
+/*График Сравнение по периодам*/
 .analyties__periodComparison {
   width: 800px;
   margin: 10px auto 0px 0px;
+}
+
+.periodComparisonСarStats {
+  width: 60%;
+}
+.periodComparisonСarStats__nmae {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background: #da6e00;
+  border-radius: 6px;
+  height: 30px;
+  color: white;
+}
+.periodComparisonСarStats__nmae p {
+  color: white;
+  width: 50%;
+}
+.periodComparisonСarStats__meaning {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
+.periodComparisonСarStats__meaning p {
+  font-size: 12px;
+  width: 50%;
+}
+
+#periodComparisonShow {
+  display: none;
 }
 
 span.msg,
@@ -727,8 +782,8 @@ span.choose {
 .filterBox label {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  width: 150px;
+  justify-content: space-between;
+  width: 180px;
   border-radius: 2px;
   box-shadow: 0 0 2px #cccccc;
   height: 100%;
@@ -768,7 +823,7 @@ span.choose {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 150px;
+  width: 180px;
   border-radius: 2px;
   box-shadow: 0 0 2px #cccccc;
   height: 100%;
@@ -799,7 +854,7 @@ span.choose {
 }
 
 .filterBox span input {
-  width: 150px;
+  width: 180px;
   padding: 10px;
 }
 
@@ -815,4 +870,108 @@ span.choose {
   font-style: normal;
   font-weight: 100;
   font-size: 10px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 100px 0px 100px 0px;
+  border: 3px solid #da6e00;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#myBtn {
+  background: url("/assets/img/Analiticyse/settings/settings.svg") no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+.footer__box {
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box__cash {
+  display: flex;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  margin: 5px;
+}
+.box__cash h1 {
+  margin-bottom: 5px;
+}
+
+.cash {
+  margin: 5px;
+}
+.cash_inCash {
+  display: flex;
+  align-items: center;
+}
+.cash_inCash img {
+  width: 8px;
+  margin-right: 5px;
+}
+.cash_inCash p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 8px;
+  margin-right: 5px;
+}
+.cash_outCash {
+  display: flex;
+  align-items: center;
+}
+.cash_outCash img {
+  width: 8px;
+  margin-right: 5px;
+}
+.cash_outCash p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 8px;
+  margin-right: 5px;
+}
+.cash__title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  color: slategray;
+}
+.cash__container {
+  display: flex;
 }

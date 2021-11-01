@@ -99,7 +99,14 @@
     &__style {
         margin-left: 10px;
         background: none;
+        border-bottom: 3px solid transparent;
        @extend %TextSubparagraphs;
+    }
+    &__style:hover{
+        border-bottom: 3px solid #da6e00;
+    }
+    &__style.active{
+        border-bottom: 3px solid #da6e00;
     }
 }
 .boxInfoOperationAndVolume {
@@ -625,7 +632,9 @@
 .Filter{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    width: 500px;
+    margin: 0px auto;
 }
 .filterBox{
     margin: 5px;
@@ -639,6 +648,10 @@
     margin: 10px 0px 10px 0px;
     margin-bottom: 20px;
 		&__Filter {
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+            margin-bottom: 10px;
 		}
 
 		&__nmae {
@@ -674,7 +687,7 @@
         margin-bottom: 10px;
     }
 }
-/*Пунтк Сравнение по периодам*/
+/*График Сравнение по периодам*/
 .analyties {
 
     &__periodComparison {
@@ -683,5 +696,36 @@
         margin: 10px auto 0px 0px;
     }
 }
-
+.periodComparisonСarStats {
+    width: 60%;
+    &__nmae {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        background: #da6e00;
+        border-radius: 6px;
+        height: 30px;
+        
+        color: white;
+        p{
+            @extend %TitleParagraph;
+            color: white;
+            width: 50%;
+        }
+    }
+    &__meaning{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        height: 30px;
+        p{
+            @extend %TextSubparagraphs;
+            font-size: 12px;
+            width: 50%;
+        }
+    }
+}
+#periodComparisonShow{
+    display: none;
+}
 
