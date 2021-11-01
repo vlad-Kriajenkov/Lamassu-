@@ -311,7 +311,7 @@ header {
 }
 
 .profit__img {
-  background: url("/assets/img/Analiticyse/dashboard/equal.svg") no-repeat;
+  background: url("/assets/img/dashboard/equal.svg") no-repeat;
   width: 12px;
   height: 12px;
   margin-right: 3px;
@@ -320,7 +320,7 @@ header {
   color: black;
 }
 .profit__img.upCommission {
-  background: url("/assets/img/Analiticyse/dashboard/up.svg");
+  background: url("/assets/img/dashboard/up.svg");
   width: 12px;
   height: 12px;
   margin-right: 3px;
@@ -329,7 +329,7 @@ header {
   color: #49db88;
 }
 .profit__img.downCommission {
-  background: url("/assets/img/Analiticyse/dashboard/down.svg");
+  background: url("/assets/img/dashboard/down.svg");
   width: 12px;
   height: 12px;
   margin-right: 3px;
@@ -395,13 +395,13 @@ header {
   margin-left: 10px;
 }
 .truckEmpty__buttonLink {
-  background: url("/assets/img/Analiticyse/button/link.svg") no-repeat;
+  background: url("/assets/img/button/link.svg") no-repeat;
   width: 12px;
   height: 12px;
   margin-right: 25px;
 }
 .truckEmpty__buttonCancel {
-  background: url("/assets/img/Analiticyse/button/cancel.svg") no-repeat;
+  background: url("/assets/img/button/cancel.svg") no-repeat;
   width: 12px;
   height: 12px;
 }
@@ -416,13 +416,13 @@ header {
   margin-left: 10px;
 }
 .warningInfo__buttonLink {
-  background: url("/assets/img/Analiticyse/button/link.svg") no-repeat;
+  background: url("/assets/img/button/link.svg") no-repeat;
   width: 12px;
   height: 12px;
   margin-right: 25px;
 }
 .warningInfo__buttonCancel {
-  background: url("/assets/img/Analiticyse/button/cancel.svg") no-repeat;
+  background: url("/assets/img/button/cancel.svg") no-repeat;
   width: 12px;
   height: 12px;
 }

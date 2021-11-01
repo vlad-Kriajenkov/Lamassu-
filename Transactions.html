@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/scss/css/Transactions.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container__header">
+            <div class="header__logoAndNav">
+                <a href="/Analiticyse.html"><img src="/assets/img/header/Logo.svg" alt="Logo" width="100px" class="logoAndNav__imgNav"></a>
+                <nav class="logoAndNav__nav">
+                    <a href="#" class="nav__link active">Операции</a>
+                    <a href="#" class="nav__link">Обслуживание</a>
+                    <a href="#" class="nav__link">Настройки </a>
+                    <a href="#" class="nav__link">Дополнительно</a>
+                </nav>
+                
+            </div>
+            <div class="header__addMashineAndnotification">
+                <button class="addMashineAndnotification__buttonAdd">
+                    <img src="/assets/img/button/add.svg" alt="Add" width="15px">
+                    Добавить Машину
+                </button>
+                <button class="addMashineAndnotification__buttonnotification"></button>
+            </div>
+        </div>  
+    </header>
+
+    <main>
+        <div class="transactions">
+            <div class="transactions__heading">
+                <div class="heading__box">
+                    <div class="heading__title"><p>Операции</p></div>
+                    <div class="heading__search">
+                        <label class="search">
+                            <button></button>
+                            <input class="search__inputText" type="text" placeholder="Поиск Операции" name="" id="">
+                        </label>
+                    </div>
+                    <button class="heading__downloadBtn">
+                        <img src="/assets/img/download/download.svg" width="15px" alt="">
+                    </button>
+                </div>
+                <div class="heading__box">
+                    <div class="heading__cashIn">
+                        <img src="/assets/img/direction/cash-in.svg" alt="Cash-In">
+                        <p>Cash-In</p>
+                    </div>
+                    <div class="heading__cashOut">
+                        <img src="/assets/img/direction/cash-out.svg" alt="Cash-Out">
+                        <p>Cash-Out</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="transactions__table">
+                <div class="table__header">
+                    <span id="cashInfo"></span>
+                    <span id="nameCar">Машина</span>
+                    <span id="operation">Операция</span>
+                    <span id="address">Адрес</span>
+                    <span id="exchangeRate">Курс Обмена</span>
+                    <span id="transactionAmount">Сумма операции и валюта </span>
+                    <span id="exchangeAmount">Сумма на которую обменяли валюта </span>
+                    <span id="Day">Дата</span>
+                    <span id="Time">Время</span>
+                    <span id="BtnEmit"></span>
+                </div>
+                <div class="table__body">
+                    <span id="cashInfo"><img src="/assets/img/direction/cash-in.svg" alt=""></span>
+                    <span id="nameCar">pizza-truck</span>
+                    <span id="operation">Jose Tosquias</span>
+                    <span id="address">Bcsdfas...</span>
+                    <span id="exchangeRate">26.420 USD</span>
+                    <span id="transactionAmount">23,000 UAH </span>
+                    <span id="exchangeAmount">874.60 USD  </span>
+                    <span id="Day">13.10.2021</span>
+                    <span id="Time">12:46 pm</span>
+                    <button id="Btn"></button>
+                </div>
+                <div>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer__box">
+            <div class="box__cash">
+                <div class="cash">
+                    <h1 class="cash__title">Курс чёрного рынка</h1>
+                    <div class="cash__container">
+                        <span class="cash_inCash">
+                            <img src="/assets/img/direction/cash-in.svg" alt="in">
+                            <p>26,230</p>
+                            <p>USD</p>
+                        </span>
+                        <span class="cash_outCash">
+                            <img src="/assets/img/direction/cash-out.svg" alt="out">
+                            <p>26,405</p>
+                            <p>USD</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="cash">
+                    <h1 class="cash__title">Курс Межбанка</h1>
+                    <div class="cash__container">
+                        <span class="cash_inCash">
+                            <img src="/assets/img/direction/cash-in.svg" alt="in">
+                            <p>26,230</p>
+                            <p>USD</p>
+                        </span>
+                        <span class="cash_outCash">
+                            <img src="/assets/img/direction/cash-out.svg" alt="out">
+                            <p>26,405</p>
+                            <p>USD</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="cash">
+                    <h1 class="cash__title">Курс НБУ</h1>
+                    <span class="cash_inCash">
+                        <img src="/assets/img/direction/cash-in.svg" alt="in">
+                        <p>26,230</p>
+                        <p>USD</p>
+                    </span>
+                </div>
+            </div>
+            <div class="box__cash">
+                <div class="cash">
+                    <h1 class="cash__title">Курс чёрного рынка</h1>
+                    <div class="cash__container">
+                        <span class="cash_inCash">
+                            <img src="/assets/img/direction/cash-in.svg" alt="in">
+                            <p>26,230</p>
+                            <p>EUR</p>
+                        </span>
+                        <span class="cash_outCash">
+                            <img src="/assets/img/direction/cash-out.svg" alt="out">
+                            <p>26,405</p>
+                            <p>EUR</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="cash">
+                    <h1 class="cash__title">Курс Межбанка</h1>
+                    <div class="cash__container">
+                        <span class="cash_inCash">
+                            <img src="/assets/img/direction/cash-in.svg" alt="in">
+                            <p>26,230</p>
+                            <p>EUR</p>
+                        </span>
+                        <span class="cash_outCash">
+                            <img src="/assets/img/direction/cash-out.svg" alt="out">
+                            <p>26,405</p>
+                            <p>EUR</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="cash">
+                    <h1 class="cash__title">Курс НБУ</h1>
+                    <span class="cash_inCash">
+                        <img src="/assets/img/direction/cash-in.svg" alt="in">
+                        <p>26,230</p>
+                        <p>EUR</p>
+                    </span>
+                </div>
+            </div>
+            <div class="box__cash">
+                <div class="cash">
+                    <h1 class="cash__title">Курс чёрного рынка</h1>
+                    <div class="cash__container">
+                        <span class="cash_inCash">
+                            <img src="/assets/img/direction/cash-in.svg" alt="in">
+                            <p>26,230</p>
+                            <p>EUR</p>
+                        </span>
+                        <span class="cash_outCash">
+                            <img src="/assets/img/direction/cash-out.svg" alt="out">
+                            <p>26,405</p>
+                            <p>EUR</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="cash">
+                    <h1 class="cash__title">Курс Межбанка</h1>
+                    <div class="cash__container">
+                        <span class="cash_inCash">
+                            <img src="/assets/img/direction/cash-in.svg" alt="in">
+                            <p>26,230</p>
+                            <p>EUR</p>
+                        </span>
+                        <span class="cash_outCash">
+                            <img src="/assets/img/direction/cash-out.svg" alt="out">
+                            <p>26,405</p>
+                            <p>EUR</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="cash">
+                    <h1 class="cash__title">Курс НБУ</h1>
+                    <span class="cash_inCash">
+                        <img src="/assets/img/direction/cash-in.svg" alt="in">
+                        <p>26,230</p>
+                        <p>EUR</p>
+                    </span>
+                </div>
+            </div>
+            <div class="box__cash">
+                <div class="cash">
+                    <h1 class="cash__title">Курс чёрного рынка</h1>
+                    <div class="cash__container">
+                        <span class="cash_inCash">
+                            <img src="/assets/img/direction/cash-in.svg" alt="in">
+                            <p>26,230</p>
+                            <p>EUR</p>
+                        </span>
+                        <span class="cash_outCash">
+                            <img src="/assets/img/direction/cash-out.svg" alt="out">
+                            <p>26,405</p>
+                            <p>EUR</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="cash">
+                    <h1 class="cash__title">Курс Межбанка</h1>
+                    <div class="cash__container">
+                        <span class="cash_inCash">
+                            <img src="/assets/img/direction/cash-in.svg" alt="in">
+                            <p>26,230</p>
+                            <p>EUR</p>
+                        </span>
+                        <span class="cash_outCash">
+                            <img src="/assets/img/direction/cash-out.svg" alt="out">
+                            <p>26,405</p>
+                            <p>EUR</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="cash">
+                    <h1 class="cash__title">Курс НБУ</h1>
+                    <span class="cash_inCash">
+                        <img src="/assets/img/direction/cash-in.svg" alt="in">
+                        <p>26,230</p>
+                        <p>EUR</p>
+                    </span>
+                </div>
+            </div>
+            <div class="box__cash">
+                <div class="cash">
+                    <h1 class="cash__title">Курс чёрного рынка</h1>
+                    <div class="cash__container">
+                        <span class="cash_inCash">
+                            <img src="/assets/img/direction/cash-in.svg" alt="in">
+                            <p>26,230</p>
+                            <p>EUR</p>
+                        </span>
+                        <span class="cash_outCash">
+                            <img src="/assets/img/direction/cash-out.svg" alt="out">
+                            <p>26,405</p>
+                            <p>EUR</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="cash">
+                    <h1 class="cash__title">Курс Межбанка</h1>
+                    <div class="cash__container">
+                        <span class="cash_inCash">
+                            <img src="/assets/img/direction/cash-in.svg" alt="in">
+                            <p>26,230</p>
+                            <p>EUR</p>
+                        </span>
+                        <span class="cash_outCash">
+                            <img src="/assets/img/direction/cash-out.svg" alt="out">
+                            <p>26,405</p>
+                            <p>EUR</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="cash">
+                    <h1 class="cash__title">Курс НБУ</h1>
+                    <span class="cash_inCash">
+                        <img src="/assets/img/direction/cash-in.svg" alt="in">
+                        <p>26,230</p>
+                        <p>EUR</p>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

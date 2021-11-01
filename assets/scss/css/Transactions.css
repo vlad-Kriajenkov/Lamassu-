@@ -1,0 +1,380 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,100&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  height: 100%;
+}
+
+header {
+  background: #da6e00;
+}
+
+.container__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0px auto;
+}
+
+.header__logoAndNav {
+  display: flex;
+  align-items: center;
+  width: 52%;
+}
+.header__addMashineAndnotification {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 17%;
+}
+
+.logoAndNav__nav {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.nav__link {
+  color: white;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  padding-bottom: 3px;
+  border-bottom: 3px solid transparent;
+}
+.nav__link:hover {
+  border-bottom: 3px solid white;
+}
+.nav__link.active {
+  border-bottom: 3px solid white;
+}
+
+.addMashineAndnotification__buttonAdd {
+  width: 141px;
+  height: 26px;
+  border-radius: 10px;
+  color: white;
+  background: #cc9999;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+}
+.addMashineAndnotification__buttonnotification {
+  background: url("/assets/img/Analiticyse/notification.svg");
+  width: 18px;
+  height: 18px;
+}
+
+.heading__title p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  color: #da6e00;
+}
+
+.search__inputText::-moz-placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: #da6e00;
+}
+
+.search__inputText:-ms-input-placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: #da6e00;
+}
+
+.search__inputText::placeholder, .heading__cashOut p, .heading__cashIn p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: #da6e00;
+}
+
+/*  Start MAiN  */
+.transactions {
+  width: 1100px;
+  margin: 0px auto;
+}
+.transactions__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0px 20px 0px;
+}
+.heading__box {
+  display: flex;
+  align-items: center;
+}
+.heading__title {
+  margin-right: 20px;
+}
+.heading__search {
+  width: 200px;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: #ffd9b3;
+}
+.heading__search button {
+  background: url("/assets/img/search/search.svg") no-repeat;
+  width: 18px;
+  height: 18px;
+}
+.heading__downloadBtn {
+  background-color: #ffd9b3;
+  border-radius: 15px;
+  width: 27px;
+  height: 27px;
+  margin-left: 10px;
+}
+.heading__downloadBtn img {
+  width: 15px;
+}
+.heading__cashIn {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.heading__cashIn img {
+  width: 14px;
+  height: 14px;
+}
+.heading__cashOut {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.heading__cashOut img {
+  width: 14px;
+  height: 14px;
+}
+.search {
+  display: flex;
+  align-items: center;
+}
+.search__inputText {
+  background-color: #ffd9b3;
+  margin-left: 5px;
+}
+.transactions__table span {
+  width: 50%;
+}
+
+.table__header {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  background-color: #da6e00;
+  color: #ffff;
+  height: 40px;
+}
+.table__body {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin-top: 10px;
+  height: 40px;
+  background-color: #ffd9b3;
+}
+
+#cashInfo {
+  width: 10%;
+}
+
+#nameCar {
+  width: 25%;
+}
+
+#operation {
+  width: 25%;
+}
+
+#address {
+  width: 25%;
+}
+
+#exchangeRate {
+  width: 30%;
+}
+
+#transactionAmount {
+  width: 50%;
+}
+
+#exchangeAmount {
+  width: 70%;
+}
+
+#Day {
+  width: 25%;
+}
+
+#Time {
+  width: 25%;
+}
+
+#BtnEmit {
+  width: 10%;
+}
+
+#Btn {
+  background: url("/assets/img/expand/open.svg") no-repeat;
+  height: 6px;
+  width: 10%;
+}
+
+#Btn .activeBtn {
+  background: url("/assets/img/expand/closed.svg") no-repeat;
+  width: 10%;
+  height: 6px;
+}
+
+/* End Main */
+.footer__box {
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box__cash {
+  display: flex;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  margin: 5px;
+}
+.box__cash h1 {
+  margin-bottom: 5px;
+}
+
+.cash {
+  margin: 5px;
+}
+.cash_inCash {
+  display: flex;
+  align-items: center;
+}
+.cash_inCash img {
+  width: 8px;
+  margin-right: 5px;
+}
+.cash_inCash p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 8px;
+  margin-right: 5px;
+}
+.cash_outCash {
+  display: flex;
+  align-items: center;
+}
+.cash_outCash img {
+  width: 8px;
+  margin-right: 5px;
+}
+.cash_outCash p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 8px;
+  margin-right: 5px;
+}
+.cash__title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  color: slategray;
+}
+.cash__container {
+  display: flex;
+}
