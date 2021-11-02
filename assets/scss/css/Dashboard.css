@@ -150,13 +150,13 @@ header {
   height: 18px;
 }
 
-.analyties__periodComparison, .AverageСarStats, .analyties__weeklyOperation, .analyties__marginStatistics {
+.notificationAndСondition__СonditionSystem, .notificationAndСondition__notification, .operationAndСommission__profitFromCommission, .operationAndСommission__operationStatistics {
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
   padding: 15px;
 }
 
-.periodComparisonСarStats__nmae p, .Filter__title, .AverageСarStats__nmae p, .boxTitle__title {
+.columnNames__connection, .columnNames__status, .columnNames__car, .СonditionSystem_title h1, .notification__title h1, .profit__value, .infoStatic__Currency h1, .boxTitle__title {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
@@ -164,7 +164,7 @@ header {
   color: #da6e00;
 }
 
-.periodComparisonСarStats__meaning p, .AverageСarStats__meaning p {
+.normalCondition__nameStatus p, .normalCondition__nameCar, .infoWarning__buttonAddWarning, .infoWarningr__name, .warning__nameCar, .СonditionSystem__buttonShowAll, .warningInfo__infoText, .truckEmpty__infoText, .weHaveInfo__buttonShowAll, .infoBody__notInfo p, .buttonFilter__style {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
@@ -172,143 +172,460 @@ header {
   color: #da6e00;
 }
 
-.conatiner__analyties {
+.conatiner__dashboard {
   max-width: 1100px;
   margin: 0px auto;
 }
 
-.analyties__title {
+.dashboard {
+  margin-bottom: 20px;
+}
+.dashboard__title {
   margin: 20px 0px 20px 0px;
 }
-.analyties__title h1 {
+.dashboard__title h1 {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   color: #da6e00;
 }
-/*  График Статистика Марженальности */
-.analyties__marginStatistics {
-  width: 800px;
-  margin: 10px auto 0px 0px;
-}
-
-.boxTitle__Filter {
+.dashboardFlexContainer {
   display: flex;
-  justify-content: space-around;
-  margin: 10px 0px 10px 0px;
+  justify-content: space-between;
 }
 
-/* Пункт Недельная Операция */
-.analyties__weeklyOperation {
-  width: 800px;
-  margin: 10px 0px 0px auto;
+/* График Bubble */
+.operationAndСommission__operationStatistics {
+  width: 550px;
 }
 
-.boxTitle__formFilter {
+.operationStatistics__boxTitle {
   display: flex;
-  justify-content: center;
-  margin: 10px 0px 10px 0px;
-}
-
-.dropdown {
-  margin-right: 10px;
-}
-
-.filterBox {
-  margin-right: 10px;
-}
-
-/* Пункт Средний Показатель Машын*/
-.Filter {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  width: 500px;
-  margin: 0px auto;
-}
-
-.filterBox {
-  margin: 5px;
-}
-
-.dropdown {
-  margin: 5px;
-}
-
-.AverageСarStats {
-  margin: 10px 0px 10px 0px;
+  justify-content: space-between;
   margin-bottom: 20px;
 }
-.AverageСarStats__Filter {
+.operationStatistics__boxInfoOperationAndVolume {
+  display: flex;
+  margin-bottom: 20px;
+}
+.operationStatistics__chart {
+  background: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  color: #da6e00;
+  width: 500px;
+}
+
+.boxTitle__buttonFilter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonFilter__style {
+  margin-left: 10px;
+  background: none;
+  border-bottom: 3px solid transparent;
+}
+.buttonFilter__style:hover {
+  border-bottom: 3px solid #da6e00;
+}
+.buttonFilter__style.active {
+  border-bottom: 3px solid #da6e00;
+}
+
+.boxInfoOperationAndVolume__boxInfoVolume {
+  margin-left: 20px;
+}
+
+.boxInfoOperation__title {
+  background: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  color: #da6e00;
+}
+.boxInfoOperation__name {
+  background: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  color: #da6e00;
+}
+
+.boxInfoVolume__title {
+  background: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  color: #da6e00;
+}
+.boxInfoVolume__name {
+  background: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  color: #da6e00;
+}
+
+#bubbleChart {
+  margin-top: 10px;
+  background: #fafbff;
+}
+
+/* График Line*/
+.operationAndСommission__profitFromCommission {
+  position: relative;
+  width: 550px;
+  margin-top: 10px;
+}
+
+.profitFromCommission__boxTitle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.profitFromCommission__boxInfoOperationAndVolume {
+  display: flex;
+  margin-bottom: 20px;
+}
+.profitFromCommission__chart {
+  background: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  color: #da6e00;
+  width: 500px;
+}
+
+.profitFromCommission__infoStatic {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  width: 77%;
+}
+
+.infoStatic__Currency {
+  display: flex;
+}
+.infoStatic__Currency h1 {
+  color: black;
+}
+.infoStatic__Currency h1:first-child {
+  margin-right: 3px;
+}
+.infoStatic__profit {
+  display: flex;
+}
+
+.profit__img {
+  background: url("/assets/img/dashboard/equal.svg") no-repeat;
+  width: 12px;
+  height: 12px;
+  margin-right: 3px;
+}
+.profit__value {
+  color: black;
+}
+.profit__img.upCommission {
+  background: url("/assets/img/dashboard/up.svg");
+  width: 12px;
+  height: 12px;
+  margin-right: 3px;
+}
+.profit__value.upCommission {
+  color: #49db88;
+}
+.profit__img.downCommission {
+  background: url("/assets/img/dashboard/down.svg");
+  width: 12px;
+  height: 12px;
+  margin-right: 3px;
+}
+.profit__value.downCommission {
+  color: #c72800;
+}
+
+/* Пунтк Оповещания  */
+.notificationAndСondition__notification {
+  width: 530px;
+}
+.notificationAndСondition__СonditionSystem {
+  width: 530px;
+  margin-top: 10px;
+}
+
+.notification__infoBody {
+  margin-top: 15px;
+}
+
+.infoBody__notInfo {
+  height: 80px;
+  display: block;
+}
+.infoBody__notInfo p {
+  color: silver;
+}
+.infoBody__weHaveInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.weHaveInfo__cashboxEmpty {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f1f6;
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 6px;
+}
+.weHaveInfo__warningInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f1f6;
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 6px;
+}
+.weHaveInfo__buttonShowAll {
+  font-size: 9px;
+  width: 100px;
+  margin: 10px auto 0px auto;
+  background: none;
+}
+
+.truckEmpty__infoText {
+  font-size: 9px;
+  margin-left: 10px;
+}
+.truckEmpty__buttonLink {
+  background: url("/assets/img/button/link.svg") no-repeat;
+  width: 12px;
+  height: 12px;
+  margin-right: 25px;
+}
+.truckEmpty__buttonCancel {
+  background: url("/assets/img/button/cancel.svg") no-repeat;
+  width: 12px;
+  height: 12px;
+}
+
+.cashboxEmptyFlex {
+  display: flex;
+  align-items: center;
+}
+
+.warningInfo__infoText {
+  font-size: 9px;
+  margin-left: 10px;
+}
+.warningInfo__buttonLink {
+  background: url("/assets/img/button/link.svg") no-repeat;
+  width: 12px;
+  height: 12px;
+  margin-right: 25px;
+}
+.warningInfo__buttonCancel {
+  background: url("/assets/img/button/cancel.svg") no-repeat;
+  width: 12px;
+  height: 12px;
+}
+
+#showAllInfoWarning {
+  display: none;
+}
+
+/* Блок Состояние Системы */
+.notificationAndСondition__СonditionSystem {
+  display: flex;
+  flex-direction: column;
+}
+
+.СonditionSystem__columnNames {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.СonditionSystem__warning {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
-}
-.AverageСarStats__nmae {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  background: #da6e00;
+  margin-top: 5px;
+  background-color: #f0f1f6;
+  padding: 5px 0px 5px 5px;
   border-radius: 6px;
-  height: 40px;
-  color: white;
 }
-.AverageСarStats__nmae p {
-  color: white;
-  width: 50%;
-}
-.AverageСarStats__meaning {
-  text-align: center;
+.СonditionSystem__normalCondition {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  height: 30px;
-}
-.AverageСarStats__meaning p {
-  font-size: 12px;
-  width: 50%;
-}
-
-.Filter__title {
-  margin-bottom: 10px;
-}
-
-/*График Сравнение по периодам*/
-.analyties__periodComparison {
-  width: 800px;
-  margin: 10px auto 0px 0px;
-}
-
-.periodComparisonСarStats {
-  width: 60%;
-}
-.periodComparisonСarStats__nmae {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  background: #da6e00;
+  margin-top: 5px;
+  background-color: #f0f1f6;
+  padding: 5px 0px 5px 5px;
   border-radius: 6px;
-  height: 30px;
-  color: white;
 }
-.periodComparisonСarStats__nmae p {
-  color: white;
-  width: 50%;
-}
-.periodComparisonСarStats__meaning {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  height: 30px;
-}
-.periodComparisonСarStats__meaning p {
-  font-size: 12px;
-  width: 50%;
+.СonditionSystem__buttonShowAll {
+  font-size: 9px;
+  width: 100px;
+  margin: 10px auto 0px auto;
+  background: none;
 }
 
-#periodComparisonShow {
+.columnNames__car {
+  width: 25%;
+}
+.columnNames__status {
+  width: 30%;
+}
+.columnNames__connection {
+  width: 15%;
+}
+.columnNames__hryvnia {
+  width: 18px;
+}
+.columnNames__coins {
+  width: 20px;
+}
+.columnNames__dollar {
+  width: 20px;
+}
+
+.columnNamesFlexBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.warning__nameCar {
+  width: 25%;
+}
+.warning__infoWarning {
+  width: 30%;
+  display: flex;
+}
+.warning__connection {
+  width: 15%;
+}
+.warning__Dollar {
+  color: red;
+}
+
+.warningFlexBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.infoWarningr__name {
+  background: #ffdcda;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.infoWarning__buttonAddWarning {
+  background: #ffdcda;
+  padding: 4px;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.normalCondition__nameCar {
+  width: 25%;
+}
+.normalCondition__nameStatus {
+  width: 30%;
+  display: flex;
+}
+.normalCondition__nameStatus p {
+  color: #49db88;
+  background: #d1f5d9;
+  padding: 5px;
+  border-radius: 5px;
+}
+.normalCondition__connection {
+  width: 15%;
+}
+.normalConditionFlexBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 30%;
+}
+
+#СonditionSystemShow {
   display: none;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 17px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  display: none;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ff3c3c;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 2px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 span.msg,

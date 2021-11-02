@@ -1,0 +1,645 @@
+%Boreder{
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    padding: 15px;
+}
+
+%TitleParagraph{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 12px;
+    color:  #da6e00;
+}
+%TextSubparagraphs{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 10px;
+    color:  #da6e00;
+}
+
+.conatiner {
+
+    &__dashboard {
+        max-width: 1100px;
+        margin: 0px auto;
+    }
+}
+.dashboard{
+  margin-bottom: 20px;
+
+    &__title {
+        margin: 20px 0px 20px 0px;
+        h1{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            color:  #da6e00;
+        }
+       
+
+    }
+
+    &__operationAndСommission {
+        
+    }
+}
+.dashboardFlexContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* График Bubble */
+.operationAndСommission {
+
+    &__operationStatistics {
+        @extend %Boreder;
+        width: 550px;
+    }
+}
+.operationStatistics {
+
+    &__boxTitle {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    &__boxInfoOperationAndVolume {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    &__chart {
+        background: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        color:  #da6e00;
+        width: 500px;
+    }
+}
+.boxTitle {
+
+    &__title {
+        @extend %TitleParagraph;
+    }
+
+    &__buttonFilter {
+      
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.buttonFilter {
+
+    &__style {
+        margin-left: 10px;
+        background: none;
+        border-bottom: 3px solid transparent;
+       @extend %TextSubparagraphs;
+    }
+    &__style:hover{
+        border-bottom: 3px solid #da6e00;
+    }
+    &__style.active{
+        border-bottom: 3px solid #da6e00;
+    }
+}
+.boxInfoOperationAndVolume {
+
+    &__boxInfoOperation {
+    }
+
+    &__boxInfoVolume {
+        margin-left: 20px;
+    }
+}
+.boxInfoOperation {
+
+    &__title {
+        background: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        color:  #da6e00;
+    }
+
+    &__name {
+        background: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        color:  #da6e00;
+    }
+}
+.boxInfoVolume {
+    
+    &__title {
+        background: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        color:  #da6e00;
+    }
+    &__name {
+        background: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        color:  #da6e00;
+    }
+}
+
+#bubbleChart{
+    margin-top: 10px;
+    background: #fafbff;
+}
+
+// .system {
+
+//     &__notificationAndСondition {
+//         box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
+//         border-radius: 6px;
+//         padding: 15px;
+//     }
+// }
+
+
+/* График Line*/
+.operationAndСommission {
+
+    &__profitFromCommission {
+        position: relative;
+        @extend %Boreder;
+        width: 550px;
+        margin-top: 10px;
+    }
+}
+.profitFromCommission {
+
+    &__boxTitle {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    &__boxInfoOperationAndVolume {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    &__chart {
+        
+        background: none;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        color: #da6e00;
+        width: 500px;
+    }
+}
+
+.profitFromCommission {
+    
+    &__infoStatic {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 20%;
+        left: 15%;
+        width: 77%;
+    }
+}
+.infoStatic {
+
+    &__Currency {
+        display: flex;
+        h1{
+            @extend %TitleParagraph;
+            color:black;
+        }
+        h1:first-child{
+            margin-right: 3px;
+        }
+    }
+
+    &__profit {
+        display: flex;
+    }
+}
+.profit {
+
+    &__img {
+        background: url('/assets/img/dashboard/equal.svg') no-repeat;
+        width: 12px;
+        height: 12px;
+        margin-right: 3px;
+        
+    }
+
+    &__value {
+        @extend %TitleParagraph;
+        color:black;
+    }
+
+    &__img.upCommission{
+        background:url("/assets/img/dashboard/up.svg");
+        width: 12px;
+        height: 12px;
+        margin-right: 3px;
+    }
+    &__value.upCommission{
+        color:#49db88;
+    }
+    &__img.downCommission{
+        background:url("/assets/img/dashboard/down.svg");
+        width: 12px;
+        height: 12px;
+        margin-right: 3px;
+    }
+    &__value.downCommission{
+        color:rgb(199, 40, 0);
+    }
+}
+
+
+/* Пунтк Оповещания  */
+.notificationAndСondition {
+
+    &__notification {
+        @extend %Boreder;
+        width: 530px;
+    }
+
+    &__СonditionSystem {
+        @extend %Boreder;
+        width: 530px;
+        margin-top: 10px;
+    }
+}
+.notification {
+
+    &__title {
+        h1{
+            @extend %TitleParagraph;
+        }
+    }
+
+    &__infoBody {
+        margin-top: 15px;
+    }
+}
+.infoBody {
+
+    &__notInfo {
+        height: 80px;
+        display: block;
+        p{
+           @extend %TextSubparagraphs;
+            color: silver;
+        }
+    }
+
+    &__weHaveInfo {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.weHaveInfo {
+
+    &__cashboxEmpty {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(240 241 246);
+        margin-top: 5px;
+        padding: 5px;
+        border-radius: 6px;
+    }
+
+    &__warningInfo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(240 241 246);
+        margin-top: 5px;
+        padding: 5px;
+        border-radius: 6px;
+    }
+    &__buttonShowAll{
+        @extend %TextSubparagraphs;
+        font-size: 9px;
+        width: 100px;
+        margin: 10px auto 0px auto;
+        background: none;
+
+    }
+}
+.cashboxEmpty {
+
+    &__img {
+    }
+}
+.truckEmpty {
+
+    &__infoText {
+        @extend %TextSubparagraphs;
+        font-size: 9px;
+        margin-left: 10px;
+    }
+
+    &__buttonLink {
+        background: url('/assets/img/button/link.svg') no-repeat;
+        width: 12px;
+        height: 12px;
+        margin-right: 25px;
+    }
+
+    &__buttonCancel {
+        background: url('/assets/img/button/cancel.svg') no-repeat;
+        width: 12px;
+        height: 12px;
+    }
+}
+.cashboxEmptyFlex{
+    display: flex;
+    align-items: center;
+}
+.warningInfo {
+
+    &__img {
+      
+    }
+
+    &__infoText {
+        @extend %TextSubparagraphs;
+        font-size: 9px;
+        margin-left: 10px;
+    }
+
+    &__buttonLink {
+        background: url('/assets/img/button/link.svg') no-repeat;
+        width: 12px;
+        height: 12px;
+        margin-right: 25px;
+    }
+
+    &__buttonCancel {
+        background: url('/assets/img/button/cancel.svg') no-repeat;
+        width: 12px;
+        height: 12px;
+    }
+}
+#showAllInfoWarning{
+    display: none;
+}
+
+/* Блок Состояние Системы */
+
+.notificationAndСondition {
+
+    &__СonditionSystem {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.СonditionSystem {
+
+    &_title {
+        h1{
+            @extend %TitleParagraph;
+        }
+    }
+
+    &__columnNames {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__warning {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5px;
+        background-color: #f0f1f6;
+        padding: 5px 0px 5px 5px;
+        border-radius: 6px;
+    }
+
+    &__normalCondition {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5px;
+        background-color: #f0f1f6;
+        padding: 5px 0px 5px 5px;
+        border-radius: 6px;
+    }
+
+    &__buttonShowAll{
+        @extend %TextSubparagraphs;
+        font-size: 9px;
+        width: 100px;
+        margin: 10px auto 0px auto;
+        background: none;
+
+    }
+}
+.columnNames {
+
+    &__car {
+        @extend %TitleParagraph;
+        width: 25%;
+    }
+
+    &__status {
+        @extend %TitleParagraph;
+        width: 30%;       
+    }
+    &__connection{
+        @extend %TitleParagraph;
+        width: 15%;
+    }
+    &__hryvnia {
+        width: 18px;
+    }
+
+    &__coins {
+        width: 20px;
+    }
+
+    &__dollar {
+        width: 20px;
+    }
+}
+.columnNamesFlexBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 30%
+
+}
+.warning {
+
+    &__nameCar {
+        @extend %TextSubparagraphs;
+        width: 25%;
+    }
+
+    &__infoWarning {
+        width: 30%;
+        display: flex;
+    }
+    &__connection{
+        width: 15%;
+    }
+    &__Hryvnia {
+    }
+
+    &__Coins {
+    }
+
+    &__Dollar {
+        color:red;
+    }
+}
+.warningFlexBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 30%;
+
+}
+.infoWarningr {
+
+    &__name {
+        @extend %TextSubparagraphs;
+        background: #ffdcda;
+        padding: 5px;
+        border-radius: 5px;
+    }
+}
+.infoWarning {
+
+    &__buttonAddWarning {
+        @extend %TextSubparagraphs;
+        background: #ffdcda;
+        padding: 4px;
+        border-radius: 5px;
+        margin-left: 5px;
+    }
+}
+.normalCondition {
+
+    &__nameCar {
+        width: 25%;
+        @extend %TextSubparagraphs;
+        
+    }
+
+    &__nameStatus {
+        width: 30%;
+        display: flex;
+        p{
+            @extend %TextSubparagraphs;
+            color:#49db88;
+            background:#d1f5d9;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    }
+    &__connection{
+        width: 15%;
+    }
+
+    &__Hryvnia {
+    }
+
+    &__Coins {
+    }
+
+    &__Dollar {
+    }
+}
+.normalConditionFlexBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 30%;
+}
+#СonditionSystemShow{
+    display: none;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 17px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {display:none;}
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(255, 60, 60);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 2px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  

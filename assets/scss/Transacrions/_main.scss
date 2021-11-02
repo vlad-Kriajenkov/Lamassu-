@@ -1,7 +1,7 @@
 %Boreder{
-    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 15px;
+    padding: 5px;
 }
 
 %TitleParagraph{
@@ -20,13 +20,12 @@
 }
 
 /*  Start MAiN  */
-
+/* Transaction */
 .transactions {
     width: 1100px;
     margin: 0px auto;
     &__heading {
         display: flex;
-        justify-content: space-between;
         align-items: center;
         margin: 20px 0px 20px 0px;
     }
@@ -129,8 +128,11 @@
         text-align: center;
         align-items: center;
         background-color:  #da6e00;
+        @extend %TitleParagraph;
+        font-size: 11px;
         color:#ffff;
         height: 40px;
+        padding: 8px;
     }
     &__body{
         display: flex;
@@ -139,6 +141,9 @@
         margin-top: 10px;
         height: 40px;
         background-color:#ffd9b3;
+        padding: 8px;
+        @extend %TextSubparagraphs;
+        color:black;
     }
 }
 #cashInfo{
@@ -186,5 +191,92 @@
     width: 10%;
     height: 6px;
 }
+
+/* All INfo Car */
+.AllInfoCar {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    @extend %Boreder;
+    margin: 10px 0px 10px 0px;
+    &__boxInfo {
+        margin: 5px;
+    }
+}
+.boxInfo {
+
+    &__title {
+        @extend %TitleParagraph;
+        font-size: 11px;
+        color:#708090;
+        margin-bottom: 5px;
+    }
+
+    &__meaning {
+        @extend %TextSubparagraphs;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        h1{
+            margin-right: 5px;
+        }
+        
+    }   
+}
+.meaning {
+
+    &__box {
+        display: flex;
+    }
+
+    &__bill {
+        margin-right: 10px;
+    }
+   
+    &__imgNextLink{
+        background: none;
+        img{
+            width: 18px;
+        }
+    }
+    &__imgBurgerOptionIcon{
+        display: flex;
+        align-items: center;
+        background-color:#ffd9b3;
+        padding: 5px;
+        border-radius: 6px;
+        @extend %TextSubparagraphs;
+        font-size: 10px;
+        img{
+            width: 18px;
+        }
+    }
+}
+.bill {
+
+    &__title {
+        margin-bottom: 5px;
+    }
+
+    &__body {
+              
+    }
+}
+.body {
+
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 5px;  
+        p:first-child{
+            margin-right: 5px;
+        }
+    }
+    
+}
+
 
 /* End Main */

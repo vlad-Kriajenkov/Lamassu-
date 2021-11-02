@@ -73,14 +73,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
-body {
+.wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  height: 100%;
 }
 
 main {
-  height: 100%;
+  flex: 1 0 auto;
+}
+
+footer {
+  flex: 0 0 auto;
 }
 
 header {
@@ -141,12 +145,18 @@ header {
   font-size: 10px;
 }
 .addMashineAndnotification__buttonnotification {
-  background: url("/assets/img/Analiticyse/notification.svg");
+  background: url("/assets/img/notification.svg");
   width: 18px;
   height: 18px;
 }
 
-.heading__title p {
+.AllInfoCar {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  padding: 5px;
+}
+
+.boxInfo__title, .table__header, .heading__title p {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
@@ -170,7 +180,7 @@ header {
   color: #da6e00;
 }
 
-.search__inputText::placeholder, .heading__cashOut p, .heading__cashIn p {
+.meaning__imgBurgerOptionIcon, .boxInfo__meaning, .table__body, .search__inputText::placeholder, .heading__cashOut p, .heading__cashIn p {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
@@ -179,13 +189,13 @@ header {
 }
 
 /*  Start MAiN  */
+/* Transaction */
 .transactions {
   width: 1100px;
   margin: 0px auto;
 }
 .transactions__heading {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin: 20px 0px 20px 0px;
 }
@@ -252,8 +262,10 @@ header {
   text-align: center;
   align-items: center;
   background-color: #da6e00;
+  font-size: 11px;
   color: #ffff;
   height: 40px;
+  padding: 8px;
 }
 .table__body {
   display: flex;
@@ -262,6 +274,8 @@ header {
   margin-top: 10px;
   height: 40px;
   background-color: #ffd9b3;
+  padding: 8px;
+  color: black;
 }
 
 #cashInfo {
@@ -316,65 +330,67 @@ header {
   height: 6px;
 }
 
-/* End Main */
-.footer__box {
-  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
-  padding: 15px;
+/* All INfo Car */
+.AllInfoCar {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
+  margin: 10px 0px 10px 0px;
 }
-
-.box__cash {
-  display: flex;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 6px;
+.AllInfoCar__boxInfo {
   margin: 5px;
 }
-.box__cash h1 {
+
+.boxInfo__title {
+  font-size: 11px;
+  color: #708090;
   margin-bottom: 5px;
 }
-
-.cash {
-  margin: 5px;
-}
-.cash_inCash {
-  display: flex;
-  align-items: center;
-}
-.cash_inCash img {
-  width: 8px;
-  margin-right: 5px;
-}
-.cash_inCash p {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 8px;
-  margin-right: 5px;
-}
-.cash_outCash {
-  display: flex;
-  align-items: center;
-}
-.cash_outCash img {
-  width: 8px;
-  margin-right: 5px;
-}
-.cash_outCash p {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 8px;
-  margin-right: 5px;
-}
-.cash__title {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
+.boxInfo__meaning {
   font-size: 10px;
-  color: slategray;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
 }
-.cash__container {
+.boxInfo__meaning h1 {
+  margin-right: 5px;
+}
+
+.meaning__box {
   display: flex;
 }
+.meaning__bill {
+  margin-right: 10px;
+}
+.meaning__imgNextLink {
+  background: none;
+}
+.meaning__imgNextLink img {
+  width: 18px;
+}
+.meaning__imgBurgerOptionIcon {
+  display: flex;
+  align-items: center;
+  background-color: #ffd9b3;
+  padding: 5px;
+  border-radius: 6px;
+  font-size: 10px;
+}
+.meaning__imgBurgerOptionIcon img {
+  width: 18px;
+}
+
+.bill__title {
+  margin-bottom: 5px;
+}
+.body__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.body__box p:first-child {
+  margin-right: 5px;
+}
+
+/* End Main */
