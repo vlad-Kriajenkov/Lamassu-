@@ -7,7 +7,7 @@
 %TitleParagraph{
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 100;
+    font-weight: 100; 
     font-size: 12px;
     color:  #da6e00;
 }
@@ -22,7 +22,7 @@
 .conatiner {
 
     &__analyties {
-        max-width: 1100px;
+        max-width: 1200px;
         margin: 0px auto;
     }
 }
@@ -43,9 +43,220 @@
     }
 
     &__operationAndСommission {
-        
+        display: flex;
+        justify-content: space-between;
     }
 }
+
+/* График Статистика Операций */
+.operationAndСommission {
+
+    &__operationStatistics {
+        @extend %Boreder;
+        width: 48%;
+    }
+}
+.operationStatistics {
+
+    &__boxTitle {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    &__boxInfoOperationAndVolume {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    &__chart {
+        background: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        color:  #da6e00;
+    }
+}
+.boxTitle {
+
+    &__title {
+        @extend %TitleParagraph;
+    }
+
+    &__buttonFilter {
+      
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.buttonFilter {
+
+    &__style {
+        margin-left: 10px;
+        background: none;
+        border-bottom: 3px solid transparent;
+       @extend %TextSubparagraphs;
+    }
+    &__style:hover{
+        border-bottom: 3px solid #da6e00;
+    }
+    &__style.active{
+        border-bottom: 3px solid #da6e00;
+    }
+}
+.boxInfoOperationAndVolume {
+
+    &__boxInfoOperation {
+    }
+
+    &__boxInfoVolume {
+        margin-left: 20px;
+    }
+}
+.boxInfoOperation {
+
+    &__title {
+        background: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        color:  #da6e00;
+    }
+
+    &__name {
+        background: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        color:  #da6e00;
+    }
+}
+.boxInfoVolume {
+    
+    &__title {
+        background: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        color:  #da6e00;
+    }
+    &__name {
+        background: none;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        color:  #da6e00;
+    }
+}
+
+#bubbleChart{
+    margin-top: 10px;
+    background: #fafbff;
+}
+
+
+/* График Прибыль от комисии*/
+.operationAndСommission {
+
+    &__profitFromCommission {
+        position: relative;
+        @extend %Boreder;
+        width: 48%;
+        height: fit-content;
+    }
+}
+.profitFromCommission { 
+
+    &__boxTitle {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    &__boxInfoOperationAndVolume {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    &__chart {
+        
+        background: none;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        color: #da6e00;
+    }
+}
+
+.profitFromCommission {
+    
+    &__infoStatic {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 20%;
+        left: 15%;
+        width: 77%;
+    }
+}
+.infoStatic {
+
+    &__Currency {
+        display: flex;
+        h1{
+            @extend %TitleParagraph;
+            color:black;
+        }
+        h1:first-child{
+            margin-right: 3px;
+        }
+    }
+
+    &__profit {
+        display: flex;
+    }
+}
+.profit {
+
+    &__img {
+        background: url('/assets/img/dashboard/equal.svg') no-repeat;
+        width: 12px;
+        height: 12px;
+        margin-right: 3px;
+        
+    }
+
+    &__value {
+        @extend %TitleParagraph;
+        color:black;
+    }
+
+    &__img.upCommission{
+        background:url("/assets/img/dashboard/up.svg");
+        width: 12px;
+        height: 12px;
+        margin-right: 3px;
+    }
+    &__value.upCommission{
+        color:#49db88;
+    }
+    &__img.downCommission{
+        background:url("/assets/img/dashboard/down.svg");
+        width: 12px;
+        height: 12px;
+        margin-right: 3px;
+    }
+    &__value.downCommission{
+        color:rgb(199, 40, 0);
+    }
+}
+
 
 
   /*  График Статистика Марженальности */
@@ -206,3 +417,6 @@
     display: none;
 }
 
+#periodComparison{
+    width: 1200px !important; 
+}

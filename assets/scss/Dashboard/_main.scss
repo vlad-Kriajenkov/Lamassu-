@@ -22,12 +22,12 @@
 .conatiner {
 
     &__dashboard {
-        max-width: 1100px;
+        max-width: 1200px;
         margin: 0px auto;
     }
 }
 .dashboard{
-  margin-bottom: 20px;
+  margin-bottom: 20px; 
 
     &__title {
         margin: 20px 0px 20px 0px;
@@ -43,247 +43,87 @@
     }
 
     &__operationAndСommission {
-        
     }
 }
-.dashboardFlexContainer{
+
+/* Пункт Статистика не рабочего стостояния Машины за «Период»*/
+.Filter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 500px;
+    margin: 0px auto;
+}
+.filterBox{
+    margin: 5px;
+}
+.dropdown{
+    margin: 5px;
+}
+
+.AverageСarStats {
+    @extend %Boreder;
+    margin: 10px 0px 10px 0px;
+    margin-bottom: 20px;
+		&__Filter {
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+            margin-bottom: 10px;
+		}
+
+		&__nmae {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            background: #da6e00;
+            border-radius: 6px;
+            height: 40px;
+            
+            color: white;
+            p{
+                @extend %TitleParagraph;
+                color: white;
+                width: 50%;
+            }
+		}
+        &__meaning{
+            text-align: center;
+            display: flex;
+            align-items: center;
+            height: 30px;
+            p{
+                @extend %TextSubparagraphs;
+                font-size: 12px;
+                width: 50%;
+            }
+        }
+}
+.Filter{
+    &__title{
+        @extend %TitleParagraph;
+        margin-bottom: 10px;
+    }
+}
+/* Пункт Статистика не рабочего стостояния Машины за «Период» End*/
+
+/* Пунтк Оповещания  */
+.system__notificationAndСondition{
     display: flex;
     justify-content: space-between;
 }
-
-/* График Bubble */
-.operationAndСommission {
-
-    &__operationStatistics {
-        @extend %Boreder;
-        width: 550px;
-    }
-}
-.operationStatistics {
-
-    &__boxTitle {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 20px;
-    }
-
-    &__boxInfoOperationAndVolume {
-        display: flex;
-        margin-bottom: 20px;
-    }
-
-    &__chart {
-        background: none;
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 10px;
-        color:  #da6e00;
-        width: 500px;
-    }
-}
-.boxTitle {
-
-    &__title {
-        @extend %TitleParagraph;
-    }
-
-    &__buttonFilter {
-      
-        display: flex;
-        justify-content: space-between;
-    }
-}
-.buttonFilter {
-
-    &__style {
-        margin-left: 10px;
-        background: none;
-        border-bottom: 3px solid transparent;
-       @extend %TextSubparagraphs;
-    }
-    &__style:hover{
-        border-bottom: 3px solid #da6e00;
-    }
-    &__style.active{
-        border-bottom: 3px solid #da6e00;
-    }
-}
-.boxInfoOperationAndVolume {
-
-    &__boxInfoOperation {
-    }
-
-    &__boxInfoVolume {
-        margin-left: 20px;
-    }
-}
-.boxInfoOperation {
-
-    &__title {
-        background: none;
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 20px;
-        color:  #da6e00;
-    }
-
-    &__name {
-        background: none;
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 10px;
-        color:  #da6e00;
-    }
-}
-.boxInfoVolume {
-    
-    &__title {
-        background: none;
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 20px;
-        color:  #da6e00;
-    }
-    &__name {
-        background: none;
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 10px;
-        color:  #da6e00;
-    }
-}
-
-#bubbleChart{
-    margin-top: 10px;
-    background: #fafbff;
-}
-
-// .system {
-
-//     &__notificationAndСondition {
-//         box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
-//         border-radius: 6px;
-//         padding: 15px;
-//     }
-// }
-
-
-/* График Line*/
-.operationAndСommission {
-
-    &__profitFromCommission {
-        position: relative;
-        @extend %Boreder;
-        width: 550px;
-        margin-top: 10px;
-    }
-}
-.profitFromCommission {
-
-    &__boxTitle {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 20px;
-    }
-
-    &__boxInfoOperationAndVolume {
-        display: flex;
-        margin-bottom: 20px;
-    }
-
-    &__chart {
-        
-        background: none;
-        font-family: "Montserrat";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 10px;
-        color: #da6e00;
-        width: 500px;
-    }
-}
-
-.profitFromCommission {
-    
-    &__infoStatic {
-        display: flex;
-        justify-content: space-between;
-        position: absolute;
-        top: 20%;
-        left: 15%;
-        width: 77%;
-    }
-}
-.infoStatic {
-
-    &__Currency {
-        display: flex;
-        h1{
-            @extend %TitleParagraph;
-            color:black;
-        }
-        h1:first-child{
-            margin-right: 3px;
-        }
-    }
-
-    &__profit {
-        display: flex;
-    }
-}
-.profit {
-
-    &__img {
-        background: url('/assets/img/dashboard/equal.svg') no-repeat;
-        width: 12px;
-        height: 12px;
-        margin-right: 3px;
-        
-    }
-
-    &__value {
-        @extend %TitleParagraph;
-        color:black;
-    }
-
-    &__img.upCommission{
-        background:url("/assets/img/dashboard/up.svg");
-        width: 12px;
-        height: 12px;
-        margin-right: 3px;
-    }
-    &__value.upCommission{
-        color:#49db88;
-    }
-    &__img.downCommission{
-        background:url("/assets/img/dashboard/down.svg");
-        width: 12px;
-        height: 12px;
-        margin-right: 3px;
-    }
-    &__value.downCommission{
-        color:rgb(199, 40, 0);
-    }
-}
-
-
-/* Пунтк Оповещания  */
 .notificationAndСondition {
 
     &__notification {
         @extend %Boreder;
-        width: 530px;
+        width: 49%;
+        height: fit-content;
     }
 
     &__СonditionSystem {
         @extend %Boreder;
-        width: 530px;
-        margin-top: 10px;
+        width: 49%;
+        height: fit-content;        
     }
 }
 .notification {
@@ -642,4 +482,4 @@
   .slider.round:before {
     border-radius: 50%;
   }
-  
+

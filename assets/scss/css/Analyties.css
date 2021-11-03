@@ -95,7 +95,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0px auto;
 }
 
@@ -150,13 +150,13 @@ header {
   height: 18px;
 }
 
-.analyties__periodComparison, .AverageСarStats, .analyties__weeklyOperation, .analyties__marginStatistics {
+.analyties__periodComparison, .AverageСarStats, .analyties__weeklyOperation, .analyties__marginStatistics, .operationAndСommission__profitFromCommission, .operationAndСommission__operationStatistics {
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
   padding: 15px;
 }
 
-.periodComparisonСarStats__nmae p, .Filter__title, .AverageСarStats__nmae p, .boxTitle__title {
+.periodComparisonСarStats__nmae p, .Filter__title, .AverageСarStats__nmae p, .profit__value, .infoStatic__Currency h1, .boxTitle__title {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
@@ -164,7 +164,7 @@ header {
   color: #da6e00;
 }
 
-.periodComparisonСarStats__meaning p, .AverageСarStats__meaning p {
+.periodComparisonСarStats__meaning p, .AverageСarStats__meaning p, .buttonFilter__style {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
@@ -173,7 +173,7 @@ header {
 }
 
 .conatiner__analyties {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0px auto;
 }
 
@@ -187,6 +187,171 @@ header {
   font-size: 20px;
   color: #da6e00;
 }
+.analyties__operationAndСommission {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* График Статистика Операций */
+.operationAndСommission__operationStatistics {
+  width: 48%;
+}
+
+.operationStatistics__boxTitle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.operationStatistics__boxInfoOperationAndVolume {
+  display: flex;
+  margin-bottom: 20px;
+}
+.operationStatistics__chart {
+  background: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  color: #da6e00;
+}
+
+.boxTitle__buttonFilter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonFilter__style {
+  margin-left: 10px;
+  background: none;
+  border-bottom: 3px solid transparent;
+}
+.buttonFilter__style:hover {
+  border-bottom: 3px solid #da6e00;
+}
+.buttonFilter__style.active {
+  border-bottom: 3px solid #da6e00;
+}
+
+.boxInfoOperationAndVolume__boxInfoVolume {
+  margin-left: 20px;
+}
+
+.boxInfoOperation__title {
+  background: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  color: #da6e00;
+}
+.boxInfoOperation__name {
+  background: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  color: #da6e00;
+}
+
+.boxInfoVolume__title {
+  background: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  color: #da6e00;
+}
+.boxInfoVolume__name {
+  background: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  color: #da6e00;
+}
+
+#bubbleChart {
+  margin-top: 10px;
+  background: #fafbff;
+}
+
+/* График Прибыль от комисии*/
+.operationAndСommission__profitFromCommission {
+  position: relative;
+  width: 48%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.profitFromCommission__boxTitle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.profitFromCommission__boxInfoOperationAndVolume {
+  display: flex;
+  margin-bottom: 20px;
+}
+.profitFromCommission__chart {
+  background: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  color: #da6e00;
+}
+
+.profitFromCommission__infoStatic {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  width: 77%;
+}
+
+.infoStatic__Currency {
+  display: flex;
+}
+.infoStatic__Currency h1 {
+  color: black;
+}
+.infoStatic__Currency h1:first-child {
+  margin-right: 3px;
+}
+.infoStatic__profit {
+  display: flex;
+}
+
+.profit__img {
+  background: url("/assets/img/dashboard/equal.svg") no-repeat;
+  width: 12px;
+  height: 12px;
+  margin-right: 3px;
+}
+.profit__value {
+  color: black;
+}
+.profit__img.upCommission {
+  background: url("/assets/img/dashboard/up.svg");
+  width: 12px;
+  height: 12px;
+  margin-right: 3px;
+}
+.profit__value.upCommission {
+  color: #49db88;
+}
+.profit__img.downCommission {
+  background: url("/assets/img/dashboard/down.svg");
+  width: 12px;
+  height: 12px;
+  margin-right: 3px;
+}
+.profit__value.downCommission {
+  color: #c72800;
+}
+
 /*  График Статистика Марженальности */
 .analyties__marginStatistics {
   width: 800px;
@@ -309,6 +474,10 @@ header {
 
 #periodComparisonShow {
   display: none;
+}
+
+#periodComparison {
+  width: 1200px !important;
 }
 
 span.msg,

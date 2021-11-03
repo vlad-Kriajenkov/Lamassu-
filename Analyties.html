@@ -36,6 +36,55 @@
                 <div class="analyties__title"> 
                     <h1>Аналитика</h1>
                 </div>
+                <div class="analyties__operationAndСommission">
+                    <div class="operationAndСommission__operationStatistics">
+                        <div class="operationStatistics__boxTitle">
+                            <div class="boxTitle__title">Статистика оперций</div>
+                            <form class="boxTitle__buttonFilter">
+                                <button class="buttonFilter__style active" value="month" >Месяц</button>
+                                <button class="buttonFilter__style" value="week" >Неделя</button>
+                                <button class="buttonFilter__style" value="day" >День</button>
+                            </form>
+                        </div>
+                        <div class="operationStatistics__boxInfoOperationAndVolume">
+                            <div class="boxInfoOperationAndVolume__boxInfoOperation">
+                                <p class="boxInfoOperation__title">157</p>
+                                <p class="boxInfoOperation__name">Оперций</p>
+                            </div>
+                            <div class="boxInfoOperationAndVolume__boxInfoVolume">
+                                <p class="boxInfoVolume__title" >39.300</p> 
+                                <p class="boxInfoVolume__name">Объёь в гривнах</p>
+                            </div>
+                        </div>
+                        <div class="operationStatistics__chart">
+                            Операции
+                            <canvas id="operationStatisticsСhart" ></canvas>
+                        </div>
+                    </div>
+                    <div class="operationAndСommission__profitFromCommission">
+                        <div class="profitFromCommission__boxTitle">
+                            <div class="boxTitle__title">Прибыль от комисии </div>
+                            <form class="boxTitle__buttonFilter">
+                                <button class="buttonFilter__style active" value="month" >Месяц</button>
+                                <button class="buttonFilter__style" value="week" >Неделя</button>
+                                <button class="buttonFilter__style" value="day" >День</button>
+                            </form>
+                        </div>
+                        <div class="profitFromCommission__chart">  
+                            <canvas id="profitFromCommissionСhart" ></canvas>              
+                        </div>
+                        <div class="profitFromCommission__infoStatic">
+                            <div class="infoStatic__Currency">
+                                <h1>3.95</h1>
+                                <h1>USD</h1>
+                            </div>
+                            <div class="infoStatic__profit">
+                                <div class="profit__img upCommission"></div>
+                                <span class="profit__value upCommission">2.1 %</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="analyties__marginStatistics">
                     <div class="marginStatistics__boxTitle">
                         <div class="boxTitle__title">Статистика Маржинальности</div>

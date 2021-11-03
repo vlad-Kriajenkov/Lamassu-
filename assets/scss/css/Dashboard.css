@@ -95,7 +95,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0px auto;
 }
 
@@ -150,13 +150,13 @@ header {
   height: 18px;
 }
 
-.notificationAndСondition__СonditionSystem, .notificationAndСondition__notification, .operationAndСommission__profitFromCommission, .operationAndСommission__operationStatistics {
+.notificationAndСondition__СonditionSystem, .notificationAndСondition__notification, .AverageСarStats {
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
   padding: 15px;
 }
 
-.columnNames__connection, .columnNames__status, .columnNames__car, .СonditionSystem_title h1, .notification__title h1, .profit__value, .infoStatic__Currency h1, .boxTitle__title {
+.columnNames__connection, .columnNames__status, .columnNames__car, .СonditionSystem_title h1, .notification__title h1, .Filter__title, .AverageСarStats__nmae p {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
@@ -164,7 +164,7 @@ header {
   color: #da6e00;
 }
 
-.normalCondition__nameStatus p, .normalCondition__nameCar, .infoWarning__buttonAddWarning, .infoWarningr__name, .warning__nameCar, .СonditionSystem__buttonShowAll, .warningInfo__infoText, .truckEmpty__infoText, .weHaveInfo__buttonShowAll, .infoBody__notInfo p, .buttonFilter__style {
+.normalCondition__nameStatus p, .normalCondition__nameCar, .infoWarning__buttonAddWarning, .infoWarningr__name, .warning__nameCar, .СonditionSystem__buttonShowAll, .warningInfo__infoText, .truckEmpty__infoText, .weHaveInfo__buttonShowAll, .infoBody__notInfo p, .AverageСarStats__meaning p {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
@@ -173,7 +173,7 @@ header {
 }
 
 .conatiner__dashboard {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0px auto;
 }
 
@@ -190,178 +190,79 @@ header {
   font-size: 20px;
   color: #da6e00;
 }
-.dashboardFlexContainer {
+/* Пункт Статистика не рабочего стостояния Машины за «Период»*/
+.Filter {
   display: flex;
-  justify-content: space-between;
-}
-
-/* График Bubble */
-.operationAndСommission__operationStatistics {
-  width: 550px;
-}
-
-.operationStatistics__boxTitle {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-.operationStatistics__boxInfoOperationAndVolume {
-  display: flex;
-  margin-bottom: 20px;
-}
-.operationStatistics__chart {
-  background: none;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 10px;
-  color: #da6e00;
+  flex-wrap: wrap;
+  justify-content: space-around;
   width: 500px;
+  margin: 0px auto;
 }
 
-.boxTitle__buttonFilter {
-  display: flex;
-  justify-content: space-between;
+.filterBox {
+  margin: 5px;
 }
 
-.buttonFilter__style {
-  margin-left: 10px;
-  background: none;
-  border-bottom: 3px solid transparent;
-}
-.buttonFilter__style:hover {
-  border-bottom: 3px solid #da6e00;
-}
-.buttonFilter__style.active {
-  border-bottom: 3px solid #da6e00;
+.dropdown {
+  margin: 5px;
 }
 
-.boxInfoOperationAndVolume__boxInfoVolume {
-  margin-left: 20px;
-}
-
-.boxInfoOperation__title {
-  background: none;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  color: #da6e00;
-}
-.boxInfoOperation__name {
-  background: none;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 10px;
-  color: #da6e00;
-}
-
-.boxInfoVolume__title {
-  background: none;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  color: #da6e00;
-}
-.boxInfoVolume__name {
-  background: none;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 10px;
-  color: #da6e00;
-}
-
-#bubbleChart {
-  margin-top: 10px;
-  background: #fafbff;
-}
-
-/* График Line*/
-.operationAndСommission__profitFromCommission {
-  position: relative;
-  width: 550px;
-  margin-top: 10px;
-}
-
-.profitFromCommission__boxTitle {
-  display: flex;
-  justify-content: space-between;
+.AverageСarStats {
+  margin: 10px 0px 10px 0px;
   margin-bottom: 20px;
 }
-.profitFromCommission__boxInfoOperationAndVolume {
-  display: flex;
-  margin-bottom: 20px;
-}
-.profitFromCommission__chart {
-  background: none;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 10px;
-  color: #da6e00;
-  width: 500px;
-}
-
-.profitFromCommission__infoStatic {
+.AverageСarStats__Filter {
   display: flex;
   justify-content: space-between;
-  position: absolute;
-  top: 20%;
-  left: 15%;
-  width: 77%;
+  align-items: center;
+  margin-bottom: 10px;
 }
-
-.infoStatic__Currency {
+.AverageСarStats__nmae {
+  text-align: center;
   display: flex;
+  align-items: center;
+  background: #da6e00;
+  border-radius: 6px;
+  height: 40px;
+  color: white;
 }
-.infoStatic__Currency h1 {
-  color: black;
+.AverageСarStats__nmae p {
+  color: white;
+  width: 50%;
 }
-.infoStatic__Currency h1:first-child {
-  margin-right: 3px;
-}
-.infoStatic__profit {
+.AverageСarStats__meaning {
+  text-align: center;
   display: flex;
+  align-items: center;
+  height: 30px;
+}
+.AverageСarStats__meaning p {
+  font-size: 12px;
+  width: 50%;
 }
 
-.profit__img {
-  background: url("/assets/img/dashboard/equal.svg") no-repeat;
-  width: 12px;
-  height: 12px;
-  margin-right: 3px;
-}
-.profit__value {
-  color: black;
-}
-.profit__img.upCommission {
-  background: url("/assets/img/dashboard/up.svg");
-  width: 12px;
-  height: 12px;
-  margin-right: 3px;
-}
-.profit__value.upCommission {
-  color: #49db88;
-}
-.profit__img.downCommission {
-  background: url("/assets/img/dashboard/down.svg");
-  width: 12px;
-  height: 12px;
-  margin-right: 3px;
-}
-.profit__value.downCommission {
-  color: #c72800;
+.Filter__title {
+  margin-bottom: 10px;
 }
 
+/* Пункт Статистика не рабочего стостояния Машины за «Период» End*/
 /* Пунтк Оповещания  */
+.system__notificationAndСondition {
+  display: flex;
+  justify-content: space-between;
+}
+
 .notificationAndСondition__notification {
-  width: 530px;
+  width: 49%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .notificationAndСondition__СonditionSystem {
-  width: 530px;
-  margin-top: 10px;
+  width: 49%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .notification__infoBody {
@@ -892,7 +793,7 @@ span.choose {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
-  font-size: 8px;
+  font-size: 9px;
   margin-right: 5px;
 }
 .cash_outCash {
@@ -907,7 +808,7 @@ span.choose {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
-  font-size: 8px;
+  font-size: 9px;
   margin-right: 5px;
 }
 .cash__title {
