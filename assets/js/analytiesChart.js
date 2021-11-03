@@ -2,30 +2,21 @@
 
 const ctx = document.getElementById('operationStatisticsСhart').getContext('2d');
 const operationStatisticsСhart = new Chart(ctx, {
-        type: 'bubble',
+        type: 'line',
         data:  {
         labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10','11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', ],
         datasets: [{
             label: 'In',
             data: [48, 61, 23, 7, 4, 44, 72, 80, 3, 99, 49, 61, 1, 1, 73, 56, 39, 86, 62, 20, 97, 19, 7, 35, 44, 37, 73, 79, 53, 58],
             backgroundColor: [
-                'rgba(91, 104, 255)',
+                'rgba(218, 110, 0, 1)',
                 
             ],
             borderColor: [
-                'rgba(34, 43, 94, 1)',
+                'rgba(218, 110, 0, 1)',
             ],
-            borderWidth: 1
-        },{
-          label: 'Out',
-            data: [1, 90, 71, 74, 7, 31, 96, 81, 20, 9, 76, 40, 40, 95, 89, 4, 52, 75, 36, 11, 67, 90, 70, 59, 36, 49, 23, 87, 64, 64],
-            backgroundColor: [
-                'rgba(89, 224, 224)',
-            ],
-            borderColor: [
-                'rgba(34, 43, 94, 1)',
-            ],
-            borderWidth: 1
+            borderWidth: 1,
+            pointRadius: 1 ,
         }],
     },
     
@@ -42,12 +33,18 @@ const operationStatisticsСhart = new Chart(ctx, {
                 display: true,
                 text: 'Месяц'
               },
+              grid:{
+                display: false,
+              }
             },
             y:{
               title: {
                 display: true,
                 text: 'Кол-во Операций',
               },
+              grid:{
+                display: false,
+              }
             },
             
           }
@@ -192,29 +189,7 @@ const weeklyOperationChart = new Chart(ctx4, {
                 'rgba(255, 159, 64, 1)'
             ],
             borderWidth: 1
-        },{
-          label: 'Truc 3. кол-во Оперций',
-          data: [78, 11, 33, 50, 27, 79, 48],
-          backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
-              'rgba(255, 206, 86, 0.2)',
-              'rgba(75, 192, 192, 0.2)',
-              'rgba(153, 102, 255, 0.2)',
-              'rgba(255, 159, 64, 0.2)'
-          ],
-          borderColor: [
-              'rgba(34, 43, 94, 1)',
-              'rgba(54, 162, 235, 1)',
-              'rgba(255, 206, 86, 1)',
-              'rgba(75, 192, 192, 1)',
-              'rgba(153, 102, 255, 1)',
-              'rgba(255, 159, 64, 1)'
-          ],
-          borderWidth: 1
-      }
-      
-      ],
+        }],
     },
 
         options: {

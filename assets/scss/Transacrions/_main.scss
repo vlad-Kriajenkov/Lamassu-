@@ -194,15 +194,11 @@
 
 /* All INfo Car */
 
-#AllInfoCar{
-    display: flex;
-    justify-content: space-around;
+#AllInfoCar{   
     @extend %Boreder;
-
     height: auto;
     max-height: 0px;
     overflow: hidden;
-    
     visibility: hidden;
     opacity: 0;
     flex-wrap: wrap;
@@ -210,7 +206,7 @@
     
 }
 #AllInfoCar.active2{
-    display: flex;
+    
     opacity: 1;
     visibility: visible;
     max-height: 250px;
@@ -220,9 +216,15 @@
 
 
 .AllInfoCar {
+    
     &__boxInfo {
         margin: 5px;
     }
+}
+.AllInfoCarConatinerText{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 .boxInfo {
 
@@ -245,6 +247,10 @@
         
     }   
 }
+.AllInfoCarConatinerButton{
+    display: flex;
+    align-items: flex-end;
+}
 .meaning {
 
     &__box {
@@ -257,9 +263,21 @@
    
     &__imgNextLink{
         background: none;
-        img{
-            width: 18px;
+        a{
+            display: flex;
+            width: 180px;
+            padding: 5px;
+            border-radius: 6px;
+            background-color: #ffd9b3;
+            font-size: 12px;
+            @extend %TextSubparagraphs;
+            img{
+                width: 18px;
+                margin-right: 10px;
+            }
+            
         }
+       
     }
     &__imgBurgerOptionIcon{
         display: flex;

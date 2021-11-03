@@ -45,6 +45,8 @@
     &__operationAndСommission {
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 20px;
     }
 }
 
@@ -160,7 +162,7 @@
 }
 
 
-/* График Прибыль от комисии*/
+/* График Маржинальная прибыль*/
 .operationAndСommission {
 
     &__profitFromCommission {
@@ -225,7 +227,7 @@
 .profit {
 
     &__img {
-        background: url('/assets/img/dashboard/equal.svg') no-repeat;
+        background: url('/assets/img/ProfitStatus/equal.svg') no-repeat;
         width: 12px;
         height: 12px;
         margin-right: 3px;
@@ -238,7 +240,7 @@
     }
 
     &__img.upCommission{
-        background:url("/assets/img/dashboard/up.svg");
+        background:url("/assets/img/ProfitStatus/up.svg");
         width: 12px;
         height: 12px;
         margin-right: 3px;
@@ -247,7 +249,7 @@
         color:#49db88;
     }
     &__img.downCommission{
-        background:url("/assets/img/dashboard/down.svg");
+        background:url("/assets/img/ProfitStatus/down.svg");
         width: 12px;
         height: 12px;
         margin-right: 3px;
@@ -265,8 +267,7 @@
     
     &__marginStatistics {
         @extend %Boreder;
-        width: 800px;
-        margin: 10px auto 0px 0px;
+        margin: 0px 0px 20px 0px;
     }
 }
 
@@ -276,18 +277,77 @@
     }
     &__Filter {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         margin: 10px 0px 10px 0px ;
     }
 }
+
+/* Пункт Средний Показатель Машын*/
+.AverageСarStats {
+    @extend %Boreder;
+    &__Filter {
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        margin-bottom: 10px;
+    }
+
+    &__nmae {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        background: #da6e00;
+        border-radius: 6px;
+        height: 40px;
+        color: white;
+        margin-bottom: 10px;
+        p{
+            @extend %TitleParagraph;
+            color: white;
+            width: 50%;
+        }
+    }
+
+    &__meaning {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 5px;
+        p{
+            @extend %TextSubparagraphs;
+            font-size: 12px;
+            margin-right: 5px;
+        }      
+    }
+}
+.Filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 500px;
+    margin: 0px auto;
+    &__title {
+        @extend %TitleParagraph;
+        margin-bottom: 10px;
+    }
+}
+
+.filterBox {
+    margin: 5px;
+}
+.dropdown {
+    margin: 5px;
+    
+}
+
+
+
 
 /* Пункт Недельная Операция */
 .analyties {
 
     &__weeklyOperation {
         @extend %Boreder;
-        width: 800px;
-        margin: 10px 0px 0px auto;
+        margin: 20px 0px 20px 0px;
     }
 }
 .weeklyOperation {
@@ -316,72 +376,81 @@
     margin-right: 10px;
 }
 
-/* Пункт Средний Показатель Машын*/
-.Filter{
+/* Пункт Топ 1 Машин*/
+.AverageСarStats {
+    @extend %Boreder;
+    &__Filter {
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        margin-bottom: 10px;
+    }
+
+    &__nmaeAverageСarStats {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        background: #da6e00;
+        border-radius: 6px;
+        height: 40px;
+        color: white;
+        margin-bottom: 10px;
+        p{
+            @extend %TitleParagraph;
+            color: white;
+            width: 50%;
+        }
+    }
+
+    &__meaningAverageСarStats {
+        width:50%;       
+        
+    }
+}
+.Filter {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     width: 500px;
     margin: 0px auto;
-}
-.filterBox{
-    margin: 5px;
-}
-.dropdown{
-    margin: 5px;
-}
-
-.AverageСarStats {
-    @extend %Boreder;
-    margin: 10px 0px 10px 0px;
-    margin-bottom: 20px;
-		&__Filter {
-            display: flex;
-            justify-content: space-between;
-            align-items:center;
-            margin-bottom: 10px;
-		}
-
-		&__nmae {
-            text-align: center;
-            display: flex;
-            align-items: center;
-            background: #da6e00;
-            border-radius: 6px;
-            height: 40px;
-            
-            color: white;
-            p{
-                @extend %TitleParagraph;
-                color: white;
-                width: 50%;
-            }
-		}
-        &__meaning{
-            text-align: center;
-            display: flex;
-            align-items: center;
-            height: 30px;
-            p{
-                @extend %TextSubparagraphs;
-                font-size: 12px;
-                width: 50%;
-            }
-        }
-}
-.Filter{
-    &__title{
+    &__title {
         @extend %TitleParagraph;
         margin-bottom: 10px;
     }
 }
+
+.filterBox {
+    margin: 5px;
+}
+.dropdown {
+    margin: 5px;
+}
+
+.AverageСarStatsBox {
+}
+.AverageСarStatsMeaningBox {
+    display: flex;
+    justify-content: space-around;
+}
+.meaningBox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    p{
+        @extend %TextSubparagraphs;
+        font-size: 12px;
+        margin-right: 5px;
+    }
+}
+
+
+
 /*График Сравнение по периодам*/
 .analyties {
 
     &__periodComparison {
         @extend %Boreder;
-        width: 800px;
-        margin: 10px auto 0px 0px;
+        margin: 20px 0px 20px 0px;
     }
 }
 .periodComparisonСarStats {
@@ -417,6 +486,3 @@
     display: none;
 }
 
-#periodComparison{
-    width: 1200px !important; 
-}

@@ -76,6 +76,7 @@ h1, h2, h3, h4, h5, h6 {
 .wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   height: 100%;
 }
 
@@ -150,13 +151,13 @@ header {
   height: 18px;
 }
 
-.analyties__periodComparison, .AverageСarStats, .analyties__weeklyOperation, .analyties__marginStatistics, .operationAndСommission__profitFromCommission, .operationAndСommission__operationStatistics {
+.analyties__periodComparison, .analyties__weeklyOperation, .AverageСarStats, .analyties__marginStatistics, .operationAndСommission__profitFromCommission, .operationAndСommission__operationStatistics {
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
   padding: 15px;
 }
 
-.periodComparisonСarStats__nmae p, .Filter__title, .AverageСarStats__nmae p, .profit__value, .infoStatic__Currency h1, .boxTitle__title {
+.periodComparisonСarStats__nmae p, .AverageСarStats__nmaeAverageСarStats p, .Filter__title, .AverageСarStats__nmae p, .profit__value, .infoStatic__Currency h1, .boxTitle__title {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
@@ -164,7 +165,7 @@ header {
   color: #da6e00;
 }
 
-.periodComparisonСarStats__meaning p, .AverageСarStats__meaning p, .buttonFilter__style {
+.periodComparisonСarStats__meaning p, .meaningBox p, .AverageСarStats__meaning p, .buttonFilter__style {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
@@ -190,6 +191,8 @@ header {
 .analyties__operationAndСommission {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
 }
 
 /* График Статистика Операций */
@@ -275,7 +278,7 @@ header {
   background: #fafbff;
 }
 
-/* График Прибыль от комисии*/
+/* График Маржинальная прибыль*/
 .operationAndСommission__profitFromCommission {
   position: relative;
   width: 48%;
@@ -325,7 +328,7 @@ header {
 }
 
 .profit__img {
-  background: url("/assets/img/dashboard/equal.svg") no-repeat;
+  background: url("/assets/img/ProfitStatus/equal.svg") no-repeat;
   width: 12px;
   height: 12px;
   margin-right: 3px;
@@ -334,7 +337,7 @@ header {
   color: black;
 }
 .profit__img.upCommission {
-  background: url("/assets/img/dashboard/up.svg");
+  background: url("/assets/img/ProfitStatus/up.svg");
   width: 12px;
   height: 12px;
   margin-right: 3px;
@@ -343,7 +346,7 @@ header {
   color: #49db88;
 }
 .profit__img.downCommission {
-  background: url("/assets/img/dashboard/down.svg");
+  background: url("/assets/img/ProfitStatus/down.svg");
   width: 12px;
   height: 12px;
   margin-right: 3px;
@@ -354,20 +357,68 @@ header {
 
 /*  График Статистика Марженальности */
 .analyties__marginStatistics {
-  width: 800px;
-  margin: 10px auto 0px 0px;
+  margin: 0px 0px 20px 0px;
 }
 
 .boxTitle__Filter {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin: 10px 0px 10px 0px;
+}
+
+/* Пункт Средний Показатель Машын*/
+.AverageСarStats__Filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.AverageСarStats__nmae {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background: #da6e00;
+  border-radius: 6px;
+  height: 40px;
+  color: white;
+  margin-bottom: 10px;
+}
+.AverageСarStats__nmae p {
+  color: white;
+  width: 50%;
+}
+.AverageСarStats__meaning {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5px;
+}
+.AverageСarStats__meaning p {
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.Filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 500px;
+  margin: 0px auto;
+}
+.Filter__title {
+  margin-bottom: 10px;
+}
+
+.filterBox {
+  margin: 5px;
+}
+
+.dropdown {
+  margin: 5px;
 }
 
 /* Пункт Недельная Операция */
 .analyties__weeklyOperation {
-  width: 800px;
-  margin: 10px 0px 0px auto;
+  margin: 20px 0px 20px 0px;
 }
 
 .boxTitle__formFilter {
@@ -384,13 +435,40 @@ header {
   margin-right: 10px;
 }
 
-/* Пункт Средний Показатель Машын*/
+/* Пункт Топ 1 Машин*/
+.AverageСarStats__Filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.AverageСarStats__nmaeAverageСarStats {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background: #da6e00;
+  border-radius: 6px;
+  height: 40px;
+  color: white;
+  margin-bottom: 10px;
+}
+.AverageСarStats__nmaeAverageСarStats p {
+  color: white;
+  width: 50%;
+}
+.AverageСarStats__meaningAverageСarStats {
+  width: 50%;
+}
+
 .Filter {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   width: 500px;
   margin: 0px auto;
+}
+.Filter__title {
+  margin-bottom: 10px;
 }
 
 .filterBox {
@@ -401,48 +479,24 @@ header {
   margin: 5px;
 }
 
-.AverageСarStats {
-  margin: 10px 0px 10px 0px;
-  margin-bottom: 20px;
-}
-.AverageСarStats__Filter {
+.AverageСarStatsMeaningBox {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-.AverageСarStats__nmae {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  background: #da6e00;
-  border-radius: 6px;
-  height: 40px;
-  color: white;
-}
-.AverageСarStats__nmae p {
-  color: white;
-  width: 50%;
-}
-.AverageСarStats__meaning {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  height: 30px;
-}
-.AverageСarStats__meaning p {
-  font-size: 12px;
-  width: 50%;
+  justify-content: space-around;
 }
 
-.Filter__title {
+.meaningBox {
+  display: flex;
+  justify-content: center;
   margin-bottom: 10px;
+}
+.meaningBox p {
+  font-size: 12px;
+  margin-right: 5px;
 }
 
 /*График Сравнение по периодам*/
 .analyties__periodComparison {
-  width: 800px;
-  margin: 10px auto 0px 0px;
+  margin: 20px 0px 20px 0px;
 }
 
 .periodComparisonСarStats {
@@ -474,10 +528,6 @@ header {
 
 #periodComparisonShow {
   display: none;
-}
-
-#periodComparison {
-  width: 1200px !important;
 }
 
 span.msg,
@@ -711,12 +761,14 @@ span.choose {
   height: 20px;
 }
 
+footer {
+  margin-top: 20px;
+}
+
 .footer__box {
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
   padding: 15px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .box__cash {
@@ -744,7 +796,7 @@ span.choose {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
-  font-size: 8px;
+  font-size: 9px;
   margin-right: 5px;
 }
 .cash_outCash {
@@ -759,7 +811,7 @@ span.choose {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
-  font-size: 8px;
+  font-size: 9px;
   margin-right: 5px;
 }
 .cash__title {

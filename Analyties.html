@@ -63,7 +63,7 @@
                     </div>
                     <div class="operationAndСommission__profitFromCommission">
                         <div class="profitFromCommission__boxTitle">
-                            <div class="boxTitle__title">Прибыль от комисии </div>
+                            <div class="boxTitle__title">Маржинальная прибыль</div>
                             <form class="boxTitle__buttonFilter">
                                 <button class="buttonFilter__style active" value="month" >Месяц</button>
                                 <button class="buttonFilter__style" value="week" >Неделя</button>
@@ -109,10 +109,10 @@
                                 </div>
                                 <input type="hidden" name="gender">
                                 <ul class="dropdown-menu">
-                                    <li id="averageTransactionReceipt">Cредний чек операции</li>
                                     <li id="numberOperations">Кол-во операций</li>
-                                    <li id="transactionsDay">Сумма операций за день</li>
-                                    <li id="profitAmount">Сумма прибыли </li>
+                                    <li id="averageTransactionReceipt">Cредний чек операции</li>
+                                    <li id="transactionsDay">Сумма операций</li>
+                                    <li id="profitAmount">Прибыль</li>
                                 </ul>
                             </div>
                             <div class="filterBox">
@@ -270,6 +270,20 @@
                                   <li id="USD">USD</li>
                                 </ul>
                             </div>
+                            <div class="dropdown">
+                                <div class="select">
+                                  <span>Показатель</span>
+                                  <i class="fa fa-chevron-left"></i>
+                                </div>
+                                <input type="hidden" name="gender">
+                                <ul class="dropdown-menu">
+                                  <li id="numberOperations">Кол-во операций</li>
+                                  <li id="averageTransactionReceipt">Средний чек операции</li>
+                                  <li id="USD">Сумма операции</li>
+                                  <li id="USD">Прибыль</li>
+                                  
+                                </ul>
+                            </div>
                             <div class="filterBox">
                                 <label>
                                     Все машины
@@ -384,7 +398,6 @@
                                 </form>
                             </div>
                         </div>
-                        
                     </div>
                     <div class="AverageСarStats__nmae">
                         <p>Среднее время офлайна </p>
@@ -393,10 +406,16 @@
                         <p>Всего время нерабочего </p>
                     </div>
                     <div class="AverageСarStats__meaning">
-                        <p>3дн,18ч,56мин,13с</p>
-                        <p>3дн,18ч,56мин,13с</p>
-                        <p>3дн,18ч,56мин,13с</p>
-                        <p>3дн,18ч,56мин,13с</p>
+                        <p>18ч,56мин,13с</p>
+                        <p>18ч,56мин,13с</p>
+                        <p>18ч,56мин,13с</p>
+                        <p>18ч,56мин,13с</p>
+                    </div>
+                    <div class="AverageСarStats__meaning">
+                        <p>В день</p>
+                        <p>В день</p>
+                        <p>В день</p>
+                        <p>В день</p>
                     </div>
                 </div>      
     
@@ -571,44 +590,68 @@
                         </div>
     
                     </div>
-                    <div class="AverageСarStats__nmae">
-                        <p>Самая прибыльная машина  </p>
-                        <p>Больше всего операций</p>
-                        <p>Самый большой средний чек</p>
-                        <p>Самое большие суммы к обмену </p>
-                        <p>Максимальное время онлайна</p>
-                    </div>
-                    <div class="AverageСarStats__meaning">
-                        <p>truck-Man</p>
-                        <p>1.348 опц</p>
-                        <p>2.500 USD</p>
-                        <p>3.000 USD</p>
-                        <p>1дн,18ч,56мин,13с</p>
-                    </div>
-                    <div class="AverageСarStats__meaning">
-                        <p>truck-Man</p>
-                        <p>1.348 опц</p>
-                        <p>2.500 USD</p>
-                        <p>3.000 USD</p>
-                        <p>1дн,18ч,56мин,13с</p>
-                    </div>
-                    <div class="AverageСarStats__meaning">
-                        <p>truck-Man</p>
-                        <p>1.348 опц</p>
-                        <p>2.500 USD</p>
-                        <p>3.000 USD</p>
-                        <p>1дн,18ч,56мин,13с</p>
-                    </div>
-                    <div class="AverageСarStats__meaning">
-                        <p>truck-Man</p>
-                        <p>1.348 опц</p>
-                        <p>2.500 USD</p>
-                        <p>3.000 USD</p>
-                        <p>1дн,18ч,56мин,13с</p>
+                    <div class="AverageСarStatsBox">
+                        <div class="AverageСarStats__nmaeAverageСarStats">
+                            <p>Самая прибыльная машина  </p>
+                            <p>Больше всего операций</p>
+                            <p>Самый большой средний чек</p>
+                            <p>Самое большие суммы к обмену </p>
+                            <p>Максимальное время онлайна</p>
+                        </div>
+                        <div class="AverageСarStatsMeaningBox">
+                            <div class="AverageСarStats__meaningAverageСarStats">
+                                <div class="meaningBox">
+                                    <p>12000 UAH</p>
+                                    <p>Машина 1</p>
+                                </div>
+                                <div class="meaningBox">
+                                    <p>12000 UAH</p>
+                                    <p>Машина 2</p>
+                                </div>
+                            </div>
+                            <div class="AverageСarStats__meaningAverageСarStats">
+                                <div class="meaningBox">
+                                    <p>1.348 опц</p>
+                                    <p>Машина 1</p>
+                                </div>
+                                <div class="meaningBox" >
+                                    <p>1.348 опц</p>
+                                    <p>Машина 2</p>
+                                </div>
+                            </div>
+                            <div class="AverageСarStats__meaningAverageСarStats">
+                                <div class="meaningBox">
+                                    <p>2.500 USD</p>
+                                    <p>Машина 1</p>
+                                </div>
+                                <div class="meaningBox">
+                                    <p>2.500 USD</p>
+                                    <p>Машина 2</p>
+                                </div>
+                            </div>
+                            <div class="AverageСarStats__meaningAverageСarStats">
+                                <div class="meaningBox">
+                                    <p>3000 USD</p>
+                                    <p>Машина 1</p>
+                                </div>
+                                <div class="meaningBox">
+                                    <p>3000 USD</p>
+                                    <p>Машина 2</p>
+                                </div>
+                            </div>
+                            <div class="AverageСarStats__meaningAverageСarStats">
+                                <div class="meaningBox">
+                                    <p>1дн,18ч,56мин,13с</p>
+                                    <p>Машина 1</p>
+                                </div>
+                                <div class="meaningBox">
+                                    <p>1дн,18ч,56мин,13с</p>
+                                    <p>Машина 2</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-    
-                
             </div>
         </main>
     
