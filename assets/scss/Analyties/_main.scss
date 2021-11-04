@@ -430,17 +430,81 @@
 }
 .AverageСarStatsMeaningBox {
     display: flex;
-    justify-content: space-around;
 }
 .meaningBox {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    text-align: center;
     margin-bottom: 10px;
     p{
         @extend %TextSubparagraphs;
         font-size: 12px;
-        margin-right: 5px;
+        margin: 0px 0px 5px 0px;
     }
+    p:nth-child(2n){
+        // @extend %TextSubparagraphs;
+        font-size: 14px;
+        
+    }
+}
+
+/* Пункт Статистика не рабочего стостояния Машины за «Период»*/
+.AverageСarStats {
+    @extend %Boreder;
+    &__Filter {
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        margin-bottom: 10px;
+    }
+
+    &__nmae {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        background: #da6e00;
+        border-radius: 6px;
+        height: 40px;
+        color: white;
+        margin-bottom: 10px;
+        p{
+            @extend %TitleParagraph;
+            color: white;
+            width: 50%;
+        }
+    }
+
+    &__meaning {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 5px;
+        p{
+            @extend %TextSubparagraphs;
+            font-size: 12px;
+            margin-right: 5px;
+            width:50%;
+            text-align: center;
+        }      
+    }
+}
+.Filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 500px;
+    margin: 0px auto;
+    &__title {
+        @extend %TitleParagraph;
+        margin-bottom: 10px;
+    }
+}
+
+.filterBox {
+    margin: 5px;
+}
+.dropdown {
+    margin: 5px;
+    
 }
 
 

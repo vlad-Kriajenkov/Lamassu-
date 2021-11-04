@@ -226,20 +226,22 @@ header {
   border-radius: 6px;
   height: 40px;
   color: white;
+  margin-bottom: 10px;
 }
 .AverageСarStats__nmae p {
   color: white;
   width: 50%;
 }
 .AverageСarStats__meaning {
-  text-align: center;
   display: flex;
-  align-items: center;
-  height: 30px;
+  justify-content: space-around;
+  margin-bottom: 5px;
 }
 .AverageСarStats__meaning p {
   font-size: 12px;
+  margin-right: 5px;
   width: 50%;
+  text-align: center;
 }
 
 .Filter__title {
@@ -761,6 +763,10 @@ span.choose {
   height: 20px;
 }
 
+footer {
+  margin-top: 20px;
+}
+
 .footer__box {
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
   padding: 15px;
@@ -769,20 +775,19 @@ span.choose {
 
 .box__cash {
   display: flex;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 6px;
-  margin: 5px;
+  align-items: flex-end;
 }
 .box__cash h1 {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .cash {
-  margin: 5px;
+  margin: 0px 30px 0px 0px;
 }
 .cash_inCash {
   display: flex;
   align-items: center;
+  margin-right: 15px;
 }
 .cash_inCash img {
   width: 8px;
