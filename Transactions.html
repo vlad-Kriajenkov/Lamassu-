@@ -39,9 +39,80 @@
                         <div class="heading__title"><p>Операции</p></div> 
                         <div class="heading__search">
                             <label class="search">
-                                <button></button>
-                                <input class="search__inputText" type="text" placeholder="Поиск Операции" name="" id="">
+                                <div class="AddFelter">
+                                    <p class="AddFelter__title">Name Filter</p>
+                                    <button class="AddFelter__button"></button>
+                                </div>
+                                <input class="search__inputText" type="text" placeholder="Филтр + Поиск Операции" name="" id="">
+                                <button class="button__serch"></button>
+                                <button class="button__close"></button>
                             </label>
+                            <div class="search__body">
+                                <form class="Filter">
+                                    <div class="Filter__summTransaction">
+                                        <p class="summTransaction__title"> Сумма операции </p>
+                                        <div class="summTransaction__body">
+                                            <div class="filterBox">
+                                                <span>
+                                                    <input type="text" placeholder="Точная" name="ExactАmount" id="ExactАmount">
+                                                </span>
+                                            </div>
+                                            <div class="filterBox">
+                                                <span>
+                                                    <input type="text" placeholder="Больше" name="MoreАmount" id="MoreАmount">
+                                                </span>
+                                            </div>
+                                            <div class="filterBox">
+                                                <span>
+                                                    <input type="text" placeholder="Меньше" name="LessАmount" id="LessАmount">
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="dropdown">
+                                        <div class="select">
+                                            <span>Место Положения </span>
+                                            <i class="fa fa-chevron-left"></i>
+                                        </div>
+                                        <input type="hidden" name="gender">
+                                        <ul class="dropdown-menu">
+                                            <li id="TRC">ТРЦ</li>
+                                            <li id="Hotel">Отели</li>
+                                        </ul>
+                                    </div> <div class="dropdown">
+                                        <div class="select">
+                                            <span>Статус</span>
+                                            <i class="fa fa-chevron-left"></i>
+                                        </div>
+                                        <input type="hidden" name="gender">
+                                        <ul class="dropdown-menu">
+                                            <li id="successfully">Успешно</li>
+                                            <li id="Error">Ошибка</li>
+                                        </ul>
+                                    </div> 
+                                    <div class="dropdown">
+                                        <div class="select">
+                                            <span>Операции</span>
+                                            <i class="fa fa-chevron-left"></i>
+                                        </div>
+                                        <input type="hidden" name="gender">
+                                        <ul class="dropdown-menu">
+                                            <li id="">Покупка влаюты</li>
+                                            <li id="">Продажа валюты</li>
+                                          
+                                        </ul>
+                                    </div>
+                                    <div class="filterBox">
+                                        <label>
+                                            Все машины
+                                            <input type="checkbox" name="AllCar" id="AllCar">
+                                        </label>       
+                                    </div>
+                                </form>
+                            </div>
+                            
                         </div>
                         <button class="heading__downloadBtn">
                             <img src="/assets/img/download/download.svg" width="15px" alt="">
@@ -63,7 +134,7 @@
                         <span id="BtnEmit"></span>
                     </div>
                     <div class="table__body">
-                        <span id="cashInfo"><img src="/assets/img/direction/cash-in.svg" alt=""></span>
+                        <span id="cashInfo"></span>
                         <span id="nameCar">pizza-truck</span>
                         <span id="operation">Jose Tosquias</span>
                         <span id="address">Ocean Plaza</span>
@@ -76,12 +147,6 @@
                     </div>
                     <div id="AllInfoCar" class="AllInfoCar">
                         <div class="AllInfoCarConatinerText">
-                            <div class="AllInfoCar__boxInfo">
-                                <div class="boxInfo__title">Машина</div>
-                                <div class="boxInfo__meaning"><img src="/assets/img/direction/cash-in.svg" alt="Cash-In">
-                                    Cash-In
-                                </div>
-                            </div>
                             <div class="AllInfoCar__boxInfo">
                                 <div class="boxInfo__title">Машина</div>
                                 <div class="boxInfo__meaning">pizza-truck</div>
@@ -119,10 +184,23 @@
                             </div>
                             <div class="AllInfoCar__boxInfo">
                                 <div class="boxInfo__title">Время</div>
+                                <div class="boxInfo__meaning">18ч,56мин,13с</div>
+                            </div>
+                            <div class="AllInfoCar__boxInfo">
+                                <div class="boxInfo__title">Контакты Клиента </div>
+                                <div class="boxInfo__meaning">+380662343209</div>
+                                <div class="boxInfo__meaning">Vlad@gmail.com</div>
+                            </div>
+                            <div class="AllInfoCar__boxInfo">
+                                <div class="boxInfo__title">Время Фискализации</div>
                                 <div class="boxInfo__meaning">12:46 pm</div>
                             </div>
                             <div class="AllInfoCar__boxInfo">
-                                <div class="boxInfo__title">Выданно "Валют"</div>
+                                <div class="boxInfo__title">Статус Транзакции</div>
+                                <div class="boxInfo__meaning">Выполнено</div>
+                            </div>
+                            <div class="AllInfoCar__boxInfo">
+                                <div class="boxInfo__title">Принято "Валют"</div>
                                 <div class="boxInfo__meaning">
                                     <div class="meaning__box">
                                         <div class="meaning__bill">
@@ -175,7 +253,7 @@
                                 </div>
                             </div>
                             <div class="AllInfoCar__boxInfo">
-                                <div class="boxInfo__title">Выданно "Валют"</div>
+                                <div class="boxInfo__title">Принято "Валют"</div>
                                 <div class="boxInfo__meaning">
                                     <div class="meaning__box">
                                         <div class="meaning__bill">
@@ -194,20 +272,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="AllInfoCar__boxInfo">
-                                <div class="boxInfo__title">Контакты Клиента </div>
-                                <div class="boxInfo__meaning">+380662343209</div>
-                                <div class="boxInfo__meaning">Vlad@gmail.com</div>
-                            </div>
-                            <div class="AllInfoCar__boxInfo">
-                                <div class="boxInfo__title">Время Фискализации</div>
-                                <div class="boxInfo__meaning">12:46 pm</div>
-                            </div>
-                            <div class="AllInfoCar__boxInfo">
-                                <div class="boxInfo__title">Статус Транзакции</div>
-                                <div class="boxInfo__meaning">Выполнено</div>
-                            </div>
-                        </div>
                         <div class="AllInfoCarConatinerButton">
                             <div class="AllInfoCar__boxInfo">
                                 <div class="boxInfo__title">Фиксальный номер операции</div>
@@ -230,17 +294,18 @@
                             </div>
                             <div class="AllInfoCar__boxInfo">
                                 <div class="boxInfo__meaning">
-                                    <button class="meaning__imgBurgerOptionIcon">
-                                        <img src="/assets/img/burgerOptionIcon/burgerOptionIcon.svg" alt="Option Icon">
+                                    <button class="meaning__imgCheck">
+                                        <img src="/assets/img/check/check.png" alt="check">
                                         Чек
-                                        
                                     </button>
                                 </div>
                             </div>
                         </div>
+                        </div>
                     </div>
+                    
                     <div class="table__body">
-                        <span id="cashInfo"><img src="/assets/img/direction/cash-in.svg" alt=""></span>
+                        <span id="cashInfo"></span>
                         <span id="nameCar">pizza-truck</span>
                         <span id="operation">Jose Tosquias</span>
                         <span id="address">Ocean Plaza</span>
@@ -255,7 +320,8 @@
         </main>
 
     </div>
-   
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="/assets/js/clickOpenTransacrions.js"></script>
+<script src="/assets/js/filter/filter.js"></script>
 </body>
 </html>

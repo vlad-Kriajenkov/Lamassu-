@@ -19,6 +19,10 @@
     color:  #da6e00;
 }
 
+main{
+    height: 600px;
+}
+
 /*  Start MAiN  */
 /* Transaction */
 .transactions {
@@ -50,15 +54,12 @@
 
     &__search {
         width: 1030px;
-        padding: 5px;
+        padding: 5px 10px 5px 10px;
         border-radius: 15px;
         background-color:#ffd9b3;
+        position: relative;
 
-        button{
-            background:url('/assets/img/search/search.svg') no-repeat;
-            width: 18px;
-            height: 18px;
-        }
+      
     }
 
     &__downloadBtn {
@@ -100,19 +101,75 @@
         }
     }
 }
+
+/* Пунтк Филтр + Поиск*/
 .search {
     display: flex;
     align-items: center;
+
    
     &__inputText{
         background-color:#ffd9b3; 
         margin-left: 5px;
+        flex-grow: 1;
     }
     &__inputText::placeholder {
         @extend %TextSubparagraphs;
        
     }
+    
 }
+
+.AddFelter {
+display: flex;
+align-items: center;
+background-color: #da6e00;
+height: 25px;
+padding: 5px;
+border-radius: 6px;
+    &__title {
+        @extend %TextSubparagraphs;
+        margin-right: 5px;
+        color: white;
+        font-size: 11px;
+    }
+
+    &__button {
+        background:url('/assets/img/button/cancel.svg') no-repeat;
+        width: 12px;
+        height: 12px;
+    }
+}
+
+
+.button {
+
+    &__serch {
+        background:url('/assets/img/search/search.svg') no-repeat;
+        width: 18px;
+        height: 18px;
+        margin-right: 5px;
+    }
+
+    &__close {
+        background:url('/assets/img/button/cancel.svg') no-repeat;
+        width: 12px;
+        height: 12px;
+        margin-right: 5px;
+    }
+}
+/* Филтр и поск Тело */
+.search{
+    &__body{
+    position: absolute;
+    width: 600px;
+    background-color: #eeeeee;
+    top: 38px;
+    }
+}
+/* Пунтк Филтр + Поиск End */
+
+
 .transactions {
 
     &__table {
@@ -218,12 +275,11 @@
 .AllInfoCar {
     
     &__boxInfo {
-        margin: 5px;
+        margin: 5px 20px 5px 5px;
     }
 }
 .AllInfoCarConatinerText{
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
 }
 .boxInfo {
@@ -249,7 +305,10 @@
 }
 .AllInfoCarConatinerButton{
     display: flex;
-    align-items: flex-end; 
+    align-items: flex-end;
+}
+.AllInfoCarConatinerButton:nth-child(2){
+    
 }
 .meaning {
 
@@ -285,6 +344,34 @@
         background-color:#ffd9b3;
         padding: 5px;
         border-radius: 6px;
+        @extend %TextSubparagraphs;
+        font-size: 10px;
+        img{ 
+            width: 18px;
+        }
+    }
+    &__imgCheck{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color:#ffd9b3;
+        padding: 5px;
+        border-radius: 6px;
+        width: 60px;
+        @extend %TextSubparagraphs;
+        font-size: 10px;
+        img{ 
+            width: 18px;
+        }
+    }
+    &__imgCamera{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color:#ffd9b3;
+        padding: 5px;
+        border-radius: 6px;
+        width: 60px;
         @extend %TextSubparagraphs;
         font-size: 10px;
         img{ 
