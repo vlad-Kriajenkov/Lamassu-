@@ -27,7 +27,7 @@
     &__heading {
         display: flex;
         align-items: center;
-        margin: 20px 0px 20px 0px;
+        margin: 15px 0px 15px 0px;
     }
 
     &__table {
@@ -49,7 +49,7 @@
     }
 
     &__search {
-        width: 200px;
+        width: 1030px;
         padding: 5px;
         border-radius: 15px;
         background-color:#ffd9b3;
@@ -249,7 +249,7 @@
 }
 .AllInfoCarConatinerButton{
     display: flex;
-    align-items: flex-end;
+    align-items: flex-end; 
 }
 .meaning {
 

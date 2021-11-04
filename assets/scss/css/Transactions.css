@@ -196,7 +196,7 @@ header {
 .transactions__heading {
   display: flex;
   align-items: center;
-  margin: 20px 0px 20px 0px;
+  margin: 15px 0px 15px 0px;
 }
 .heading__box {
   display: flex;
@@ -206,7 +206,7 @@ header {
   margin-right: 20px;
 }
 .heading__search {
-  width: 200px;
+  width: 1030px;
   padding: 5px;
   border-radius: 15px;
   background-color: #ffd9b3;
