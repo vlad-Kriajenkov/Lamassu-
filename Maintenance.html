@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/scss/css/Maintenance.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="boxHeader">
+            <div class="container__header">
+                <div class="header__logoAndNav">
+                    <a href="/Dashboard.html"><img src="/assets/img/header/Logo.svg" alt="Logo" width="100px" class="logoAndNav__imgNav"></a>
+                    <nav class="logoAndNav__nav">
+                        <a href="/Transactions.html" class="nav__link active">Операции</a>
+                        <a href="/Maintenance.html" class="nav__link">Обслуживание</a>
+                        <a href="/Analyties.html" class="nav__link">Аналитика</a>
+                        <a href="#" class="nav__link">Настройки </a>
+                        <a href="/filter.html" class="nav__link">Дополнительно</a>
+                    </nav>
+                </div>
+                <div class="header__addMashineAndnotification">
+                    <button class="addMashineAndnotification__buttonAdd">
+                        <img src="/assets/img/button/add.svg" alt="Add" width="15px">
+                        Добавить Машину
+                    </button>
+                    <button class="addMashineAndnotification__buttonnotification"></button>
+                </div>
+            </div>  
+        </div>    
+        <div class="boxMaintenanceNav">
+            <div class="container__MaintenanceNav">
+                <nav>
+                    <a href="" class="MaintenanceNav__link active">Машины</a>
+                    <a href="" class="MaintenanceNav__link">Кассеты</a>
+                    <a href="" class="MaintenanceNav__link">Инкассирование</a>
+                    <a href="" class="MaintenanceNav__link">Подкрепление</a>
+                    <a href="" class="MaintenanceNav__link">Лог машин</a>
+                    <a href="" class="MaintenanceNav__link">Лог сервера</a>
+                    <a href="" class="MaintenanceNav__link">Лог ЦИС</a>
+                    <a href="" class="MaintenanceNav__link">История смены курсов</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="transactions">
+            <div class="transactions__heading">
+                <div class="heading__box">
+                    <div class="heading__title"><p>Машины</p></div> 
+                    <div class="heading__search">
+                        <label class="search">
+                            <div class="AddFelter">
+                                <p class="AddFelter__title">Name Filter</p>
+                                <button class="AddFelter__button"></button>
+                            </div>
+                            <input class="search__inputText" type="text" placeholder="Филтр + Поиск Операции" name="" id="">
+                            <button class="button__serch"></button>
+                            <button class="button__close"></button>
+                        </label>
+                        <div class="search__body">
+                            <form class="Filter">
+                            
+                                <div class="Filter__Data">
+                                    <p>Дата:</p>
+                                    <div class="dropdown">
+                                        <div class="select">
+                                            <span>Текущий день</span>
+                                            <i class="fa fa-chevron-left"></i>
+                                            <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
+                                        </div>
+                                        <input type="hidden" name="gender">
+                                        <ul class="dropdown-menu">
+                                            <li id="ThisDay">Текущий день</li>
+                                            <li id="Yesterday">Вчера</li>
+                                            <li id="ThisWeek">Текущая Неделя</li>
+                                            <li id="Month">Месяца</li>
+                                            <li id="RangeData">Диапозон</li>
+                                        </ul>
+                                    </div> 
+                                    <div class="select__mounth">
+                                        <div class="MounthBox">
+                                            <div class="dropdown">
+                                                <div class="select">
+                                                    <span>Месяц</span>
+                                                    <i class="fa fa-chevron-left"></i>
+                                                    <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
+                                                </div>
+                                                <input type="hidden" name="gender">
+                                                <ul class="dropdown-menu">
+                                                    <li id="January">Январь </li>
+                                                    <li id="February">Февраль </li>
+                                                    <li id="March">Март </li>
+                                                    <li id="April">Апрель </li>
+                                                    <li id="May">Май </li>
+                                                    <li id="June">Июнь</li>
+                                                    <li id="July">Июль</li>
+                                                    <li id="August">Август</li>
+                                                    <li id="September">Сентябрь </li>
+                                                    <li id="October">Октябрь </li>
+                                                    <li id="November">Ноябрь </li>
+                                                    <li id="December">Декабрь </li>
+                                                </ul>
+                                            </div> 
+                                        </div>    
+                                        <div class="YearBox">
+                                            <div class="dropdown">
+                                                <div class="select">
+                                                    <span>Год</span>
+                                                    <i class="fa fa-chevron-left"></i>
+                                                    <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
+                                                </div>
+                                                <input type="hidden" name="gender">
+                                                <ul class="dropdown-menu">
+                                                    <li id="2010">2010</li>
+                                                    <li id="2011">2011</li>
+                                                    <li id="2012">2012</li>
+                                                    <li id="2013">2013</li>
+                                                    <li id="2014">2014</li>
+                                                    <li id="2015">2015</li>
+                                                    <li id="2016">2016</li>
+                                                    <li id="2017">2017</li>
+                                                    <li id="2018">2018</li>
+                                                    <li id="2019">2019</li>
+                                                    <li id="2020">2020</li>
+                                                    <li id="2021">2021</li>
+                                                    <li id="2022">2022</li>
+                                                    <li id="2023">2023</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="select__range">
+                                        <input type="date" name="datefrom" id="datefrom">
+                                        <input type="date" name="datebefore" id="datebefore">
+                                    </div>
+                                </div>
+                                <div class="Filter__Volute">
+                                    <p>Валюта:</p>
+                                    <div class="dropdown">
+                                        <div class="select">
+                                            <span>Все </span>
+                                            <i class="fa fa-chevron-left"></i>
+                                            <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
+                                        </div>
+                                        <input type="hidden" name="gender">
+                                        <ul class="dropdown-menu">
+                                            <li id="AllVolute">Все</li>
+                                            <li id="USDVolute">Долар</li>
+                                            <li id="EURVolute">Евро</li>
+                                        </ul>
+                                    </div> 
+                                </div>
+                                <div class="Filter__amountInCurrency">
+                                    <p>Сумма в Валюте</p>
+                                    <div class="dropdown">
+                                        <div class="select">
+                                            <span>Точно</span>
+                                            <i class="fa fa-chevron-left"></i>
+                                            <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
+                                        </div>
+                                        <input type="hidden" name="gender">
+                                        <ul class="dropdown-menu">
+                                            <li id="Exactly">Точно</li>
+                                            <li id="RangeSum">Диопозон</li>
+                                            <li id="More">Больше</li>
+                                            <li id="Smaller">Меньше</li>
+                                        </ul>
+                                    </div> 
+                                    <div class="select__volute">
+                                        <input type="number" placeholder="Введите точную сумму" name="Exactly" id="Exactly">
+                                    </div>
+                                    <div class="select__rangeSum">
+                                        <input type="number" placeholder="Введите сумму от" name="rangeSumForm" id="rangeSumForm">
+                                        <input type="number" placeholder="Введите сумму до" name="rangeSumBefore" id="rangeSumBefore">
+                                    </div>
+                                    <div class="select__more">
+                                        <input type="number" placeholder="Введите Больше" name="More" id="More">
+                                    </div>
+                                    <div class="select__smaller">
+                                        <input type="number" placeholder="Введите Меньше" name="Smaller" id="Smaller">
+                                    </div>
+                                </div>
+                                <div class="Filter__status">
+                                    <p>Статус</p>
+                                    <div class="dropdown">
+                                        <div class="select">
+                                            <span>Все</span>
+                                            <i class="fa fa-chevron-left"></i>
+                                            <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
+                                        </div>
+                                        <input type="hidden" name="gender">
+                                        <ul class="dropdown-menu">
+                                            <li id="allStatus">Все</li>
+                                            <li id="successfullyStatus">Успешно</li>
+                                            <li id="errorStatus">Ошибка</li>
+                                        </ul>
+                                    </div> 
+                                </div>
+                                <div class="Filter__operations">
+                                    <p>Операции</p>
+                                    <div class="dropdown">
+                                        <div class="select">
+                                            <span>Все</span>
+                                            <i class="fa fa-chevron-left"></i>
+                                            <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
+                                        </div>
+                                        <input type="hidden" name="gender">
+                                        <ul class="dropdown-menu">
+                                            <li id="allOperations">Все</li>
+                                            <li id="purchaseOperations">Покупка влаюты</li>
+                                            <li id="saleOperations">Продажа валюты</li>
+                                        </ul>
+                                    </div>
+                                </div>    
+                                <div class="Filter__Car">
+                                    <p>Машины</p>
+                                    <div class="dropdownСar">
+                                        <div class="selectCar">
+                                            <span>Все</span>
+                                            <input type="search" name="" id="d">
+                                            <i class="fa fa-chevron-left"></i>
+                                            <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
+                                        </div>
+                                        <input type="hidden" name="gender">
+                                        <ul class="dropdown-menuCar">
+                                            <li id="allOperations">
+                                                <label>
+                                                        Все
+                                                    <input type="checkbox" name="" id="">
+                                                </label>
+                                            </li>
+                                            <li id="purchaseOperations">
+                                                <label>
+                                                        Машина 1
+                                                    <input type="checkbox" name="" id="">
+                                                </label>
+                                            </li>
+                                            <li id="saleOperations">
+                                                <label>
+                                                        Машина 2
+                                                    <input type="checkbox" name="" id="">
+                                                </label>
+                                            </li>
+                                            <li id="saleOperations">
+                                                <label>
+                                                        Машина 2
+                                                    <input type="checkbox" name="" id="">
+                                                </label>
+                                            </li>
+                                            <li id="saleOperations">
+                                                <label>
+                                                        Машина 2
+                                                    <input type="checkbox" name="" id="">
+                                                </label>
+                                            </li>
+                                            <li id="saleOperations">
+                                                <label>
+                                                        Машина 2
+                                                    <input type="checkbox" name="" id="">
+                                                </label>
+                                            </li>
+                                            <li id="saleOperations">
+                                                <label>
+                                                        Машина 2
+                                                    <input type="checkbox" name="" id="">
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>    
+                            </form>
+                        </div>
+                        
+                    </div>
+                    <button class="heading__downloadBtn">
+                        <img src="/assets/img/download/download.svg" width="15px" alt="">
+                    </button>
+                </div>
+            </div>
+
+            <div class="transactions__table">
+                <div class="table__header">
+                    <span id="numCar">Номер машины</span>
+                    <span id="connection">Связь</span>
+                    <span id="address">Адрес</span>
+                    <span id="status">Статус</span>
+                    <span id="firmware">Прошивка</span>
+                    <span id="specification">Спецификация</span>
+                    <span id="course">Курс USD/EUR</span>
+                    <span id="cashAcceptor">Купюроприемник</span>
+                    <span id="Dispenser">Диспенсер</span>
+                    <span id="Hopper">Хоппер</span>
+                    <span id="Printer">Принтер</span>
+                    <span id="downloadСheck"></span>
+                </div>
+                <div class="table__body">
+                    <span id="numCar">Машина 1</span>
+                    <span id="connection">Отличная</span>
+                    <span id="address">Ocean Plaza</span>
+                    <span id="status">Выполнено</span>
+                    <span id="firmware">Текст Текст</span>
+                    <span id="specification">Текст Текст</span>
+                    <span id="course">26.420 USD / 30.190 EUR</span>
+                    <span id="cashAcceptor">Купюроприемник</span>
+                    <span id="Dispenser">Диспенсер</span>
+                    <span id="Hopper">Хоппер</span>
+                    <span id="Printer">Принтер</span>
+                    <button id="downloadСheck">
+                        <img src="/assets/img/downloadСheck/downloadСheck.png"  alt="">
+                    </button>
+                </div>
+                <!-- <div id="AllInfoCar" class="AllInfoCar">
+                    <div class="AllInfoCarConatinerText">
+                        <div class="AllInfoCar__boxInfo">
+                            <div class="boxInfo__title">Машина</div>
+                            <div class="boxInfo__meaning">pizza-truck</div>
+                        </div>
+                        <div class="AllInfoCar__boxInfo">
+                            <div class="boxInfo__title">Адрес</div>
+                            <div class="boxInfo__meaning">
+                                <h1>Город:</h1>
+                                <p>Киев</p>
+                            </div>
+                            <div class="boxInfo__meaning">
+                                <h1>Улица:</h1>
+                                <p>Антоновича, 176</p>
+                            </div>
+                            <div class="boxInfo__meaning">
+                                <h1>Торговый центр:</h1>
+                                <p>Ocean Plaza</p>
+                            </div>
+                        </div>
+                        <div class="AllInfoCar__boxInfo">
+                            <div class="boxInfo__title">Курс Обмена</div>
+                            <div class="boxInfo__meaning">26.420 USD</div>
+                        </div>
+                        <div class="AllInfoCar__boxInfo">
+                            <div class="boxInfo__title">Сумма операции и валюта</div>
+                            <div class="boxInfo__meaning">23,000 USD</div>
+                        </div>
+                        <div class="AllInfoCar__boxInfo">
+                            <div class="boxInfo__title">Сумма на которую обменяли валюта</div>
+                            <div class="boxInfo__meaning">874.60 UAH</div>
+                        </div>
+                        <div class="AllInfoCar__boxInfo">
+                            <div class="boxInfo__title">Дата</div>
+                            <div class="boxInfo__meaning">13.10.2021</div>
+                        </div>
+                        <div class="AllInfoCar__boxInfo">
+                            <div class="boxInfo__title">Время</div>
+                            <div class="boxInfo__meaning">18ч,56мин,13с</div>
+                        </div>
+                        <div class="AllInfoCar__boxInfo">
+                            <div class="boxInfo__title">Контакты Клиента </div>
+                            <div class="boxInfo__meaning">+380662343209</div>
+                            <div class="boxInfo__meaning">Vlad@gmail.com</div>
+                        </div>
+                        <div class="AllInfoCar__boxInfo">
+                            <div class="boxInfo__title">Время Фискализации</div>
+                            <div class="boxInfo__meaning">12:46 pm</div>
+                        </div>
+                        <div class="AllInfoCar__boxInfo">
+                            <div class="boxInfo__title">Статус Транзакции</div>
+                            <div class="boxInfo__meaning">Выполнено</div>
+                        </div>
+                        <div class="AllInfoCar__boxInfo">
+                            <div class="boxInfo__title">Принято "Валют"</div>
+                            <div class="boxInfo__meaning">
+                                <div class="meaning__box">
+                                    <div class="meaning__bill">
+                                        <h1 class="bill__title">Купюра</h1>
+                                        <div class="bill__body">
+                                            <div class="body__box">
+                                                <p>1000 грн:</p>
+                                                <p>100 шт.</p>
+                                            </div>
+                                            <div class="body__box">
+                                                <p>500 грн:</p>
+                                                <p>100 шт.</p>
+                                            </div>
+                                            <div class="body__box">
+                                                <p>200 грн:</p>
+                                                <p>100 шт.</p>
+                                            </div>
+                                            <div class="body__box">
+                                                <p>100 грн:</p>
+                                                <p>100 шт.</p>
+                                            </div>
+                                            <div class="body__box">
+                                                <p>50 грн:</p>
+                                                <p>100 шт.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="meaning__bill">
+                                        <h1 class="bill__title">Монет</h1>
+                                        <div class="bill__body">
+                                            <div class="body__box">
+                                                <p>10 грн:</p>
+                                                <p>100 шт.</p>
+                                            </div>
+                                            <div class="body__box">
+                                                <p>5 грн:</p>
+                                                <p>100 шт.</p>
+                                            </div>
+                                            <div class="body__box">
+                                                <p>2 грн:</p>
+                                                <p>100 шт.</p>
+                                            </div>
+                                            <div class="body__box">
+                                                <p>1 грн:</p>
+                                                <p>100 шт.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="AllInfoCar__boxInfo">
+                            <div class="boxInfo__title">Принято "Валют"</div>
+                            <div class="boxInfo__meaning">
+                                <div class="meaning__box">
+                                    <div class="meaning__bill">
+                                        <h1 class="bill__title">Купюра</h1>
+                                        <div class="bill__body">
+                                            <div class="body__box">
+                                                <p>100 USD:</p>
+                                                <p>100 шт.</p>
+                                            </div>
+                                            <div class="body__box">
+                                                <p>50 USD:</p>
+                                                <p>100 шт.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="AllInfoCarConatinerButton">
+                        <div class="AllInfoCar__boxInfo">
+                            <div class="boxInfo__title">Фиксальный номер операции</div>
+                            <div class="boxInfo__meaning">
+                                <button class="meaning__imgNextLink">
+                                    <a href="#"> 
+                                        <img src="/assets/img/link/nextLink.svg" alt="Go to">
+                                        <p>( 111111 )</p> 
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="AllInfoCar__boxInfo">
+                            <div class="boxInfo__meaning">
+                                <button class="meaning__imgBurgerOptionIcon">
+                                    <img src="/assets/img/burgerOptionIcon/burgerOptionIcon.svg" alt="Option Icon">
+                                    открыть лог операции 
+                                </button>
+                            </div>
+                        </div>
+                        <div class="AllInfoCar__boxInfo">
+                            <div class="boxInfo__meaning">
+                                <button class="meaning__imgCheck">
+                                    <img src="/assets/img/check/check.png" alt="check">
+                                    Чек
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div> -->
+                
+                <div class="table__body">
+                    <span id="cashInfo"></span>
+                    <span id="nameCar">pizza-truck</span>
+                    <span id="operation">Jose Tosquias</span>
+                    <span id="address">Ocean Plaza</span>
+                    <span id="exchangeRate">26.420 USD</span>
+                    <span id="transactionAmount">23,000 USD </span>
+                    <span id="exchangeAmount">874.60 UAH </span>
+                    <span id="Day">13.10.2021</span>
+                    <span id="Time">12:46 pm</span>
+                    <button  id="Btn"></button>
+                </div>
+            </div>
+        </div>    
+    </main>
+</body>
+</html>

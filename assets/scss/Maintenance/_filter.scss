@@ -1,0 +1,422 @@
+%TitleFilter{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    color: #da6e00;
+}
+%TextFilter{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 10px;
+    color: #da6e00;
+}
+
+  
+  .Filter {
+    display: flex;
+    flex-direction: column;
+    &__summTransaction {
+        padding: 5px;
+    }
+    &__Data{
+        @extend %TitleFilter;
+        color:#fff;
+    }
+    &__Volute{
+        @extend %TitleFilter;
+        color:#fff;
+    }
+    &__amountInCurrency{
+        position: relative;
+        @extend %TitleFilter;
+        color:#fff;
+    }
+    &__status{
+        @extend %TitleFilter;
+        color:#fff;
+    }
+    &__operations{
+        @extend %TitleFilter;
+        color:#fff;
+    }
+    &__Car{
+        @extend %TitleFilter;
+        color:#fff;
+        p{
+            margin-bottom: 5px;
+        }
+    }
+    
+}
+  .select{
+      &__mounth{
+        visibility: hidden;
+        position: absolute;
+        top: 22px;
+        left: 210px;
+        display: flex;
+        justify-content: space-between;
+        width: 64%;
+        height: 35px;
+      }
+      &__range{
+        visibility: hidden;
+        position: absolute;
+        top: 32px;
+        left: 210px;
+        display: flex;
+        justify-content: space-between;
+        width: 64%;
+        input{
+            width: 180px;
+            height: 31px;
+            border-radius: 2px;
+            box-shadow: 0 0 2px #cccccc;
+            padding: 5px; 
+            @extend %TextFilter;
+           
+        }
+       
+      }
+      &__volute{
+        visibility: hidden;
+        position: absolute;
+        top: 22px;
+        left: 200px;
+        input{
+            width: 180px;
+            height: 31px;
+            border-radius: 2px;
+            box-shadow: 0 0 2px #cccccc;
+            padding: 5px;
+        }
+        input::placeholder{
+            @extend %TextFilter;
+        }
+      }
+      &__rangeSum{
+            visibility: hidden;
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            top: 22px;
+            left: 200px;
+            width: 66%;
+           
+            // width: 213%;
+            input{
+                width: 180px;
+                height: 31px;
+                border-radius: 2px;
+                box-shadow: 0 0 2px #cccccc;
+                padding: 5px; 
+                @extend %TextFilter;
+            }
+            input::placeholder{
+                @extend %TextFilter;
+            }
+      }
+      &__more{
+        visibility: hidden;
+        position: absolute;
+        top: 22px;
+        left: 200px;
+        input{
+            width: 180px;
+            height: 31px;
+            border-radius: 2px;
+            box-shadow: 0 0 2px #cccccc;
+            padding: 5px;
+            @extend %TextFilter;
+        }
+        input::placeholder{
+            @extend %TextFilter;
+        }
+      }
+      &__smaller{
+        visibility: hidden;
+        position: absolute;
+        top: 22px;
+        left: 200px;
+        input{
+            width: 180px;
+            height: 31px;
+            border-radius: 2px;
+            box-shadow: 0 0 2px #cccccc;
+            padding: 5px;
+            @extend %TextFilter;
+        }
+        input::placeholder{
+            @extend %TextFilter;
+        }
+      }
+    }
+
+    .select__smaller.active,
+    .select__more.active,
+    .select__rangeSum.active,
+    .select__volute.active,
+    .select__mounth.active,
+    .select__range.active{
+     visibility: visible;
+  }
+  
+  span.msg,
+  span.choose {
+    color: #555;
+    padding: 5px 0 10px;
+    display: inherit
+  }
+  .container {
+    width: 500px;
+    margin: 50px auto 0;
+    text-align: center
+  }
+  
+  /*Styling Selectbox*/
+  .dropdown {
+    width: 180px;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 0 2px rgb(204, 204, 204);
+    transition: all .5s ease;
+    position: relative;
+    font-size: 14px;
+    color: #da6e00;
+    height: 100%;
+    text-align: left
+  }
+  .dropdown .select {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    // display: block;
+    padding: 10px
+  }
+  .dropdown .select > i {
+      font-size: 13px;
+      color: #888;
+      cursor: pointer;
+      transition: all .3s ease-in-out;
+      float: right;
+      line-height: 20px
+  }
+  .dropdown:hover {
+      box-shadow: 0 0 4px rgb(204, 204, 204)
+  }
+  .dropdown:active {
+      background-color: #f8f8f8
+  }
+  .dropdown.active:hover,
+  .dropdown.active {
+      box-shadow: 0 0 4px rgb(204, 204, 204);
+      border-radius: 2px 2px 0 0;
+      background-color: #f8f8f8
+  }
+  .dropdown.active .select > i {
+      transform: rotate(-90deg)
+  }
+  .dropdown .dropdown-menu {
+      position: absolute;
+      background-color: #fff;
+      width: 100%;
+      left: 0;
+      margin-top: 1px;
+      box-shadow: 0 1px 2px rgb(204, 204, 204);
+      border-radius: 0 1px 2px 2px;
+      overflow: hidden;
+      display: none;
+      max-height: 144px;
+      overflow-y: auto;
+      z-index: 9
+  }
+  .dropdown .dropdown-menu li {
+      padding: 10px;
+      transition: all .2s ease-in-out;
+      cursor: pointer
+  } 
+  .dropdown .dropdown-menu {
+      padding: 0;
+      list-style: none
+  }
+  .dropdown .dropdown-menu li:hover {
+      background-color: #f2f2f2
+  }
+  .dropdown .dropdown-menu li:active {
+      background-color: #e2e2e2
+  }
+
+
+
+// .summTransaction {
+
+//     &__title {
+//         font-family: 'Montserrat';
+//         font-style: normal;
+//         font-weight: 700;
+//         font-size: 12px;
+//         color: #da6e00;
+//     }
+
+//     &__body {
+//         display: flex;
+//         justify-content: space-between;
+//     }
+// }
+ 
+ .filterBox label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 180px;
+    border-radius: 2px;
+    box-shadow: 0 0 2px rgb(204, 204, 204);
+    height: 100%;
+    padding: 9px;
+    background-color:#fff;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 10px;
+    color: #da6e00;
+  }
+
+  
+  .filterBox label input::placeholder{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 10px;
+    color: #da6e00;
+}
+.filterBox span {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 180px;
+    border-radius: 2px;
+    box-shadow: 0 0 2px rgb(204, 204, 204);
+    height: 100%;
+    
+  }
+  .filterBox span input::placeholder{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 10px;
+    color: #da6e00;
+    
+}
+.filterBox span input{
+    width: 180px;
+    padding: 10px;
+    
+}
+.select span{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 10px;
+}
+.dropdown .dropdown-menu  li {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 10px;
+}
+.filterBox,
+.dropdown{
+    margin: 10px 0px 10px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+  .dropdownСar {
+    width: 180px;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 0 2px rgb(204, 204, 204);
+    transition: all .5s ease;
+    position: relative;
+    font-size: 10px;
+    color: #da6e00;
+    height: 100%;
+    text-align: left
+  }
+  .dropdownСar .selectCar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    
+    padding: 10px
+  }
+  .dropdownСar .selectCar input{
+    @extend %TextFilter;
+      width: 85px;
+      margin-left: 5px;
+  }
+  .dropdownСar .selectCar > i {
+      font-size: 13px;
+      color: #888;
+      cursor: pointer;
+      transition: all .3s ease-in-out;
+      float: right;
+      line-height: 20px
+  }
+  .dropdownСar:hover {
+      box-shadow: 0 0 4px rgb(204, 204, 204)
+  }
+  .dropdownСar:active {
+      background-color: #f8f8f8
+  }
+  .dropdownСar.active:hover,
+  .dropdownСar.active {
+      box-shadow: 0 0 4px rgb(204, 204, 204);
+      border-radius: 2px 2px 0 0;
+      background-color: #f8f8f8
+  }
+  .dropdownСar.active .selectCar > i {
+      transform: rotate(-90deg)
+  }
+  .dropdownСar .dropdown-menuCar {
+      position: absolute;
+      background-color: #fff;
+      width: 100%;
+      left: 0;
+      margin-top: 1px;
+      box-shadow: 0 1px 2px rgb(204, 204, 204);
+      border-radius: 0 1px 2px 2px;
+      overflow: hidden;
+      display: none;
+      max-height: 144px;
+      overflow-y: auto;
+      z-index: 9
+  }
+  .dropdownСar .dropdown-menuCar li {
+      padding: 10px;
+      transition: all .2s ease-in-out;
+      cursor: pointer
+  } 
+  .dropdownСar .dropdown-menuCar {
+      padding: 0;
+      list-style: none
+  }
+  .dropdownСar .dropdown-menuCar li:hover {
+      background-color: #f2f2f2
+  }
+  .dropdownСar .dropdown-menuCar li:active {
+      background-color: #e2e2e2
+  }
+
