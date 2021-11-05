@@ -161,11 +161,18 @@ border-radius: 6px;
 /* Филтр и поск Тело */
 .search{
     &__body{
-    position: absolute;
-    width: 600px;
-    background-color: #eeeeee;
-    top: 38px;
+        display: none;
+        position: absolute;
+        width: 600px;
+        background-color: #da6e00;
+        top: 38px;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 5px;
     }
+}
+.search__body.activeFilter{
+    display: block;
 }
 /* Пунтк Филтр + Поиск End */
 

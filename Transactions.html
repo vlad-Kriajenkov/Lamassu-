@@ -18,7 +18,7 @@
                         <a href="#" class="nav__link">Обслуживание</a>
                         <a href="/Analyties.html" class="nav__link">Аналитика</a>
                         <a href="#" class="nav__link">Настройки </a>
-                        <a href="#" class="nav__link">Дополнительно</a>
+                        <a href="/filter.html" class="nav__link">Дополнительно</a>
                     </nav>
                     
                 </div>
@@ -49,67 +49,215 @@
                             </label>
                             <div class="search__body">
                                 <form class="Filter">
-                                    <div class="Filter__summTransaction">
-                                        <p class="summTransaction__title"> Сумма операции </p>
-                                        <div class="summTransaction__body">
-                                            <div class="filterBox">
-                                                <span>
-                                                    <input type="text" placeholder="Точная" name="ExactАmount" id="ExactАmount">
-                                                </span>
+                               
+                                    <div class="Filter__Data">
+                                        <p>Дата:</p>
+                                        <div class="dropdown">
+                                            <div class="select">
+                                                <span>Текущий день</span>
+                                                <i class="fa fa-chevron-left"></i>
+                                                <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
                                             </div>
-                                            <div class="filterBox">
-                                                <span>
-                                                    <input type="text" placeholder="Больше" name="MoreАmount" id="MoreАmount">
-                                                </span>
+                                            <input type="hidden" name="gender">
+                                            <ul class="dropdown-menu">
+                                                <li id="ThisDay">Текущий день</li>
+                                                <li id="Yesterday">Вчера</li>
+                                                <li id="ThisWeek">Текущая Неделя</li>
+                                                <li id="Month">Месяца</li>
+                                                <li id="RangeData">Диапозон</li>
+                                            </ul>
+                                        </div> 
+                                        <div class="select__mounth">
+                                            <div class="MounthBox">
+                                                <div class="dropdown">
+                                                    <div class="select">
+                                                        <span>Месяц</span>
+                                                        <i class="fa fa-chevron-left"></i>
+                                                        <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
+                                                    </div>
+                                                    <input type="hidden" name="gender">
+                                                    <ul class="dropdown-menu">
+                                                        <li id="January">Январь </li>
+                                                        <li id="February">Февраль </li>
+                                                        <li id="March">Март </li>
+                                                        <li id="April">Апрель </li>
+                                                        <li id="May">Май </li>
+                                                        <li id="June">Июнь</li>
+                                                        <li id="July">Июль</li>
+                                                        <li id="August">Август</li>
+                                                        <li id="September">Сентябрь </li>
+                                                        <li id="October">Октябрь </li>
+                                                        <li id="November">Ноябрь </li>
+                                                        <li id="December">Декабрь </li>
+                                                    </ul>
+                                                </div> 
+                                            </div>    
+                                            <div class="YearBox">
+                                                <div class="dropdown">
+                                                    <div class="select">
+                                                        <span>Год</span>
+                                                        <i class="fa fa-chevron-left"></i>
+                                                        <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
+                                                    </div>
+                                                    <input type="hidden" name="gender">
+                                                    <ul class="dropdown-menu">
+                                                        <li id="2010">2010</li>
+                                                        <li id="2011">2011</li>
+                                                        <li id="2012">2012</li>
+                                                        <li id="2013">2013</li>
+                                                        <li id="2014">2014</li>
+                                                        <li id="2015">2015</li>
+                                                        <li id="2016">2016</li>
+                                                        <li id="2017">2017</li>
+                                                        <li id="2018">2018</li>
+                                                        <li id="2019">2019</li>
+                                                        <li id="2020">2020</li>
+                                                        <li id="2021">2021</li>
+                                                        <li id="2022">2022</li>
+                                                        <li id="2023">2023</li>
+                                                    </ul>
+                                                </div>
                                             </div>
-                                            <div class="filterBox">
-                                                <span>
-                                                    <input type="text" placeholder="Меньше" name="LessАmount" id="LessАmount">
-                                                </span>
-                                            </div>
+                                        </div>
+                                        <div class="select__range">
+                                            <input type="date" name="datefrom" id="datefrom">
+                                            <input type="date" name="datebefore" id="datebefore">
                                         </div>
                                     </div>
-                                    
-                                    
-                                    <div class="dropdown">
-                                        <div class="select">
-                                            <span>Место Положения </span>
-                                            <i class="fa fa-chevron-left"></i>
-                                        </div>
-                                        <input type="hidden" name="gender">
-                                        <ul class="dropdown-menu">
-                                            <li id="TRC">ТРЦ</li>
-                                            <li id="Hotel">Отели</li>
-                                        </ul>
-                                    </div> <div class="dropdown">
-                                        <div class="select">
-                                            <span>Статус</span>
-                                            <i class="fa fa-chevron-left"></i>
-                                        </div>
-                                        <input type="hidden" name="gender">
-                                        <ul class="dropdown-menu">
-                                            <li id="successfully">Успешно</li>
-                                            <li id="Error">Ошибка</li>
-                                        </ul>
-                                    </div> 
-                                    <div class="dropdown">
-                                        <div class="select">
-                                            <span>Операции</span>
-                                            <i class="fa fa-chevron-left"></i>
-                                        </div>
-                                        <input type="hidden" name="gender">
-                                        <ul class="dropdown-menu">
-                                            <li id="">Покупка влаюты</li>
-                                            <li id="">Продажа валюты</li>
-                                          
-                                        </ul>
+                                    <div class="Filter__Volute">
+                                        <p>Валюта:</p>
+                                        <div class="dropdown">
+                                            <div class="select">
+                                                <span>Все </span>
+                                                <i class="fa fa-chevron-left"></i>
+                                                <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
+                                            </div>
+                                            <input type="hidden" name="gender">
+                                            <ul class="dropdown-menu">
+                                                <li id="AllVolute">Все</li>
+                                                <li id="USDVolute">Долар</li>
+                                                <li id="EURVolute">Евро</li>
+                                            </ul>
+                                        </div> 
                                     </div>
-                                    <div class="filterBox">
-                                        <label>
-                                            Все машины
-                                            <input type="checkbox" name="AllCar" id="AllCar">
-                                        </label>       
+                                    <div class="Filter__amountInCurrency">
+                                        <p>Сумма в Валюте</p>
+                                        <div class="dropdown">
+                                            <div class="select">
+                                                <span>Точно</span>
+                                                <i class="fa fa-chevron-left"></i>
+                                                <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
+                                            </div>
+                                            <input type="hidden" name="gender">
+                                            <ul class="dropdown-menu">
+                                                <li id="Exactly">Точно</li>
+                                                <li id="RangeSum">Диопозон</li>
+                                                <li id="More">Больше</li>
+                                                <li id="Smaller">Меньше</li>
+                                            </ul>
+                                        </div> 
+                                        <div class="select__volute">
+                                            <input type="number" placeholder="Введите точную сумму" name="Exactly" id="Exactly">
+                                        </div>
+                                        <div class="select__rangeSum">
+                                            <input type="number" placeholder="Введите сумму от" name="rangeSumForm" id="rangeSumForm">
+                                            <input type="number" placeholder="Введите сумму до" name="rangeSumBefore" id="rangeSumBefore">
+                                        </div>
+                                        <div class="select__more">
+                                            <input type="number" placeholder="Введите Больше" name="More" id="More">
+                                        </div>
+                                        <div class="select__smaller">
+                                            <input type="number" placeholder="ВведитеМеньше" name="Smaller" id="Smaller">
+                                        </div>
                                     </div>
+                                    <div class="Filter__status">
+                                        <p>Статус</p>
+                                        <div class="dropdown">
+                                            <div class="select">
+                                                <span>Все</span>
+                                                <i class="fa fa-chevron-left"></i>
+                                                <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
+                                            </div>
+                                            <input type="hidden" name="gender">
+                                            <ul class="dropdown-menu">
+                                                <li id="allStatus">Все</li>
+                                                <li id="successfullyStatus">Успешно</li>
+                                                <li id="errorStatus">Ошибка</li>
+                                            </ul>
+                                        </div> 
+                                    </div>
+                                    <div class="Filter__operations">
+                                        <p>Операции</p>
+                                        <div class="dropdown">
+                                            <div class="select">
+                                                <span>Все</span>
+                                                <i class="fa fa-chevron-left"></i>
+                                                <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
+                                            </div>
+                                            <input type="hidden" name="gender">
+                                            <ul class="dropdown-menu">
+                                                <li id="allOperations">Все</li>
+                                                <li id="purchaseOperations">Покупка влаюты</li>
+                                                <li id="saleOperations">Продажа валюты</li>
+                                            </ul>
+                                        </div>
+                                    </div>    
+                                    <div class="Filter__Car">
+                                        <p>Машины</p>
+                                        <div class="dropdownСar">
+                                            <div class="selectCar">
+                                                <span>Все</span>
+                                                <input type="search" name="" id="d">
+                                                <i class="fa fa-chevron-left"></i>
+                                                <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
+                                            </div>
+                                            <input type="hidden" name="gender">
+                                            <ul class="dropdown-menuCar">
+                                                <li id="allOperations">
+                                                    <label>
+                                                            Все
+                                                        <input type="checkbox" name="" id="">
+                                                    </label>
+                                                </li>
+                                                <li id="purchaseOperations">
+                                                    <label>
+                                                            Машина 1
+                                                        <input type="checkbox" name="" id="">
+                                                    </label>
+                                                </li>
+                                                <li id="saleOperations">
+                                                    <label>
+                                                            Машина 2
+                                                        <input type="checkbox" name="" id="">
+                                                    </label>
+                                                </li>
+                                                <li id="saleOperations">
+                                                    <label>
+                                                            Машина 2
+                                                        <input type="checkbox" name="" id="">
+                                                    </label>
+                                                </li>
+                                                <li id="saleOperations">
+                                                    <label>
+                                                            Машина 2
+                                                        <input type="checkbox" name="" id="">
+                                                    </label>
+                                                </li>
+                                                <li id="saleOperations">
+                                                    <label>
+                                                            Машина 2
+                                                        <input type="checkbox" name="" id="">
+                                                    </label>
+                                                </li>
+                                                <li id="saleOperations">
+                                                    <label>
+                                                            Машина 2
+                                                        <input type="checkbox" name="" id="">
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>    
                                 </form>
                             </div>
                             
@@ -315,7 +463,15 @@
                         <span id="Day">13.10.2021</span>
                         <span id="Time">12:46 pm</span>
                         <button  id="Btn"></button>
-                </div>
+                    </div>
+                    <form>
+                        <select  name="" id="">
+                            <option>машина 2 </option>
+                            <option>машина 3 </option>
+                            <input type="checkbox" placeholder="Все машины" name="" id="">
+                            
+                        </select>
+                    </form>
             </div>
         </main>
 

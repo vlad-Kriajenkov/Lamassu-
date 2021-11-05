@@ -288,10 +288,18 @@ main {
 
 /* Филтр и поск Тело */
 .search__body {
+  display: none;
   position: absolute;
   width: 600px;
-  background-color: #eeeeee;
+  background-color: #da6e00;
   top: 38px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.search__body.activeFilter {
+  display: block;
 }
 
 /* Пунтк Филтр + Поиск End */
@@ -491,9 +499,156 @@ main {
 }
 
 /* End Main */
+.Filter__Car, .Filter__operations, .Filter__status, .Filter__amountInCurrency, .Filter__Volute, .Filter__Data {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  color: #da6e00;
+}
+
+.select__smaller input::-moz-placeholder, .select__more input::-moz-placeholder, .select__rangeSum input::-moz-placeholder, .select__volute input::-moz-placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: #da6e00;
+}
+
+.select__smaller input:-ms-input-placeholder, .select__more input:-ms-input-placeholder, .select__rangeSum input:-ms-input-placeholder, .select__volute input:-ms-input-placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: #da6e00;
+}
+
+.dropdownСar .selectCar input, .select__smaller input::placeholder, .select__smaller input, .select__more input::placeholder, .select__more input, .select__rangeSum input::placeholder, .select__rangeSum input, .select__volute input::placeholder, .select__range input {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: #da6e00;
+}
+
 .Filter {
   display: flex;
   flex-direction: column;
+}
+.Filter__summTransaction {
+  padding: 5px;
+}
+.Filter__Data {
+  color: #fff;
+}
+.Filter__Volute {
+  color: #fff;
+}
+.Filter__amountInCurrency {
+  position: relative;
+  color: #fff;
+}
+.Filter__status {
+  color: #fff;
+}
+.Filter__operations {
+  color: #fff;
+}
+.Filter__Car {
+  color: #fff;
+}
+.Filter__Car p {
+  margin-bottom: 5px;
+}
+
+.select__mounth {
+  visibility: hidden;
+  position: absolute;
+  top: 22px;
+  left: 210px;
+  display: flex;
+  justify-content: space-between;
+  width: 64%;
+  height: 35px;
+}
+.select__range {
+  visibility: hidden;
+  position: absolute;
+  top: 32px;
+  left: 210px;
+  display: flex;
+  justify-content: space-between;
+  width: 64%;
+}
+.select__range input {
+  width: 180px;
+  height: 31px;
+  border-radius: 2px;
+  box-shadow: 0 0 2px #cccccc;
+  padding: 5px;
+}
+.select__volute {
+  visibility: hidden;
+  position: absolute;
+  top: 22px;
+  left: 200px;
+}
+.select__volute input {
+  width: 180px;
+  height: 31px;
+  border-radius: 2px;
+  box-shadow: 0 0 2px #cccccc;
+  padding: 5px;
+}
+.select__rangeSum {
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 22px;
+  left: 200px;
+  width: 66%;
+}
+.select__rangeSum input {
+  width: 180px;
+  height: 31px;
+  border-radius: 2px;
+  box-shadow: 0 0 2px #cccccc;
+  padding: 5px;
+}
+.select__more {
+  visibility: hidden;
+  position: absolute;
+  top: 22px;
+  left: 200px;
+}
+.select__more input {
+  width: 180px;
+  height: 31px;
+  border-radius: 2px;
+  box-shadow: 0 0 2px #cccccc;
+  padding: 5px;
+}
+.select__smaller {
+  visibility: hidden;
+  position: absolute;
+  top: 22px;
+  left: 200px;
+}
+.select__smaller input {
+  width: 180px;
+  height: 31px;
+  border-radius: 2px;
+  box-shadow: 0 0 2px #cccccc;
+  padding: 5px;
+}
+.select__smaller.active,
+.select__more.active,
+.select__rangeSum.active,
+.select__volute.active,
+.select__mounth.active,
+.select__range.active {
+  visibility: visible;
 }
 
 span.msg,
@@ -525,8 +680,9 @@ span.choose {
 }
 
 .dropdown .select {
+  display: flex;
+  justify-content: space-between;
   cursor: pointer;
-  display: block;
   padding: 10px;
 }
 
@@ -590,22 +746,6 @@ span.choose {
 
 .dropdown .dropdown-menu li:active {
   background-color: #e2e2e2;
-}
-
-.Filter__summTransaction {
-  padding: 5px;
-}
-
-.summTransaction__title {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 12px;
-  color: #da6e00;
-}
-.summTransaction__body {
-  display: flex;
-  justify-content: space-between;
 }
 
 .filterBox label {
@@ -705,4 +845,93 @@ span.choose {
 .filterBox,
 .dropdown {
   margin: 10px 0px 10px 0px;
+}
+
+.dropdownСar {
+  width: 180px;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 2px #cccccc;
+  transition: all 0.5s ease;
+  position: relative;
+  font-size: 10px;
+  color: #da6e00;
+  height: 100%;
+  text-align: left;
+}
+
+.dropdownСar .selectCar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.dropdownСar .selectCar input {
+  width: 85px;
+  margin-left: 5px;
+}
+
+.dropdownСar .selectCar > i {
+  font-size: 13px;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  float: right;
+  line-height: 20px;
+}
+
+.dropdownСar:hover {
+  box-shadow: 0 0 4px #cccccc;
+}
+
+.dropdownСar:active {
+  background-color: #f8f8f8;
+}
+
+.dropdownСar.active:hover,
+.dropdownСar.active {
+  box-shadow: 0 0 4px #cccccc;
+  border-radius: 2px 2px 0 0;
+  background-color: #f8f8f8;
+}
+
+.dropdownСar.active .selectCar > i {
+  transform: rotate(-90deg);
+}
+
+.dropdownСar .dropdown-menuCar {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  left: 0;
+  margin-top: 1px;
+  box-shadow: 0 1px 2px #cccccc;
+  border-radius: 0 1px 2px 2px;
+  overflow: hidden;
+  display: none;
+  max-height: 144px;
+  overflow-y: auto;
+  z-index: 9;
+}
+
+.dropdownСar .dropdown-menuCar li {
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.dropdownСar .dropdown-menuCar {
+  padding: 0;
+  list-style: none;
+}
+
+.dropdownСar .dropdown-menuCar li:hover {
+  background-color: #f2f2f2;
+}
+
+.dropdownСar .dropdown-menuCar li:active {
+  background-color: #e2e2e2;
 }
