@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/scss/css/Maintenance.css">
+    <link rel="stylesheet" href="/assets/scss/css/Cassettes.css">
     <title>Document</title>
 </head>
 <body>
@@ -50,8 +50,8 @@
         <div class="maintenance">
             <div class="maintenance__heading">
                 <div class="heading__box">
-                    <div class="heading__title"><p>Машины</p></div> 
-                    <div class="heading__search">
+                    <div class="heading__title"><p>Кассеты</p></div> 
+                    <!-- <div class="heading__search">
                         <label class="search">
                             <div class="AddFelter">
                                 <p class="AddFelter__title">Name Filter</p>
@@ -73,11 +73,11 @@
                                         </div>
                                         <input type="hidden" name="gender">
                                         <ul class="dropdown-menu">
-                                            <li id="AllConnection">Все</li>
-                                            <li id="MainMenu">Основное меню</li>
-                                            <li id="CurrencyExchange">Обмен валюты</li>
-                                            <li id="Fiscalization">Фискализация</li>
-                                            <li id="SystemLockout">Системная блокировка</li>
+                                            <li id="ThisDay">Все</li>
+                                            <li id="Yesterday">Основное меню</li>
+                                            <li id="ThisWeek">Обмен валюты</li>
+                                            <li id="Month">Фискализация</li>
+                                            <li id="RangeData">Системная блокировка</li>
                                         </ul>
                                     </div> 
                                 </div>
@@ -91,9 +91,9 @@
                                         </div>
                                         <input type="hidden" name="gender">
                                         <ul class="dropdown-menu">
-                                            <li id="AllSpecifications">Все</li>
-                                            <li id="F56+TBV">F56+TBV</li>
-                                            <li id="F56+iVision100-SS">F56+iVision 100- SS</li>
+                                            <li id="AllVolute">Все</li>
+                                            <li id="USDVolute">F56+TBV</li>
+                                            <li id="EURVolute">F56+iVision 100- SS</li>
                                         </ul>
                                     </div> 
                                 </div>
@@ -107,9 +107,9 @@
                                         </div>
                                         <input type="hidden" name="gender">
                                         <ul class="dropdown-menu">
-                                            <li id="AllStatus">Все</li>
-                                            <li id="NetworkLost">Сеть потерена</li>
-                                            <li id="FullyWorking">Полностью работающая</li>
+                                            <li id="Exactly">Все</li>
+                                            <li id="RangeSum">Сеть потерена</li>
+                                            <li id="More">Полностью работающая</li>
                                         </ul>
                                     </div> 
                                 </div>
@@ -123,9 +123,9 @@
                                         </div>
                                         <input type="hidden" name="gender">
                                         <ul class="dropdown-menu">
-                                            <li id="AllManufacturer">Все</li>
-                                            <li id="Technomatika">Техноматика</li>
-                                            <li id="Vanguard">Авангард</li>
+                                            <li id="Exactly">Все</li>
+                                            <li id="RangeSum">Техноматика</li>
+                                            <li id="More">Авангард</li>
                                         </ul>
                                     </div> 
                                 </div>
@@ -139,9 +139,9 @@
                                         </div>
                                         <input type="hidden" name="gender">
                                         <ul class="dropdown-menu">
-                                            <li id="AllLocations">Все</li>
-                                            <li id="MALL">ТРЦ</li>
-                                            <li id="Hotels">Отели</li>
+                                            <li id="Exactly">Все</li>
+                                            <li id="RangeSum">ТРЦ</li>
+                                            <li id="More">Отели</li>
                                         </ul>
                                     </div> 
                                 </div>
@@ -162,37 +162,37 @@
                                             <li id="OneCar">
                                                 <label>
                                                     0001
-                                                    <input type="checkbox" name="Car001" id="Car001">
+                                                    <input type="checkbox" name="" id="">
                                                 </label>
                                             </li>
                                             <li id="OneCar">
                                                 <label>
                                                     0002
-                                                    <input type="checkbox" name="Car002" id="Car002">
+                                                    <input type="checkbox" name="" id="">
                                                 </label>
                                             </li>
                                             <li id="OneCar">
                                                 <label>
                                                     0003
-                                                    <input type="checkbox" name="Car003" id="Car003">
+                                                    <input type="checkbox" name="" id="">
                                                 </label>
                                             </li>
                                             <li id="OneCar">
                                                 <label>
                                                     0004
-                                                    <input type="checkbox" name="Car004" id="Car004">
+                                                    <input type="checkbox" name="" id="">
                                                 </label>
                                             </li>
                                             <li id="OneCar">
                                                 <label>
                                                     0005
-                                                    <input type="checkbox" name="Car005" id="Car005">
+                                                    <input type="checkbox" name="" id="">
                                                 </label>
                                             </li>
                                             <li id="OneCar">
                                                 <label>
                                                     0006
-                                                    <input type="checkbox" name="Car006" id="Car006">
+                                                    <input type="checkbox" name="" id="">
                                                 </label>
                                             </li>
                                         </ul>
@@ -202,9 +202,9 @@
                             </form>
                         </div>
                         
-                    </div>
+                    </div> -->
                     <button class="heading__downloadBtn">
-                        <img src="/assets/img/download/download.svg" width="15px" alt="">
+                        <img src="/assets/img/history/history.svg" width="15px" alt="history">
                     </button>
                 </div>
             </div>
@@ -212,46 +212,40 @@
             <div class="maintenance__table">
                 <div class="table__header">
                     <span id="numCar">Номер машины</span>
-                    <span id="connection">Связь</span>
-                    <span id="address">Адрес</span>
-                    <span id="status">Статус</span>
-                    <span id="firmware">Прошивка</span>
-                    <span id="specification">Спецификация</span>
-                    <span id="course">Курс USD/EUR</span>
-                    <span id="cashAcceptor">Купюроприемник</span>
-                    <span id="Dispenser">Диспенсер</span>
-                    <span id="Hopper">Хоппер</span>
-                    <span id="Printer">Принтер</span>
-                    <span id="downloadСheck"></span>
-                </div>
+                    <span id="connection">Cash-out 1</span>
+                    <span id="connection">Cash-out 2</span>
+                    <span id="connection">Cash-out 3</span>
+                    <span id="connection">Cash-out 4</span>
+                    <span id="connection">Cash-out 5</span>
+                    <span id="connection">Cash-out 6</span>
+                    <span id="connection">Cash-in </span>
+                    <span id="downloadСheck">Update</span>
+                </div> 
                 <div class="table__body">
-                    <span id="numCar">0001</span>
-                    <span id="connection">
-                        <form class="formStatusSwitch">
-                            <label class="switch">
-                                <input type="checkbox">
-                                <span class="slider round"></span>
-                            </label>
+                    <span id="numCar">
+                        0001
+                    </span>
+                    <span id="CashCar">
+                        <div class="cashT"></div>
+                        <div class="cashB"></div>
+                        <form method="post">
+                            <input type="number" name="Value" id="Value">
+                            <button type="button" onclick="FillingCassette" >Проверить</button>
                         </form>
                     </span>
-                    <span id="address">Ocean Plaza</span>
-                    <span id="status">Полностью работающая</span>
-                    <span id="firmware">F56+TBV</span>
-                    <span id="specification">Текст Текст</span>
-                    <span id="course">26.420 USD / 30.190 EUR</span>
-                    <span id="cashAcceptor"> ОК (REJ=0)</span>
-                    <span id="Dispenser">ОК</span>
-                    <span id="Hopper">ОК</span>
-                    <span id="Printer">ОК</span>
                     <button id="Btn">
                         <img src="/assets/img/downloadСheck/downloadСheck.png"  alt="">
                     </button>
                 </div>
-                
+               
             </div>
-        </div>    
+        </div> 
     </main>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>    
-    <script src="/assets/js/filter/filter.js"></script> 
+
+   
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>   
+    <script src="/assets/js/Cassetts/cassettsLogik.js"></script> 
+    <!-- <script src="/assets/js/filter/filter.js"></script>  -->
+    <!-- <script src="/assets/js/filter/asd.js"></script> -->
 </body>
 </html>

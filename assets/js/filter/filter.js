@@ -5,6 +5,7 @@ $('.search__inputText').click(function () {
 
 
 
+
 /*Dropdown Filter Box*/
 $('.dropdown').click(function () {
     $(this).attr('tabindex', 1).focus();
@@ -69,7 +70,7 @@ $('#Smaller').click(function () {
     $('.select__volute').removeClass('active');
     $('.select__more').removeClass('active'); 
 });
-/*End Dropdown Menu*/
+
 
 
 // $('.dropdown-menu li').click(function () {
@@ -80,18 +81,15 @@ $('#Smaller').click(function () {
 
 
 
-/////
+/* Dropdown Menu car */
 $('.selectCar').click(function () {
-    // $(this).attr('tabindex', 1).focus();
     $(this).addClass('active');
     $(".dropdownСar").find('.dropdown-menuCar').slideToggle("slow");
 });
 $('.dropdownСar').focusout(function () {
     $(this).removeClass('active');
-    // $(this).find('.dropdown-menuCar').slideUp("slow");
 });
 $('.dropdownСar .dropdown-menuCar li').click(function () {
     $(this).parents('.dropdownСar').find('span').text($(this).text());
-    // $(this).parents('.dropdownСar').find('input').attr('value', $(this).attr('id'));
 }); 
-////
+/*End Dropdown Menu car */

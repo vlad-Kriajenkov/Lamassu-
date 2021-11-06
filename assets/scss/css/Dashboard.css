@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*Обнуление*/
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;1,100&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
 .wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   height: 100%;
 }
 
@@ -123,7 +123,7 @@ header {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
-  font-size: 10px;
+  font-size: 12px;
   padding-bottom: 3px;
   border-bottom: 3px solid transparent;
 }
@@ -157,7 +157,7 @@ header {
   padding: 15px;
 }
 
-.columnNames__connection, .columnNames__status, .columnNames__car, .СonditionSystem_title h1, .notification__title h1, .Filter__title, .AverageСarStats__nmae p {
+.columnNames__connection, .columnNames__status, .columnNames__car, .СonditionSystem_title h1, .notification__title h1, .box__title, .AverageСarStats__nmae p {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
@@ -195,28 +195,13 @@ main {
   font-size: 20px;
   color: #da6e00;
 }
+
 /* Пункт Статистика не рабочего стостояния Машины за «Период»*/
-.Filter {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  width: 500px;
-  margin: 0px auto;
-}
-
-.filterBox {
-  margin: 5px;
-}
-
-.dropdown {
-  margin: 5px;
-}
-
 .AverageСarStats {
   margin: 10px 0px 10px 0px;
   margin-bottom: 20px;
 }
-.AverageСarStats__Filter {
+.AverageСarStats__box {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -248,7 +233,7 @@ main {
   text-align: center;
 }
 
-.Filter__title {
+.box__title {
   margin-bottom: 10px;
 }
 
@@ -356,7 +341,7 @@ main {
   display: none;
 }
 
-/* Блок Состояние Системы */
+/* Пункт Состояние Системы */
 .notificationAndСondition__СonditionSystem {
   display: flex;
   flex-direction: column;
@@ -479,61 +464,121 @@ main {
   display: none;
 }
 
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 17px;
+.dropdownСar .selectCar input, .dropdownСar {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  color: #fff;
 }
 
-/* Hide default HTML checkbox */
-.switch input {
-  display: none;
+.Filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 500px;
+  margin: 0px auto;
 }
 
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ff3c3c;
-  transition: 0.4s;
+.filterBox label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 180px;
+  border-radius: 2px;
+  box-shadow: 0 0 2px #cccccc;
+  height: 100%;
+  padding: 9px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: #da6e00;
 }
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 12px;
-  width: 12px;
-  left: 2px;
-  bottom: 3px;
-  background-color: white;
-  transition: 0.4s;
+.filterBox label input::-moz-placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: #da6e00;
 }
 
-input:checked + .slider {
-  background-color: #2196F3;
+.filterBox label input:-ms-input-placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: #da6e00;
 }
 
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+.filterBox label input::placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: #da6e00;
 }
 
-input:checked + .slider:before {
-  transform: translateX(26px);
+.filterBox span {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 180px;
+  border-radius: 2px;
+  box-shadow: 0 0 2px #cccccc;
+  height: 100%;
 }
 
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
+.filterBox span input::-moz-placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: #da6e00;
 }
 
-.slider.round:before {
-  border-radius: 50%;
+.filterBox span input:-ms-input-placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: #da6e00;
+}
+
+.filterBox span input::placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: #da6e00;
+}
+
+.filterBox span input {
+  width: 180px;
+  padding: 10px;
+}
+
+.select span {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+}
+
+.dropdown .dropdown-menu li {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+}
+
+.filterBox {
+  margin: 5px;
+}
+
+.dropdown {
+  margin: 5px;
 }
 
 span.msg,
@@ -632,97 +677,106 @@ span.choose {
   background-color: #e2e2e2;
 }
 
-.filterBox label {
+/* Стиль Фильтр Машины*/
+.dropdownСar {
+  width: 180px;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 2px #cccccc;
+  transition: all 0.5s ease;
+  position: relative;
+  font-size: 10px;
+  color: #da6e00;
+  text-align: left;
+  height: 34px;
+  margin-top: 5px;
+  margin-right: 3px;
+}
+
+.dropdownСar .selectCar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  width: 180px;
-  border-radius: 2px;
-  box-shadow: 0 0 2px #cccccc;
-  height: 100%;
-  padding: 9px;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
-  color: #da6e00;
-}
-
-.filterBox label input::-moz-placeholder {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
-  color: #da6e00;
-}
-
-.filterBox label input:-ms-input-placeholder {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
-  color: #da6e00;
-}
-
-.filterBox label input::placeholder {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
-  color: #da6e00;
-}
-
-.filterBox span {
-  display: flex;
   align-items: center;
-  justify-content: space-around;
-  width: 180px;
-  border-radius: 2px;
-  box-shadow: 0 0 2px #cccccc;
-  height: 100%;
-}
-
-.filterBox span input::-moz-placeholder {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
-  color: #da6e00;
-}
-
-.filterBox span input:-ms-input-placeholder {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
-  color: #da6e00;
-}
-
-.filterBox span input::placeholder {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
-  color: #da6e00;
-}
-
-.filterBox span input {
-  width: 180px;
+  cursor: pointer;
   padding: 10px;
 }
 
-.select span {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
+.dropdownСar .selectCar input {
+  width: 85px;
+  margin-left: 5px;
 }
 
-.dropdown .dropdown-menu li {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
+.dropdownСar .selectCar > i {
+  font-size: 13px;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  float: right;
+  line-height: 20px;
+}
+
+.dropdownСar:hover {
+  box-shadow: 0 0 4px #cccccc;
+}
+
+.dropdownСar:active {
+  background-color: #f8f8f8;
+}
+
+.dropdownСar.active:hover,
+.dropdownСar.active {
+  box-shadow: 0 0 4px #cccccc;
+  border-radius: 2px 2px 0 0;
+}
+
+.dropdownСar.active .selectCar > i {
+  transform: rotate(-90deg);
+}
+
+.dropdownСar .dropdown-menuCar {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  left: 0;
+  margin-top: 1px;
+  box-shadow: 0 1px 2px #cccccc;
+  border-radius: 0 1px 2px 2px;
+  overflow: hidden;
+  display: none;
+  max-height: 144px;
+  overflow-y: auto;
+  z-index: 9;
+}
+
+.dropdownСar .dropdown-menuCar li {
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.dropdownСar .dropdown-menuCar li label {
+  display: flex;
+  align-items: center;
+}
+.dropdownСar .dropdown-menuCar li label input {
+  margin-left: 10px;
+}
+
+.dropdownСar .dropdown-menuCar {
+  padding: 0;
+  list-style: none;
+}
+
+.dropdownСar .dropdown-menuCar li:hover {
+  background-color: #fff;
+}
+
+.dropdownСar .dropdown-menuCar li:active {
+  background-color: #fff;
+}
+
+.selectCar input {
+  background-color: #fff;
 }
 
 .modal {
@@ -833,4 +887,61 @@ footer {
 }
 .cash__container {
   display: flex;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 17px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  display: none;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ff3c3c;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 2px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }

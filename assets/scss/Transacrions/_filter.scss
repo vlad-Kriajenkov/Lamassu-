@@ -1,16 +1,16 @@
 %TitleFilter{
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 700;
-    font-size: 12px;
-    color: #da6e00;
+    font-weight: 100;
+    font-size: 11px;
+    color: silver
 }
 %TextFilter{
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 100;
-    font-size: 10px;
-    color: #da6e00;
+    font-weight: 800;
+    font-size: 12px;
+    color: #fff;
 }
 
   
@@ -22,60 +22,72 @@
     }
     &__Data{
         @extend %TitleFilter;
-        color:#fff;
     }
     &__Volute{
         @extend %TitleFilter;
-        color:#fff;
     }
     &__amountInCurrency{
         position: relative;
         @extend %TitleFilter;
-        color:#fff;
     }
     &__status{
         @extend %TitleFilter;
-        color:#fff;
     }
     &__operations{
         @extend %TitleFilter;
-        color:#fff;
     }
     &__Car{
         @extend %TitleFilter;
-        color:#fff;
         p{
             margin-bottom: 5px;
         }
     }
-    
+    &__ButtonSearch{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 35px;
+        margin: 0px auto;
+        @extend %TitleFilter;
+        color: #da6e00;
+        background-color:#fff;
+        border-radius: 2px;
+        img{
+            margin-right: 10px;
+        }
+    }
+    &__ButtonSearch:hover{
+        box-shadow: 0 0 8px #cccccc;
+    }
 }
   .select{
       &__mounth{
         visibility: hidden;
         position: absolute;
-        top: 22px;
+        top: 20px;
         left: 210px;
         display: flex;
         justify-content: space-between;
         width: 64%;
-        height: 35px;
+        height: 32px;
       }
       &__range{
         visibility: hidden;
         position: absolute;
-        top: 32px;
+        top: 30.5px;
         left: 210px;
         display: flex;
         justify-content: space-between;
         width: 64%;
         input{
             width: 180px;
-            height: 31px;
+            height: 32px;
             border-radius: 2px;
             box-shadow: 0 0 2px #cccccc;
             padding: 5px; 
             @extend %TextFilter;
+            background-color: #da6e00;
            
         }
        
@@ -87,10 +99,12 @@
         left: 200px;
         input{
             width: 180px;
-            height: 31px;
+            height: 32px;
             border-radius: 2px;
             box-shadow: 0 0 2px #cccccc;
             padding: 5px;
+            background-color: #da6e00;
+            color: #fff;
         }
         input::placeholder{
             @extend %TextFilter;
@@ -113,6 +127,7 @@
                 box-shadow: 0 0 2px #cccccc;
                 padding: 5px; 
                 @extend %TextFilter;
+                background-color: #da6e00;
             }
             input::placeholder{
                 @extend %TextFilter;
@@ -130,6 +145,7 @@
             box-shadow: 0 0 2px #cccccc;
             padding: 5px;
             @extend %TextFilter;
+            background-color: #da6e00;
         }
         input::placeholder{
             @extend %TextFilter;
@@ -147,6 +163,7 @@
             box-shadow: 0 0 2px #cccccc;
             padding: 5px;
             @extend %TextFilter;
+            background-color: #da6e00;
         }
         input::placeholder{
             @extend %TextFilter;
@@ -179,14 +196,14 @@
   .dropdown {
     width: 180px;
     display: inline-block;
-    background-color: #fff;
+    background-color: #da6e00 ;
     border-radius: 2px;
     box-shadow: 0 0 2px rgb(204, 204, 204);
     transition: all .5s ease;
     position: relative;
     font-size: 14px;
-    color: #da6e00;
-    height: 100%;
+    color: #fff;
+    // height: 100%;
     text-align: left
   }
   .dropdown .select {
@@ -214,14 +231,14 @@
   .dropdown.active {
       box-shadow: 0 0 4px rgb(204, 204, 204);
       border-radius: 2px 2px 0 0;
-      background-color: #f8f8f8
+    //   background-color: #f8f8f8
   }
   .dropdown.active .select > i {
       transform: rotate(-90deg)
   }
   .dropdown .dropdown-menu {
       position: absolute;
-      background-color: #fff;
+      background-color: #da6e00;
       width: 100%;
       left: 0;
       margin-top: 1px;
@@ -236,90 +253,23 @@
   .dropdown .dropdown-menu li {
       padding: 10px;
       transition: all .2s ease-in-out;
-      cursor: pointer
+      cursor: pointer;
+     
   } 
   .dropdown .dropdown-menu {
       padding: 0;
       list-style: none
   }
   .dropdown .dropdown-menu li:hover {
-      background-color: #f2f2f2
+      background-color: #b35a02
   }
   .dropdown .dropdown-menu li:active {
-      background-color: #e2e2e2
+      background-color: #b35a02
   }
 
 
-
-// .summTransaction {
-
-//     &__title {
-//         font-family: 'Montserrat';
-//         font-style: normal;
-//         font-weight: 700;
-//         font-size: 12px;
-//         color: #da6e00;
-//     }
-
-//     &__body {
-//         display: flex;
-//         justify-content: space-between;
-//     }
-// }
- 
- .filterBox label{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 180px;
-    border-radius: 2px;
-    box-shadow: 0 0 2px rgb(204, 204, 204);
-    height: 100%;
-    padding: 9px;
-    background-color:#fff;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 100;
-    font-size: 10px;
-    color: #da6e00;
-  }
-
-  
-  .filterBox label input::placeholder{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 100;
-    font-size: 10px;
-    color: #da6e00;
-}
-.filterBox span {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 180px;
-    border-radius: 2px;
-    box-shadow: 0 0 2px rgb(204, 204, 204);
-    height: 100%;
-    
-  }
-  .filterBox span input::placeholder{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 100;
-    font-size: 10px;
-    color: #da6e00;
-    
-}
-.filterBox span input{
-    width: 180px;
-    padding: 10px;
-    
-}
 .select span{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 100;
-    font-size: 10px;
+  @extend %TextFilter
 }
 .dropdown .dropdown-menu  li {
     font-family: 'Montserrat';
@@ -332,25 +282,17 @@
     margin: 10px 0px 10px 0px;
 }
 
-
-
-
-
-
-
-
-
-
+/* Стиль Фильтр Машины*/
   .dropdownСar {
     width: 180px;
     display: inline-block;
-    background-color: #fff;
+    background-color: #da6e00;
     border-radius: 2px;
     box-shadow: 0 0 2px rgb(204, 204, 204);
     transition: all .5s ease;
     position: relative;
     font-size: 10px;
-    color: #da6e00;
+    color: #fff;
     height: 100%;
     text-align: left
   }
@@ -359,8 +301,8 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    
     padding: 10px
+    
   }
   .dropdownСar .selectCar input{
     @extend %TextFilter;
@@ -385,14 +327,14 @@
   .dropdownСar.active {
       box-shadow: 0 0 4px rgb(204, 204, 204);
       border-radius: 2px 2px 0 0;
-      background-color: #f8f8f8
+    //   background-color: #f8f8f8
   }
   .dropdownСar.active .selectCar > i {
       transform: rotate(-90deg)
   }
   .dropdownСar .dropdown-menuCar {
       position: absolute;
-      background-color: #fff;
+      background-color: #da6e00;
       width: 100%;
       left: 0;
       margin-top: 1px;
@@ -407,16 +349,25 @@
   .dropdownСar .dropdown-menuCar li {
       padding: 10px;
       transition: all .2s ease-in-out;
-      cursor: pointer
+      cursor: pointer;
+      label{
+        display:flex;
+        align-items:center;
+        input{
+            margin-left: 10px;
+        }
+      }
   } 
   .dropdownСar .dropdown-menuCar {
       padding: 0;
       list-style: none
   }
   .dropdownСar .dropdown-menuCar li:hover {
-      background-color: #f2f2f2
+      background-color: #b35a02
   }
   .dropdownСar .dropdown-menuCar li:active {
-      background-color: #e2e2e2
+      background-color: #b35a02
   }
-
+  .selectCar input{
+      background-color:#da6e00;
+  }

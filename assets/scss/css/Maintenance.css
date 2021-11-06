@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*Обнуление*/
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;1,100&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -126,7 +126,7 @@ footer {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
-  font-size: 10px;
+  font-size: 12px;
   padding-bottom: 3px;
   border-bottom: 3px solid transparent;
 }
@@ -149,7 +149,7 @@ footer {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  font-size: 10px;
+  font-size: 11px;
   color: #747474;
   margin-right: 11px;
 }
@@ -206,7 +206,7 @@ footer {
   color: #da6e00;
 }
 
-.meaning__imgCamera, .meaning__imgCheck, .meaning__imgBurgerOptionIcon, .meaning__imgNextLink a, .boxInfo__meaning, .table__body, .AddFelter__title, .search__inputText::placeholder, .heading__cashOut p, .heading__cashIn p {
+.meaning__imgCamera, .meaning__imgCheck, .meaning__imgBurgerOptionIcon, .meaning__imgNextLink a, .boxInfo__meaning, .table__body, .AddFelter__title, .search__inputText::placeholder {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
@@ -220,11 +220,11 @@ main {
 
 /*  Start MAiN  */
 /* Transaction */
-.transactions {
+.maintenance {
   width: 1200px;
   margin: 0px auto;
 }
-.transactions__heading {
+.maintenance__heading {
   display: flex;
   align-items: center;
   margin: 15px 0px 15px 0px;
@@ -253,24 +253,7 @@ main {
 .heading__downloadBtn img {
   width: 15px;
 }
-.heading__cashIn {
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
-}
-.heading__cashIn img {
-  width: 14px;
-  height: 14px;
-}
-.heading__cashOut {
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
-}
-.heading__cashOut img {
-  width: 14px;
-  height: 14px;
-}
+
 /* Пунтк Филтр + Поиск*/
 .search {
   display: flex;
@@ -323,17 +306,15 @@ main {
   padding: 10px;
   border: 1px solid black;
   border-radius: 5px;
+  z-index: 1000;
 }
 
 .search__body.activeFilter {
   display: block;
+  z-index: 1000;
 }
 
 /* Пунтк Филтр + Поиск End */
-.transactions__table span {
-  width: 50%;
-}
-
 .table__header {
   display: flex;
   text-align: center;
@@ -345,7 +326,7 @@ main {
   padding: 8px;
 }
 .table__header span {
-  width: 50%;
+  width: 110%;
 }
 .table__body {
   display: flex;
@@ -359,14 +340,265 @@ main {
 }
 .table__body button,
 .table__body span {
-  width: 50%;
+  width: 110%;
 }
 
-#downloadСheck {
+#Btn {
   background: none;
 }
-#downloadСheck img {
+#Btn img {
   width: 25px;
+}
+
+.Filter__ButtonSearch, .Filter__Car, .Filter__Status, .Filter__Specifications, .Filter__Connection {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 11px;
+  color: silver;
+}
+
+.dropdownСar .selectCar input, .select span {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12px;
+  color: #fff;
+}
+
+.Filter {
+  display: flex;
+  flex-direction: column;
+}
+.Filter__Status {
+  position: relative;
+}
+.Filter__Car p {
+  margin-bottom: 5px;
+}
+.Filter__ButtonSearch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 35px;
+  margin: 10px auto 0px auto;
+  color: #da6e00;
+  background-color: #fff;
+  border-radius: 2px;
+}
+.Filter__ButtonSearch img {
+  margin-right: 10px;
+}
+.Filter__ButtonSearch:hover {
+  box-shadow: 0 0 8px #cccccc;
+}
+
+span.msg,
+span.choose {
+  color: #555;
+  padding: 5px 0 10px;
+  display: inherit;
+}
+
+.container {
+  width: 500px;
+  margin: 50px auto 0;
+  text-align: center;
+}
+
+/*Styling Selectbox*/
+.dropdown {
+  width: 580px;
+  display: inline-block;
+  background-color: #da6e00;
+  border-radius: 2px;
+  box-shadow: 0 0 2px #cccccc;
+  transition: all 0.5s ease;
+  position: relative;
+  font-size: 14px;
+  color: #fff;
+  text-align: left;
+}
+
+.dropdown .select {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.dropdown .select > i {
+  font-size: 13px;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  float: right;
+  line-height: 20px;
+}
+
+.dropdown:hover {
+  box-shadow: 0 0 4px #cccccc;
+}
+
+.dropdown:active {
+  background-color: #f8f8f8;
+}
+
+.dropdown.active:hover,
+.dropdown.active {
+  box-shadow: 0 0 4px #cccccc;
+  border-radius: 2px 2px 0 0;
+}
+
+.dropdown.active .select > i {
+  transform: rotate(-90deg);
+}
+
+.dropdown .dropdown-menu {
+  position: absolute;
+  background-color: #da6e00;
+  width: 100%;
+  left: 0;
+  margin-top: 1px;
+  box-shadow: 0 1px 2px #cccccc;
+  border-radius: 0 1px 2px 2px;
+  overflow: hidden;
+  display: none;
+  max-height: 144px;
+  overflow-y: auto;
+  z-index: 9;
+}
+
+.dropdown .dropdown-menu li {
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.dropdown .dropdown-menu {
+  padding: 0;
+  list-style: none;
+}
+
+.dropdown .dropdown-menu li:hover {
+  background-color: #b35a02;
+}
+
+.dropdown .dropdown-menu li:active {
+  background-color: #b35a02;
+}
+
+.dropdown .dropdown-menu li {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+}
+
+.filterBox,
+.dropdown {
+  margin: 10px 0px 10px 0px;
+}
+
+/* Анимация открытия Филтра Машины*/
+.dropdownСar {
+  width: 580px;
+  display: inline-block;
+  background-color: #da6e00;
+  border-radius: 2px;
+  box-shadow: 0 0 2px #cccccc;
+  transition: all 0.5s ease;
+  position: relative;
+  font-size: 10px;
+  color: #fff;
+  height: 100%;
+  text-align: left;
+}
+
+.dropdownСar .selectCar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.dropdownСar .selectCar input {
+  width: 85px;
+  margin-left: 5px;
+}
+
+.dropdownСar .selectCar > i {
+  font-size: 13px;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  float: right;
+  line-height: 20px;
+}
+
+.dropdownСar:hover {
+  box-shadow: 0 0 4px #cccccc;
+}
+
+.dropdownСar:active {
+  background-color: #f8f8f8;
+}
+
+.dropdownСar.active:hover,
+.dropdownСar.active {
+  box-shadow: 0 0 4px #cccccc;
+  border-radius: 2px 2px 0 0;
+}
+
+.dropdownСar.active .selectCar > i {
+  transform: rotate(-90deg);
+}
+
+.dropdownСar .dropdown-menuCar {
+  position: absolute;
+  background-color: #da6e00;
+  width: 100%;
+  left: 0;
+  margin-top: 1px;
+  box-shadow: 0 1px 2px #cccccc;
+  border-radius: 0 1px 2px 2px;
+  overflow: hidden;
+  display: none;
+  max-height: 144px;
+  overflow-y: auto;
+  z-index: 9;
+}
+
+.dropdownСar .dropdown-menuCar li {
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.dropdownСar .dropdown-menuCar li label {
+  display: flex;
+  align-items: center;
+}
+.dropdownСar .dropdown-menuCar li label input {
+  margin-left: 10px;
+}
+
+.dropdownСar .dropdown-menuCar {
+  padding: 0;
+  list-style: none;
+}
+
+.dropdownСar .dropdown-menuCar li:hover {
+  background-color: #b35a02;
+}
+
+.dropdownСar .dropdown-menuCar li:active {
+  background-color: #b35a02;
+}
+
+.selectCar input {
+  background-color: #da6e00;
 }
 
 /* All INfo Car */
@@ -488,439 +720,59 @@ main {
 }
 
 /* End Main */
-.Filter__Car, .Filter__operations, .Filter__status, .Filter__amountInCurrency, .Filter__Volute, .Filter__Data {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 12px;
-  color: #da6e00;
-}
-
-.select__smaller input::-moz-placeholder, .select__more input::-moz-placeholder, .select__rangeSum input::-moz-placeholder, .select__volute input::-moz-placeholder {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
-  color: #da6e00;
-}
-
-.select__smaller input:-ms-input-placeholder, .select__more input:-ms-input-placeholder, .select__rangeSum input:-ms-input-placeholder, .select__volute input:-ms-input-placeholder {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
-  color: #da6e00;
-}
-
-.dropdownСar .selectCar input, .select__smaller input::placeholder, .select__smaller input, .select__more input::placeholder, .select__more input, .select__rangeSum input::placeholder, .select__rangeSum input, .select__volute input::placeholder, .select__range input {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
-  color: #da6e00;
-}
-
-.Filter {
-  display: flex;
-  flex-direction: column;
-}
-.Filter__summTransaction {
-  padding: 5px;
-}
-.Filter__Data {
-  color: #fff;
-}
-.Filter__Volute {
-  color: #fff;
-}
-.Filter__amountInCurrency {
+/* The switch - the box around the slider */
+.switch {
   position: relative;
-  color: #fff;
-}
-.Filter__status {
-  color: #fff;
-}
-.Filter__operations {
-  color: #fff;
-}
-.Filter__Car {
-  color: #fff;
-}
-.Filter__Car p {
-  margin-bottom: 5px;
-}
-
-.select__mounth {
-  visibility: hidden;
-  position: absolute;
-  top: 22px;
-  left: 210px;
-  display: flex;
-  justify-content: space-between;
-  width: 64%;
-  height: 35px;
-}
-.select__range {
-  visibility: hidden;
-  position: absolute;
-  top: 32px;
-  left: 210px;
-  display: flex;
-  justify-content: space-between;
-  width: 64%;
-}
-.select__range input {
-  width: 180px;
-  height: 31px;
-  border-radius: 2px;
-  box-shadow: 0 0 2px #cccccc;
-  padding: 5px;
-}
-.select__volute {
-  visibility: hidden;
-  position: absolute;
-  top: 22px;
-  left: 200px;
-}
-.select__volute input {
-  width: 180px;
-  height: 31px;
-  border-radius: 2px;
-  box-shadow: 0 0 2px #cccccc;
-  padding: 5px;
-}
-.select__rangeSum {
-  visibility: hidden;
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  top: 22px;
-  left: 200px;
-  width: 66%;
-}
-.select__rangeSum input {
-  width: 180px;
-  height: 31px;
-  border-radius: 2px;
-  box-shadow: 0 0 2px #cccccc;
-  padding: 5px;
-}
-.select__more {
-  visibility: hidden;
-  position: absolute;
-  top: 22px;
-  left: 200px;
-}
-.select__more input {
-  width: 180px;
-  height: 31px;
-  border-radius: 2px;
-  box-shadow: 0 0 2px #cccccc;
-  padding: 5px;
-}
-.select__smaller {
-  visibility: hidden;
-  position: absolute;
-  top: 22px;
-  left: 200px;
-}
-.select__smaller input {
-  width: 180px;
-  height: 31px;
-  border-radius: 2px;
-  box-shadow: 0 0 2px #cccccc;
-  padding: 5px;
-}
-.select__smaller.active,
-.select__more.active,
-.select__rangeSum.active,
-.select__volute.active,
-.select__mounth.active,
-.select__range.active {
-  visibility: visible;
-}
-
-span.msg,
-span.choose {
-  color: #555;
-  padding: 5px 0 10px;
-  display: inherit;
-}
-
-.container {
-  width: 500px;
-  margin: 50px auto 0;
-  text-align: center;
-}
-
-/*Styling Selectbox*/
-.dropdown {
-  width: 180px;
   display: inline-block;
-  background-color: #fff;
-  border-radius: 2px;
-  box-shadow: 0 0 2px #cccccc;
-  transition: all 0.5s ease;
-  position: relative;
-  font-size: 14px;
-  color: #da6e00;
-  height: 100%;
-  text-align: left;
+  width: 40px;
+  height: 17px;
 }
 
-.dropdown .select {
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
-  padding: 10px;
-}
-
-.dropdown .select > i {
-  font-size: 13px;
-  color: #888;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  float: right;
-  line-height: 20px;
-}
-
-.dropdown:hover {
-  box-shadow: 0 0 4px #cccccc;
-}
-
-.dropdown:active {
-  background-color: #f8f8f8;
-}
-
-.dropdown.active:hover,
-.dropdown.active {
-  box-shadow: 0 0 4px #cccccc;
-  border-radius: 2px 2px 0 0;
-  background-color: #f8f8f8;
-}
-
-.dropdown.active .select > i {
-  transform: rotate(-90deg);
-}
-
-.dropdown .dropdown-menu {
-  position: absolute;
-  background-color: #fff;
-  width: 100%;
-  left: 0;
-  margin-top: 1px;
-  box-shadow: 0 1px 2px #cccccc;
-  border-radius: 0 1px 2px 2px;
-  overflow: hidden;
+/* Hide default HTML checkbox */
+.switch input {
   display: none;
-  max-height: 144px;
-  overflow-y: auto;
-  z-index: 9;
 }
 
-.dropdown .dropdown-menu li {
-  padding: 10px;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
-}
-
-.dropdown .dropdown-menu {
-  padding: 0;
-  list-style: none;
-}
-
-.dropdown .dropdown-menu li:hover {
-  background-color: #f2f2f2;
-}
-
-.dropdown .dropdown-menu li:active {
-  background-color: #e2e2e2;
-}
-
-.filterBox label {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 180px;
-  border-radius: 2px;
-  box-shadow: 0 0 2px #cccccc;
-  height: 100%;
-  padding: 9px;
-  background-color: #fff;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
-  color: #da6e00;
-}
-
-.filterBox label input::-moz-placeholder {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
-  color: #da6e00;
-}
-
-.filterBox label input:-ms-input-placeholder {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
-  color: #da6e00;
-}
-
-.filterBox label input::placeholder {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
-  color: #da6e00;
-}
-
-.filterBox span {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 180px;
-  border-radius: 2px;
-  box-shadow: 0 0 2px #cccccc;
-  height: 100%;
-}
-
-.filterBox span input::-moz-placeholder {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
-  color: #da6e00;
-}
-
-.filterBox span input:-ms-input-placeholder {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
-  color: #da6e00;
-}
-
-.filterBox span input::placeholder {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
-  color: #da6e00;
-}
-
-.filterBox span input {
-  width: 180px;
-  padding: 10px;
-}
-
-.select span {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
-}
-
-.dropdown .dropdown-menu li {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
-}
-
-.filterBox,
-.dropdown {
-  margin: 10px 0px 10px 0px;
-}
-
-.dropdownСar {
-  width: 180px;
-  display: inline-block;
-  background-color: #fff;
-  border-radius: 2px;
-  box-shadow: 0 0 2px #cccccc;
-  transition: all 0.5s ease;
-  position: relative;
-  font-size: 10px;
-  color: #da6e00;
-  height: 100%;
-  text-align: left;
-}
-
-.dropdownСar .selectCar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  padding: 10px;
-}
-
-.dropdownСar .selectCar input {
-  width: 85px;
-  margin-left: 5px;
-}
-
-.dropdownСar .selectCar > i {
-  font-size: 13px;
-  color: #888;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  float: right;
-  line-height: 20px;
-}
-
-.dropdownСar:hover {
-  box-shadow: 0 0 4px #cccccc;
-}
-
-.dropdownСar:active {
-  background-color: #f8f8f8;
-}
-
-.dropdownСar.active:hover,
-.dropdownСar.active {
-  box-shadow: 0 0 4px #cccccc;
-  border-radius: 2px 2px 0 0;
-  background-color: #f8f8f8;
-}
-
-.dropdownСar.active .selectCar > i {
-  transform: rotate(-90deg);
-}
-
-.dropdownСar .dropdown-menuCar {
+/* The slider */
+.slider {
   position: absolute;
-  background-color: #fff;
-  width: 100%;
-  left: 0;
-  margin-top: 1px;
-  box-shadow: 0 1px 2px #cccccc;
-  border-radius: 0 1px 2px 2px;
-  overflow: hidden;
-  display: none;
-  max-height: 144px;
-  overflow-y: auto;
-  z-index: 9;
-}
-
-.dropdownСar .dropdown-menuCar li {
-  padding: 10px;
-  transition: all 0.2s ease-in-out;
   cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ff3c3c;
+  transition: 0.4s;
 }
 
-.dropdownСar .dropdown-menuCar {
-  padding: 0;
-  list-style: none;
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 2px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
 }
 
-.dropdownСar .dropdown-menuCar li:hover {
-  background-color: #f2f2f2;
+input:checked + .slider {
+  background-color: #2196F3;
 }
 
-.dropdownСar .dropdown-menuCar li:active {
-  background-color: #e2e2e2;
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
