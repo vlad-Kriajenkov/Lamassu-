@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/scss/css/Maintenance.css">
+    <link rel="stylesheet" href="/assets/scss/css/MachineLogic.css">
     <title>Document</title>
 </head>
 <body>
@@ -30,7 +30,7 @@
                 </div>
             </div>  
         </div>    
-        <div class="boxMainNav"> 
+        <div class="boxMainNav">
             <div class="container__MainNav">
                 <nav>
                     <a href="/Maintenance.html" class="MainNav__link active">Машины</a>
@@ -47,10 +47,10 @@
     </header>
     
     <main>
-        <div class="maintenance">
-            <div class="maintenance__heading">
+        <div class="reinforcements">
+            <div class="reinforcements__heading">
                 <div class="heading__box">
-                    <div class="heading__title"><p>Машины</p></div> 
+                    <div class="heading__title"><p>Лог Машины</p></div> 
                     <div class="heading__search">
                         <label class="search">
                             <div class="AddFelter">
@@ -63,87 +63,32 @@
                         </label>
                         <div class="search__body">
                             <form class="Filter">
-                                <div class="Filter__Connection">
-                                    <p>Связь:</p>
+                                <div class="Filter__Data">
+                                    <p>Времени:</p>
                                     <div class="dropdown">
                                         <div class="select">
-                                            <span>Все</span>
+                                            <span>1 час</span>
                                             <i class="fa fa-chevron-left"></i>
                                             <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
                                         </div>
                                         <input type="hidden" name="gender">
                                         <ul class="dropdown-menu">
-                                            <li id="AllConnection">Все</li>
-                                            <li id="MainMenu">Основное меню</li>
-                                            <li id="CurrencyExchange">Обмен валюты</li>
-                                            <li id="Fiscalization">Фискализация</li>
-                                            <li id="SystemLockout">Системная блокировка</li>
+                                            <li id="LastHour">1 час</li>
+                                            <li id="LastThreeHours">3 час</li>
+                                            <li id="ThisDay">Текущий день</li>
+                                            <li id="ThisWeek">Текущая неделя</li>
+                                            <li id="RangeData">Диапозон дня</li>
+                                            <li id="RangeWeek">Диапозон времени</li>
                                         </ul>
                                     </div> 
-                                </div>
-                                <div class="Filter__Specifications">
-                                    <p>Спецификации:</p>
-                                    <div class="dropdown">
-                                        <div class="select">
-                                            <span>Все </span>
-                                            <i class="fa fa-chevron-left"></i>
-                                            <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
-                                        </div>
-                                        <input type="hidden" name="gender">
-                                        <ul class="dropdown-menu">
-                                            <li id="AllSpecifications">Все</li>
-                                            <li id="F56+TBV">F56+TBV</li>
-                                            <li id="F56+iVision100-SS">F56+iVision 100- SS</li>
-                                        </ul>
-                                    </div> 
-                                </div>
-                                <div class="Filter__Status">
-                                    <p>Статус:</p>
-                                    <div class="dropdown">
-                                        <div class="select">
-                                            <span>Все</span>
-                                            <i class="fa fa-chevron-left"></i>
-                                            <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
-                                        </div>
-                                        <input type="hidden" name="gender">
-                                        <ul class="dropdown-menu">
-                                            <li id="AllStatus">Все</li>
-                                            <li id="NetworkLost">Сеть потерена</li>
-                                            <li id="FullyWorking">Полностью работающая</li>
-                                        </ul>
-                                    </div> 
-                                </div>
-                                <div class="Filter__Status">
-                                    <p>Производитель:</p>
-                                    <div class="dropdown">
-                                        <div class="select">
-                                            <span>Все</span>
-                                            <i class="fa fa-chevron-left"></i>
-                                            <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
-                                        </div>
-                                        <input type="hidden" name="gender">
-                                        <ul class="dropdown-menu">
-                                            <li id="AllManufacturer">Все</li>
-                                            <li id="Technomatika">Техноматика</li>
-                                            <li id="Vanguard">Авангард</li>
-                                        </ul>
-                                    </div> 
-                                </div>
-                                <div class="Filter__Status">
-                                    <p>Сегмент местоположения:</p>
-                                    <div class="dropdown">
-                                        <div class="select">
-                                            <span>Все</span>
-                                            <i class="fa fa-chevron-left"></i>
-                                            <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
-                                        </div>
-                                        <input type="hidden" name="gender">
-                                        <ul class="dropdown-menu">
-                                            <li id="AllLocations">Все</li>
-                                            <li id="MALL">ТРЦ</li>
-                                            <li id="Hotels">Отели</li>
-                                        </ul>
-                                    </div> 
+                                    <div class="select__time">
+                                        <input type="time" name="timefrom" id="timefrom">
+                                        <input type="time" name="timebefore" id="timebefore">
+                                    </div>
+                                    <div class="select__range">
+                                        <input type="date" name="datefrom" id="datefrom">
+                                        <input type="date" name="datebefore" id="datebefore">
+                                    </div>
                                 </div>
                                 <div class="Filter__Car">
                                     <p>Машины</p>
@@ -211,46 +156,21 @@
 
             <div class="maintenance__table">
                 <div class="table__header">
-                    <span id="numCar">Номер машины</span>
-                    <span id="connection">Связь</span>
-                    <span id="address">Адрес</span>
-                    <span id="status">Статус</span>
-                    <span id="firmware">Прошивка</span>
-                    <span id="specification">Спецификация</span>
-                    <span id="course">Курс USD/EUR</span>
-                    <span id="cashAcceptor">Купюроприемник</span>
-                    <span id="Dispenser">Диспенсер</span>
-                    <span id="Hopper">Хоппер</span>
-                    <span id="Printer">Принтер</span>
-                    <span id="downloadСheck"></span>
+                    <span id="Day">Дата</span>
+                    <span id="Level">Уровень</span>
+                    <span id="Info"></span>
+                </div>
+                <div class="table__bodyNoActivity">
+                    <p>Пока никакой активности</p>
                 </div>
                 <div class="table__body">
-                    <span id="numCar">0001</span>
-                    <span id="connection">
-                        <form class="formStatusSwitch">
-                            <label class="switch">
-                                <input type="checkbox">
-                                <span class="slider round"></span>
-                            </label>
-                        </form>
-                    </span>
-                    <span id="address">Ocean Plaza</span>
-                    <span id="status">Полностью работающая</span>
-                    <span id="firmware">F56+TBV</span>
-                    <span id="specification">Текст Текст</span>
-                    <span id="course">26.420 USD / 30.190 EUR</span>
-                    <span id="cashAcceptor"> ОК (REJ=0)</span>
-                    <span id="Dispenser">ОК</span>
-                    <span id="Hopper">ОК</span>
-                    <span id="Printer">ОК</span>
-                    <button id="Btn">
-                        <img src="/assets/img/downloadСheck/downloadСheck.png"  alt="">
-                    </button>
+                    <span id="Day">20.11.2021</span>
+                    <span id="Level">Error</span>
+                    <span id="Info">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
                 </div>
-                
             </div>
         </div>    
-    </main>
+    </main>   
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>    
     <script src="/assets/js/filter/filter.js"></script> 
 </body>

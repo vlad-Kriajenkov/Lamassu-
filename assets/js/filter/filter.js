@@ -44,6 +44,33 @@ $('#RangeData').click(function () {
     $('.select__range').addClass('active'); 
  });
 
+ 
+/*Скрытие Filter__Data подпунктов в  MachineLogic */
+$('#LastHour').click(function () {
+    $('.select__time').removeClass('active'); 
+     $('.select__range').removeClass('active'); 
+ });
+ $('#LastThreeHours').click(function () {
+    $('.select__time').removeClass('active'); 
+     $('.select__range').removeClass('active'); 
+ });
+ $('#ThisDay').click(function () {
+    $('.select__time').removeClass('active'); 
+     $('.select__range').removeClass('active'); 
+ });
+$('#ThisWeek').click(function () {
+   $('.select__time').removeClass('active'); 
+   $('.select__range').removeClass('active');
+});
+$('#RangeData').click(function () {
+    $('.select__time').removeClass('active'); 
+    $('.select__range').addClass('active'); 
+ });
+ $('#RangeWeek').click(function () {
+    $('.select__time').addClass('active'); 
+     $('.select__range').removeClass('active'); 
+ });
+
 
 /* Скрытие Filter__amountInCurrency подпунктов  */
 $('#Exactly').click(function () {

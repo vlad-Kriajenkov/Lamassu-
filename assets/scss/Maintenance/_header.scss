@@ -1,7 +1,7 @@
 .boxHeader{
     background: #da6e00; 
 }
-.boxMaintenanceNav{
+.boxMainNav{
     background: #ffd9b3;
 }
 
@@ -66,7 +66,7 @@
 }
 .container {
 
-    &__MaintenanceNav {
+    &__MainNav {
         width: 1200px;
         margin: 0px auto;
         height: 40px;
@@ -74,7 +74,7 @@
         align-items: center;
     }
 }
-.MaintenanceNav {
+.MainNav {
 
     &__link {
         font-family: 'Montserrat';

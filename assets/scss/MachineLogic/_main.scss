@@ -25,7 +25,7 @@ main{
 
 /*  Start MAiN  */
 /* Transaction */
-.maintenance {
+.reinforcements {
     width: 1200px;
     margin: 0px auto;
     &__heading {
@@ -48,6 +48,7 @@ main{
     &__title {
         margin-right: 20px;
         p{
+            width: 145px;
             @extend %TitleParagraph;
         }
         
@@ -66,7 +67,7 @@ main{
     &__downloadBtn {
         background-color:#ffd9b3;
         border-radius: 15px;
-        width: 31px;
+        width: 34px;
         height: 27px;
         margin-left: 10px; 
         img{
@@ -156,7 +157,7 @@ border-radius: 6px;
 .table {
     &__header {
         display: flex;
-        text-align: center;
+        text-align: left;
         align-items: center;
         background-color:  #da6e00;
         @extend %TitleParagraph;
@@ -165,13 +166,14 @@ border-radius: 6px;
         height: 40px;
         padding: 8px;
         span{
-            width:110%;
+            margin-left: 15px;
+            width:13%;
         }
        
     }
     &__body{
         display: flex;
-        text-align: center;
+        text-align: left;
         align-items: center;
         margin: 10px 0px 10px 0px;
         height: 40px;
@@ -181,11 +183,23 @@ border-radius: 6px;
         color:black;
         button,
         span{
-            width:110%;
+            margin-left: 15px;
+            width:13%;
         }
+    }
+    &__bodyNoActivity{
+        display: none;
+        @extend %TitleParagraph;
+        font-size: 12px;
+        margin: 10px;
+
     }
 }
 
+#Info{
+    text-align: left;
+    width: 100%;
+}
 
 #Btn{
     background:none;

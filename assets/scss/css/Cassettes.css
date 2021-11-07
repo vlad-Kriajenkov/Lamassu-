@@ -91,7 +91,7 @@ footer {
   background: #da6e00;
 }
 
-.boxMaintenanceNav {
+.boxMainNav {
   background: #ffd9b3;
 }
 
@@ -137,7 +137,7 @@ footer {
   border-bottom: 3px solid white;
 }
 
-.container__MaintenanceNav {
+.container__MainNav {
   width: 1200px;
   margin: 0px auto;
   height: 40px;
@@ -145,7 +145,7 @@ footer {
   align-items: center;
 }
 
-.MaintenanceNav__link {
+.MainNav__link {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
@@ -153,10 +153,10 @@ footer {
   color: #747474;
   margin-right: 11px;
 }
-.MaintenanceNav__link:hover {
+.MainNav__link:hover {
   color: #da6e00;
 }
-.MaintenanceNav__link.active {
+.MainNav__link.active {
   color: #da6e00;
 }
 

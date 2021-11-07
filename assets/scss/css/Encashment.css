@@ -220,11 +220,11 @@ main {
 
 /*  Start MAiN  */
 /* Transaction */
-.maintenance {
+.encashment {
   width: 1200px;
   margin: 0px auto;
 }
-.maintenance__heading {
+.encashment__heading {
   display: flex;
   align-items: center;
   margin: 15px 0px 15px 0px;
@@ -247,7 +247,7 @@ main {
 .heading__downloadBtn {
   background-color: #ffd9b3;
   border-radius: 15px;
-  width: 31px;
+  width: 34px;
   height: 27px;
   margin-left: 10px;
 }
@@ -351,7 +351,7 @@ main {
   width: 25px;
 }
 
-.Filter__ButtonSearch, .Filter__Car, .Filter__Status, .Filter__Specifications, .Filter__Connection {
+.Filter__ButtonSearch, .Filter__Car, .Filter__Data {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
@@ -359,7 +359,7 @@ main {
   color: silver;
 }
 
-.dropdownСar .selectCar input, .select span {
+.dropdownСar .selectCar input, .select span, .select__range input {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 800;
@@ -370,9 +370,6 @@ main {
 .Filter {
   display: flex;
   flex-direction: column;
-}
-.Filter__Status {
-  position: relative;
 }
 .Filter__Car p {
   margin-bottom: 5px;
@@ -395,6 +392,39 @@ main {
   box-shadow: 0 0 8px #cccccc;
 }
 
+.select__mounth {
+  visibility: hidden;
+  position: absolute;
+  top: 20px;
+  left: 210px;
+  display: flex;
+  justify-content: space-between;
+  width: 64%;
+  height: 32px;
+}
+.select__range {
+  visibility: hidden;
+  position: absolute;
+  top: 30.5px;
+  left: 210px;
+  display: flex;
+  justify-content: space-between;
+  width: 64%;
+}
+.select__range input {
+  width: 180px;
+  height: 32px;
+  border-radius: 2px;
+  box-shadow: 0 0 2px #cccccc;
+  padding: 5px;
+  background-color: #da6e00;
+}
+
+.select__mounth.active,
+.select__range.active {
+  visibility: visible;
+}
+
 span.msg,
 span.choose {
   color: #555;
@@ -410,7 +440,7 @@ span.choose {
 
 /*Styling Selectbox*/
 .dropdown {
-  width: 580px;
+  width: 180px;
   display: inline-block;
   background-color: #da6e00;
   border-radius: 2px;
@@ -504,14 +534,14 @@ span.choose {
 
 /* Анимация открытия Филтра Машины*/
 .dropdownСar {
-  width: 580px;
+  width: 180px;
   display: inline-block;
   background-color: #da6e00;
   border-radius: 2px;
   box-shadow: 0 0 2px #cccccc;
   transition: all 0.5s ease;
   position: relative;
-  font-size: 10px;
+  font-size: 14px;
   color: #fff;
   height: 100%;
   text-align: left;
@@ -721,59 +751,3 @@ span.choose {
 }
 
 /* End Main */
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 17px;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  display: none;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ff3c3c;
-  transition: 0.4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 12px;
-  width: 12px;
-  left: 2px;
-  bottom: 3px;
-  background-color: white;
-  transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
