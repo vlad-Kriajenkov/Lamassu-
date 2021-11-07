@@ -190,23 +190,7 @@ footer {
   color: #da6e00;
 }
 
-.search__inputText::-moz-placeholder {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
-  color: #da6e00;
-}
-
-.search__inputText:-ms-input-placeholder {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
-  color: #da6e00;
-}
-
-.meaning__imgCamera, .meaning__imgCheck, .meaning__imgBurgerOptionIcon, .meaning__imgNextLink a, .boxInfo__meaning, .table__body, .AddFelter__title, .search__inputText::placeholder {
+.meaning__imgCamera, .meaning__imgCheck, .meaning__imgBurgerOptionIcon, .meaning__imgNextLink a, .boxInfo__meaning, .table__body, .heading__warning {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
@@ -227,6 +211,7 @@ main {
 .maintenance__heading {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin: 15px 0px 15px 0px;
 }
 .heading__box {
@@ -254,67 +239,7 @@ main {
   width: 15px;
 }
 
-/* Пунтк Филтр + Поиск*/
-.search {
-  display: flex;
-  align-items: center;
-}
-.search__inputText {
-  background-color: #ffd9b3;
-  margin-left: 5px;
-  flex-grow: 1;
-}
-.AddFelter {
-  display: flex;
-  align-items: center;
-  background-color: #da6e00;
-  height: 25px;
-  padding: 5px;
-  border-radius: 6px;
-}
-.AddFelter__title {
-  margin-right: 5px;
-  color: white;
-  font-size: 11px;
-}
-.AddFelter__button {
-  background: url("/assets/img/button/cancel.svg") no-repeat;
-  width: 12px;
-  height: 12px;
-}
-
-.button__serch {
-  background: url("/assets/img/search/search.svg") no-repeat;
-  width: 18px;
-  height: 18px;
-  margin-right: 5px;
-}
-.button__close {
-  background: url("/assets/img/button/cancel.svg") no-repeat;
-  width: 12px;
-  height: 12px;
-  margin-right: 5px;
-}
-
-/* Филтр и поск Тело */
-.search__body {
-  display: none;
-  position: absolute;
-  width: 600px;
-  background-color: #da6e00;
-  top: 38px;
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 5px;
-  z-index: 1000;
-}
-
-.search__body.activeFilter {
-  display: block;
-  z-index: 1000;
-}
-
-/* Пунтк Филтр + Поиск End */
+/* */
 .table__header {
   display: flex;
   text-align: center;
@@ -326,7 +251,7 @@ main {
   padding: 8px;
 }
 .table__header span {
-  width: 110%;
+  width: 150px;
 }
 .table__body {
   display: flex;
@@ -335,23 +260,29 @@ main {
   margin: 10px 0px 10px 0px;
   background-color: #ffd9b3;
   padding: 8px;
-  color: black;
+  color: sienna;
 }
-.table__body button,
 .table__body span {
-  width: 110%;
+  width: 150px;
 }
 
-#Btn {
+#numCar {
+  width: 100px;
+}
+
+#downloadСheck {
+  width: 50px;
   background: none;
 }
-#Btn img {
-  width: 25px;
+#downloadСheck img {
+  width: 18px;
 }
 
 /*CashCarOut start */
 #CashCarOut {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .cashOutBorder {
@@ -375,10 +306,18 @@ main {
   left: 25px;
 }
 
+.cashOutInfo {
+  text-align: left;
+}
+.cashOutInfo p {
+  margin: 0px 0px 5px 5px;
+}
 /*CashCarOut End */
 /*CashCarIn start */
 #CashCarIn {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .cashInBorder {

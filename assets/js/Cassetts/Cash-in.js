@@ -147,6 +147,7 @@ $('#btn3').click(function () {
         }
     
     }else{
+        
         if (valueInputFulfillment == 0 ) {
             visibilityBody.css('height', "0px");
             visibilityBody.css('margin-top', '100px');

@@ -31,12 +31,14 @@ main{
     &__heading {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         margin: 15px 0px 15px 0px;
     }
 
     &__table {
     }
 }
+
 .heading {
 
     &__box {
@@ -52,6 +54,9 @@ main{
         
     }
 
+    &__warning{
+        @extend %TextSubparagraphs;
+    }    
     &__search {
         width: 1030px;
         padding: 5px 10px 5px 10px;
@@ -75,83 +80,7 @@ main{
         
     }
 }
-
-/* Пунтк Филтр + Поиск*/
-.search {
-    display: flex;
-    align-items: center;
-
-   
-    &__inputText{
-        background-color:#ffd9b3; 
-        margin-left: 5px;
-        flex-grow: 1;
-    }
-    &__inputText::placeholder {
-        @extend %TextSubparagraphs;
-       
-    }
-    
-}
-
-.AddFelter {
-display: flex;
-align-items: center;
-background-color: #da6e00;
-height: 25px;
-padding: 5px;
-border-radius: 6px;
-    &__title {
-        @extend %TextSubparagraphs;
-        margin-right: 5px;
-        color: white;
-        font-size: 11px;
-    }
-
-    &__button {
-        background:url('/assets/img/button/cancel.svg') no-repeat;
-        width: 12px;
-        height: 12px;
-    }
-}
-
-
-.button {
-
-    &__serch {
-        background:url('/assets/img/search/search.svg') no-repeat;
-        width: 18px;
-        height: 18px;
-        margin-right: 5px;
-    }
-
-    &__close {
-        background:url('/assets/img/button/cancel.svg') no-repeat;
-        width: 12px;
-        height: 12px;
-        margin-right: 5px;
-    }
-}
-/* Филтр и поск Тело */
-.search{
-    &__body{
-        display: none;
-        position: absolute;
-        width: 600px;
-        background-color: #da6e00;
-        top: 38px;
-        padding: 10px;
-        border: 1px solid black;
-        border-radius: 5px;
-        z-index: 1000;
-    }
-}
-.search__body.activeFilter{
-    display: block;
-    z-index: 1000;
-}
-/* Пунтк Филтр + Поиск End */
-
+/* */
 .table {
     &__header {
         display: flex;
@@ -164,7 +93,7 @@ border-radius: 6px;
         height: 40px;
         padding: 8px;
         span{
-            width:110%;
+            width:150px;
         }
        
     }
@@ -173,32 +102,34 @@ border-radius: 6px;
         text-align: center;
         align-items: center;
         margin: 10px 0px 10px 0px;
-        // height: 40px;
         background-color:#ffd9b3;
         padding: 8px;
         @extend %TextSubparagraphs;
-        color:black;
-        button,
+        color:sienna;
         span{
-            width:110%;
+            width:150px;
         }
     }
 }
-
-
-#Btn{
-    background:none;
-   img{
-       width: 25px;
-   }
-    
+#numCar{
+    width:100px;
 }
+#downloadСheck{
+    width: 50px;
+    background:none;
+    img{
+        width: 18px;
+    }
+}
+
 
 
 
 /*CashCarOut start */
 #CashCarOut{
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 .cashOutBorder {
     width: 70px;
@@ -220,12 +151,30 @@ border-radius: 6px;
     position: absolute;
     left: 25px;
 }
+
+.cashOutInfo {
+    text-align: left;
+    p{
+        margin: 0px 0px 5px 5px;
+    }
+    &__numberBills {
+    }
+
+    &__nominal {
+    }
+
+    &__finalTotal {
+    }
+}
+
 /*CashCarOut End */
 
 
 /*CashCarIn start */
 #CashCarIn{
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 .cashInBorder {
     width: 70px;
