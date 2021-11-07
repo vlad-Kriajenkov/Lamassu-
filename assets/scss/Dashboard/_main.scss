@@ -105,12 +105,14 @@ main{
         @extend %Boreder;
         width: 49%;
         height: fit-content;
+        margin-bottom: 70px;
     }
 
     &__СonditionSystem {
         @extend %Boreder;
         width: 49%;
-        height: fit-content;        
+        height: fit-content;   
+        margin-bottom: 70px;     
     }
 }
 .notification {

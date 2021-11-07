@@ -253,3 +253,161 @@ border-radius: 6px;
     width: 10%;
     height: 6px;
 }
+
+
+/* All INfo Car */
+
+#AllInfoCar{   
+    @extend %Boreder;
+    height: auto;
+    max-height: 0px;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    flex-wrap: wrap;
+    transition: opacity 1s linear, visibility 1s linear, max-height 1s linear, padding 1s linear ;
+    
+}
+#AllInfoCar.active2{
+    
+    opacity: 1;
+    visibility: visible;
+    max-height: 250px;
+    
+    
+}
+
+
+.AllInfoCar {
+    
+    &__boxInfo {
+        margin: 5px 20px 5px 5px;
+    }
+}
+.AllInfoCarConatinerText{
+    display: flex;
+    flex-wrap: wrap;
+}
+.boxInfo {
+
+    &__title {
+        @extend %TitleParagraph;
+        font-size: 11px;
+        color:#708090;
+        margin-bottom: 5px;
+    }
+
+    &__meaning {
+        @extend %TextSubparagraphs;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        h1{
+            margin-right: 5px;
+        }
+        
+    }   
+}
+.AllInfoCarConatinerButton{
+    display: flex;
+    align-items: flex-end;
+}
+.AllInfoCarConatinerButton:nth-child(2){
+    
+}
+.meaning {
+
+    &__box {
+        display: flex;
+    }
+
+    &__bill {
+        margin-right: 10px;
+    }
+   
+    &__imgNextLink{
+        background: none;
+        a{
+            display: flex;
+            width: 180px;
+            padding: 5px;
+            border-radius: 6px;
+            background-color: #ffd9b3;
+            font-size: 12px;
+            @extend %TextSubparagraphs;
+            img{
+                width: 18px;
+                margin-right: 10px;
+            }
+            
+        }
+       
+    }
+    &__imgBurgerOptionIcon{
+        display: flex;
+        align-items: center;
+        background-color:#ffd9b3;
+        padding: 5px;
+        border-radius: 6px;
+        @extend %TextSubparagraphs;
+        font-size: 10px;
+        img{ 
+            width: 18px;
+        }
+    }
+    &__imgCheck{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color:#ffd9b3;
+        padding: 5px;
+        border-radius: 6px;
+        width: 60px;
+        @extend %TextSubparagraphs;
+        font-size: 10px;
+        img{ 
+            width: 18px;
+        }
+    }
+    &__imgCamera{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color:#ffd9b3;
+        padding: 5px;
+        border-radius: 6px;
+        width: 60px;
+        @extend %TextSubparagraphs;
+        font-size: 10px;
+        img{ 
+            width: 18px;
+        }
+    }
+}
+.bill {
+
+    &__title {
+        margin-bottom: 5px;
+    }
+
+    &__body {
+              
+    }
+}
+.body {
+
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 5px;  
+        p:first-child{
+            margin-right: 5px;
+        }
+    }
+    
+}
+
+
+/* End Main */

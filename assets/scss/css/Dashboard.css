@@ -249,12 +249,14 @@ main {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  margin-bottom: 70px;
 }
 .notificationAndСondition__СonditionSystem {
   width: 49%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  margin-bottom: 70px;
 }
 
 .notification__infoBody {
