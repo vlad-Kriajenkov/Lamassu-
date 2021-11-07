@@ -225,13 +225,47 @@
                     <span id="numCar">
                         0001
                     </span>
-                    <span id="CashCar">
-                        <div class="cashT"></div>
-                        <div class="cashB"></div>
-                        <form method="post">
-                            <input type="number" name="Value" id="Value">
-                            <button type="button" onclick="FillingCassette" >Проверить</button>
-                        </form>
+                    <span id="CashCarOut">
+                        <div class="cashOutBorder"></div>
+                        <div class="cashOutBody">
+                            <p class="cashOutText">100%</p>
+                        </div>
+                    </span>
+                    <span id="CashCarOut">
+                        <div class="cashOutBorder"></div>
+                        <div class="cashOutBody">
+                            <p class="cashOutText">100%</p>
+                        </div>
+                    </span>
+                    <span id="CashCarOut">
+                        <div class="cashOutBorder"></div>
+                        <div class="cashOutBody">
+                            <p class="cashOutText">100%</p>
+                        </div>
+                    </span>
+                    <span id="CashCarOut">
+                        <div class="cashOutBorder"></div>
+                        <div class="cashOutBody">
+                            <p class="cashOutText">100%</p>
+                        </div>
+                    </span>
+                    <span id="CashCarOut">
+                        <div class="cashOutBorder"></div>
+                        <div class="cashOutBody">
+                            <p class="cashOutText">100%</p>
+                        </div>
+                    </span>
+                    <span id="CashCarOut">
+                        <div class="cashOutBorder"></div>
+                        <div class="cashOutBody">
+                            <p class="cashOutText">100%</p>
+                        </div>
+                    </span>
+                    <span id="CashCarIn">
+                        <div class="cashInBorder"></div>
+                        <div class="cashInBody">
+                            <p class="cashInText">0%</p>
+                        </div>
                     </span>
                     <button id="Btn">
                         <img src="/assets/img/downloadСheck/downloadСheck.png"  alt="">
@@ -239,12 +273,25 @@
                 </div>
                
             </div>
+            <form class="formSubmit">
+                <p>Cash-out</p>
+                <input placeholder="Эмитация Заполности" type="number" name="Value" id="FulfillmentEmulation">
+                <input placeholder="Эмитация Предупреждения" type="number" name="Value" id="WarningsEmulation">
+                <button type="button" id="btn2"  >Проверить</button>
+            </form>
+            <form class="formSubmit">
+                <p>Cash-in</p>
+                <input placeholder="Эмитация Заполности" type="number" name="Value" id="FulfillmentEmulationin">
+                <input placeholder="Эмитация Предупреждения" type="number" name="Value" id="WarningsEmulationin">
+                <button type="button" id="btn3"  >Проверить</button>
+            </form>
         </div> 
     </main>
 
    
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>   
-    <script src="/assets/js/Cassetts/cassettsLogik.js"></script> 
+    <script src="/assets/js/Cassetts/Cash-out.js"></script> 
+    <script src="/assets/js/Cassetts/Cash-in.js"></script> 
     <!-- <script src="/assets/js/filter/filter.js"></script>  -->
     <!-- <script src="/assets/js/filter/asd.js"></script> -->
 </body>
