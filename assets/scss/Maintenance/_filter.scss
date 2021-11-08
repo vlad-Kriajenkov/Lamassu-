@@ -178,7 +178,7 @@
   }
   .dropdownСar .selectCar input{
     @extend %TextFilter;
-      width: 85px;
+      width: 100%;
       margin-left: 5px;
   }
   .dropdownСar .selectCar > i {
