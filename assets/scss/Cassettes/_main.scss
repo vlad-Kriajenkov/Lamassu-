@@ -93,7 +93,7 @@ main{
         height: 40px;
         padding: 8px;
         span{
-            width:150px;
+            width:155px;
         }
        
     }
@@ -107,9 +107,12 @@ main{
         @extend %TextSubparagraphs;
         color:sienna;
         span{
-            width:150px;
+            width:155px;
         }
     }
+}
+.numCar__buttonOpenCar{
+    background:none;
 }
 #numCar{
     width:100px;

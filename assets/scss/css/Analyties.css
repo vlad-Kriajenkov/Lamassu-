@@ -409,14 +409,6 @@ header {
   margin-bottom: 10px;
 }
 
-.filterBox {
-  margin: 5px;
-}
-
-.dropdown {
-  margin: 5px;
-}
-
 /* Пункт Недельная Операция */
 .analyties__weeklyOperation {
   margin: 20px 0px 20px 0px;
@@ -426,14 +418,6 @@ header {
   display: flex;
   justify-content: center;
   margin: 10px 0px 10px 0px;
-}
-
-.dropdown {
-  margin-right: 10px;
-}
-
-.filterBox {
-  margin-right: 10px;
 }
 
 /* Пункт Топ 1 Машин*/
@@ -470,14 +454,6 @@ header {
 }
 .Filter__title {
   margin-bottom: 10px;
-}
-
-.filterBox {
-  margin: 5px;
-}
-
-.dropdown {
-  margin: 5px;
 }
 
 .AverageСarStatsMeaningBox {
@@ -542,14 +518,6 @@ header {
   margin-bottom: 10px;
 }
 
-.filterBox {
-  margin: 5px;
-}
-
-.dropdown {
-  margin: 5px;
-}
-
 /*График Сравнение по периодам*/
 .analyties__periodComparison {
   margin: 20px 0px 20px 0px;
@@ -609,7 +577,7 @@ span.choose {
 
 /*Styling Selectbox*/
 .dropdown {
-  width: 180px;
+  width: 200px;
   display: inline-block;
   background-color: #fff;
   border-radius: 2px;
@@ -623,8 +591,9 @@ span.choose {
 }
 
 .dropdown .select {
+  display: flex;
+  justify-content: space-between;
   cursor: pointer;
-  display: block;
   padding: 10px;
 }
 
@@ -694,7 +663,7 @@ span.choose {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 180px;
+  width: 200px;
   border-radius: 2px;
   box-shadow: 0 0 2px #cccccc;
   height: 100%;
@@ -734,10 +703,10 @@ span.choose {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 180px;
+  width: 200px;
   border-radius: 2px;
   box-shadow: 0 0 2px #cccccc;
-  height: 100%;
+  height: 32px;
 }
 
 .filterBox span input::-moz-placeholder {
@@ -765,8 +734,9 @@ span.choose {
 }
 
 .filterBox span input {
-  width: 180px;
+  width: 200px;
   padding: 10px;
+  height: 32px;
 }
 
 .select span {
@@ -785,7 +755,7 @@ span.choose {
 
 /* Стиль Фильтр Машины*/
 .dropdownСar {
-  width: 180px;
+  width: 200px;
   display: inline-block;
   background-color: #fff;
   border-radius: 2px;
@@ -795,9 +765,7 @@ span.choose {
   font-size: 10px;
   color: #da6e00;
   text-align: left;
-  height: 34px;
-  margin-top: 5px;
-  margin-right: 3px;
+  height: 32px;
 }
 
 .dropdownСar .selectCar {
@@ -883,6 +851,12 @@ span.choose {
 
 .selectCar input {
   background-color: #fff;
+}
+
+.filterBox,
+.dropdown,
+.dropdownСar {
+  margin: 5px;
 }
 
 .modal {

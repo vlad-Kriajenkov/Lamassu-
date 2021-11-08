@@ -38,7 +38,7 @@
                     <a href="/Encashment.html" class="MainNav__link">Инкассирование</a>
                     <a href="/Reinforcements.html" class="MainNav__link">Подкрепление</a>
                     <a href="/MachineLogic.html" class="MainNav__link">Лог машин</a>
-                    <a href="" class="MainNav__link">Лог сервера</a>
+                    <a href="/ServerLog.html" class="MainNav__link">Лог сервера</a>
                     <a href="" class="MainNav__link">Лог ЦИС</a>
                     <a href="" class="MainNav__link">История смены курсов</a>
                 </nav>
@@ -70,11 +70,13 @@
                     <span id="connection">Cash-out 5</span>
                     <span id="connection">Cash-out 6</span>
                     <span id="connection">Cash-in </span>
-                    <span id="downloadСheck">Update</span>
+                   
                 </div> 
                 <div class="table__body">
                     <span id="numCar">
-                        0001
+                        <button class="numCar__buttonOpenCar">
+                            0001
+                        </button>
                     </span>
                     <span id="CashCarOut">
                         <div class="CashCarOutBox">
@@ -166,9 +168,6 @@
                             <p class="cashOutInfo__nominalEUR">261 куп. EUR</p>
                         </div> 
                     </span>
-                    <button id="downloadСheck">
-                        <img src="/assets/img/edit/edit.svg"  alt="edit">
-                    </button>
                 </div>
                
             </div>
@@ -186,8 +185,30 @@
             </form>
         </div> 
     </main>
-
-   
+    
+    <div class="footer__box">
+        <div class="box__cashInSystem">
+            <p class="Cash__Titel">Денег в системе</p>
+        </div>
+        <div class="box__CashIn"> 
+            <img class="Cash__Img" src="/assets/img/direction/cash-in.svg" alt="cash-in">
+            <p class="Cash__TitelIO">Cash-in:</p>
+            <p class="Cash__Sum">31.660</p>
+            <p class="Cash__currency">UAH</p>
+        </div>
+        <div class="box__CashOut">
+            <img class="Cash__Img" src="/assets/img/direction/cash-out.svg" alt="cash-out">
+            <p class="Cash__TitelIO">Cash-out:</p>
+            <p class="Cash__Sum">54.200</p>
+            <p class="Cash__currency">UAH</p>
+        </div>
+        <div class="box__totalCash">
+            <p class="Cash__TitelIO">Общая</p>
+            <p class="Cash__Sum">85.800</p>
+            <p class="Cash__currency">UAH</p>
+        </div>
+    </div>
+    
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>   
     <script src="/assets/js/Cassetts/Cash-out.js"></script> 
     <script src="/assets/js/Cassetts/Cash-in.js"></script> 

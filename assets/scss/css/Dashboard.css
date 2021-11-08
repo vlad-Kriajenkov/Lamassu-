@@ -486,7 +486,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 180px;
+  width: 200px;
   border-radius: 2px;
   box-shadow: 0 0 2px #cccccc;
   height: 100%;
@@ -526,7 +526,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 180px;
+  width: 200px;
   border-radius: 2px;
   box-shadow: 0 0 2px #cccccc;
   height: 100%;
@@ -557,7 +557,7 @@ main {
 }
 
 .filterBox span input {
-  width: 180px;
+  width: 200px;
   padding: 10px;
 }
 
@@ -598,7 +598,7 @@ span.choose {
 
 /*Styling Selectbox*/
 .dropdown {
-  width: 180px;
+  width: 200px;
   display: inline-block;
   background-color: #fff;
   border-radius: 2px;
@@ -612,8 +612,9 @@ span.choose {
 }
 
 .dropdown .select {
+  display: flex;
+  justify-content: space-between;
   cursor: pointer;
-  display: block;
   padding: 10px;
 }
 
@@ -681,7 +682,7 @@ span.choose {
 
 /* Стиль Фильтр Машины*/
 .dropdownСar {
-  width: 180px;
+  width: 200px;
   display: inline-block;
   background-color: #fff;
   border-radius: 2px;

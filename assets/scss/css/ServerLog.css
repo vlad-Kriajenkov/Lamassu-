@@ -177,12 +177,7 @@ footer {
   height: 18px;
 }
 
-#AllInfoCar {
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
-  border-radius: 6px;
-}
-
-.boxInfo__title, .table__header, .heading__title p {
+.table__bodyNoActivity, .table__header, .heading__title p {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
@@ -190,7 +185,23 @@ footer {
   color: #da6e00;
 }
 
-.meaning__imgCamera, .meaning__imgCheck, .meaning__imgBurgerOptionIcon, .meaning__imgNextLink a, .boxInfo__meaning, .table__body, .heading__warning {
+.search__inputText::-moz-placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: #da6e00;
+}
+
+.search__inputText:-ms-input-placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: #da6e00;
+}
+
+.table__body, .AddFelter__title, .search__inputText::placeholder {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
@@ -204,45 +215,98 @@ main {
 
 /*  Start MAiN  */
 /* Transaction */
-.maintenance {
+.reinforcements {
   width: 1200px;
   margin: 0px auto;
 }
-.maintenance__heading {
+.reinforcements__heading {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin: 15px 0px 15px 0px;
 }
 .heading__box {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 .heading__title {
   margin-right: 20px;
 }
+.heading__title p {
+  width: 145px;
+}
 .heading__search {
-  width: 1030px;
+  width: 100%;
   padding: 5px 10px 5px 10px;
   border-radius: 15px;
   background-color: #ffd9b3;
   position: relative;
 }
-.heading__downloadBtn {
-  background-color: #ffd9b3;
-  border-radius: 15px;
-  width: 27px;
-  height: 27px;
-  margin-left: 10px;
+
+/* Пунтк Филтр + Поиск*/
+.search {
+  display: flex;
+  align-items: center;
 }
-.heading__downloadBtn img {
-  width: 15px;
+.search__inputText {
+  background-color: #ffd9b3;
+  margin-left: 5px;
+  flex-grow: 1;
+}
+.AddFelter {
+  display: flex;
+  align-items: center;
+  background-color: #da6e00;
+  height: 25px;
+  padding: 5px;
+  border-radius: 6px;
+}
+.AddFelter__title {
+  margin-right: 5px;
+  color: white;
+  font-size: 11px;
+}
+.AddFelter__button {
+  background: url("/assets/img/button/cancel.svg") no-repeat;
+  width: 12px;
+  height: 12px;
 }
 
-/* */
+.button__serch {
+  background: url("/assets/img/search/search.svg") no-repeat;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
+.button__close {
+  background: url("/assets/img/button/cancel.svg") no-repeat;
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+}
+
+/* Филтр и поск Тело */
+.search__body {
+  display: none;
+  position: absolute;
+  width: 600px;
+  background-color: #da6e00;
+  top: 38px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.search__body.activeFilter {
+  display: block;
+  z-index: 1000;
+}
+
+/* Пунтк Филтр + Поиск End */
 .table__header {
   display: flex;
-  text-align: center;
+  text-align: left;
   align-items: center;
   background-color: #da6e00;
   font-size: 11px;
@@ -251,108 +315,40 @@ main {
   padding: 8px;
 }
 .table__header span {
-  width: 155px;
+  margin-left: 15px;
+  width: 13%;
 }
 .table__body {
   display: flex;
-  text-align: center;
-  align-items: center;
-  margin: 10px 0px 10px 0px;
-  background-color: #ffd9b3;
-  padding: 8px;
-  color: sienna;
-}
-.table__body span {
-  width: 155px;
-}
-
-.numCar__buttonOpenCar {
-  background: none;
-}
-
-#numCar {
-  width: 100px;
-}
-
-#downloadСheck {
-  width: 50px;
-  background: none;
-}
-#downloadСheck img {
-  width: 18px;
-}
-
-/*CashCarOut start */
-#CashCarOut {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.cashOutBorder {
-  width: 70px;
-  height: 100px;
-  border: 2px solid #1b2559;
-}
-
-.cashOutBody {
-  position: absolute;
-  width: 70px;
-  height: 100px;
-  background-color: #1b2559;
-  top: 0px;
-}
-
-.cashOutText {
-  color: white;
-  font-size: 15px;
-  position: absolute;
-  left: 25px;
-}
-
-.cashOutInfo {
   text-align: left;
-}
-.cashOutInfo p {
-  margin: 0px 0px 5px 5px;
-}
-/*CashCarOut End */
-/*CashCarIn start */
-#CashCarIn {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.cashInBorder {
-  width: 70px;
-  height: 100px;
-  border: 2px solid #1b2559;
-}
-
-.cashInBody {
-  position: absolute;
-  width: 70px;
-  height: 0px;
-  background-color: #1b2559;
-  top: 0px;
-}
-
-.cashInText {
+  align-items: center;
+  padding: 8px;
   color: black;
-  font-size: 15px;
-  position: absolute;
-  left: 43px;
-  top: 84px;
+}
+.table__body button,
+.table__body span {
+  margin-left: 15px;
+  width: 13%;
+}
+.table__bodyNoActivity {
+  display: none;
+  font-size: 12px;
+  margin: 10px;
 }
 
-/*CashCarIn End */
-.formSubmit {
-  border: 1px solid black;
-  width: 200px;
+#Info {
+  text-align: left;
+  width: 100%;
 }
 
-.Filter__ButtonSearch, .Filter__Car, .Filter__Status, .Filter__Specifications, .Filter__Connection {
+#Btn {
+  background: none;
+}
+#Btn img {
+  width: 25px;
+}
+
+.Filter__ButtonSearch, .Filter__Car, .Filter__Data {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
@@ -360,7 +356,7 @@ main {
   color: silver;
 }
 
-.dropdownСar .selectCar input, .select span {
+.dropdownСar .selectCar input, .select span, .select__range input, .select__time input {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 800;
@@ -371,9 +367,6 @@ main {
 .Filter {
   display: flex;
   flex-direction: column;
-}
-.Filter__Status {
-  position: relative;
 }
 .Filter__Car p {
   margin-bottom: 5px;
@@ -396,6 +389,47 @@ main {
   box-shadow: 0 0 8px #cccccc;
 }
 
+.select__time {
+  visibility: hidden;
+  position: absolute;
+  top: 30.5px;
+  left: 210px;
+  display: flex;
+  justify-content: space-between;
+  width: 64%;
+  height: 32px;
+}
+.select__time input {
+  width: 180px;
+  height: 32px;
+  border-radius: 2px;
+  box-shadow: 0 0 2px #cccccc;
+  padding: 5px;
+  background-color: #da6e00;
+}
+.select__range {
+  visibility: hidden;
+  position: absolute;
+  top: 30.5px;
+  left: 210px;
+  display: flex;
+  justify-content: space-between;
+  width: 64%;
+}
+.select__range input {
+  width: 180px;
+  height: 32px;
+  border-radius: 2px;
+  box-shadow: 0 0 2px #cccccc;
+  padding: 5px;
+  background-color: #da6e00;
+}
+
+.select__time.active,
+.select__range.active {
+  visibility: visible;
+}
+
 span.msg,
 span.choose {
   color: #555;
@@ -411,7 +445,7 @@ span.choose {
 
 /*Styling Selectbox*/
 .dropdown {
-  width: 580px;
+  width: 180px;
   display: inline-block;
   background-color: #da6e00;
   border-radius: 2px;
@@ -505,14 +539,14 @@ span.choose {
 
 /* Анимация открытия Филтра Машины*/
 .dropdownСar {
-  width: 580px;
+  width: 180px;
   display: inline-block;
   background-color: #da6e00;
   border-radius: 2px;
   box-shadow: 0 0 2px #cccccc;
   transition: all 0.5s ease;
   position: relative;
-  font-size: 10px;
+  font-size: 14px;
   color: #fff;
   height: 100%;
   text-align: left;
@@ -601,188 +635,4 @@ span.choose {
 
 .selectCar input {
   background-color: #da6e00;
-}
-
-/* All INfo Car */
-#AllInfoCar {
-  height: auto;
-  max-height: 0px;
-  overflow: hidden;
-  visibility: hidden;
-  opacity: 0;
-  flex-wrap: wrap;
-  transition: opacity 1s linear, visibility 1s linear, max-height 1s linear, padding 1s linear;
-}
-
-#AllInfoCar.active2 {
-  opacity: 1;
-  visibility: visible;
-  max-height: 250px;
-}
-
-.AllInfoCar__boxInfo {
-  margin: 5px 20px 5px 5px;
-}
-
-.AllInfoCarConatinerText {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.boxInfo__title {
-  font-size: 11px;
-  color: #708090;
-  margin-bottom: 5px;
-}
-.boxInfo__meaning {
-  font-size: 10px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 5px;
-}
-.boxInfo__meaning h1 {
-  margin-right: 5px;
-}
-
-.AllInfoCarConatinerButton {
-  display: flex;
-  align-items: flex-end;
-}
-
-.meaning__box {
-  display: flex;
-}
-.meaning__bill {
-  margin-right: 10px;
-}
-.meaning__imgNextLink {
-  background: none;
-}
-.meaning__imgNextLink a {
-  display: flex;
-  width: 180px;
-  padding: 5px;
-  border-radius: 6px;
-  background-color: #ffd9b3;
-  font-size: 12px;
-}
-.meaning__imgNextLink a img {
-  width: 18px;
-  margin-right: 10px;
-}
-.meaning__imgBurgerOptionIcon {
-  display: flex;
-  align-items: center;
-  background-color: #ffd9b3;
-  padding: 5px;
-  border-radius: 6px;
-  font-size: 10px;
-}
-.meaning__imgBurgerOptionIcon img {
-  width: 18px;
-}
-.meaning__imgCheck {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: #ffd9b3;
-  padding: 5px;
-  border-radius: 6px;
-  width: 60px;
-  font-size: 10px;
-}
-.meaning__imgCheck img {
-  width: 18px;
-}
-.meaning__imgCamera {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: #ffd9b3;
-  padding: 5px;
-  border-radius: 6px;
-  width: 60px;
-  font-size: 10px;
-}
-.meaning__imgCamera img {
-  width: 18px;
-}
-
-.bill__title {
-  margin-bottom: 5px;
-}
-.body__box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 5px;
-}
-.body__box p:first-child {
-  margin-right: 5px;
-}
-
-/* End Main */
-.footer__box {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  position: fixed;
-  left: 0;
-  bottom: 0px;
-  background-color: white;
-  width: 100%;
-  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
-  padding: 15px;
-}
-
-.box__CashIn {
-  display: flex;
-  align-items: flex-end;
-}
-.box__CashOut {
-  display: flex;
-  align-items: flex-end;
-}
-.box__totalCash {
-  display: flex;
-  align-items: flex-end;
-}
-
-.Cash__Img {
-  width: 12px;
-  margin-right: 5px;
-}
-.Cash__Titel {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 10px;
-  color: slategray;
-  margin-right: 5px;
-}
-.Cash__TitelIO {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 10px;
-  color: #1b2559;
-  margin-bottom: 1px;
-  margin-right: 5px;
-}
-.Cash__Sum {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  color: #1b2559;
-  margin-right: 5px;
-}
-.Cash__currency {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 10px;
-  color: #1b2559;
-  margin-bottom: 1px;
-  margin-right: 5px;
 }

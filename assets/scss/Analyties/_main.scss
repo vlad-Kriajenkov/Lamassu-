@@ -332,14 +332,6 @@
     }
 }
 
-.filterBox {
-    margin: 5px;
-}
-.dropdown {
-    margin: 5px;
-    
-}
-
 
 
 
@@ -369,12 +361,6 @@
         justify-content: center;
         margin: 10px 0px 10px 0px;
     }
-}
-.dropdown {
-    margin-right: 10px;
-}
-.filterBox {
-    margin-right: 10px;
 }
 
 /* Пункт Топ 1 Машин*/
@@ -418,13 +404,6 @@
         @extend %TitleParagraph;
         margin-bottom: 10px;
     }
-}
-
-.filterBox {
-    margin: 5px;
-}
-.dropdown {
-    margin: 5px;
 }
 
 .AverageСarStatsBox {
@@ -500,17 +479,6 @@
         margin-bottom: 10px;
     }
 }
-
-.filterBox {
-    margin: 5px;
-}
-.dropdown {
-    margin: 5px;
-    
-}
-
-
-
 /*График Сравнение по периодам*/
 .analyties {
 

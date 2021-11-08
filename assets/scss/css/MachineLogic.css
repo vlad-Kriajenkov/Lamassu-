@@ -332,9 +332,6 @@ main {
   display: flex;
   text-align: left;
   align-items: center;
-  margin: 10px 0px 10px 0px;
-  height: 40px;
-  background-color: #ffd9b3;
   padding: 8px;
   color: black;
 }
