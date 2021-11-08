@@ -1,0 +1,194 @@
+%Boreder{
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    
+}
+
+%TitleParagraph{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700; 
+    font-size: 20px;
+    color:  #da6e00;
+}
+%TextSubparagraphs{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 10px;
+    color:  #da6e00;
+}
+
+main{
+    height: 600px;
+}
+
+/*  Start MAiN  */
+/* Transaction */
+.historyСourseСhanges { 
+    width: 1200px;
+    margin: 0px auto;
+    &__heading {
+        display: flex;
+        align-items: center;
+        margin: 15px 0px 15px 0px;
+    }
+
+    &__table {
+    }
+}
+.heading {
+
+    &__box {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__title {
+        margin-right: 20px;
+        p{
+            width: 252px;
+            @extend %TitleParagraph;
+        }
+        
+    }
+
+    &__search {
+        width: 100%;
+        padding: 5px 10px 5px 10px;
+        border-radius: 15px;
+        background-color:#ffd9b3;
+        position: relative;
+
+      
+    }
+}
+
+/* Пунтк Филтр + Поиск*/
+.search {
+    display: flex;
+    align-items: center;
+
+   
+    &__inputText{
+        background-color:#ffd9b3; 
+        margin-left: 5px;
+        flex-grow: 1;
+    }
+    &__inputText::placeholder {
+        @extend %TextSubparagraphs;
+       
+    }
+    
+}
+
+.AddFelter {
+display: flex;
+align-items: center;
+background-color: #da6e00;
+height: 25px;
+padding: 5px;
+border-radius: 6px;
+    &__title {
+        @extend %TextSubparagraphs;
+        margin-right: 5px;
+        color: white;
+        font-size: 11px;
+    }
+
+    &__button {
+        background:url('/assets/img/button/cancel.svg') no-repeat;
+        width: 12px;
+        height: 12px;
+    }
+}
+
+
+.button {
+
+    &__serch {
+        background:url('/assets/img/search/search.svg') no-repeat;
+        width: 18px;
+        height: 18px;
+        margin-right: 5px;
+    }
+
+    &__close {
+        background:url('/assets/img/button/cancel.svg') no-repeat;
+        width: 12px;
+        height: 12px;
+        margin-right: 5px;
+    }
+}
+/* Филтр и поск Тело */
+.search{
+    &__body{
+        display: none;
+        position: absolute;
+        width: 600px;
+        background-color: #ffd9b3 ;
+        top: 38px;
+        padding: 10px;
+        border: 1px solid #da6e00;
+        border-radius: 5px;
+        z-index: 1000;
+    }
+}
+.search__body.activeFilter{
+    display: block;
+    z-index: 1000;
+}
+/* Пунтк Филтр + Поиск End */
+
+.table {
+    &__header {
+        display: flex;
+        text-align: left;
+        align-items: center;
+        background-color:  #da6e00;
+        @extend %TitleParagraph;
+        font-size: 11px;
+        color:#ffff;
+        height: 40px;
+        padding: 8px;
+        span{
+            text-align: center;
+            margin-left: 15px;
+            width:31%;
+        }
+       
+    }
+    &__body{
+        display: flex;
+        text-align: left;
+        align-items: center;
+        padding: 8px;
+        @extend %TextSubparagraphs;
+        color:black;
+        background-color: #ffd9b3;
+        margin: 10px 0px 10px 0px;
+        button,
+        span{
+            text-align: center;
+            margin-left: 15px;
+            width:31%;
+        }
+    }
+    &__bodyNoActivity{
+        display: none;
+        @extend %TitleParagraph;
+        font-size: 12px;
+        margin: 10px;
+
+    }
+}
+
+
+#Btn{
+    background:none;
+   img{
+       width: 25px;
+   }
+    
+}

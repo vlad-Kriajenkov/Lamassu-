@@ -481,10 +481,6 @@ span.choose {
   box-shadow: 0 0 4px #cccccc;
 }
 
-.dropdown:active {
-  background-color: #f8f8f8;
-}
-
 .dropdown.active:hover,
 .dropdown.active {
   box-shadow: 0 0 4px #cccccc;
@@ -580,10 +576,6 @@ span.choose {
 
 .dropdownСar:hover {
   box-shadow: 0 0 4px #cccccc;
-}
-
-.dropdownСar:active {
-  background-color: #f8f8f8;
 }
 
 .dropdownСar.active:hover,

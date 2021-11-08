@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/scss/css/Transactions.css">
+    <link rel="stylesheet" href="/assets/scss/css/DropDownMenu.css">
     <title>Document</title>
 </head>
 <body>
@@ -33,7 +33,65 @@
         </header>
     
         <main>
-            <div class="transactions">
+            <div class="InfoСar">
+                <div class="UpdateAndClosed">
+                    <button class="UpdateAndClosed__buttonUpdate">
+                        <img src="/assets/img/history/history.svg" width="18px" alt="Update">
+                    </button>
+                    <button class="UpdateAndClosed__buttonClosed">
+                        <img src="/assets/img/button/cancel.svg"  width="18px" alt="Closed">
+                    </button>
+                </div>
+                <div class="InfoСar__InfoCarLocations">
+                    <div class="Box">
+                        <div class="Box__imgCar">
+                            <img src="/assets/img/CarFoto/CarFoto.jfif" width="260px" height="350px" alt="CarFoto">
+                        </div>
+                        <div class="BoxNameCarAndLoctions">
+                            <div class="Box__NameCar">
+                                <p class="NameCar__title">Машина 1</p>
+                                <p class="NameCar__meaning">0001</p>
+                            </div>
+                            <div class="Box__locations">
+                                <div class="locations__title">Адрес</div>
+                                <div class="containerLoc">
+                                    <h1 class="locations__title">Город:</h1>
+                                    <p class="locations__meaning">Киев</p>
+                                </div>
+                                <div class="containerLoc">
+                                    <h1 class="locations__title">Улица:</h1>
+                                    <p class="locations__meaning">Антоновича, 176</p>
+                                </div>
+                                <div class="containerLoc">
+                                    <h1 class="locations__title">Торговый центр:</h1>
+                                    <p class="locations__meaning">Ocean Plaza</p>
+                                </div>
+                                <div class="containerLoc">
+                                    <h1 class="locations__title">Отель:</h1>
+                                    <p class="locations__meaning">Plaza</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Geolocation">
+                        <button id="Geolocation" class="Geolocation__button">Геолокационные данные</button>
+                        <div id="LongAndWidth" class="Geolocation__LongAndWidth">
+                            <label class="LongAndWidth__long">
+                                Долгота
+                                <input type="text" name="Long" id="Long">
+                            </label>    
+                            <label class="LongAndWidth__width">
+                                Ширина 
+                                <input type="text" name="Width" id="Width">
+                            </label>    
+                        </div>
+                    </div>
+                </div>
+                <div class="InfoСar__InfoCarAll">
+
+                </div>
+            </div>
+            <!-- <div class="transactions">
                 <div class="transactions__heading">
                     <div class="heading__box">
                         <div class="heading__title"><p>Операции</p></div> 
@@ -460,12 +518,13 @@
                         <span id="Time">12:46 pm</span>
                         <button  id="Btn"></button>
                     </div>
-            </div>
+                </div>
+            </div> -->
         </main>
 
     </div>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="/assets/js/clickOpenTransacrions.js"></script>
+<script src="/assets/js/clickOpen/clickOpenDropDownMenu.js"></script>
 <script src="/assets/js/filter/filter.js"></script>
 </body>
 </html>

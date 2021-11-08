@@ -1,0 +1,550 @@
+%Boreder{
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    
+}
+
+%TitleParagraph{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700; 
+    font-size: 14px;
+    color:  #1b2559
+}
+%TextSubparagraphs{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 10px;
+    color:silver;
+}
+%TextNormal{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 10px;
+}
+
+.InfoСar {
+    width: 1200px;
+    margin: 0px auto;
+		&__InfoCarLocations {
+		}
+
+		&__InfoCarAll {
+		}
+}
+.UpdateAndClosed {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px 10px 0px;
+    &__buttonUpdate {
+        background: none;
+        img{
+            width:18px
+        }
+    }
+
+    &__buttonClosed {
+        background:none;
+        img{
+            width:18px
+        }
+    }
+}
+.Box{
+    display: flex;
+    &__imgCar {
+        img{
+            width: 260px;
+            height: 350px;
+        }
+    }
+}
+.BoxNameCarAndLoctions {
+}
+.Box{
+		&__NameCar {
+           
+		}
+
+		&__locations {
+          
+		}
+}
+.NameCar {
+
+		&__title {
+            @extend %TitleParagraph;
+            margin: 5px 0px 0px 5px;
+		}
+
+		&__meaning {
+            @extend %TitleParagraph;
+            margin: 5px 0px 5px 5px;
+		}
+}
+.locations {
+
+		&__title {
+            @extend %TextSubparagraphs;
+            margin: 5px 0px 5px 5px;
+		}
+
+		&__meaning {
+           @extend %TextNormal;
+           margin: 0px 0px 5px 5px;
+           
+		}
+}
+.containerLoc {
+    display: flex;
+    align-items: flex-end;
+}
+
+.Geolocation {
+
+    &__button {
+        border-radius: 5px;
+        background-color: slategray;
+        height: 20px;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        @extend %TextNormal;
+        margin: 20px 0px 5px 0px;
+    }
+    &__button:hover{
+        color: white;
+    }
+
+    &__LongAndWidth {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        border-radius: 6px;
+        box-shadow: 0px 2px 20px rgb(0 0 0 / 25%);
+        width: 18%;
+        padding: 10px;
+        transition: opacity 1s linear, visibility 1s linear;
+    }
+}
+.LongAndWidth {
+
+    &__long {
+        @extend %TextNormal;
+        margin-bottom: 10px;
+        input{
+            border: 1px solid black;
+            border-radius: 5px;
+            height: 25px;
+            margin-top: 5px;
+        }
+    }
+
+    &__width {
+        @extend %TextNormal;
+        input{
+            border: 1px solid black;
+            border-radius: 5px;
+            height: 25px;
+            margin-top: 5px;
+        }
+    }
+}
+
+.activeShow{
+    visibility: visible;
+    opacity: 1;
+}
+
+// /*  Start MAiN  */
+// /* Transaction */
+// .transactions {
+//     width: 1200px;
+//     margin: 0px auto;
+//     &__heading {
+//         display: flex;
+//         align-items: center;
+//         margin: 15px 0px 15px 0px;
+//     }
+
+//     &__table {
+//     }
+// }
+// .heading {
+
+//     &__box {
+//         display: flex;
+//         align-items: center;
+//     }
+
+//     &__title {
+//         margin-right: 20px;
+//         p{
+//             @extend %TitleParagraph;
+//         }
+        
+//     }
+
+//     &__search {
+//         width: 1030px;
+//         padding: 5px 10px 5px 10px;
+//         border-radius: 15px;
+//         background-color:#ffd9b3;
+//         position: relative;
+
+      
+//     }
+
+//     &__downloadBtn {
+//         background-color:#ffd9b3;
+//         border-radius: 15px;
+//         width: 27px;
+//         height: 27px;
+//         margin-left: 10px; 
+//         img{
+//             width: 15px;
+             
+//         }
+        
+//     }
+
+//     &__cashIn {
+//         display: flex;
+//         align-items: center;
+//         margin-right: 10px;
+//         img{
+//             width: 14px;
+//             height: 14px;
+//         }
+//         p{
+//           @extend  %TextSubparagraphs;
+//         }
+//     }
+
+//     &__cashOut {
+//         display: flex;
+//         align-items: center;
+//         margin-right: 10px;
+//         img{
+//             width: 14px;
+//             height: 14px;
+//         }
+//         p{
+//             @extend  %TextSubparagraphs;
+//         }
+//     }
+// }
+
+// /* Пунтк Филтр + Поиск*/
+// .search {
+//     display: flex;
+//     align-items: center;
+
+   
+//     &__inputText{
+//         background-color:#ffd9b3; 
+//         margin-left: 5px;
+//         flex-grow: 1;
+//     }
+//     &__inputText::placeholder {
+//         @extend %TextSubparagraphs;
+       
+//     }
+    
+// }
+
+// .AddFelter {
+// display: flex;
+// align-items: center;
+// background-color: #da6e00;
+// height: 25px;
+// padding: 5px;
+// border-radius: 6px;
+//     &__title {
+//         @extend %TextSubparagraphs;
+//         margin-right: 5px;
+//         color: white;
+//         font-size: 11px;
+//     }
+
+//     &__button {
+//         background:url('/assets/img/button/cancel.svg') no-repeat;
+//         width: 12px;
+//         height: 12px;
+//     }
+// }
+
+
+// .button {
+
+//     &__serch {
+//         background:url('/assets/img/search/search.svg') no-repeat;
+//         width: 18px;
+//         height: 18px;
+//         margin-right: 5px;
+//     }
+
+//     &__close {
+//         background:url('/assets/img/button/cancel.svg') no-repeat;
+//         width: 12px;
+//         height: 12px;
+//         margin-right: 5px;
+//     }
+// }
+// /* Филтр и поск Тело */
+// .search{
+//     &__body{
+//         display: none;
+//         position: absolute;
+//         width: 600px;
+//         background-color: #ffd9b3 ;
+//         top: 38px;
+//         padding: 10px;
+//         border: 1px solid #da6e00;
+//         border-radius: 5px;
+//         z-index: 1000;
+//     }
+// }
+// .search__body.activeFilter{
+//     display: block;
+// }
+// /* Пунтк Филтр + Поиск End */
+
+// .transactions{
+//     &__table{
+//         span {
+//         width: 50%;
+//         }
+//     }
+// }
+// .table {
+//     &__header {
+//         display: flex;
+//         text-align: center;
+//         align-items: center;
+//         background-color:  #da6e00;
+//         @extend %TitleParagraph;
+//         font-size: 11px;
+//         color:#ffff;
+//         height: 40px;
+//         padding: 8px;
+//     }
+//     &__body{
+//         display: flex;
+//         text-align: center;
+//         align-items: center;
+//         margin: 10px 0px 10px 0px;
+//         height: 40px;
+//         background-color:#ffd9b3;
+//         padding: 8px;
+//         @extend %TextSubparagraphs;
+//         color:black;
+//     }
+// }
+// #cashInfo{
+//     width: 10%;
+// }
+// #nameCar{
+//     width: 25%;
+// }
+// #operation{
+//     width: 25%;
+// }
+// #address{
+//     width: 25%;
+// }
+// #exchangeRate{
+//     width: 30%;
+
+// }
+// #transactionAmount{
+//     width: 50%;
+// }
+// #exchangeAmount{
+//     width: 70%;
+// }
+// #Day{
+//     width: 25%;
+// }
+// #Time{
+//     width: 25%;
+// }
+
+// #BtnEmit{
+//     width: 10%;
+// }
+
+
+// #Btn{
+//     background:url('/assets/img/expand/open.svg') no-repeat;
+//     height: 6px;
+//     width: 10%;
+    
+// }
+// #Btn .activeBtn{
+//     background:url('/assets/img/expand/closed.svg') no-repeat;
+//     width: 10%;
+//     height: 6px;
+// }
+
+
+// /* All INfo Car */
+
+// #AllInfoCar{   
+//     @extend %Boreder;
+//     height: auto;
+//     max-height: 0px;
+//     overflow: hidden;
+//     visibility: hidden;
+//     opacity: 0;
+//     flex-wrap: wrap;
+//     transition: opacity 1s linear, visibility 1s linear, max-height 1s linear, padding 1s linear ;
+    
+// }
+// #AllInfoCar.active2{
+    
+//     opacity: 1;
+//     visibility: visible;
+//     max-height: 250px;
+    
+    
+// }
+
+
+// .AllInfoCar {
+    
+//     &__boxInfo {
+//         margin: 5px 20px 5px 5px;
+//     }
+// }
+// .AllInfoCarConatinerText{
+//     display: flex;
+//     flex-wrap: wrap;
+// }
+// .boxInfo {
+
+//     &__title {
+//         @extend %TitleParagraph;
+//         font-size: 11px;
+//         color:#708090;
+//         margin-bottom: 5px;
+//     }
+
+//     &__meaning {
+//         @extend %TextSubparagraphs;
+//         font-size: 10px;
+//         display: flex;
+//         align-items: center;
+//         margin-bottom: 5px;
+//         h1{
+//             margin-right: 5px;
+//         }
+        
+//     }   
+// }
+// .AllInfoCarConatinerButton{
+//     display: flex;
+//     align-items: flex-end;
+// }
+// .AllInfoCarConatinerButton:nth-child(2){
+    
+// }
+// .meaning {
+
+//     &__box {
+//         display: flex;
+//     }
+
+//     &__bill {
+//         margin-right: 10px;
+//     }
+   
+//     &__imgNextLink{
+//         background: none;
+//         a{
+//             display: flex;
+//             width: 180px;
+//             padding: 5px;
+//             border-radius: 6px;
+//             background-color: #ffd9b3;
+//             font-size: 12px;
+//             @extend %TextSubparagraphs;
+//             img{
+//                 width: 18px;
+//                 margin-right: 10px;
+//             }
+            
+//         }
+       
+//     }
+//     &__imgBurgerOptionIcon{
+//         display: flex;
+//         align-items: center;
+//         background-color:#ffd9b3;
+//         padding: 5px;
+//         border-radius: 6px;
+//         @extend %TextSubparagraphs;
+//         font-size: 10px;
+//         img{ 
+//             width: 18px;
+//         }
+//     }
+//     &__imgCheck{
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-around;
+//         background-color:#ffd9b3;
+//         padding: 5px;
+//         border-radius: 6px;
+//         width: 60px;
+//         @extend %TextSubparagraphs;
+//         font-size: 10px;
+//         img{ 
+//             width: 18px;
+//         }
+//     }
+//     &__imgCamera{
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-around;
+//         background-color:#ffd9b3;
+//         padding: 5px;
+//         border-radius: 6px;
+//         width: 60px;
+//         @extend %TextSubparagraphs;
+//         font-size: 10px;
+//         img{ 
+//             width: 18px;
+//         }
+//     }
+// }
+// .bill {
+
+//     &__title {
+//         margin-bottom: 5px;
+//     }
+
+//     &__body {
+              
+//     }
+// }
+// .body {
+
+//     &__box {
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//         margin-bottom: 5px;  
+//         p:first-child{
+//             margin-right: 5px;
+//         }
+//     }
+    
+// }
+
+
+// /* End Main */

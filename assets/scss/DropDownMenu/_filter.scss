@@ -17,8 +17,23 @@
   .Filter {
     display: flex;
     flex-direction: column;
-
+    &__summTransaction {
+        padding: 5px;
+    }
     &__Data{
+        @extend %TitleFilter;
+    }
+    &__Volute{
+        @extend %TitleFilter;
+    }
+    &__amountInCurrency{
+        position: relative;
+        @extend %TitleFilter;
+    }
+    &__status{
+        @extend %TitleFilter;
+    }
+    &__operations{
         @extend %TitleFilter;
     }
     &__Car{
@@ -33,7 +48,7 @@
         align-items: center;
         width: 100px;
         height: 35px;
-        margin: 10px auto 0px auto;
+        margin: 0px auto;
         @extend %TitleFilter;
         color: #da6e00;
         background-color:#fff;
@@ -45,46 +60,126 @@
     &__ButtonSearch:hover{
         box-shadow: 0 0 8px #cccccc;
     }
-}  
-.select{
-    &__mounth{
-      visibility: hidden;
-      position: absolute;
-      top: 20px;
-      left: 210px;
-      display: flex;
-      justify-content: space-between;
-      width: 64%;
-      height: 32px;
-    }
-    &__range{
-      visibility: hidden;
-      position: absolute;
-      top: 30.5px;
-      left: 210px;
-      display: flex;
-      justify-content: space-between;
-      width: 64%;
-      input{
-          width: 180px;
-          height: 32px;
-          border-radius: 2px;
-          box-shadow: 0 0 2px #cccccc;
-          padding: 5px; 
-          @extend %TextFilter;
-          background-color: #da6e00;
-         
-      }
-     
-    }
 }
+  .select{
+      &__mounth{
+        visibility: hidden;
+        position: absolute;
+        top: 20px;
+        left: 210px;
+        display: flex;
+        justify-content: space-between;
+        width: 64%;
+        height: 32px;
+      }
+      &__range{
+        visibility: hidden;
+        position: absolute;
+        top: 30.5px;
+        left: 210px;
+        display: flex;
+        justify-content: space-between;
+        width: 64%;
+        input{
+            width: 180px;
+            height: 32px;
+            border-radius: 2px;
+            box-shadow: 0 0 2px #cccccc;
+            padding: 5px; 
+            @extend %TextFilter;
+            background-color: #da6e00;
+           
+        }
+       
+      }
+      &__volute{
+        visibility: hidden;
+        position: absolute;
+        top: 22px;
+        left: 200px;
+        input{
+            width: 180px;
+            height: 32px;
+            border-radius: 2px;
+            box-shadow: 0 0 2px #cccccc;
+            padding: 5px;
+            background-color: #da6e00;
+            color: #fff;
+        }
+        input::placeholder{
+            @extend %TextFilter;
+        }
+      }
+      &__rangeSum{
+            visibility: hidden;
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            top: 22px;
+            left: 200px;
+            width: 66%;
+           
+            // width: 213%;
+            input{
+                width: 180px;
+                height: 31px;
+                border-radius: 2px;
+                box-shadow: 0 0 2px #cccccc;
+                padding: 5px; 
+                @extend %TextFilter;
+                background-color: #da6e00;
+            }
+            input::placeholder{
+                @extend %TextFilter;
+            }
+      }
+      &__more{
+        visibility: hidden;
+        position: absolute;
+        top: 22px;
+        left: 200px;
+        input{
+            width: 180px;
+            height: 31px;
+            border-radius: 2px;
+            box-shadow: 0 0 2px #cccccc;
+            padding: 5px;
+            @extend %TextFilter;
+            background-color: #da6e00;
+        }
+        input::placeholder{
+            @extend %TextFilter;
+        }
+      }
+      &__smaller{
+        visibility: hidden;
+        position: absolute;
+        top: 22px;
+        left: 200px;
+        input{
+            width: 180px;
+            height: 31px;
+            border-radius: 2px;
+            box-shadow: 0 0 2px #cccccc;
+            padding: 5px;
+            @extend %TextFilter;
+            background-color: #da6e00;
+        }
+        input::placeholder{
+            @extend %TextFilter;
+        }
+      }
+    }
 
+    .select__smaller.active,
+    .select__more.active,
+    .select__rangeSum.active,
+    .select__volute.active,
     .select__mounth.active,
     .select__range.active{
      visibility: visible;
-  } 
-
-
+  }
+  
   span.msg,
   span.choose {
     color: #555;
@@ -129,7 +224,9 @@
   .dropdown:hover {
       box-shadow: 0 0 4px rgb(204, 204, 204)
   }
-
+  .dropdown:active {
+      background-color: #f8f8f8
+  }
   .dropdown.active:hover,
   .dropdown.active {
       box-shadow: 0 0 4px rgb(204, 204, 204);
@@ -184,7 +281,8 @@
 .dropdown{
     margin: 10px 0px 10px 0px;
 }
-/* Анимация открытия Филтра Машины*/
+
+/* Стиль Фильтр Машины*/
   .dropdownСar {
     width: 180px;
     display: inline-block;
@@ -193,7 +291,7 @@
     box-shadow: 0 0 2px rgb(204, 204, 204);
     transition: all .5s ease;
     position: relative;
-    font-size: 14px;
+    font-size: 10px;
     color: #fff;
     height: 100%;
     text-align: left
@@ -222,7 +320,9 @@
   .dropdownСar:hover {
       box-shadow: 0 0 4px rgb(204, 204, 204)
   }
-  
+  .dropdownСar:active {
+      background-color: #f8f8f8
+  }
   .dropdownСar.active:hover,
   .dropdownСar.active {
       box-shadow: 0 0 4px rgb(204, 204, 204);
@@ -271,159 +371,3 @@
   .selectCar input{
       background-color:#da6e00;
   }
-
-  
-/* All INfo Car */
-
-#AllInfoCar{   
-    @extend %Boreder;
-    height: auto;
-    max-height: 0px;
-    overflow: hidden;
-    visibility: hidden;
-    opacity: 0;
-    flex-wrap: wrap;
-    transition: opacity 1s linear, visibility 1s linear, max-height 1s linear, padding 1s linear ;
-    
-}
-#AllInfoCar.active2{
-    
-    opacity: 1;
-    visibility: visible;
-    max-height: 250px;
-    
-    
-}
-
-
-.AllInfoCar {
-    
-    &__boxInfo {
-        margin: 5px 20px 5px 5px;
-    }
-}
-.AllInfoCarConatinerText{
-    display: flex;
-    flex-wrap: wrap;
-}
-.boxInfo {
-
-    &__title {
-        @extend %TitleParagraph;
-        font-size: 11px;
-        color:#708090;
-        margin-bottom: 5px;
-    }
-
-    &__meaning {
-        @extend %TextSubparagraphs;
-        font-size: 10px;
-        display: flex;
-        align-items: center;
-        margin-bottom: 5px;
-        h1{
-            margin-right: 5px;
-        }
-        
-    }   
-}
-.AllInfoCarConatinerButton{
-    display: flex;
-    align-items: flex-end;
-}
-
-.meaning {
-
-    &__box {
-        display: flex;
-    }
-
-    &__bill {
-        margin-right: 10px;
-    }
-   
-    &__imgNextLink{
-        background: none;
-        a{
-            display: flex;
-            width: 180px;
-            padding: 5px;
-            border-radius: 6px;
-            background-color: #ffd9b3;
-            font-size: 12px;
-            @extend %TextSubparagraphs;
-            img{
-                width: 18px;
-                margin-right: 10px;
-            }
-            
-        }
-       
-    }
-    &__imgBurgerOptionIcon{
-        display: flex;
-        align-items: center;
-        background-color:#ffd9b3;
-        padding: 5px;
-        border-radius: 6px;
-        @extend %TextSubparagraphs;
-        font-size: 10px;
-        img{ 
-            width: 18px;
-        }
-    }
-    &__imgCheck{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        background-color:#ffd9b3;
-        padding: 5px;
-        border-radius: 6px;
-        width: 60px;
-        @extend %TextSubparagraphs;
-        font-size: 10px;
-        img{ 
-            width: 18px;
-        }
-    }
-    &__imgCamera{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        background-color:#ffd9b3;
-        padding: 5px;
-        border-radius: 6px;
-        width: 60px;
-        @extend %TextSubparagraphs;
-        font-size: 10px;
-        img{ 
-            width: 18px;
-        }
-    }
-}
-.bill {
-
-    &__title {
-        margin-bottom: 5px;
-    }
-
-    &__body {
-              
-    }
-}
-.body {
-
-    &__box {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 5px;  
-        p:first-child{
-            margin-right: 5px;
-        }
-    }
-    
-}
-
-
-/* End Main */

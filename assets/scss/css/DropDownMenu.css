@@ -87,12 +87,8 @@ footer {
   flex: 0 0 auto;
 }
 
-.boxHeader {
+header {
   background: #da6e00;
-}
-
-.boxMainNav {
-  background: #ffd9b3;
 }
 
 .container__header {
@@ -137,29 +133,6 @@ footer {
   border-bottom: 3px solid white;
 }
 
-.container__MainNav {
-  width: 1200px;
-  margin: 0px auto;
-  height: 40px;
-  display: flex;
-  align-items: center;
-}
-
-.MainNav__link {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 11px;
-  color: #747474;
-  margin-right: 11px;
-}
-.MainNav__link:hover {
-  color: #da6e00;
-}
-.MainNav__link.active {
-  color: #da6e00;
-}
-
 .addMashineAndnotification__buttonAdd {
   width: 141px;
   height: 26px;
@@ -177,190 +150,125 @@ footer {
   height: 18px;
 }
 
-#AllInfoCar {
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
-  border-radius: 6px;
-}
-
-.boxInfo__title, .table__header, .heading__title p {
+.NameCar__meaning, .NameCar__title {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
-  color: #da6e00;
+  font-size: 14px;
+  color: #1b2559;
 }
 
-.search__inputText::-moz-placeholder {
+.locations__title {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
   font-size: 10px;
-  color: #da6e00;
+  color: silver;
 }
 
-.search__inputText:-ms-input-placeholder {
+.LongAndWidth__width, .LongAndWidth__long, .Geolocation__button, .locations__meaning {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
   font-size: 10px;
-  color: #da6e00;
 }
 
-.meaning__imgCamera, .meaning__imgCheck, .meaning__imgBurgerOptionIcon, .meaning__imgNextLink a, .boxInfo__meaning, .table__body, .AddFelter__title, .search__inputText::placeholder {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
-  color: #da6e00;
-}
-
-main {
-  height: 600px;
-}
-
-/*  Start MAiN  */
-/* Transaction */
-.reinforcements {
+.InfoСar {
   width: 1200px;
   margin: 0px auto;
 }
-.reinforcements__heading {
+.UpdateAndClosed {
   display: flex;
-  align-items: center;
-  margin: 15px 0px 15px 0px;
-}
-.heading__box {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-.heading__title {
-  margin-right: 20px;
-}
-.heading__search {
-  width: 100%;
-  padding: 5px 10px 5px 10px;
-  border-radius: 15px;
-  background-color: #ffd9b3;
-  position: relative;
-}
-.heading__downloadBtn {
-  background-color: #ffd9b3;
-  border-radius: 15px;
-  width: 34px;
-  height: 27px;
-  margin-left: 10px;
-}
-.heading__downloadBtn img {
-  width: 15px;
-}
-
-/* Пунтк Филтр + Поиск*/
-.search {
-  display: flex;
-  align-items: center;
-}
-.search__inputText {
-  background-color: #ffd9b3;
-  margin-left: 5px;
-  flex-grow: 1;
-}
-.AddFelter {
-  display: flex;
-  align-items: center;
-  background-color: #da6e00;
-  height: 25px;
-  padding: 5px;
-  border-radius: 6px;
-}
-.AddFelter__title {
-  margin-right: 5px;
-  color: white;
-  font-size: 11px;
-}
-.AddFelter__button {
-  background: url("/assets/img/button/cancel.svg") no-repeat;
-  width: 12px;
-  height: 12px;
-}
-
-.button__serch {
-  background: url("/assets/img/search/search.svg") no-repeat;
-  width: 18px;
-  height: 18px;
-  margin-right: 5px;
-}
-.button__close {
-  background: url("/assets/img/button/cancel.svg") no-repeat;
-  width: 12px;
-  height: 12px;
-  margin-right: 5px;
-}
-
-/* Филтр и поск Тело */
-.search__body {
-  display: none;
-  position: absolute;
-  width: 600px;
-  background-color: #ffd9b3;
-  top: 38px;
-  padding: 10px;
-  border: 1px solid #da6e00;
-  border-radius: 5px;
-  z-index: 1000;
-}
-
-.search__body.activeFilter {
-  display: block;
-  z-index: 1000;
-}
-
-/* Пунтк Филтр + Поиск End */
-.table__header {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  background-color: #da6e00;
-  font-size: 11px;
-  color: #ffff;
-  height: 40px;
-  padding: 8px;
-}
-.table__header span {
-  width: 110%;
-}
-.table__body {
-  display: flex;
-  text-align: center;
-  align-items: center;
+  justify-content: space-between;
   margin: 10px 0px 10px 0px;
-  height: 40px;
-  background-color: #ffd9b3;
-  padding: 8px;
-  color: black;
 }
-.table__body button,
-.table__body span {
-  width: 110%;
-  height: 40px;
+.UpdateAndClosed__buttonUpdate {
+  background: none;
+}
+.UpdateAndClosed__buttonUpdate img {
+  width: 18px;
+}
+.UpdateAndClosed__buttonClosed {
+  background: none;
+}
+.UpdateAndClosed__buttonClosed img {
+  width: 18px;
+}
+
+.Box {
+  display: flex;
+}
+.Box__imgCar img {
+  width: 260px;
+  height: 350px;
+}
+
+.NameCar__title {
+  margin: 5px 0px 0px 5px;
+}
+.NameCar__meaning {
+  margin: 5px 0px 5px 5px;
+}
+
+.locations__title {
+  margin: 5px 0px 5px 5px;
+}
+.locations__meaning {
+  margin: 0px 0px 5px 5px;
+}
+
+.containerLoc {
+  display: flex;
+  align-items: flex-end;
+}
+
+.Geolocation__button {
+  border-radius: 5px;
+  background-color: slategray;
+  height: 20px;
+  padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 20px 0px 5px 0px;
+}
+.Geolocation__button:hover {
+  color: white;
+}
+.Geolocation__LongAndWidth {
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
+  width: 18%;
+  padding: 10px;
+  transition: opacity 1s linear, visibility 1s linear;
 }
 
-#open {
-  display: contents;
-  cursor: pointer;
+.LongAndWidth__long {
+  margin-bottom: 10px;
+}
+.LongAndWidth__long input {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 25px;
+  margin-top: 5px;
+}
+.LongAndWidth__width input {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 25px;
+  margin-top: 5px;
 }
 
-#downloadСheck {
-  background: none;
-}
-#downloadСheck img {
-  width: 25px;
+.activeShow {
+  visibility: visible;
+  opacity: 1;
 }
 
-.Filter__ButtonSearch, .Filter__Car, .Filter__Data {
+.Filter__ButtonSearch, .Filter__Car, .Filter__operations, .Filter__status, .Filter__amountInCurrency, .Filter__Volute, .Filter__Data {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
@@ -368,7 +276,23 @@ main {
   color: silver;
 }
 
-.dropdownСar .selectCar input, .select span, .select__range input {
+.select__smaller input::-moz-placeholder, .select__more input::-moz-placeholder, .select__rangeSum input::-moz-placeholder, .select__volute input::-moz-placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12px;
+  color: #fff;
+}
+
+.select__smaller input:-ms-input-placeholder, .select__more input:-ms-input-placeholder, .select__rangeSum input:-ms-input-placeholder, .select__volute input:-ms-input-placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12px;
+  color: #fff;
+}
+
+.dropdownСar .selectCar input, .select span, .select__smaller input::placeholder, .select__smaller input, .select__more input::placeholder, .select__more input, .select__rangeSum input::placeholder, .select__rangeSum input, .select__volute input::placeholder, .select__range input {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 800;
@@ -380,6 +304,12 @@ main {
   display: flex;
   flex-direction: column;
 }
+.Filter__summTransaction {
+  padding: 5px;
+}
+.Filter__amountInCurrency {
+  position: relative;
+}
 .Filter__Car p {
   margin-bottom: 5px;
 }
@@ -389,7 +319,7 @@ main {
   align-items: center;
   width: 100px;
   height: 35px;
-  margin: 10px auto 0px auto;
+  margin: 0px auto;
   color: #da6e00;
   background-color: #fff;
   border-radius: 2px;
@@ -428,7 +358,70 @@ main {
   padding: 5px;
   background-color: #da6e00;
 }
-
+.select__volute {
+  visibility: hidden;
+  position: absolute;
+  top: 22px;
+  left: 200px;
+}
+.select__volute input {
+  width: 180px;
+  height: 32px;
+  border-radius: 2px;
+  box-shadow: 0 0 2px #cccccc;
+  padding: 5px;
+  background-color: #da6e00;
+  color: #fff;
+}
+.select__rangeSum {
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 22px;
+  left: 200px;
+  width: 66%;
+}
+.select__rangeSum input {
+  width: 180px;
+  height: 31px;
+  border-radius: 2px;
+  box-shadow: 0 0 2px #cccccc;
+  padding: 5px;
+  background-color: #da6e00;
+}
+.select__more {
+  visibility: hidden;
+  position: absolute;
+  top: 22px;
+  left: 200px;
+}
+.select__more input {
+  width: 180px;
+  height: 31px;
+  border-radius: 2px;
+  box-shadow: 0 0 2px #cccccc;
+  padding: 5px;
+  background-color: #da6e00;
+}
+.select__smaller {
+  visibility: hidden;
+  position: absolute;
+  top: 22px;
+  left: 200px;
+}
+.select__smaller input {
+  width: 180px;
+  height: 31px;
+  border-radius: 2px;
+  box-shadow: 0 0 2px #cccccc;
+  padding: 5px;
+  background-color: #da6e00;
+}
+.select__smaller.active,
+.select__more.active,
+.select__rangeSum.active,
+.select__volute.active,
 .select__mounth.active,
 .select__range.active {
   visibility: visible;
@@ -479,6 +472,10 @@ span.choose {
 
 .dropdown:hover {
   box-shadow: 0 0 4px #cccccc;
+}
+
+.dropdown:active {
+  background-color: #f8f8f8;
 }
 
 .dropdown.active:hover,
@@ -537,7 +534,7 @@ span.choose {
   margin: 10px 0px 10px 0px;
 }
 
-/* Анимация открытия Филтра Машины*/
+/* Стиль Фильтр Машины*/
 .dropdownСar {
   width: 180px;
   display: inline-block;
@@ -546,7 +543,7 @@ span.choose {
   box-shadow: 0 0 2px #cccccc;
   transition: all 0.5s ease;
   position: relative;
-  font-size: 14px;
+  font-size: 10px;
   color: #fff;
   height: 100%;
   text-align: left;
@@ -576,6 +573,10 @@ span.choose {
 
 .dropdownСar:hover {
   box-shadow: 0 0 4px #cccccc;
+}
+
+.dropdownСar:active {
+  background-color: #f8f8f8;
 }
 
 .dropdownСar.active:hover,
@@ -632,123 +633,3 @@ span.choose {
 .selectCar input {
   background-color: #da6e00;
 }
-
-/* All INfo Car */
-#AllInfoCar {
-  height: auto;
-  max-height: 0px;
-  overflow: hidden;
-  visibility: hidden;
-  opacity: 0;
-  flex-wrap: wrap;
-  transition: opacity 1s linear, visibility 1s linear, max-height 1s linear, padding 1s linear;
-}
-
-#AllInfoCar.active2 {
-  opacity: 1;
-  visibility: visible;
-  max-height: 250px;
-}
-
-.AllInfoCar__boxInfo {
-  margin: 5px 20px 5px 5px;
-}
-
-.AllInfoCarConatinerText {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.boxInfo__title {
-  font-size: 11px;
-  color: #708090;
-  margin-bottom: 5px;
-}
-.boxInfo__meaning {
-  font-size: 10px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 5px;
-}
-.boxInfo__meaning h1 {
-  margin-right: 5px;
-}
-
-.AllInfoCarConatinerButton {
-  display: flex;
-  align-items: flex-end;
-}
-
-.meaning__box {
-  display: flex;
-}
-.meaning__bill {
-  margin-right: 10px;
-}
-.meaning__imgNextLink {
-  background: none;
-}
-.meaning__imgNextLink a {
-  display: flex;
-  width: 180px;
-  padding: 5px;
-  border-radius: 6px;
-  background-color: #ffd9b3;
-  font-size: 12px;
-}
-.meaning__imgNextLink a img {
-  width: 18px;
-  margin-right: 10px;
-}
-.meaning__imgBurgerOptionIcon {
-  display: flex;
-  align-items: center;
-  background-color: #ffd9b3;
-  padding: 5px;
-  border-radius: 6px;
-  font-size: 10px;
-}
-.meaning__imgBurgerOptionIcon img {
-  width: 18px;
-}
-.meaning__imgCheck {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: #ffd9b3;
-  padding: 5px;
-  border-radius: 6px;
-  width: 60px;
-  font-size: 10px;
-}
-.meaning__imgCheck img {
-  width: 18px;
-}
-.meaning__imgCamera {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: #ffd9b3;
-  padding: 5px;
-  border-radius: 6px;
-  width: 60px;
-  font-size: 10px;
-}
-.meaning__imgCamera img {
-  width: 18px;
-}
-
-.bill__title {
-  margin-bottom: 5px;
-}
-.body__box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 5px;
-}
-.body__box p:first-child {
-  margin-right: 5px;
-}
-
-/* End Main */
