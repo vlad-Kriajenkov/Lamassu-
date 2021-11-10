@@ -120,3 +120,35 @@ $('.dropdownСar .dropdown-menuCar li').click(function () {
     $(this).parents('.dropdownСar').find('span').text($(this).text());
 }); 
 /*End Dropdown Menu car */
+
+
+/* Dropdown Menu LNG */
+$('.select').click(function () {
+    $(this).attr('tabindex', 1).focus();
+    $(this).addClass('active');
+    $(".dropdownLNG").find('.dropdownLNG-menu').slideToggle("slow");
+});
+$('.dropdownLNG').focusout(function () {
+    $(this).removeClass('active');
+    $(this).find('.dropdownLNG-menu').slideUp("slow");
+});
+$('.dropdownLNG .dropdownLNG-menu li').click(function () {
+    $(this).parents('.dropdownLNG').find('span').text($(this).text());
+        $(this).parents('.dropdownLNG').find('input').attr('value', $(this).attr('id'));
+}); 
+/*End Dropdown Menu car */
+
+// /*Dropdown Filter Box*/
+// $('.dropdown').click(function () {
+//     $(this).attr('tabindex', 1).focus();
+//     $(this).toggleClass('active');
+//     $(this).find('.dropdown-menu').slideToggle("slow");
+// });
+// $('.dropdown').focusout(function () {
+//     $(this).removeClass('active');
+//     $(this).find('.dropdown-menu').slideUp("slow");
+// });
+// $('.dropdown .dropdown-menu li').click(function () {
+//     $(this).parents('.dropdown').find('span').text($(this).text());
+//     $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
+// }); 

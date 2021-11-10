@@ -1,0 +1,159 @@
+%Boreder{
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    
+}
+
+%TitleParagraphCassettes{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700; 
+    font-size: 20px;
+    color:  #da6e00;
+}
+%TextSubparagraphsCassettes{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 10px;
+    color:  #da6e00;
+}
+
+
+
+/*  Start MAiN  */
+/* Transaction */
+.maintenance {
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 15px 0px 15px 0px;
+    }
+    &__title{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 100;
+        font-size: 12px;
+        color:#a9a9a9;
+        margin: 10px 0px 10px 5px;
+    }
+    &__table {
+    }
+}
+
+
+.table {
+    &__header {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        background-color:  #da6e00;
+        @extend %TitleParagraphCassettes;
+        font-size: 11px;
+        color:#ffff;
+        height: 40px;
+        padding: 8px;
+        span{
+            width:155px;
+        }
+       
+    }
+    &__body{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        margin: 10px 0px 10px 0px;
+        // background-color:#ffd9b3;
+        padding: 8px;
+        @extend %TextSubparagraphsCassettes;
+        color:sienna;
+        span{
+            width:155px;
+        }
+    }
+}
+
+
+
+
+
+/*CashCarOut start */
+#CashCarOut{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.cashOutBorder {
+    width: 70px;
+    height: 100px;
+    border: 2px solid #1b2559;
+}
+.cashOutBody {
+    position:absolute;
+    width: 70px;
+    height: 100px;
+    background-color:#1b2559;
+    // border: 2px solid #1b2559;
+    top: 0px;
+   
+}
+.cashOutText{
+    color:white;
+    font-size: 15px;
+    position: absolute;
+    left: 25px;
+}
+
+.cashOutInfo {
+    text-align: left;
+    p{
+        margin: 0px 0px 5px 5px;
+    }
+    &__numberBills {
+    }
+
+    &__nominal {
+    }
+
+    &__finalTotal {
+    }
+}
+
+/*CashCarOut End */
+
+
+/*CashCarIn start */
+#CashCarIn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.cashInBorder {
+    width: 70px;
+    height: 100px;
+    border: 2px solid #1b2559;
+}
+.cashInBody {
+    position:absolute;
+    width: 70px;
+    height: 0px;
+    background-color:#1b2559;
+    // border: 2px solid #1b2559;
+    top: 0px;
+   
+}
+.cashInText{
+    color:black;
+    font-size: 15px;
+    position: absolute;
+    left: 43px;
+    top: 84px;
+}
+/*CashCarIn End */
+
+
+.formSubmit{
+    border: 1px solid black;
+    width: 200px;
+}

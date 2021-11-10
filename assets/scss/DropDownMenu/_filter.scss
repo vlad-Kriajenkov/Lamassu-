@@ -196,7 +196,7 @@
   .dropdown {
     width: 180px;
     display: inline-block;
-    background-color: #da6e00 ;
+    background-color: #da6e00;
     border-radius: 2px;
     box-shadow: 0 0 2px rgb(204, 204, 204);
     transition: all .5s ease;
@@ -224,9 +224,7 @@
   .dropdown:hover {
       box-shadow: 0 0 4px rgb(204, 204, 204)
   }
-  .dropdown:active {
-      background-color: #f8f8f8
-  }
+ 
   .dropdown.active:hover,
   .dropdown.active {
       box-shadow: 0 0 4px rgb(204, 204, 204);
@@ -371,3 +369,89 @@
   .selectCar input{
       background-color:#da6e00;
   }
+  /* end*/
+
+  /*Стиль Leng*/
+  
+  .dropdownLNG {
+    width: 66px;
+    display: inline-block;
+    background-color: #da6e00;
+    border-radius: 2px;
+    box-shadow: 0 0 2px rgb(204, 204, 204);
+    transition: all .5s ease;
+    position: relative;
+    font-size: 14px;
+    color: #fff;
+    text-align: left;
+    margin-left:10px;
+  }
+  .dropdownLNG .select {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    // display: block;
+    padding: 5px
+  }
+  .dropdownLNG .select > i {
+      font-size: 13px;
+      color: #888;
+      cursor: pointer;
+      transition: all .3s ease-in-out;
+      float: right;
+      line-height: 20px
+  }
+  .dropdownLNG:hover {
+      box-shadow: 0 0 4px rgb(204, 204, 204)
+  }
+ 
+  .dropdownLNG.active:hover,
+  .dropdownLNG.active {
+      box-shadow: 0 0 4px rgb(204, 204, 204);
+      border-radius: 2px 2px 0 0;
+    //   background-color: #f8f8f8
+  }
+  .dropdownLNG.active .select > i {
+      transform: rotate(-90deg)
+  }
+  .dropdownLNG .dropdownLNG-menu {
+      position: absolute;
+      background-color: #da6e00;
+      width: 100%;
+      left: 0;
+      margin-top: 1px;
+      box-shadow: 0 1px 2px rgb(204, 204, 204);
+      border-radius: 0 1px 2px 2px;
+      overflow: hidden;
+      display: none;
+      max-height: 144px;
+      overflow-y: auto;
+      z-index: 9
+  }
+  .dropdownLNG .dropdownLNG-menu li {
+      padding: 10px;
+      transition: all .2s ease-in-out;
+      cursor: pointer;
+     
+  } 
+  .dropdownLNG .dropdownLNG-menu {
+      padding: 0;
+      list-style: none
+  }
+  .dropdownLNG .dropdownLNG-menu li:hover {
+      background-color: #b35a02
+  }
+  .dropdownLNG .dropdownLNG-menu li:active {
+      background-color: #b35a02
+  }
+
+
+.select span{
+  @extend %TextFilter
+}
+.dropdownLNG .dropdownLNG-menu  li {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 10px;
+}

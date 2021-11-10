@@ -1,0 +1,49 @@
+.styleBTN{
+    visibility: visible; 
+    border-radius: 5px;
+    background-color: slategray;
+    height: 20px;
+    width:147px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px 5px 0px;
+    @extend %TextNormal;
+}
+
+.styleBTN:hover{
+    color:#ffff;
+}
+.styleBTNBig{
+    visibility: visible; 
+    border-radius: 5px;
+    background-color: slategray;
+    height: 20px;
+    width:200px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px 5px 0px;
+    @extend %TextNormal;
+}
+
+.styleBTNBig:hover{
+    color:#ffff;
+}
+
+.styleBTNInstall{
+    width: 180px;
+    background-color: #da6e00;
+    border-radius: 2px;
+    box-shadow: 0 0 2px rgb(204, 204, 204);
+    font-size: 14px;
+    color: #fff;
+    height: 32px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700; 
+    font-size: 12px;
+}
+

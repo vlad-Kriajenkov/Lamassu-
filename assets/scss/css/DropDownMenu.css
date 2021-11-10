@@ -150,6 +150,11 @@ header {
   height: 18px;
 }
 
+#AllInfoCar {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+}
+
 .NameCar__meaning, .NameCar__title {
   font-family: "Montserrat";
   font-style: normal;
@@ -158,15 +163,15 @@ header {
   color: #1b2559;
 }
 
-.locations__title {
+.controlInfo__title, .InfoCarAll__APICISInput label, .locations__title {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
   font-size: 10px;
-  color: silver;
+  color: #a9a9a9;
 }
 
-.LongAndWidth__width, .LongAndWidth__long, .Geolocation__button, .locations__meaning {
+.styleBTNBig, .styleBTN, .controlInfo__meaning, .BtnAPICISInput, .LongAndWidth__button, .LongAndWidth__width, .LongAndWidth__long, .Geolocation__button, .locations__meaning {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
@@ -177,6 +182,15 @@ header {
   width: 1200px;
   margin: 0px auto;
 }
+.InfoСar__InfoCarLocations {
+  margin-right: 10px;
+  width: 36%;
+}
+.InfoСar__InfoCarAll {
+  background-color: #f6f6f6;
+  width: 64%;
+}
+
 .UpdateAndClosed {
   display: flex;
   justify-content: space-between;
@@ -193,6 +207,10 @@ header {
 }
 .UpdateAndClosed__buttonClosed img {
   width: 18px;
+}
+
+.wrepperInfoСar {
+  display: flex;
 }
 
 .Box {
@@ -237,16 +255,27 @@ header {
 }
 .Geolocation__LongAndWidth {
   opacity: 0;
+  height: auto;
+  max-height: 0px;
+  overflow: hidden;
   visibility: hidden;
-  display: flex;
-  flex-direction: column;
   border-radius: 6px;
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
-  width: 18%;
-  padding: 10px;
-  transition: opacity 1s linear, visibility 1s linear;
+  width: 48%;
+  transition: opacity 1s linear, visibility 1s linear, max-height 1s linear, padding 1s linear;
 }
 
+.activeShow {
+  visibility: visible;
+  opacity: 1;
+  max-height: 100%;
+  padding: 10px;
+}
+
+.LongAndWidth__box {
+  display: flex;
+  flex-direction: column;
+}
 .LongAndWidth__long {
   margin-bottom: 10px;
 }
@@ -262,10 +291,102 @@ header {
   height: 25px;
   margin-top: 5px;
 }
+.LongAndWidth__button {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.25);
+  margin: 10px auto;
+}
+
+.Marginality__button.noAccess {
+  visibility: hidden;
+  height: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.InfoCarAll__APICISInput {
+  height: auto;
+  max-height: 0px;
+  overflow: hidden;
+  visibility: visible;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 1s linear, visibility 1s linear, max-height 1s linear, padding 1s linear;
+}
+.InfoCarAll__APICISInput label {
+  margin-bottom: 10px;
+  color: black;
+}
+.InfoCarAll__APICISInput input {
+  width: 100%;
+  height: 20px;
+  margin: 5px 0px 10px 0px;
+  border-radius: 6px;
+}
+.InfoCarAll__specification {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: auto;
+  max-height: 0px;
+  overflow: hidden;
+  visibility: visible;
+  opacity: 0;
+  transition: opacity 1s linear, visibility 1s linear, max-height 1s linear, padding 1s linear;
+}
+
+.activeShowSpecification {
+  visibility: visible;
+  opacity: 1;
+  max-height: 100%;
+  padding: 10px;
+}
 
 .activeShow {
   visibility: visible;
   opacity: 1;
+  max-height: 100%;
+  padding: 10px;
+}
+
+.BtnAPICISInput {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.25);
+  margin: 0px auto;
+}
+
+.Box_control {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 5px;
+}
+.Box__controlInfo {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+
+.controlInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+.controlInfo__title {
+  color: white;
+  background-color: #1b2559;
+  margin: 5px;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+.controlInfo__meaning {
+  margin: 5px;
 }
 
 .Filter__ButtonSearch, .Filter__Car, .Filter__operations, .Filter__status, .Filter__amountInCurrency, .Filter__Volute, .Filter__Data {
@@ -474,10 +595,6 @@ span.choose {
   box-shadow: 0 0 4px #cccccc;
 }
 
-.dropdown:active {
-  background-color: #f8f8f8;
-}
-
 .dropdown.active:hover,
 .dropdown.active {
   box-shadow: 0 0 4px #cccccc;
@@ -633,3 +750,505 @@ span.choose {
 .selectCar input {
   background-color: #da6e00;
 }
+
+/* end*/
+/*Стиль Leng*/
+.dropdownLNG {
+  width: 66px;
+  display: inline-block;
+  background-color: #da6e00;
+  border-radius: 2px;
+  box-shadow: 0 0 2px #cccccc;
+  transition: all 0.5s ease;
+  position: relative;
+  font-size: 14px;
+  color: #fff;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.dropdownLNG .select {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.dropdownLNG .select > i {
+  font-size: 13px;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  float: right;
+  line-height: 20px;
+}
+
+.dropdownLNG:hover {
+  box-shadow: 0 0 4px #cccccc;
+}
+
+.dropdownLNG.active:hover,
+.dropdownLNG.active {
+  box-shadow: 0 0 4px #cccccc;
+  border-radius: 2px 2px 0 0;
+}
+
+.dropdownLNG.active .select > i {
+  transform: rotate(-90deg);
+}
+
+.dropdownLNG .dropdownLNG-menu {
+  position: absolute;
+  background-color: #da6e00;
+  width: 100%;
+  left: 0;
+  margin-top: 1px;
+  box-shadow: 0 1px 2px #cccccc;
+  border-radius: 0 1px 2px 2px;
+  overflow: hidden;
+  display: none;
+  max-height: 144px;
+  overflow-y: auto;
+  z-index: 9;
+}
+
+.dropdownLNG .dropdownLNG-menu li {
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.dropdownLNG .dropdownLNG-menu {
+  padding: 0;
+  list-style: none;
+}
+
+.dropdownLNG .dropdownLNG-menu li:hover {
+  background-color: #b35a02;
+}
+
+.dropdownLNG .dropdownLNG-menu li:active {
+  background-color: #b35a02;
+}
+
+.dropdownLNG .dropdownLNG-menu li {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+}
+
+.styleBTN {
+  visibility: visible;
+  border-radius: 5px;
+  background-color: slategray;
+  height: 20px;
+  width: 147px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px 5px 0px;
+}
+
+.styleBTN:hover {
+  color: #ffff;
+}
+
+.styleBTNBig {
+  visibility: visible;
+  border-radius: 5px;
+  background-color: slategray;
+  height: 20px;
+  width: 200px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px 5px 0px;
+}
+
+.styleBTNBig:hover {
+  color: #ffff;
+}
+
+.styleBTNInstall {
+  width: 180px;
+  background-color: #da6e00;
+  border-radius: 2px;
+  box-shadow: 0 0 2px #cccccc;
+  font-size: 14px;
+  color: #fff;
+  height: 32px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+#AllInfoCar {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+}
+
+.table__header {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  color: #da6e00;
+}
+
+.table__body {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: #da6e00;
+}
+
+/*  Start MAiN  */
+/* Transaction */
+.maintenance__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0px 15px 0px;
+}
+.maintenance__title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 12px;
+  color: #a9a9a9;
+  margin: 10px 0px 10px 5px;
+}
+.table__header {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  background-color: #da6e00;
+  font-size: 11px;
+  color: #ffff;
+  height: 40px;
+  padding: 8px;
+}
+.table__header span {
+  width: 155px;
+}
+.table__body {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin: 10px 0px 10px 0px;
+  padding: 8px;
+  color: sienna;
+}
+.table__body span {
+  width: 155px;
+}
+
+/*CashCarOut start */
+#CashCarOut {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.cashOutBorder {
+  width: 70px;
+  height: 100px;
+  border: 2px solid #1b2559;
+}
+
+.cashOutBody {
+  position: absolute;
+  width: 70px;
+  height: 100px;
+  background-color: #1b2559;
+  top: 0px;
+}
+
+.cashOutText {
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  left: 25px;
+}
+
+.cashOutInfo {
+  text-align: left;
+}
+.cashOutInfo p {
+  margin: 0px 0px 5px 5px;
+}
+/*CashCarOut End */
+/*CashCarIn start */
+#CashCarIn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.cashInBorder {
+  width: 70px;
+  height: 100px;
+  border: 2px solid #1b2559;
+}
+
+.cashInBody {
+  position: absolute;
+  width: 70px;
+  height: 0px;
+  background-color: #1b2559;
+  top: 0px;
+}
+
+.cashInText {
+  color: black;
+  font-size: 15px;
+  position: absolute;
+  left: 43px;
+  top: 84px;
+}
+
+/*CashCarIn End */
+.formSubmit {
+  border: 1px solid black;
+  width: 200px;
+}
+
+#AllInfoCar {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+}
+
+.boxInfo__title, .table__header {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  color: #da6e00;
+}
+
+.meaning__imgCamera, .meaning__imgCheck, .meaning__imgBurgerOptionIcon, .meaning__imgNextLink a, .boxInfo__meaning, .table__bodyTransactions {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: #da6e00;
+}
+
+main {
+  height: 600px;
+}
+
+/*  Start MAiN  */
+/* Transaction */
+.transactions__table {
+  margin: 10px 0px 50px 0px;
+}
+.transactions__table span {
+  width: 50%;
+}
+.transactions__title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 12px;
+  color: #a9a9a9;
+  margin: 10px 0px 10px 5px;
+}
+
+.table__header {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  background-color: #da6e00;
+  font-size: 11px;
+  color: #ffff;
+  height: 40px;
+  padding: 8px;
+}
+.table__bodyTransactions {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin: 10px 0px 10px 0px;
+  height: 40px;
+  background-color: #ffd9b3;
+  padding: 8px;
+  color: black;
+}
+
+#cashInfo {
+  width: 10%;
+}
+
+#nameCar {
+  width: 25%;
+}
+
+#operation {
+  width: 25%;
+}
+
+#address {
+  width: 25%;
+}
+
+#exchangeRate {
+  width: 30%;
+}
+
+#transactionAmount {
+  width: 50%;
+}
+
+#exchangeAmount {
+  width: 70%;
+}
+
+#Day {
+  width: 25%;
+}
+
+#Time {
+  width: 25%;
+}
+
+#BtnEmit {
+  width: 10%;
+}
+
+#Btn {
+  background: url("/assets/img/expand/open.svg") no-repeat;
+  height: 6px;
+  width: 10%;
+}
+
+#Btn .activeBtn {
+  background: url("/assets/img/expand/closed.svg") no-repeat;
+  width: 10%;
+  height: 6px;
+}
+
+/* All INfo Car */
+#AllInfoCar {
+  height: auto;
+  max-height: 0px;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  flex-wrap: wrap;
+  transition: opacity 1s linear, visibility 1s linear, max-height 1s linear, padding 1s linear;
+}
+
+#AllInfoCar.active2 {
+  opacity: 1;
+  visibility: visible;
+  max-height: 250px;
+}
+
+.AllInfoCar__boxInfo {
+  margin: 5px 20px 5px 5px;
+}
+
+.AllInfoCarConatinerText {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.boxInfo__title {
+  font-size: 11px;
+  color: #708090;
+  margin-bottom: 5px;
+}
+.boxInfo__meaning {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.boxInfo__meaning h1 {
+  margin-right: 5px;
+}
+
+.AllInfoCarConatinerButton {
+  display: flex;
+  align-items: flex-end;
+}
+
+.meaning__box {
+  display: flex;
+}
+.meaning__bill {
+  margin-right: 10px;
+}
+.meaning__imgNextLink {
+  background: none;
+}
+.meaning__imgNextLink a {
+  display: flex;
+  width: 180px;
+  padding: 5px;
+  border-radius: 6px;
+  background-color: #ffd9b3;
+  font-size: 12px;
+}
+.meaning__imgNextLink a img {
+  width: 18px;
+  margin-right: 10px;
+}
+.meaning__imgBurgerOptionIcon {
+  display: flex;
+  align-items: center;
+  background-color: #ffd9b3;
+  padding: 5px;
+  border-radius: 6px;
+  font-size: 10px;
+}
+.meaning__imgBurgerOptionIcon img {
+  width: 18px;
+}
+.meaning__imgCheck {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ffd9b3;
+  padding: 5px;
+  border-radius: 6px;
+  width: 60px;
+  font-size: 10px;
+}
+.meaning__imgCheck img {
+  width: 18px;
+}
+.meaning__imgCamera {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ffd9b3;
+  padding: 5px;
+  border-radius: 6px;
+  width: 60px;
+  font-size: 10px;
+}
+.meaning__imgCamera img {
+  width: 18px;
+}
+
+.bill__title {
+  margin-bottom: 5px;
+}
+.body__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.body__box p:first-child {
+  margin-right: 5px;
+}
+
+/* End Main */
