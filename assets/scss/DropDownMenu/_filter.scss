@@ -275,10 +275,6 @@
     font-weight: 100;
     font-size: 10px;
 }
-.filterBox,
-.dropdown{
-    margin: 10px 0px 10px 0px;
-}
 
 /* Стиль Фильтр Машины*/
   .dropdownСar {
@@ -386,14 +382,14 @@
     text-align: left;
     margin-left:10px;
   }
-  .dropdownLNG .select {
+  .dropdownLNG .selectLNG {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
     // display: block;
     padding: 5px
   }
-  .dropdownLNG .select > i {
+  .dropdownLNG .selectLNG > i {
       font-size: 13px;
       color: #888;
       cursor: pointer;
@@ -411,7 +407,7 @@
       border-radius: 2px 2px 0 0;
     //   background-color: #f8f8f8
   }
-  .dropdownLNG.active .select > i {
+  .dropdownLNG.active .selectLNG > i {
       transform: rotate(-90deg)
   }
   .dropdownLNG .dropdownLNG-menu {
@@ -446,7 +442,7 @@
   }
 
 
-.select span{
+.selectLNG span{
   @extend %TextFilter
 }
 .dropdownLNG .dropdownLNG-menu  li {

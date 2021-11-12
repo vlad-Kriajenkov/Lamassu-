@@ -34,10 +34,14 @@
 		}
 
 		&__InfoCarAll {
-            background-color: #f6f6f6;
+            // background-color: #f6f6f6;
             width:64%;
 		}
 }
+.Updatebox{
+    display: flex;
+}
+
 .UpdateAndClosed {
     display: flex;
     justify-content: space-between;
@@ -48,7 +52,9 @@
             width:18px
         }
     }
-
+    &__value{
+        margin-left: 20px;
+    }
     &__buttonClosed {
         background:none;
         img{
@@ -56,6 +62,21 @@
         }
     }
 }
+
+.value {
+
+    &__title {
+       @extend %TextSubparagraphs;
+       margin: 0px 5px 3px 0px;
+    }
+
+    &__meaning {
+        @extend %TextNormal;
+        margin-right: 10px;
+    }
+}
+
+
 .wrepperInfoСar{
     display: flex;
 }
@@ -81,15 +102,10 @@
 }
 .NameCar {
 
-		&__title {
-            @extend %TitleParagraph;
-            margin: 5px 0px 0px 5px;
-		}
-
-		&__meaning {
-            @extend %TitleParagraph;
-            margin: 5px 0px 5px 5px;
-		}
+    &__title {
+        @extend %TitleParagraph;
+        margin: 5px 0px 0px 5px;
+    }
 }
 .locations {
 
@@ -103,28 +119,39 @@
            margin: 0px 0px 5px 5px;
            
 		}
+     
 }
 .containerLoc {
     display: flex;
     align-items: flex-end;
 }
 
+.Edit {
+
+    &__title {
+        @extend %TextNormal;
+        font-size: 14px;
+        color: #a9a9a9;
+        margin-top: 20px;
+    }
+    &__Geolocation{
+        margin-right: 5px;
+    }
+}
+.Box{
+    &__Edit{
+        display: flex;
+    }
+}
 .Geolocation {
 
     &__button {
-        border-radius: 5px;
-        background-color: slategray;
-        height: 20px;
-        padding: 5px;
-        display: flex;
-        justify-content: center;
-        align-items:center;
-        @extend %TextNormal;
-        margin: 20px 0px 5px 0px;
+        img{
+            width: 20px;
+            margin-right: 5px;                
+        }
     }
-    &__button:hover{
-        color: white;
-    }
+   
 
     &__LongAndWidth {
         opacity: 0;
@@ -134,8 +161,7 @@
         visibility: hidden;
         border-radius: 6px;
         box-shadow: 0px 2px 20px rgb(0 0 0 / 25%);
-        width: 48%;
-        
+        width: 100%;
         transition: opacity 1s linear, visibility 1s linear, max-height 1s linear, padding 1s linear ;
     }
 }
@@ -159,6 +185,7 @@
             border-radius: 5px;
             height: 25px;
             margin-top: 5px;
+            width:180px;
         }
     }
 
@@ -169,20 +196,163 @@
             border-radius: 5px;
             height: 25px;
             margin-top: 5px;
+            width:180px;
         }
     }
     &__button{
-        padding: 5px;
-        border-radius: 5px;
-        background-color:rgba(0, 0, 0, 0.25);
-        @extend %TextNormal;
         margin: 10px auto;
     }
 }
 
-.Marginality {
+
+.Box {
+
+    &__status {
+    }
+}
+.status {
+
+    &__title {
+        @extend %TextSubparagraphs;
+        font-size: 14px;
+        margin: 10px 0px 5px 0px;
+    }
+
+    &__Allinfo {
+    }
+}
+.Allinfo {
+
+    &__sttusInfo {
+        color: #49db88;
+        background: #d1f5d9;
+        padding: 5px;
+        border-radius: 5px;
+        margin: 5px 0px 5px 0px;
+        width: fit-content;
+    }
+
+    &__pingInfo {
+        display: flex;
+    }
+}
+.pingInfo {
+
+    &__ping {
+        margin: 5px;   
+    }
+
+    &__pingLast {
+        margin: 5px; 
+    }
+}
+.ping {
+
+    &__title {
+        @extend %TextSubparagraphs;
+        margin-bottom: 5px;
+    }
+
+    &__meaning {
+        @extend %TextNormal;
+    }
+}
+
+
+/* */
+    
+.NameAndAddress {
 
     &__button {
+        img{
+            width: 18px;
+            margin-right: 8px;
+        }
+    }
+
+    &__box {
+        display: flex;
+        flex-direction:column;
+        text-align: center;
+        opacity: 0;
+        height: 0px;
+        overflow: hidden;
+        visibility: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 2px 20px rgb(0 0 0 / 25%);
+        width: 100%;
+        transition: opacity 1s linear, visibility 1s linear, height 1s linear, padding 1s linear ;
+    }
+}
+.activeShowNameAndAddress{
+    visibility: visible;
+    opacity: 1;
+    height: 260px;
+    padding: 10px;
+}
+.box {
+
+    &__nameCar {
+        display: flex;
+        flex-direction:column;
+    }
+
+    &__editAdrres {
+        display: flex;
+        flex-direction:column;
+    }
+}
+.nameCar {
+
+    &__input {
+        @extend %TextNormal;
+        input{
+            border: 1px solid black;
+            border-radius: 5px;
+            height: 25px;
+            margin-top: 5px;
+            width:180px;
+        }
+    }
+
+    &__button {
+    }
+}
+.editAdrres {
+
+    &__input {
+        @extend %TextNormal;
+        margin-top: 5px;
+        input{
+            border: 1px solid black;
+            border-radius: 5px;
+            height: 25px;
+            margin-top: 5px;
+            width:180px;
+        }
+    }
+    &__select{
+        margin-top: 10px;
+    }
+    &__button {
+    }
+}
+
+/* */
+
+.Box__button{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.Marginality {
+
+  
+    &__button {
+        img{
+            width: 17px;
+            margin-right: 5px;
+        }
     }
     &__button.noAccess{
        visibility: hidden;
@@ -194,8 +364,61 @@
 .LogMachine {
 
     &__button {
+        img{
+            width: 20px;
+            margin-right: 5px;
+        }
     }
 }
+
+.APICISBtn {
+
+    &__button {
+         img{
+            width: 20px;
+            margin-right: 5px;
+        }
+    }
+}
+.SpecificationBtn {
+
+    &__button {
+         img{
+            width: 20px;
+            margin-right: 5px;
+        }
+    }
+}
+.Forwarding {
+
+    &__button {
+         img{
+            width: 20px;
+            margin-right: 5px;
+        }
+    }
+}
+.EntryExitWorkv{
+
+}
+.RebootBillAcceptor{
+    &__button {
+        img{
+           width: 20px;
+           margin-right: 5px;
+       }
+   }
+}
+.RebootDispenser{
+    &__button {
+        img{
+           width: 20px;
+           margin-right: 5px;
+       }
+   }
+}
+
+
 
 .InfoCarAll {
 
@@ -211,7 +434,6 @@
         label{
             margin-bottom: 10px;
             @extend %TextSubparagraphs;
-            color: black;
             
         }
         input{
@@ -227,20 +449,20 @@
     &__specification{
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-evenly;
         height: auto;
-        max-height: 0px;
+        height: 0px;
         overflow: hidden;
         visibility: visible;
         opacity: 0;
-        transition: opacity 1s linear, visibility 1s linear, max-height 1s linear, padding 1s linear ;
+        transition: opacity 1s linear, visibility 1s linear, height 1s linear, padding 1s linear ;
     }
 }
 .activeShowSpecification{
     visibility: visible;
     opacity: 1;
-    max-height: 100%;
+    height: 115px;
     padding: 10px;
 }  
 .activeShow{
@@ -258,8 +480,18 @@
 }
 
 .Box {
-  
-		&_control {
+        &__controlTitle{
+            p{
+                padding: 5px;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 100;
+                font-size: 12px;
+                color:#a9a9a9;
+            }
+        }
+
+		&__control {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -275,25 +507,21 @@
 .Forwarding {
     // margin: 10px;
 		&__button {
+          
 		}
 }
 .controlInfo {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 50%;
+    margin-right: 10px;
     &__title {
         @extend %TextSubparagraphs;
-        color:white;
-        background-color:#1b2559;
-        margin: 5px;
         width: 100%;
-        padding: 10px;
-        text-align: center;
+        
     }
 
     &__meaning {
         @extend %TextNormal;
-        margin: 5px;
+        margin: 5px 0px 5px 0px;
     }
 }

@@ -123,7 +123,7 @@ $('.dropdownСar .dropdown-menuCar li').click(function () {
 
 
 /* Dropdown Menu LNG */
-$('.select').click(function () {
+$('.selectLNG').click(function () {
     $(this).attr('tabindex', 1).focus();
     $(this).addClass('active');
     $(".dropdownLNG").find('.dropdownLNG-menu').slideToggle("slow");

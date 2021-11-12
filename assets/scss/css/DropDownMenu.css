@@ -155,7 +155,7 @@ header {
   border-radius: 6px;
 }
 
-.NameCar__meaning, .NameCar__title {
+.NameCar__title {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
@@ -163,7 +163,7 @@ header {
   color: #1b2559;
 }
 
-.controlInfo__title, .InfoCarAll__APICISInput label, .locations__title {
+.controlInfo__title, .InfoCarAll__APICISInput label, .ping__title, .status__title, .locations__title, .value__title {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
@@ -171,7 +171,7 @@ header {
   color: #a9a9a9;
 }
 
-.styleBTNBig, .styleBTN, .controlInfo__meaning, .BtnAPICISInput, .LongAndWidth__button, .LongAndWidth__width, .LongAndWidth__long, .Geolocation__button, .locations__meaning {
+.styleBTNBig, .styleBTN, .controlInfo__meaning, .BtnAPICISInput, .editAdrres__input, .nameCar__input, .ping__meaning, .LongAndWidth__width, .LongAndWidth__long, .Edit__title, .locations__meaning, .value__meaning {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
@@ -187,8 +187,11 @@ header {
   width: 36%;
 }
 .InfoСar__InfoCarAll {
-  background-color: #f6f6f6;
   width: 64%;
+}
+
+.Updatebox {
+  display: flex;
 }
 
 .UpdateAndClosed {
@@ -202,11 +205,21 @@ header {
 .UpdateAndClosed__buttonUpdate img {
   width: 18px;
 }
+.UpdateAndClosed__value {
+  margin-left: 20px;
+}
 .UpdateAndClosed__buttonClosed {
   background: none;
 }
 .UpdateAndClosed__buttonClosed img {
   width: 18px;
+}
+
+.value__title {
+  margin: 0px 5px 3px 0px;
+}
+.value__meaning {
+  margin-right: 10px;
 }
 
 .wrepperInfoСar {
@@ -224,9 +237,6 @@ header {
 .NameCar__title {
   margin: 5px 0px 0px 5px;
 }
-.NameCar__meaning {
-  margin: 5px 0px 5px 5px;
-}
 
 .locations__title {
   margin: 5px 0px 5px 5px;
@@ -240,18 +250,22 @@ header {
   align-items: flex-end;
 }
 
-.Geolocation__button {
-  border-radius: 5px;
-  background-color: slategray;
-  height: 20px;
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0px 5px 0px;
+.Edit__title {
+  font-size: 14px;
+  color: #a9a9a9;
+  margin-top: 20px;
 }
-.Geolocation__button:hover {
-  color: white;
+.Edit__Geolocation {
+  margin-right: 5px;
+}
+
+.Box__Edit {
+  display: flex;
+}
+
+.Geolocation__button img {
+  width: 20px;
+  margin-right: 5px;
 }
 .Geolocation__LongAndWidth {
   opacity: 0;
@@ -261,7 +275,7 @@ header {
   visibility: hidden;
   border-radius: 6px;
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
-  width: 48%;
+  width: 100%;
   transition: opacity 1s linear, visibility 1s linear, max-height 1s linear, padding 1s linear;
 }
 
@@ -284,25 +298,148 @@ header {
   border-radius: 5px;
   height: 25px;
   margin-top: 5px;
+  width: 180px;
 }
 .LongAndWidth__width input {
   border: 1px solid black;
   border-radius: 5px;
   height: 25px;
   margin-top: 5px;
+  width: 180px;
 }
 .LongAndWidth__button {
-  padding: 5px;
-  border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.25);
   margin: 10px auto;
 }
 
+.status__title {
+  font-size: 14px;
+  margin: 10px 0px 5px 0px;
+}
+.Allinfo__sttusInfo {
+  color: #49db88;
+  background: #d1f5d9;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px 0px 5px 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.Allinfo__pingInfo {
+  display: flex;
+}
+
+.pingInfo__ping {
+  margin: 5px;
+}
+.pingInfo__pingLast {
+  margin: 5px;
+}
+
+.ping__title {
+  margin-bottom: 5px;
+}
+/* */
+.NameAndAddress__button img {
+  width: 18px;
+  margin-right: 8px;
+}
+.NameAndAddress__box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  opacity: 0;
+  height: 0px;
+  overflow: hidden;
+  visibility: hidden;
+  border-radius: 6px;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  transition: opacity 1s linear, visibility 1s linear, height 1s linear, padding 1s linear;
+}
+
+.activeShowNameAndAddress {
+  visibility: visible;
+  opacity: 1;
+  height: 260px;
+  padding: 10px;
+}
+
+.box__nameCar {
+  display: flex;
+  flex-direction: column;
+}
+.box__editAdrres {
+  display: flex;
+  flex-direction: column;
+}
+
+.nameCar__input input {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 25px;
+  margin-top: 5px;
+  width: 180px;
+}
+.editAdrres__input {
+  margin-top: 5px;
+}
+.editAdrres__input input {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 25px;
+  margin-top: 5px;
+  width: 180px;
+}
+.editAdrres__select {
+  margin-top: 10px;
+}
+/* */
+.Box__button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.Marginality__button img {
+  width: 17px;
+  margin-right: 5px;
+}
 .Marginality__button.noAccess {
   visibility: hidden;
   height: 0px;
   padding: 0px;
   margin: 0px;
+}
+
+.LogMachine__button img {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.APICISBtn__button img {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.SpecificationBtn__button img {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.Forwarding__button img {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.RebootBillAcceptor__button img {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.RebootDispenser__button img {
+  width: 20px;
+  margin-right: 5px;
 }
 
 .InfoCarAll__APICISInput {
@@ -317,7 +454,6 @@ header {
 }
 .InfoCarAll__APICISInput label {
   margin-bottom: 10px;
-  color: black;
 }
 .InfoCarAll__APICISInput input {
   width: 100%;
@@ -328,20 +464,20 @@ header {
 .InfoCarAll__specification {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-evenly;
   height: auto;
-  max-height: 0px;
+  height: 0px;
   overflow: hidden;
   visibility: visible;
   opacity: 0;
-  transition: opacity 1s linear, visibility 1s linear, max-height 1s linear, padding 1s linear;
+  transition: opacity 1s linear, visibility 1s linear, height 1s linear, padding 1s linear;
 }
 
 .activeShowSpecification {
   visibility: visible;
   opacity: 1;
-  max-height: 100%;
+  height: 115px;
   padding: 10px;
 }
 
@@ -359,7 +495,15 @@ header {
   margin: 0px auto;
 }
 
-.Box_control {
+.Box__controlTitle p {
+  padding: 5px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 12px;
+  color: #a9a9a9;
+}
+.Box__control {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -374,19 +518,13 @@ header {
 .controlInfo {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 50%;
+  margin-right: 10px;
 }
 .controlInfo__title {
-  color: white;
-  background-color: #1b2559;
-  margin: 5px;
   width: 100%;
-  padding: 10px;
-  text-align: center;
 }
 .controlInfo__meaning {
-  margin: 5px;
+  margin: 5px 0px 5px 0px;
 }
 
 .Filter__ButtonSearch, .Filter__Car, .Filter__operations, .Filter__status, .Filter__amountInCurrency, .Filter__Volute, .Filter__Data {
@@ -413,7 +551,7 @@ header {
   color: #fff;
 }
 
-.dropdownСar .selectCar input, .select span, .select__smaller input::placeholder, .select__smaller input, .select__more input::placeholder, .select__more input, .select__rangeSum input::placeholder, .select__rangeSum input, .select__volute input::placeholder, .select__range input {
+.selectLNG span, .dropdownСar .selectCar input, .select span, .select__smaller input::placeholder, .select__smaller input, .select__more input::placeholder, .select__more input, .select__rangeSum input::placeholder, .select__rangeSum input, .select__volute input::placeholder, .select__range input {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 800;
@@ -646,11 +784,6 @@ span.choose {
   font-size: 10px;
 }
 
-.filterBox,
-.dropdown {
-  margin: 10px 0px 10px 0px;
-}
-
 /* Стиль Фильтр Машины*/
 .dropdownСar {
   width: 180px;
@@ -767,14 +900,14 @@ span.choose {
   margin-left: 10px;
 }
 
-.dropdownLNG .select {
+.dropdownLNG .selectLNG {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
   padding: 5px;
 }
 
-.dropdownLNG .select > i {
+.dropdownLNG .selectLNG > i {
   font-size: 13px;
   color: #888;
   cursor: pointer;
@@ -793,7 +926,7 @@ span.choose {
   border-radius: 2px 2px 0 0;
 }
 
-.dropdownLNG.active .select > i {
+.dropdownLNG.active .selectLNG > i {
   transform: rotate(-90deg);
 }
 
@@ -841,9 +974,8 @@ span.choose {
 .styleBTN {
   visibility: visible;
   border-radius: 5px;
-  background-color: slategray;
-  height: 20px;
-  width: 147px;
+  background-color: #f2e3d4;
+  padding: 10px;
   padding: 5px;
   display: flex;
   justify-content: center;
@@ -852,15 +984,14 @@ span.choose {
 }
 
 .styleBTN:hover {
-  color: #ffff;
+  color: #da6e00;
 }
 
 .styleBTNBig {
   visibility: visible;
   border-radius: 5px;
-  background-color: slategray;
-  height: 20px;
-  width: 200px;
+  background-color: #f2e3d4;
+  padding: 10px;
   padding: 5px;
   display: flex;
   justify-content: center;
@@ -869,7 +1000,7 @@ span.choose {
 }
 
 .styleBTNBig:hover {
-  color: #ffff;
+  color: #da6e00;
 }
 
 .styleBTNInstall {
@@ -1037,10 +1168,6 @@ span.choose {
   font-weight: 100;
   font-size: 10px;
   color: #da6e00;
-}
-
-main {
-  height: 600px;
 }
 
 /*  Start MAiN  */
@@ -1252,3 +1379,60 @@ main {
 }
 
 /* End Main */
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 17px;
+  margin: 0px 5px 0px 5px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  display: none;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ff3c3c;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 2px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

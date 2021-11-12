@@ -5,6 +5,14 @@ document.getElementById('Geolocation').onclick = function() {
     document.getElementById('LongAndWidth').classList.add('activeShow');
   }
 
+document.getElementById('NameAndAddress').onclick = function() {
+  if(document.getElementById('NameAndAddressbox').classList.contains('activeShowNameAndAddress')) {
+      document.getElementById('NameAndAddressbox').classList.remove('activeShowNameAndAddress');
+  }else
+  document.getElementById('NameAndAddressbox').classList.add('activeShowNameAndAddress');
+}
+
+
   document.getElementById('APICISBtn').onclick = function() {
     if(document.getElementById('APICISInput').classList.contains('activeShow')) {
         document.getElementById('APICISInput').classList.remove('activeShow');

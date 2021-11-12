@@ -35,12 +35,12 @@
         <main>
             <div class="InfoСar">
                 <div class="UpdateAndClosed">
-                    <div>
+                    <div class="Updatebox">
                         <button class="UpdateAndClosed__buttonUpdate">
                             <img src="/assets/img/history/history.svg" width="18px" alt="Update">
                         </button>
                         <div class="dropdownLNG">
-                            <div class="select">
+                            <div class="selectLNG">
                                 <span>LNG</span>
                                 <i class="fa fa-chevron-left"></i>
                                 <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
@@ -52,6 +52,14 @@
                                 <li id="RUSLNG">RUS</li>
                             </ul>
                         </div> 
+                        <div class="UpdateAndClosed__value">
+                            <h2 class="value__title">КУРС USD</h2>
+                            <p class="value__meaning">23.00</p>
+                        </div>
+                        <div class="UpdateAndClosed__value">
+                            <h2 class="value__title">КУРС EUR</h2>
+                            <p class="value__meaning">26.00</p>
+                        </div>
                     </div>
                     <button class="UpdateAndClosed__buttonClosed">
                         <img src="/assets/img/button/cancel.svg"  width="18px" alt="Closed">
@@ -65,8 +73,7 @@
                             </div>
                             <div class="BoxNameCarAndLoctions">
                                 <div class="Box__NameCar"> 
-                                    <p class="NameCar__title">Машина 1</p>
-                                    <p class="NameCar__meaning">0001</p>
+                                    <p class="NameCar__title">Машина 1 (0001)</p>
                                 </div>
                                 <div class="containerLoc">
                                     <h1 class="locations__title">Номер валютомата:</h1>
@@ -75,52 +82,120 @@
                                 <div class="Box__locations">
                                     <div class="locations__title">Адрес</div>
                                     <div class="containerLoc">
-                                        <h1 class="locations__title">Город:</h1>
-                                        <p class="locations__meaning">Киев</p>
+                                        <p class="locations__meaning">Киев. Антоновича, 176. Ocean Plaza</p>
                                     </div>
-                                    <div class="containerLoc">
-                                        <h1 class="locations__title">Улица:</h1>
-                                        <p class="locations__meaning">Антоновича, 176</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                       
+                        <div class="Box__Edit">
+                            <div class="Edit__Geolocation">
+                                <button id="Geolocation" class="Geolocation__button styleBTNBig"><img src="/assets/img/monitoring/ГеолокационныеДанные.svg" alt=""> Геолокационные данные</button>
+                                <div id="LongAndWidth" class="Geolocation__LongAndWidth">
+                                    <form class="LongAndWidth__box">
+                                        <label class="LongAndWidth__long">
+                                            Долгота
+                                            <input type="text" name="Long" id="Long">
+                                        </label>    
+                                        <label class="LongAndWidth__width">
+                                            Ширина 
+                                            <input type="text" name="Width" id="Width">
+                                        </label>    
+                                        <button class="LongAndWidth__button styleBTN" >Отправить</button>
+                                    </form>
+                                    
+                                </div>
+                            </div>  
+                            <div class="Edit__NameAndAddress">
+                                <button id="NameAndAddress" class="NameAndAddress__button styleBTNBig"><img src="/assets/img/edit/edit.svg" alt="Увше"> Изменить Имя и Адрес</button>
+                                <div id="NameAndAddressbox" class="NameAndAddress__box">
+                                    <form class="box__nameCar">
+                                        <label class="nameCar__input">
+                                            Официальное Имя Машины
+                                            <input type="text" name="Long" id="Long">
+                                        </label>    
+                                        <button class="nameCar__button styleBTN" >Редактировать оф. Имя</button>
+                                    </form>
+                                    <form class="box__editAdrres">    
+                                        <label class="editAdrres__input">
+                                            Официальный адрес
+                                            <input type="text" name="Width" id="Width">
+                                        </label>   
+                                        <div class="editAdrres__select">
+                                            <div class="dropdown">
+                                                <div class="select">
+                                                    <span>Сегмент местоположения</span>
+                                                    <i class="fa fa-chevron-left"></i>
+                                                    <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
+                                                </div>
+                                                <input type="hidden" name="gender">
+                                                <ul class="dropdown-menu">
+                                                    <li id="MALL">ТРЦ</li>
+                                                    <li id="Hotels">Отели</li>
+                                                </ul>
+                                            </div>   
+                                        </div>
+                                        <button class="editAdrres__button styleBTN" >Редактировать оф. адресс</button>
+                                    </form>
+                                </div>
+                            </div>                              
+                        </div>
+
+                        <div class="Box__status">
+                            <p class="status__title">Статус</p>
+                            <div class="status__Allinfo">
+                                <div class="Allinfo__sttusInfo">
+                                    <p>Полностью работающая </p>
+                                </div>
+                                <div class="Allinfo__pingInfo">
+                                    <div class="pingInfo__ping">
+                                        <h1 class="ping__title">Пинг</h1>
+                                        <p class="ping__meaning">3.2ms</p>
                                     </div>
-                                    <div class="containerLoc">
-                                        <h1 class="locations__title">Торговый центр:</h1>
-                                        <p class="locations__meaning">Ocean Plaza</p>
-                                    </div>
-                                    <div class="containerLoc">
-                                        <h1 class="locations__title">Отель:</h1>
-                                        <p class="locations__meaning">Plaza</p>
+                                    <div class="pingInfo__pingLast">
+                                        <h1 class="ping__title">Последний пинг</h1>
+                                        <p class="ping__meaning">8 минут назад</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="Geolocation">
-                            <button id="Geolocation" class="Geolocation__button">Геолокационные данные</button>
-                            <div id="LongAndWidth" class="Geolocation__LongAndWidth">
-                                <form class="LongAndWidth__box">
-                                    <label class="LongAndWidth__long">
-                                        Долгота
-                                        <input type="text" name="Long" id="Long">
-                                    </label>    
-                                    <label class="LongAndWidth__width">
-                                        Ширина 
-                                        <input type="text" name="Width" id="Width">
-                                    </label>    
-                                    <button class="LongAndWidth__button" >Отправить</button>
-                                </form>
+
+
+                        <p class="Edit__title">Действия</p>
+                        <div class="Box__button">
+                            <div class="Marginality">
+                                <button class="Marginality__button styleBTN"> <img src="/assets/img/monitoring/Маржинальность.svg" alt="Маржинальность"> Маржинальность</button>
                             </div>
-                        </div>
-                        <div class="Marginality">
-                            <button class="Marginality__button styleBTN">Маржинальность</button>
-                        </div>
-                        <div class="LogMachine">
-                            <a href="/MachineLogic.html"><button class="LogMachine__button styleBTN">Лог Машины</button></a>
-                        </div>
-                        <div class="APICISBtn">
-                            <button id="APICISBtn" class="APICISBtn__button styleBTN">АПИ ЦИС</button>
-                        </div>
-                        <div class="SpecificationBtn">
-                            <button id="SpecificationBtn" class="SpecificationBtn__button styleBTN">Спецификация</button>
-                        </div>
+                            <div class="LogMachine">
+                                <a href="/MachineLogic.html"><button class="LogMachine__button styleBTN"> <img src="/assets/img/monitoring/ЛогМашины.svg"  alt=""> Лог Машины</button></a>
+                            </div>
+                            <div class="APICISBtn">
+                                <button id="APICISBtn" class="APICISBtn__button styleBTN"> <img src="/assets/img/monitoring/АПИЦИС.svg"  alt=""> АПИ ЦИС</button>
+                            </div>
+                            <div class="SpecificationBtn">
+                                <button id="SpecificationBtn" class="SpecificationBtn__button styleBTN"> <img src="/assets/img/monitoring/Спецификация.svg"  alt=""> Спецификация</button>
+                            </div>
+                            <div class="Forwarding">
+                                <button id="Forwarding" class="Forwarding__button styleBTN"> <img src="/assets/img/monitoring/Форвардинг.svg"  alt=""> Форвардинг</button>
+                            </div>
+                            <div class="EntryExitWork styleBTN">
+                                Вход/Выход Работу 
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                         
+                            <div class="RebootBillAcceptor">
+                                <button id="RebootBillAcceptor" class="RebootBillAcceptor__button styleBTNBig"> <img src="/assets/img/monitoring/ПерезагрузитьКупюроприемник.svg"  alt="Перезагрузить Купюроприемник"> Перезагрузить купюроприемник</button>
+                            </div>
+                            <div class="RebootDispenser">
+                                <button id="RebootDispenser" class="RebootDispenser__button styleBTNBig"> <img src="/assets/img/monitoring/ПерезагрузитьДиспенсер.svg"  alt=""> Перезагрузить диспенсер</button>
+                            </div>
+                        </div>        
+                        
                     </div>
                     <div class="InfoСar__InfoCarAll">
                         <form id="APICISInput" class="InfoCarAll__APICISInput">
@@ -179,26 +254,10 @@
                             </div> 
                             <button class="styleBTNInstall">Устоновить</button>
                         </form>
-                        <form class="InfoCarAll__control">
-                            <div class="Box_control">
-                                <div class="Forwarding">
-                                    <button id="Forwarding" class="Forwarding__button styleBTN">Форвардинг</button>
-                                </div>
-                                <div class="Forwarding">
-                                    <button id="Forwarding" class="Forwarding__button styleBTN">Выход из работы</button>
-                                </div>
-                                <div class="Forwarding">
-                                    <button id="Forwarding" class="Forwarding__button styleBTN">Вход в работу</button>
-                                </div>
-                                <div>
-                                    <div class="Forwarding">
-                                        <button id="Forwarding" class="Forwarding__button styleBTNBig">Перезагрузить купюроприемник</button>
-                                    </div>
-                                    <div class="Forwarding">
-                                        <button id="Forwarding" class="Forwarding__button styleBTNBig">Перезагрузить диспенсер</button>
-                                    </div>
-                                </div>
-                            </div> 
+                        <div class="InfoCarAll__control">
+                            <div class="Box__controlTitle">
+                                <p>Спецификация</p>
+                            </div>
                             <div class="Box__controlInfo">
                                 <div class="controlInfo">
                                     <h1 class="controlInfo__title">Последняя полная перезагрузка машины:</h1>
@@ -233,7 +292,7 @@
                                     <p class="controlInfo__meaning">Текст Текст </p>
                                 </div>
                             </div>                               
-                        </form>
+                        </div>
                         <div class="maintenance__table">
                             <p class="maintenance__title">Кассеты</p>
                             <div class="table__header">
