@@ -175,6 +175,15 @@ main{
         background: none;
 
     }
+    &__buttonCloseAll{
+        display:none;
+        @extend %TextSubparagraphs;
+        font-size: 9px;
+        width: 100px;
+        margin: 10px auto 0px auto;
+        background: none;
+
+    }
 }
 .cashboxEmpty {
 
@@ -234,7 +243,9 @@ main{
 #showAllInfoWarning{
     display: none;
 }
-
+#showAllInfoNotification{
+    display: none;
+}
 /* Пункт Состояние Системы */
 
 .notificationAndСondition {
@@ -279,6 +290,14 @@ main{
     }
 
     &__buttonShowAll{
+        @extend %TextSubparagraphs;
+        font-size: 9px;
+        width: 100px;
+        margin: 10px auto 0px auto;
+        background: none;
+    }
+    &__buttonCloseAll{
+        display:none;
         @extend %TextSubparagraphs;
         font-size: 9px;
         width: 100px;

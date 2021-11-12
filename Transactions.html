@@ -17,7 +17,7 @@
                         <a href="/Transactions.html" class="nav__link active">Операции</a>
                         <a href="/Maintenance.html" class="nav__link">Обслуживание</a>
                         <a href="/Analyties.html" class="nav__link">Аналитика</a>
-                        <a href="#" class="nav__link">Настройки </a>
+                        <a href="/Configure-margin.html" class="nav__link">Настройки </a>
                         <a href="#" class="nav__link">Дополнительно</a>
                     </nav>
                     
@@ -27,7 +27,125 @@
                         <img src="/assets/img/button/add.svg" alt="Add" width="15px">
                         Добавить Машину
                     </button>
-                    <button class="addMashineAndnotification__buttonnotification"></button>
+                    <button onclick="shownotification()" class="addMashineAndnotification__buttonnotification"></button>
+                    <div id="windowNotification" class="windowNotification">
+                        <div class="windowNotification__header">
+                            <p class="header__title">Оповещание</p>
+                            <button id="ShowAllNotification" onclick="showAllInfoNotification()" class="header__buttonShowAll">Посмотреть всё</button>
+                            <button    class="header__buttonCloseAll">Скрыть все</button>
+                            <button class="header__bTnCloseNotification" onclick="shownotification()">
+                                <img class="header__imgNotification" src="/assets/img/notificationblack.svg" alt="notification">
+                            </button>
+                        </div>
+                        <div class="windowNotification__weHaveInfo">
+                            <div class="weHaveInfo__cashboxEmpty">
+                                <div class="cashboxEmptyFlex">
+                                    <img src="/assets/img/Warning/cashbox-empty.svg" alt="cashboxEmpty" class="cashboxEmpty__img">
+                                    <p class="truckEmpty__infoText">francesinha-трак. Обналичивание-кассета 2 почти пуст</p>
+                                </div>
+                                <div class="cashboxEmptyFlex">
+                                    <button class="truckEmpty__buttonLink"></button>
+                                    <button class="truckEmpty__buttonCancel"></button>
+                                </div>
+                               
+                            </div>
+                            <div class="weHaveInfo__warningInfo">
+                                <div class="cashboxEmptyFlex">
+                                    <img src="/assets/img/Warning/warning.svg" alt="" class="warningInfo__img" width="17px">
+                                    <p class="warningInfo__infoText">Остаток наличных биткойнов низкий</p>
+                                </div>
+                                <div class="cashboxEmptyFlex">
+                                    <button class="warningInfo__buttonLink"></button>
+                                    <button class="warningInfo__buttonCancel"></button>
+                                </div>
+                            </div>
+                            <div id="showAllInfoNotification">
+                                <div class="weHaveInfo__warningInfo">
+                                    <div class="cashboxEmptyFlex">
+                                        <img src="/assets/img/Warning/warning.svg" alt="" class="warningInfo__img" width="17px">
+                                        <p class="warningInfo__infoText">Остаток наличных биткойнов низкий</p>
+                                    </div>
+                                    <div class="cashboxEmptyFlex">
+                                        <button class="warningInfo__buttonLink"></button>
+                                        <button class="warningInfo__buttonCancel"></button>
+                                    </div>
+                                </div>
+                                <div class="weHaveInfo__warningInfo">
+                                    <div class="cashboxEmptyFlex">
+                                        <img src="/assets/img/Warning/warning.svg" alt="" class="warningInfo__img" width="17px">
+                                        <p class="warningInfo__infoText">Остаток наличных биткойнов низкий</p>
+                                    </div>
+                                    <div class="cashboxEmptyFlex">
+                                        <button class="warningInfo__buttonLink"></button>
+                                        <button class="warningInfo__buttonCancel"></button>
+                                    </div>
+                                </div>
+                                <div class="weHaveInfo__warningInfo">
+                                    <div class="cashboxEmptyFlex">
+                                        <img src="/assets/img/Warning/warning.svg" alt="" class="warningInfo__img" width="17px">
+                                        <p class="warningInfo__infoText">Остаток наличных биткойнов низкий</p>
+                                    </div>
+                                    <div class="cashboxEmptyFlex">
+                                        <button class="warningInfo__buttonLink"></button>
+                                        <button class="warningInfo__buttonCancel"></button>
+                                    </div>
+                                </div>
+                                <div class="weHaveInfo__warningInfo">
+                                    <div class="cashboxEmptyFlex">
+                                        <img src="/assets/img/Warning/warning.svg" alt="" class="warningInfo__img" width="17px">
+                                        <p class="warningInfo__infoText">Остаток наличных биткойнов низкий</p>
+                                    </div>
+                                    <div class="cashboxEmptyFlex">
+                                        <button class="warningInfo__buttonLink"></button>
+                                        <button class="warningInfo__buttonCancel"></button>
+                                    </div>
+                                </div>
+                                <div class="weHaveInfo__warningInfo">
+                                    <div class="cashboxEmptyFlex">
+                                        <img src="/assets/img/Warning/warning.svg" alt="" class="warningInfo__img" width="17px">
+                                        <p class="warningInfo__infoText">Остаток наличных биткойнов низкий</p>
+                                    </div>
+                                    <div class="cashboxEmptyFlex">
+                                        <button class="warningInfo__buttonLink"></button>
+                                        <button class="warningInfo__buttonCancel"></button>
+                                    </div>
+                                </div>
+                                <div class="weHaveInfo__warningInfo">
+                                    <div class="cashboxEmptyFlex">
+                                        <img src="/assets/img/Warning/warning.svg" alt="" class="warningInfo__img" width="17px">
+                                        <p class="warningInfo__infoText">Остаток наличных биткойнов низкий</p>
+                                    </div>
+                                    <div class="cashboxEmptyFlex">
+                                        <button class="warningInfo__buttonLink"></button>
+                                        <button class="warningInfo__buttonCancel"></button>
+                                    </div>
+                                </div>
+                                <div class="weHaveInfo__warningInfo">
+                                    <div class="cashboxEmptyFlex">
+                                        <img src="/assets/img/Warning/warning.svg" alt="" class="warningInfo__img" width="17px">
+                                        <p class="warningInfo__infoText">Остаток наличных биткойнов низкий</p>
+                                    </div>
+                                    <div class="cashboxEmptyFlex">
+                                        <button class="warningInfo__buttonLink"></button>
+                                        <button class="warningInfo__buttonCancel"></button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>  
+                        <div class="windowNotification__shippingbox">
+                            <button id="shippingboxbtn" class="shippingbox__button" >
+                                Отправить оповещание
+                            </button>
+                            <div id="formShippin" class="shippingbox__formShippin">
+                                <form class="formShippin__formsSend">
+                                    <input class="formsSend__input" type="email" placeholder="Введите gmail получателя" name="RecipientsEmail" id="RecipientsEmail">
+                                    <input class="formsSend__input" placeholder="Введите текст" type="text" name="senderMessage" id="senderMessage">
+                                    <button id="senderButton" class="formsSend__button"><img src="/assets/img/share/share.svg" width="18px" alt="share"></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>  
         </header>
@@ -467,6 +585,7 @@
     </div>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="/assets/js/clickOpenTransacrions.js"></script>
+<script src="/assets/js/clickOpen/clickOpenNotification.js"></script>
 <script src="/assets/js/filter/filter.js"></script>
 </body>
 </html>

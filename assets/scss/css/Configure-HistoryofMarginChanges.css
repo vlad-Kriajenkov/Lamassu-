@@ -1,0 +1,452 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;1,100&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex: 0 0 auto;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type=number]:hover,
+input[type=number]:focus {
+  -moz-appearance: number-input;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.boxHeader {
+  background: #da6e00;
+}
+
+.boxMainNav {
+  background: #ffd9b3;
+}
+
+.container__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+.header__logoAndNav {
+  display: flex;
+  align-items: center;
+  width: 52%;
+}
+.header__addMashineAndnotification {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 17%;
+}
+
+.logoAndNav__nav {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.nav__link {
+  color: white;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 12px;
+  padding-bottom: 3px;
+  border-bottom: 3px solid transparent;
+}
+.nav__link:hover {
+  border-bottom: 3px solid white;
+}
+.nav__link.active {
+  border-bottom: 3px solid white;
+}
+
+.container__MainNav {
+  width: 1200px;
+  margin: 0px auto;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.MainNav__link {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  color: #747474;
+  margin-right: 11px;
+}
+.MainNav__link:hover {
+  color: #da6e00;
+}
+.MainNav__link.active {
+  color: #da6e00;
+}
+
+.addMashineAndnotification__buttonAdd {
+  width: 141px;
+  height: 26px;
+  border-radius: 10px;
+  color: white;
+  background: #cc9999;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+}
+.addMashineAndnotification__buttonnotification {
+  background: url("/assets/img/notification.svg");
+  width: 18px;
+  height: 18px;
+}
+
+.heading__title p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  color: #da6e00;
+}
+
+.warningInfo__infoText, .truckEmpty__infoText, .weHaveInfo__buttonCloseAll, .weHaveInfo__buttonShowAll {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: #da6e00;
+}
+
+main {
+  height: 600px;
+}
+
+.ConfigureHistoryofMarginChanges {
+  width: 1200px;
+  margin: 0px auto;
+}
+.ConfigureHistoryofMarginChanges__heading {
+  display: flex;
+  align-items: center;
+  margin: 15px 0px 15px 0px;
+}
+.heading__box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.heading__title {
+  margin-right: 20px;
+}
+#windowNotification {
+  display: none;
+}
+
+.windowNotification {
+  position: absolute;
+  background-color: #ffff;
+  top: 4px;
+  right: 16px;
+  width: 400px;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  padding: 15px;
+  z-index: 999;
+}
+.windowNotification__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.windowNotification__main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.header__title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 12px;
+  color: #da6e00;
+}
+.header__buttonShowAll {
+  background: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 12px;
+  color: #da6e00;
+}
+.header__buttonShowAll:hover {
+  color: #1b2559;
+}
+.header__imgNotification {
+  width: 18px;
+  height: 18px;
+}
+.header__buttonCloseAll {
+  display: none;
+  background: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 12px;
+  color: #da6e00;
+}
+.header__buttonCloseAll:hover {
+  color: #1b2559;
+}
+.header__bTnCloseNotification {
+  background: none;
+}
+
+.main__message {
+  margin-top: 10px;
+}
+
+.message__NameSender {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 12px;
+  color: #1b2559;
+}
+.message__textSender {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 20px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: #ffff;
+  background-color: #1b2559;
+}
+
+.shippingbox__button {
+  visibility: visible;
+  border-radius: 5px;
+  background-color: #f2e3d4;
+  padding: 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px 5px 0px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: #da6e00;
+}
+.shippingbox__button:hover {
+  color: black;
+}
+.shippingbox__formShippin {
+  opacity: 0;
+  visibility: hidden;
+  height: 0px;
+  transition: visibility 1s linear, height 1s linear, opacity 1s linear;
+}
+.shippingbox__formShippin.activeShow {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+.formsSend__input {
+  padding: 5px;
+  width: 90%;
+  border-radius: 10px;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
+  margin: 10px 5px 0px 0px;
+}
+.formsSend__button {
+  background: none;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 100%;
+  padding: 5px;
+}
+
+/**/
+.weHaveInfo__cashboxEmpty {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f1f6;
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 6px;
+}
+.weHaveInfo__warningInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f1f6;
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 6px;
+}
+.weHaveInfo__buttonShowAll {
+  font-size: 9px;
+  width: 100px;
+  margin: 10px auto 0px auto;
+  background: none;
+}
+.weHaveInfo__buttonCloseAll {
+  display: none;
+  font-size: 9px;
+  width: 100px;
+  margin: 10px auto 0px auto;
+  background: none;
+}
+
+.truckEmpty__infoText {
+  font-size: 9px;
+  margin-left: 10px;
+}
+.truckEmpty__buttonLink {
+  background: url("/assets/img/button/link.svg") no-repeat;
+  width: 12px;
+  height: 12px;
+  margin-right: 25px;
+}
+.truckEmpty__buttonCancel {
+  background: url("/assets/img/button/cancel.svg") no-repeat;
+  width: 12px;
+  height: 12px;
+}
+
+.cashboxEmptyFlex {
+  display: flex;
+  align-items: center;
+}
+
+.warningInfo__infoText {
+  font-size: 9px;
+  margin-left: 10px;
+}
+.warningInfo__buttonLink {
+  background: url("/assets/img/button/link.svg") no-repeat;
+  width: 12px;
+  height: 12px;
+  margin-right: 25px;
+}
+.warningInfo__buttonCancel {
+  background: url("/assets/img/button/cancel.svg") no-repeat;
+  width: 12px;
+  height: 12px;
+}
+
+#showAllInfoWarning {
+  display: none;
+}
+
+#showAllInfoNotification {
+  display: none;
+}
+
+/**/

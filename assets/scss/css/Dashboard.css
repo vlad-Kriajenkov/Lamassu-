@@ -166,7 +166,7 @@ header {
   color: #da6e00;
 }
 
-.normalCondition__nameStatus p, .normalCondition__nameCar, .infoWarning__buttonAddWarning, .infoWarningr__name, .warning__nameCar, .СonditionSystem__buttonShowAll, .warningInfo__infoText, .truckEmpty__infoText, .weHaveInfo__buttonShowAll, .infoBody__notInfo p, .AverageСarStats__meaning p {
+.normalCondition__nameStatus p, .normalCondition__nameCar, .infoWarning__buttonAddWarning, .infoWarningr__name, .warning__nameCar, .СonditionSystem__buttonCloseAll, .СonditionSystem__buttonShowAll, .warningInfo__infoText, .truckEmpty__infoText, .weHaveInfo__buttonCloseAll, .weHaveInfo__buttonShowAll, .infoBody__notInfo p, .AverageСarStats__meaning p {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
@@ -302,6 +302,13 @@ main {
   margin: 10px auto 0px auto;
   background: none;
 }
+.weHaveInfo__buttonCloseAll {
+  display: none;
+  font-size: 9px;
+  width: 100px;
+  margin: 10px auto 0px auto;
+  background: none;
+}
 
 .truckEmpty__infoText {
   font-size: 9px;
@@ -344,6 +351,10 @@ main {
   display: none;
 }
 
+#showAllInfoNotification {
+  display: none;
+}
+
 /* Пункт Состояние Системы */
 .notificationAndСondition__СonditionSystem {
   display: flex;
@@ -374,6 +385,13 @@ main {
   border-radius: 6px;
 }
 .СonditionSystem__buttonShowAll {
+  font-size: 9px;
+  width: 100px;
+  margin: 10px auto 0px auto;
+  background: none;
+}
+.СonditionSystem__buttonCloseAll {
+  display: none;
   font-size: 9px;
   width: 100px;
   margin: 10px auto 0px auto;
@@ -951,16 +969,16 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+#windowNotification {
+  display: none;
+}
+
 .windowNotification {
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   background-color: #ffff;
   top: -11px;
   right: -15px;
   width: 400px;
-  min-height: 500px;
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
   padding: 15px;
@@ -970,6 +988,7 @@ input:checked + .slider:before {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
 }
 .windowNotification__main {
   height: 100%;
@@ -998,6 +1017,21 @@ input:checked + .slider:before {
   width: 18px;
   height: 18px;
 }
+.header__buttonCloseAll {
+  display: none;
+  background: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 12px;
+  color: #da6e00;
+}
+.header__buttonCloseAll:hover {
+  color: #1b2559;
+}
+.header__bTnCloseNotification {
+  background: none;
+}
 
 .main__message {
   margin-top: 10px;
@@ -1024,16 +1058,50 @@ input:checked + .slider:before {
   background-color: #1b2559;
 }
 
-.sends__input {
+.shippingbox__button {
+  visibility: visible;
+  border-radius: 5px;
+  background-color: #f2e3d4;
+  padding: 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px 5px 0px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: #da6e00;
+}
+.shippingbox__button:hover {
+  color: black;
+}
+.shippingbox__formShippin {
+  opacity: 0;
+  visibility: hidden;
+  height: 0px;
+  transition: visibility 1s linear, height 1s linear, opacity 1s linear;
+}
+.shippingbox__formShippin.activeShow {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+.formsSend__input {
   padding: 5px;
   width: 90%;
   border-radius: 10px;
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
   margin: 10px 5px 0px 0px;
 }
-.sends__button {
+.formsSend__button {
   background: none;
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
   border-radius: 100%;
   padding: 5px;
 }
+
+/**/
+/**/
