@@ -130,6 +130,7 @@ input[type=number]::-webkit-outer-spin-button {
   width: 52%;
 }
 .header__addMashineAndnotification {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -198,6 +199,11 @@ input[type=number]::-webkit-outer-spin-button {
   height: 18px;
 }
 
+.channelSetp__channel {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+}
+
 .heading__title p {
   font-family: "Montserrat";
   font-style: normal;
@@ -206,12 +212,19 @@ input[type=number]::-webkit-outer-spin-button {
   color: #da6e00;
 }
 
-.warningInfo__infoText, .truckEmpty__infoText, .weHaveInfo__buttonCloseAll, .weHaveInfo__buttonShowAll {
+.warningInfo__infoText, .truckEmpty__infoText, .weHaveInfo__buttonCloseAll, .weHaveInfo__buttonShowAll, .alertMe__title, .transaction__title, .setup__title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 13px;
+  color: #a9a9a9;
+}
+
+.cashOutTextBottom, .cashOutTextTop, .alertMe__cassets, .alertMe__meaningEdit, .alertMe__meaning, .btnSaeveAndCancel__Cancel, .btnSaeveAndCancel__Saeve, .Sum__title, .channel__title, .channelSetp__title span {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
   font-size: 10px;
-  color: #da6e00;
 }
 
 main {
@@ -227,6 +240,13 @@ main {
   align-items: center;
   margin: 15px 0px 15px 0px;
 }
+.ConfigureNotifications__alert {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .heading__box {
   display: flex;
   align-items: center;
@@ -235,6 +255,218 @@ main {
 .heading__title {
   margin-right: 20px;
 }
+/**/
+.setup__title {
+  margin-bottom: 10px;
+}
+.channelSetp__title {
+  display: flex;
+}
+.channelSetp__title span {
+  display: flex;
+  align-items: center;
+  background: #da6e00;
+  height: 40px;
+  width: 12%;
+  padding-left: 10px;
+  color: #ffff;
+  font-size: 11px;
+}
+.channelSetp__channel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 72%;
+  margin: 10px 0px 0px 0px;
+  height: 40px;
+}
+
+.channel__title {
+  color: #da6e00;
+  font-size: 11px;
+  margin-left: 10px;
+}
+.channel__input {
+  display: flex;
+  justify-content: space-between;
+  width: 74%;
+  margin-right: 67px;
+}
+.channel__input span {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  width: 45px;
+}
+
+/**/
+/**/
+.alert__transaction {
+  margin-right: 20px;
+}
+.alert__balance {
+  margin-right: 20px;
+}
+
+.transaction__title {
+  margin: 50px 0px 10px 0px;
+}
+.transaction__Sum {
+  display: flex;
+  align-items: center;
+  margin: 15px 0px 0px 0px;
+}
+.transaction__alertMe {
+  margin: 15px 0px 0px 0px;
+}
+.transaction__Car {
+  display: flex;
+  margin-right: 10px;
+}
+
+.Sum__title {
+  color: #da6e00;
+  font-size: 11px;
+  margin: 0px 15px 0px 0px;
+}
+.Sum__btnEdit button {
+  background: none;
+}
+.Sum__btnEdit button img {
+  width: 20px;
+}
+.Sum__btnSaeveAndCancel {
+  display: flex;
+}
+.Sum__btnSaeveAndCancel button {
+  background: none;
+}
+
+#btnBigSum {
+  visibility: visible;
+}
+
+#btnMaxOperetion {
+  visibility: visible;
+}
+
+#btnMinOpererion {
+  visibility: visible;
+}
+
+.btnSaeveAndCancel__Saeve {
+  color: #da6e00;
+  border-bottom: 2px solid white;
+  margin: 0px 0px 0px 5px;
+}
+.btnSaeveAndCancel__Saeve:hover {
+  border-bottom: 2px solid #04d004;
+}
+.btnSaeveAndCancel__Cancel {
+  color: #da6e00;
+  border-bottom: 2px solid white;
+  margin: 0px 0px 0px 5px;
+}
+.btnSaeveAndCancel__Cancel:hover {
+  border-bottom: 2px solid #c70505;
+}
+
+.alertMe__title {
+  font-size: 9px;
+}
+.alertMe__meaning {
+  color: #da6e00;
+  font-size: 12px;
+  margin-top: 15px;
+}
+.alertMe__meaningEdit {
+  color: #da6e00;
+  font-size: 12px;
+  margin-top: 15px;
+}
+.alertMe__cassets {
+  color: #da6e00;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.meaningEdit__input {
+  width: 80px;
+  text-align: end;
+  color: #da6e00;
+  border-bottom: 2px solid #da6e00;
+}
+
+/**/
+/*CashCarOut start */
+.cassetsBox {
+  display: flex;
+}
+
+#CashCarOutTop {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.cashOutBorderTop {
+  width: 70px;
+  height: 100px;
+  border: 2px solid #1b2559;
+}
+
+.cashOutBodyTop {
+  position: absolute;
+  width: 70px;
+  height: 100px;
+  background-color: #1b2559;
+  top: 0px;
+}
+
+.cashOutTextTop {
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  left: 25px;
+}
+
+.cashOutInfoTop {
+  text-align: left;
+}
+.cashOutInfoTop p {
+  margin: 0px 0px 5px 5px;
+}
+#CashCarOutBottom {
+  position: relative;
+  margin-right: 10px;
+}
+
+.cashOutBorderBottom {
+  width: 70px;
+  height: 100px;
+  border: 2px solid red;
+}
+
+.cashOutBodyBottom {
+  position: absolute;
+  width: 70px;
+  height: 0px;
+  background-color: red;
+  top: 0px;
+}
+
+.cashOutTextBottom {
+  color: red;
+  font-size: 15px;
+  position: absolute;
+  left: 25px;
+  top: 84px;
+}
+
+/*CashCarOut End */
+/*CashCarIn start */
+/*CashCarIn End */
 #windowNotification {
   display: none;
 }
@@ -242,8 +474,8 @@ main {
 .windowNotification {
   position: absolute;
   background-color: #ffff;
-  top: 4px;
-  right: 16px;
+  top: -11px;
+  right: -15px;
   width: 400px;
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
@@ -450,3 +682,59 @@ main {
 }
 
 /**/
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 17px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  display: none;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #a2a0a0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 2px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #da6e00;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #da6e00;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

@@ -18,7 +18,7 @@
                         <a href="/Maintenance.html" class="nav__link">Обслуживание</a>
                         <a href="/Analyties.html" class="nav__link">Аналитика</a>
                         <a href="/Configure-margin.html" class="nav__link">Настройки </a> 
-                        <a href="/filter.html" class="nav__link">Дополнительно</a>
+                        <a href="/Additionally-Instructions.html" class="nav__link">Дополнительно</a>
                     </nav>
                 </div>
                 <div class="header__addMashineAndnotification">
@@ -166,8 +166,610 @@
             <div class="ConfigureNotifications__heading">
                 <div class="heading__box">
                     <div class="heading__title"><p>Уведомления</p></div> 
-                    
                 </div>
+            </div>
+            <div class="ConfigureNotifications__setup">
+                <h1 class="setup__title">Настройка</h1>
+                <div class="setup__channelSetup">
+                    <div class="channelSetp__title">
+                        <span>Канал</span>
+                        <span>Баланс</span>
+                        <span>Ошибки бух</span>
+                        <span>Ошибки операций</span>
+                        <span>Технические ошибки</span>
+                        <span>Менеджмент</span>
+                    </div>
+                    <form class="channelSetp__channel">
+                        <span class="channel__title">Смс</span>
+                        <div class="channel__input">     
+                            <span>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </span>
+                            <span>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </span>
+                            <span>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </span>
+                            <span>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </span>
+                            <span>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </span>
+                        </div>    
+                    </form>
+                    <form class="channelSetp__channel">
+                        <span class="channel__title">Центр Увидомления</span>
+                        <div class="channel__input">   
+                            <span>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </span>
+                            <span>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </span>
+                            <span>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </span>
+                            <span>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </span>
+                            <span>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </span>
+                        </div>    
+                    </form>
+                </div>
+            </div>
+            <div class="ConfigureNotifications__alert">
+                <form class="alert__transaction">
+                    <div class="transaction__title">Оповещание о транзакции</div>
+                    <div class="transaction__Sum">
+                        <p class="Sum__title">Транзакция высокой суммы</p>
+                        <div class="Sum__btnEdit">
+                            <button>
+                                <img src="/assets/img/edit/edit.svg" alt="изменить">
+                            </button>
+                        </div>
+                        <div id="btnBigSum" class="Sum__btnSaeveAndCancel">
+                            <button class="btnSaeveAndCancel__Saeve">Сахранить</button>
+                            <button class="btnSaeveAndCancel__Cancel">Отмена</button>
+                        </div>
+                    </div>
+                    <div class="transaction__alertMe">
+                        <p class="alertMe__title">Предупредить меня на</p>
+                        <div class="alertMe__meaning ">
+                            <p>- UAH</p>
+                        </div>
+                        <div class="alertMe__meaningEdit"> 
+                            <label class="meaningEdit__lable" >
+                                <input class="meaningEdit__input" type="number" name="editBigSum" id="editBigSum">
+                                UAH
+                            </label>
+                        </div>
+                    </div>
+                </form>
+                <form class="alert__transaction">
+                    <div class="transaction__Sum">
+                        <p class="Sum__title">Транзакция максимальном кол-ве операций</p>
+                        <div class="Sum__btnEdit">
+                            <button>
+                                <img src="/assets/img/edit/edit.svg" alt="изменить">
+                            </button>
+                        </div>
+                        <div id="btnMaxOperetion" class="Sum__btnSaeveAndCancel">
+                            <button class="btnSaeveAndCancel__Saeve">Сахранить</button>
+                            <button class="btnSaeveAndCancel__Cancel">Отмена</button>
+                        </div>
+                    </div>
+                    <div class="transaction__alertMe">
+                        <p class="alertMe__title">Предупредить меня на</p>
+                        <div class="alertMe__meaning ">
+                            <p>- UAH</p>
+                        </div>
+                        <div class="alertMe__meaningEdit"> 
+                            <label class="meaningEdit__lable" >
+                                <input class="meaningEdit__input" type="number" name="MaxOperetion" id="MaxOperetion">
+                                UAH
+                            </label>
+                        </div>
+                    </div>
+                </form>
+                <form class="alert__transaction">
+                    <div class="transaction__Sum">
+                        <p class="Sum__title">Транзакция минимальном кол-ве операций</p>
+                        <div class="Sum__btnEdit">
+                            <button>
+                                <img src="/assets/img/edit/edit.svg" alt="изменить">
+                            </button>
+                        </div>
+                        <div id="btnMinOpererion" class="Sum__btnSaeveAndCancel">
+                            <button class="btnSaeveAndCancel__Saeve">Сахранить</button>
+                            <button class="btnSaeveAndCancel__Cancel">Отмена</button>
+                        </div>
+                    </div>
+                    <div class="transaction__alertMe">
+                        <p class="alertMe__title">Предупредить меня на</p>
+                        <div class="alertMe__meaning ">
+                            <p>- UAH</p>
+                        </div>
+                        <div class="alertMe__meaningEdit"> 
+                            <label class="meaningEdit__lable" >
+                                <input class="meaningEdit__input" type="number" name="MinOpererion" id="MinOpererion">
+                                UAH
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="ConfigureNotifications__alert">
+                <form class="alert__balance">
+                    <div class="transaction__title">Оповещание о балансе</div>
+                    <div class="transaction__Sum">
+                        <p class="Sum__title">Cash out(Пусто)</p>
+                        <div class="Sum__btnEdit">
+                            <button>
+                                <img src="/assets/img/edit/edit.svg" alt="изменить">
+                            </button>
+                        </div>
+                        <div  class="Sum__btnSaeveAndCancel">
+                            <button class="btnSaeveAndCancel__Saeve">Сахранить</button>
+                            <button class="btnSaeveAndCancel__Cancel">Отмена</button>
+                        </div>
+                    </div>
+                    <div class="cassetsBox">
+                        <div class="transaction__Car">
+                            <span id="CashCarOutTop">
+                                <div class="CashCarOutBoxTop">
+                                    <div class="cashOutBorderTop"></div>
+                                    <div class="cashOutBodyTop">
+                                        <p class="cashOutTextTop">100%</p>
+                                    </div>
+                                </div>
+                            </span>
+                            <div class="transaction__alertMe">
+                                <p class="alertMe__cassets">Cassette 1(Полный)</p>
+                                <p class="alertMe__title">Предупредить меня на</p>
+                                <div class="alertMe__meaning ">
+                                    <p>- купюр</p>
+                                </div>
+                                <div class="alertMe__meaningEdit"> 
+                                    <label class="meaningEdit__lable" >
+                                        <input class="meaningEdit__input" type="number" name="editBigSum" id="editBigSum">
+                                        купюр
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="transaction__Car">
+                            <span id="CashCarOutBottom">
+                                <div class="CashCarOutBoxTop">
+                                    <div class="cashOutBorderBottom"></div>
+                                    <div class="cashOutBodyBottom">
+                                        <p class="cashOutTextBottom">100%</p>
+                                    </div>
+                                </div>
+                            </span>
+                            <div class="transaction__alertMe">
+                                <p class="alertMe__cassets">Cassette 1(Пустой)</p>
+                                <p class="alertMe__title">Предупредить меня на</p>
+                                <div class="alertMe__meaning ">
+                                    <p>- купюр</p>
+                                </div>
+                                <div class="alertMe__meaningEdit"> 
+                                    <label class="meaningEdit__lable" >
+                                        <input class="meaningEdit__input" type="number" name="editBigSum" id="editBigSum">
+                                        купюр
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <form class="alert__balance">
+                    <div class="transaction__Sum">
+                        <p class="Sum__title">Cash out(Пусто)</p>
+                        <div class="Sum__btnEdit">
+                            <button>
+                                <img src="/assets/img/edit/edit.svg" alt="изменить">
+                            </button>
+                        </div>
+                        <div  class="Sum__btnSaeveAndCancel">
+                            <button class="btnSaeveAndCancel__Saeve">Сахранить</button>
+                            <button class="btnSaeveAndCancel__Cancel">Отмена</button>
+                        </div>
+                    </div>
+                    <div class="cassetsBox">
+                        <div class="transaction__Car">
+                            <span id="CashCarOutTop">
+                                <div class="CashCarOutBoxTop">
+                                    <div class="cashOutBorderTop"></div>
+                                    <div class="cashOutBodyTop">
+                                        <p class="cashOutTextTop">100%</p>
+                                    </div>
+                                </div>
+                            </span>
+                            <div class="transaction__alertMe">
+                                <p class="alertMe__cassets">Cassette 2(Полный)</p>
+                                <p class="alertMe__title">Предупредить меня на</p>
+                                <div class="alertMe__meaning ">
+                                    <p>- купюр</p>
+                                </div>
+                                <div class="alertMe__meaningEdit"> 
+                                    <label class="meaningEdit__lable" >
+                                        <input class="meaningEdit__input" type="number" name="editBigSum" id="editBigSum">
+                                        купюр
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="transaction__Car">
+                            <span id="CashCarOutBottom">
+                                <div class="CashCarOutBoxTop">
+                                    <div class="cashOutBorderBottom"></div>
+                                    <div class="cashOutBodyBottom">
+                                        <p class="cashOutTextBottom">100%</p>
+                                    </div>
+                                </div>
+                            </span>
+                            <div class="transaction__alertMe">
+                                <p class="alertMe__cassets">Cassette 2(Пустой)</p>
+                                <p class="alertMe__title">Предупредить меня на</p>
+                                <div class="alertMe__meaning ">
+                                    <p>- купюр</p>
+                                </div>
+                                <div class="alertMe__meaningEdit"> 
+                                    <label class="meaningEdit__lable" >
+                                        <input class="meaningEdit__input" type="number" name="editBigSum" id="editBigSum">
+                                        купюр
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <form class="alert__balance">
+                    <div class="transaction__Sum">
+                        <p class="Sum__title">Cash out(Пусто)</p>
+                        <div class="Sum__btnEdit">
+                            <button>
+                                <img src="/assets/img/edit/edit.svg" alt="изменить">
+                            </button>
+                        </div>
+                        <div  class="Sum__btnSaeveAndCancel">
+                            <button class="btnSaeveAndCancel__Saeve">Сахранить</button>
+                            <button class="btnSaeveAndCancel__Cancel">Отмена</button>
+                        </div>
+                    </div>
+                    <div class="cassetsBox">
+                        <div class="transaction__Car">
+                            <span id="CashCarOutTop">
+                                <div class="CashCarOutBoxTop">
+                                    <div class="cashOutBorderTop"></div>
+                                    <div class="cashOutBodyTop">
+                                        <p class="cashOutTextTop">100%</p>
+                                    </div>
+                                </div>
+                            </span>
+                            <div class="transaction__alertMe">
+                                <p class="alertMe__cassets">Cassette 3(Полный)</p>
+                                <p class="alertMe__title">Предупредить меня на</p>
+                                <div class="alertMe__meaning ">
+                                    <p>- купюр</p>
+                                </div>
+                                <div class="alertMe__meaningEdit"> 
+                                    <label class="meaningEdit__lable" >
+                                        <input class="meaningEdit__input" type="number" name="editBigSum" id="editBigSum">
+                                        купюр
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="transaction__Car">
+                            <span id="CashCarOutBottom">
+                                <div class="CashCarOutBoxTop">
+                                    <div class="cashOutBorderBottom"></div>
+                                    <div class="cashOutBodyBottom">
+                                        <p class="cashOutTextBottom">100%</p>
+                                    </div>
+                                </div>
+                            </span>
+                            <div class="transaction__alertMe">
+                                <p class="alertMe__cassets">Cassette 3(Пустой)</p>
+                                <p class="alertMe__title">Предупредить меня на</p>
+                                <div class="alertMe__meaning ">
+                                    <p>- купюр</p>
+                                </div>
+                                <div class="alertMe__meaningEdit"> 
+                                    <label class="meaningEdit__lable" >
+                                        <input class="meaningEdit__input" type="number" name="editBigSum" id="editBigSum">
+                                        купюр
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <form class="alert__balance">
+                    <div class="transaction__Sum">
+                        <p class="Sum__title">Cash out(Пусто)</p>
+                        <div class="Sum__btnEdit">
+                            <button>
+                                <img src="/assets/img/edit/edit.svg" alt="изменить">
+                            </button>
+                        </div>
+                        <div  class="Sum__btnSaeveAndCancel">
+                            <button class="btnSaeveAndCancel__Saeve">Сахранить</button>
+                            <button class="btnSaeveAndCancel__Cancel">Отмена</button>
+                        </div>
+                    </div>
+                    <div class="cassetsBox">
+                        <div class="transaction__Car">
+                            <span id="CashCarOutTop">
+                                <div class="CashCarOutBoxTop">
+                                    <div class="cashOutBorderTop"></div>
+                                    <div class="cashOutBodyTop">
+                                        <p class="cashOutTextTop">100%</p>
+                                    </div>
+                                </div>
+                            </span>
+                            <div class="transaction__alertMe">
+                                <p class="alertMe__cassets">Cassette 4(Полный)</p>
+                                <p class="alertMe__title">Предупредить меня на</p>
+                                <div class="alertMe__meaning ">
+                                    <p>- купюр</p>
+                                </div>
+                                <div class="alertMe__meaningEdit"> 
+                                    <label class="meaningEdit__lable" >
+                                        <input class="meaningEdit__input" type="number" name="editBigSum" id="editBigSum">
+                                        купюр
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="transaction__Car">
+                            <span id="CashCarOutBottom">
+                                <div class="CashCarOutBoxTop">
+                                    <div class="cashOutBorderBottom"></div>
+                                    <div class="cashOutBodyBottom">
+                                        <p class="cashOutTextBottom">100%</p>
+                                    </div>
+                                </div>
+                            </span>
+                            <div class="transaction__alertMe">
+                                <p class="alertMe__cassets">Cassette 4(Пустой)</p>
+                                <p class="alertMe__title">Предупредить меня на</p>
+                                <div class="alertMe__meaning ">
+                                    <p>- купюр</p>
+                                </div>
+                                <div class="alertMe__meaningEdit"> 
+                                    <label class="meaningEdit__lable" >
+                                        <input class="meaningEdit__input" type="number" name="editBigSum" id="editBigSum">
+                                        купюр
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <form class="alert__balance">
+                    <div class="transaction__Sum">
+                        <p class="Sum__title">Cash out(Пусто)</p>
+                        <div class="Sum__btnEdit">
+                            <button>
+                                <img src="/assets/img/edit/edit.svg" alt="изменить">
+                            </button>
+                        </div>
+                        <div  class="Sum__btnSaeveAndCancel">
+                            <button class="btnSaeveAndCancel__Saeve">Сахранить</button>
+                            <button class="btnSaeveAndCancel__Cancel">Отмена</button>
+                        </div>
+                    </div>
+                    <div class="cassetsBox">
+                        <div class="transaction__Car">
+                            <span id="CashCarOutTop">
+                                <div class="CashCarOutBoxTop">
+                                    <div class="cashOutBorderTop"></div>
+                                    <div class="cashOutBodyTop">
+                                        <p class="cashOutTextTop">100%</p>
+                                    </div>
+                                </div>
+                            </span>
+                            <div class="transaction__alertMe">
+                                <p class="alertMe__cassets">Cassette 5(Полный)</p>
+                                <p class="alertMe__title">Предупредить меня на</p>
+                                <div class="alertMe__meaning ">
+                                    <p>- купюр</p>
+                                </div>
+                                <div class="alertMe__meaningEdit"> 
+                                    <label class="meaningEdit__lable" >
+                                        <input class="meaningEdit__input" type="number" name="editBigSum" id="editBigSum">
+                                        купюр
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="transaction__Car">
+                            <span id="CashCarOutBottom">
+                                <div class="CashCarOutBoxTop">
+                                    <div class="cashOutBorderBottom"></div>
+                                    <div class="cashOutBodyBottom">
+                                        <p class="cashOutTextBottom">100%</p>
+                                    </div>
+                                </div>
+                            </span>
+                            <div class="transaction__alertMe">
+                                <p class="alertMe__cassets">Cassette 5(Пустой)</p>
+                                <p class="alertMe__title">Предупредить меня на</p>
+                                <div class="alertMe__meaning ">
+                                    <p>- купюр</p>
+                                </div>
+                                <div class="alertMe__meaningEdit"> 
+                                    <label class="meaningEdit__lable" >
+                                        <input class="meaningEdit__input" type="number" name="editBigSum" id="editBigSum">
+                                        купюр
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <form class="alert__balance">
+                    <div class="transaction__Sum">
+                        <p class="Sum__title">Cash out(Пусто)</p>
+                        <div class="Sum__btnEdit">
+                            <button>
+                                <img src="/assets/img/edit/edit.svg" alt="изменить">
+                            </button>
+                        </div>
+                        <div  class="Sum__btnSaeveAndCancel">
+                            <button class="btnSaeveAndCancel__Saeve">Сахранить</button>
+                            <button class="btnSaeveAndCancel__Cancel">Отмена</button>
+                        </div>
+                    </div>
+                    <div class="cassetsBox">
+                        <div class="transaction__Car">
+                            <span id="CashCarOutTop">
+                                <div class="CashCarOutBoxTop">
+                                    <div class="cashOutBorderTop"></div>
+                                    <div class="cashOutBodyTop">
+                                        <p class="cashOutTextTop">100%</p>
+                                    </div>
+                                </div>
+                            </span>
+                            <div class="transaction__alertMe">
+                                <p class="alertMe__cassets">Cassette 6(Полный)</p>
+                                <p class="alertMe__title">Предупредить меня на</p>
+                                <div class="alertMe__meaning ">
+                                    <p>- купюр</p>
+                                </div>
+                                <div class="alertMe__meaningEdit"> 
+                                    <label class="meaningEdit__lable" >
+                                        <input class="meaningEdit__input" type="number" name="editBigSum" id="editBigSum">
+                                        купюр
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="transaction__Car">
+                            <span id="CashCarOutBottom">
+                                <div class="CashCarOutBoxTop">
+                                    <div class="cashOutBorderBottom"></div>
+                                    <div class="cashOutBodyBottom">
+                                        <p class="cashOutTextBottom">100%</p>
+                                    </div>
+                                </div>
+                            </span>
+                            <div class="transaction__alertMe">
+                                <p class="alertMe__cassets">Cassette 6(Пустой)</p>
+                                <p class="alertMe__title">Предупредить меня на</p>
+                                <div class="alertMe__meaning ">
+                                    <p>- купюр</p>
+                                </div>
+                                <div class="alertMe__meaningEdit"> 
+                                    <label class="meaningEdit__lable" >
+                                        <input class="meaningEdit__input" type="number" name="editBigSum" id="editBigSum">
+                                        купюр
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <form class="alert__balance">
+                    <div class="transaction__Sum">
+                        <p class="Sum__title">Cash in(Пусто)</p>
+                        <div class="Sum__btnEdit">
+                            <button>
+                                <img src="/assets/img/edit/edit.svg" alt="изменить">
+                            </button>
+                        </div>
+                        <div  class="Sum__btnSaeveAndCancel">
+                            <button class="btnSaeveAndCancel__Saeve">Сахранить</button>
+                            <button class="btnSaeveAndCancel__Cancel">Отмена</button>
+                        </div>
+                    </div>
+                    <div class="cassetsBox">
+                        <div class="transaction__Car">
+                            <span id="CashCarOutTop">
+                                <div class="CashCarOutBoxTop">
+                                    <div class="cashOutBorderTop"></div>
+                                    <div class="cashOutBodyTop">
+                                        <p class="cashOutTextTop">100%</p>
+                                    </div>
+                                </div>
+                            </span>
+                            <div class="transaction__alertMe">
+                                <p class="alertMe__cassets">Cassette 1(Полный)</p>
+                                <p class="alertMe__title">Предупредить меня на</p>
+                                <div class="alertMe__meaning ">
+                                    <p>- купюр</p>
+                                </div>
+                                <div class="alertMe__meaningEdit"> 
+                                    <label class="meaningEdit__lable" >
+                                        <input class="meaningEdit__input" type="number" name="editBigSum" id="editBigSum">
+                                        купюр
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="transaction__Car">
+                            <span id="CashCarOutBottom">
+                                <div class="CashCarOutBoxTop">
+                                    <div class="cashOutBorderBottom"></div>
+                                    <div class="cashOutBodyBottom">
+                                        <p class="cashOutTextBottom">100%</p>
+                                    </div>
+                                </div>
+                            </span>
+                            <div class="transaction__alertMe">
+                                <p class="alertMe__cassets">Cassette 1(Пустой)</p>
+                                <p class="alertMe__title">Предупредить меня на</p>
+                                <div class="alertMe__meaning ">
+                                    <p>- купюр</p>
+                                </div>
+                                <div class="alertMe__meaningEdit"> 
+                                    <label class="meaningEdit__lable" >
+                                        <input class="meaningEdit__input" type="number" name="editBigSum" id="editBigSum">
+                                        купюр
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                
+              
             </div>
         </div>    
     </main>

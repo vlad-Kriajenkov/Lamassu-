@@ -15,8 +15,15 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 100;
+    font-size: 13px;
+    color:  #a9a9a9;
+
+}
+%TextNormal{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 100;
     font-size: 10px;
-    color:  #da6e00;
 }
 
 main{
@@ -31,8 +38,14 @@ main{
         align-items: center;
         margin: 15px 0px 15px 0px;
     }
+    &__setup {
+    }
 
-    &__table {
+    &__alert {
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 }
 .heading {
@@ -51,3 +64,292 @@ main{
         
     }
 }
+
+/**/
+
+.setup {
+
+    &__title {
+        @extend %TextSubparagraphs;
+        margin-bottom: 10px;
+    }
+
+    &__channelSetup {
+       
+
+    }
+}
+.channelSetp {
+    &__title {
+        display: flex;
+        span{
+            display: flex;
+            align-items: center;
+            background: #da6e00;
+            height: 40px;
+            width: 12%;
+            padding-left: 10px;
+            @extend %TextNormal;
+            color:  #ffff;
+            font-size: 11px;
+        }
+    }
+
+    &__channel {
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        width: 72%;
+        @extend %Boreder;
+        margin: 10px 0px 0px 0px;
+        height: 40px;
+    }
+}
+.channel {
+  
+    &__title {
+        @extend %TextNormal;
+        color:  #da6e00;
+        font-size: 11px;
+        margin-left: 10px;
+    }
+
+    &__input {
+        display: flex;
+        justify-content: space-between;
+        width: 74%;
+        margin-right: 67px;
+        span{
+            display: flex;
+            align-items: center;
+            // background: #da6e00;
+            height: 20px;
+            width: 45px;
+          
+        }
+    }
+}
+
+.switch {
+}
+.slider {
+}
+.round {
+}
+/**/
+
+
+/**/
+.alert {
+
+    &__transaction {
+        margin-right: 20px;
+    }
+    &__balance {
+        margin-right: 20px;
+    }
+}
+.transaction {
+
+    &__title {
+        @extend %TextSubparagraphs;
+        margin: 50px 0px 10px 0px;
+    }
+
+    &__Sum {
+        display: flex;
+        align-items: center;
+        margin: 15px 0px 0px 0px;
+    }
+
+    &__alertMe {
+        margin: 15px 0px 0px 0px;
+    }
+    &__Car{
+        display: flex;
+        margin-right: 10px;
+    }
+}
+.Sum {
+
+    &__title {
+        @extend %TextNormal;
+        color: #da6e00;
+        font-size: 11px;
+        margin: 0px 15px 0px 0px;
+    }
+
+    &__btnEdit {
+       
+        button{
+            background:none;
+            img{
+                width:20px;
+            }
+        }
+    }
+
+    &__btnSaeveAndCancel {
+        display: flex;
+        button{
+            background:none;
+            
+        }
+    }
+}
+#btnBigSum{
+    visibility: visible;
+}
+#btnMaxOperetion{
+    visibility: visible;
+}
+#btnMinOpererion{
+    visibility: visible;
+}   
+.btnSaeveAndCancel {
+
+    &__Saeve {
+        @extend %TextNormal;
+        color: #da6e00;
+        border-bottom:  2px solid white;
+        margin: 0px 0px 0px 5px ;
+    }
+    &__Saeve:hover {
+        border-bottom:  2px solid rgb(4, 208, 4);
+    }
+
+    &__Cancel {
+        @extend %TextNormal;
+        color: #da6e00;
+        border-bottom:  2px solid white;
+        margin: 0px 0px 0px 5px ;
+    }
+    &__Cancel:hover {
+        border-bottom:  2px solid rgb(199, 5, 5);
+    }
+    
+
+}
+.alertMe {
+
+    &__title {
+        @extend %TextSubparagraphs;
+        font-size: 9px;
+    }
+
+    &__meaning {
+        @extend %TextNormal;
+        color: #da6e00;
+        font-size: 12px;
+        margin-top: 15px;
+    }
+
+    &__meaningEdit {
+        @extend %TextNormal;
+        color: #da6e00;
+        font-size: 12px;
+        margin-top: 15px;
+    }
+    &__cassets{
+        @extend %TextNormal;
+        color: #da6e00;
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+}
+.meaningEdit {
+
+    &__lable {
+    }
+
+    &__input {
+        width:80px;
+        text-align: end;
+        color: #da6e00;
+        border-bottom: 2px solid #da6e00;
+    }
+}
+
+/**/
+
+/*CashCarOut start */
+.cassetsBox{
+    display: flex;
+}
+
+#CashCarOutTop{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+}
+.cashOutBorderTop {
+    width: 70px;
+    height: 100px;
+    border: 2px solid #1b2559;
+}
+.cashOutBodyTop {
+    position:absolute;
+    width: 70px;
+    height: 100px;
+    background-color:#1b2559;
+    // border: 2px solid #1b2559;
+    top: 0px;
+   
+}
+.cashOutTextTop{
+    @extend %TextNormal;
+    color:white;
+    font-size: 15px;
+    position: absolute;
+    left: 25px;
+}
+
+.cashOutInfoTop {
+    text-align: left;
+    p{
+        margin: 0px 0px 5px 5px;
+    }
+    &__numberBills {
+    }
+
+    &__nominal {
+    }
+
+    &__finalTotal {
+    }
+}
+#CashCarOutBottom{
+    position: relative;
+    margin-right: 10px;
+}
+.cashOutBorderBottom {
+    width: 70px;
+    height: 100px;
+    border: 2px solid rgb(255, 0, 0);
+}
+.cashOutBodyBottom {
+    position:absolute;
+    width: 70px;
+    height: 0px;
+    background-color:rgb(255, 0, 0);
+    // border: 2px solid #1b2559;
+    top: 0px;
+   
+}
+.cashOutTextBottom{
+    @extend %TextNormal;
+    color:rgb(255, 0, 0);
+    font-size: 15px;
+    position: absolute;
+    left: 25px;
+    top: 84px;
+}
+/*CashCarOut End */
+
+
+
+/*CashCarIn start */
+
+/*CashCarIn End */
+
