@@ -151,557 +151,565 @@
         </header>
     
         <main>
-            <div class="InfoСar">
-                <div class="UpdateAndClosed">
-                    <div class="Updatebox">
-                        <button class="UpdateAndClosed__buttonUpdate">
-                            <img src="/assets/img/history/history.svg" width="18px" alt="Update">
-                        </button>
-                        <div class="dropdownLNG">
-                            <div class="selectLNG">
-                                <span>LNG</span>
-                                <i class="fa fa-chevron-left"></i>
-                                <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
-                            </div>
-                            <input type="hidden" name="gender">
-                            <ul class="dropdownLNG-menu">
-                                <li id="UKRLNG">UKR</li>
-                                <li id="ENGLNG">ENG</li>
-                                <li id="RUSLNG">RUS</li>
-                            </ul>
-                        </div> 
-                        <div class="UpdateAndClosed__value">
-                            <h2 class="value__title">КУРС USD</h2>
-                            <p class="value__meaning">23.00</p>
-                        </div>
-                        <div class="UpdateAndClosed__value">
-                            <h2 class="value__title">КУРС EUR</h2>
-                            <p class="value__meaning">26.00</p>
-                        </div>
-                    </div>
-                    <button class="UpdateAndClosed__buttonClosed">
-                        <img src="/assets/img/button/cancel.svg"  width="18px" alt="Closed">
-                    </button>
-                </div>
-                <div class="wrepperInfoСar">
-                    <div class="InfoСar__InfoCarLocations">
-                        <div class="Box">
-                            <div class="Box__imgCar">
-                                <img src="/assets/img/CarFoto/CarFoto.jfif" width="260px" height="350px" alt="CarFoto">
-                            </div>
-                            <div class="BoxNameCarAndLoctions">
-                                <div class="Box__NameCar"> 
-                                    <p class="NameCar__title">Машина 1 (0001)</p>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div class="InfoСar">
+                        <div class="UpdateAndClosed">
+                            <div class="Updatebox">
+                                <button class="UpdateAndClosed__buttonUpdate">
+                                    <img src="/assets/img/history/history.svg" width="18px" alt="Update">
+                                </button>
+                                <div class="dropdownLNG">
+                                    <div class="selectLNG">
+                                        <span>LNG</span>
+                                        <i class="fa fa-chevron-left"></i>
+                                        <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
+                                    </div>
+                                    <input type="hidden" name="gender">
+                                    <ul class="dropdownLNG-menu">
+                                        <li id="UKRLNG">UKR</li>
+                                        <li id="ENGLNG">ENG</li>
+                                        <li id="RUSLNG">RUS</li>
+                                    </ul>
+                                </div> 
+                                <div class="UpdateAndClosed__value">
+                                    <h2 class="value__title">КУРС USD</h2>
+                                    <p class="value__meaning">23.00</p>
                                 </div>
-                                <div class="containerLoc">
-                                    <h1 class="locations__title">Номер валютомата:</h1>
-                                    <p class="locations__meaning">0001</p>
+                                <div class="UpdateAndClosed__value">
+                                    <h2 class="value__title">КУРС EUR</h2>
+                                    <p class="value__meaning">26.00</p>
                                 </div>
-                                <div class="Box__locations">
-                                    <div class="locations__title">Адрес</div>
-                                    <div class="containerLoc">
-                                        <p class="locations__meaning">Киев. Антоновича, 176. Ocean Plaza</p>
+                            </div>
+                            <button class="UpdateAndClosed__buttonClosed">
+                                <img src="/assets/img/button/cancel.svg"  width="18px" alt="Closed">
+                            </button>
+                        </div>
+                        <div class="wrepperInfoСar">
+                            <div class="InfoСar__InfoCarLocations">
+                                <div class="Box">
+                                    <div class="Box__imgCar">
+                                        <img src="/assets/img/CarFoto/CarFoto.jfif" width="260px" height="350px" alt="CarFoto">
+                                    </div>
+                                    <div class="BoxNameCarAndLoctions">
+                                        <div class="Box__NameCar"> 
+                                            <p class="NameCar__title">Машина 1 (0001)</p>
+                                        </div>
+                                        <div class="containerLoc">
+                                            <h1 class="locations__title">Номер валютомата:</h1>
+                                            <p class="locations__meaning">0001</p>
+                                        </div>
+                                        <div class="Box__locations">
+                                            <div class="locations__title">Адрес</div>
+                                            <div class="containerLoc">
+                                                <p class="locations__meaning">Киев. Антоновича, 176. Ocean Plaza</p>
+                                            </div>
+                                        </div>
+                                        
                                     </div>
                                 </div>
+    
+                            
+                                <div class="Box__Edit">
+                                    <div class="Edit__Geolocation">
+                                        <button id="Geolocation" class="Geolocation__button styleBTNBig"><img src="/assets/img/monitoring/ГеолокационныеДанные.svg" alt=""> Геолокационные данные</button>
+                                        <div id="LongAndWidth" class="Geolocation__LongAndWidth">
+                                            <form class="LongAndWidth__box">
+                                                <label class="LongAndWidth__long">
+                                                    Долгота
+                                                    <input type="text" name="Long" id="Long">
+                                                </label>    
+                                                <label class="LongAndWidth__width">
+                                                    Ширина 
+                                                    <input type="text" name="Width" id="Width">
+                                                </label>    
+                                                <button class="LongAndWidth__button styleBTN" >Отправить</button>
+                                            </form>
+                                            
+                                        </div>
+                                    </div>  
+                                    <div class="Edit__NameAndAddress">
+                                        <button id="NameAndAddress" class="NameAndAddress__button styleBTNBig"><img src="/assets/img/edit/edit.svg" alt="Увше"> Изменить Имя и Адрес</button>
+                                        <div id="NameAndAddressbox" class="NameAndAddress__box">
+                                            <form class="box__nameCar">
+                                                <label class="nameCar__input">
+                                                    Официальное Имя Машины
+                                                    <input type="text" name="Long" id="Long">
+                                                </label>    
+                                                <button class="nameCar__button styleBTN" >Редактировать оф. Имя</button>
+                                            </form>
+                                            <form class="box__editAdrres">    
+                                                <label class="editAdrres__input">
+                                                    Официальный адрес
+                                                    <input type="text" name="Width" id="Width">
+                                                </label>   
+                                                <div class="editAdrres__select">
+                                                    <div class="dropdown">
+                                                        <div class="select">
+                                                            <span>Сегмент местоположения</span>
+                                                            <i class="fa fa-chevron-left"></i>
+                                                            <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
+                                                        </div>
+                                                        <input type="hidden" name="gender">
+                                                        <ul class="dropdown-menu">
+                                                            <li id="MALL">ТРЦ</li>
+                                                            <li id="Hotels">Отели</li>
+                                                        </ul>
+                                                    </div>   
+                                                </div>
+                                                <button class="editAdrres__button styleBTN" >Редактировать оф. адресс</button>
+                                            </form>
+                                        </div>
+                                    </div>                              
+                                </div>
+    
+                                <div class="Box__status">
+                                    <p class="status__title">Статус</p>
+                                    <div class="status__Allinfo">
+                                        <div class="Allinfo__sttusInfoNormal">
+                                            Полностью работающая 
+                                        </div>
+                                        <div class="Allinfo__sttusInfoWarning">
+                                            Сеть потерена
+                                        </div>
+                                        <div class="Allinfo__pingInfo">
+                                            <div class="pingInfo__ping">
+                                                <h1 class="ping__title">Пинг</h1>
+                                                <p class="ping__meaning">3.2ms</p>
+                                            </div>
+                                            <div class="pingInfo__pingLast">
+                                                <h1 class="ping__title">Последний пинг</h1>
+                                                <p class="ping__meaning">8 минут назад</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+    
+                                <p class="Edit__title">Действия</p>
+                                <div class="Box__button">
+                                    <div class="Marginality">
+                                        <button class="Marginality__button styleBTN"> <img src="/assets/img/monitoring/Маржинальность.svg" alt="Маржинальность"> Маржинальность</button>
+                                    </div>
+                                    <div class="LogMachine">
+                                        <a href="/MachineLogic.html"><button class="LogMachine__button styleBTN"> <img src="/assets/img/monitoring/ЛогМашины.svg"  alt=""> Лог Машины</button></a>
+                                    </div>
+                                    <div class="APICISBtn">
+                                        <button id="APICISBtn" class="APICISBtn__button styleBTN"> <img src="/assets/img/monitoring/АПИЦИС.svg"  alt=""> АПИ ЦИС</button>
+                                    </div>
+                                    <div class="SpecificationBtn">
+                                        <button id="SpecificationBtn" class="SpecificationBtn__button styleBTN"> <img src="/assets/img/monitoring/Спецификация.svg"  alt=""> Спецификация</button>
+                                    </div>
+                                    <div class="Forwarding">
+                                        <button id="Forwarding" class="Forwarding__button styleBTN"> <img src="/assets/img/monitoring/Форвардинг.svg"  alt=""> Форвардинг</button>
+                                    </div>
+                                    <div class="EntryExitWork styleBTN">
+                                        Вход/Выход Работу 
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                
+                                    <div class="RebootBillAcceptor">
+                                        <button id="RebootBillAcceptor" class="RebootBillAcceptor__button styleBTNBig"> <img src="/assets/img/monitoring/ПерезагрузитьКупюроприемник.svg"  alt="Перезагрузить Купюроприемник"> Перезагрузить купюроприемник</button>
+                                    </div>
+                                    <div class="RebootDispenser">
+                                        <button id="RebootDispenser" class="RebootDispenser__button styleBTNBig"> <img src="/assets/img/monitoring/ПерезагрузитьДиспенсер.svg"  alt=""> Перезагрузить диспенсер</button>
+                                    </div>
+                                </div>        
                                 
                             </div>
-                        </div>
-
-                       
-                        <div class="Box__Edit">
-                            <div class="Edit__Geolocation">
-                                <button id="Geolocation" class="Geolocation__button styleBTNBig"><img src="/assets/img/monitoring/ГеолокационныеДанные.svg" alt=""> Геолокационные данные</button>
-                                <div id="LongAndWidth" class="Geolocation__LongAndWidth">
-                                    <form class="LongAndWidth__box">
-                                        <label class="LongAndWidth__long">
-                                            Долгота
-                                            <input type="text" name="Long" id="Long">
-                                        </label>    
-                                        <label class="LongAndWidth__width">
-                                            Ширина 
-                                            <input type="text" name="Width" id="Width">
-                                        </label>    
-                                        <button class="LongAndWidth__button styleBTN" >Отправить</button>
-                                    </form>
-                                    
-                                </div>
-                            </div>  
-                            <div class="Edit__NameAndAddress">
-                                <button id="NameAndAddress" class="NameAndAddress__button styleBTNBig"><img src="/assets/img/edit/edit.svg" alt="Увше"> Изменить Имя и Адрес</button>
-                                <div id="NameAndAddressbox" class="NameAndAddress__box">
-                                    <form class="box__nameCar">
-                                        <label class="nameCar__input">
-                                            Официальное Имя Машины
-                                            <input type="text" name="Long" id="Long">
-                                        </label>    
-                                        <button class="nameCar__button styleBTN" >Редактировать оф. Имя</button>
-                                    </form>
-                                    <form class="box__editAdrres">    
-                                        <label class="editAdrres__input">
-                                            Официальный адрес
-                                            <input type="text" name="Width" id="Width">
-                                        </label>   
-                                        <div class="editAdrres__select">
-                                            <div class="dropdown">
-                                                <div class="select">
-                                                    <span>Сегмент местоположения</span>
-                                                    <i class="fa fa-chevron-left"></i>
-                                                    <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
-                                                </div>
-                                                <input type="hidden" name="gender">
-                                                <ul class="dropdown-menu">
-                                                    <li id="MALL">ТРЦ</li>
-                                                    <li id="Hotels">Отели</li>
-                                                </ul>
-                                            </div>   
+                            <div class="InfoСar__InfoCarAll">
+                                <form id="APICISInput" class="InfoCarAll__APICISInput">
+                                    <label> 
+                                        Отправка транзакций
+                                        <input type="text" name="" id="">
+                                    </label>
+                                    <label>
+                                        Получение обновлений курсов
+                                        <input type="text" name="" id="">
+                                    </label>
+                                    <label>
+                                        Отправка команды о выставлении курса
+                                        <input type="text" name="" id="">
+                                    </label>
+                                    <label>
+                                        Ссылка на генерацию QR с приказом на приказ о смене курсов
+                                        <input type="text" name="" id="">
+                                    </label>
+                                    <label>
+                                        Инкассация
+                                        <input type="text" name="" id="">
+                                    </label>
+                                    <label>
+                                        Подкрепление
+                                        <input type="text" name="" id="">
+                                    </label>
+                                    <button id="BtnAPICISInput" class="BtnAPICISInput">Отправить</button>
+                                </form>
+                                <form id="specificationInput" class="InfoCarAll__specification">
+                                    <div class="dropdown">
+                                        <div class="select">
+                                            <span>Прошивка</span>
+                                            <i class="fa fa-chevron-left"></i>
+                                            <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
                                         </div>
-                                        <button class="editAdrres__button styleBTN" >Редактировать оф. адресс</button>
-                                    </form>
-                                </div>
-                            </div>                              
-                        </div>
-
-                        <div class="Box__status">
-                            <p class="status__title">Статус</p>
-                            <div class="status__Allinfo">
-                                <div class="Allinfo__sttusInfo">
-                                    <p>Полностью работающая </p>
-                                </div>
-                                <div class="Allinfo__pingInfo">
-                                    <div class="pingInfo__ping">
-                                        <h1 class="ping__title">Пинг</h1>
-                                        <p class="ping__meaning">3.2ms</p>
-                                    </div>
-                                    <div class="pingInfo__pingLast">
-                                        <h1 class="ping__title">Последний пинг</h1>
-                                        <p class="ping__meaning">8 минут назад</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <p class="Edit__title">Действия</p>
-                        <div class="Box__button">
-                            <div class="Marginality">
-                                <button class="Marginality__button styleBTN"> <img src="/assets/img/monitoring/Маржинальность.svg" alt="Маржинальность"> Маржинальность</button>
-                            </div>
-                            <div class="LogMachine">
-                                <a href="/MachineLogic.html"><button class="LogMachine__button styleBTN"> <img src="/assets/img/monitoring/ЛогМашины.svg"  alt=""> Лог Машины</button></a>
-                            </div>
-                            <div class="APICISBtn">
-                                <button id="APICISBtn" class="APICISBtn__button styleBTN"> <img src="/assets/img/monitoring/АПИЦИС.svg"  alt=""> АПИ ЦИС</button>
-                            </div>
-                            <div class="SpecificationBtn">
-                                <button id="SpecificationBtn" class="SpecificationBtn__button styleBTN"> <img src="/assets/img/monitoring/Спецификация.svg"  alt=""> Спецификация</button>
-                            </div>
-                            <div class="Forwarding">
-                                <button id="Forwarding" class="Forwarding__button styleBTN"> <img src="/assets/img/monitoring/Форвардинг.svg"  alt=""> Форвардинг</button>
-                            </div>
-                            <div class="EntryExitWork styleBTN">
-                                Вход/Выход Работу 
-                                <label class="switch">
-                                    <input type="checkbox">
-                                    <span class="slider round"></span>
-                                </label>
-                            </div>
-                         
-                            <div class="RebootBillAcceptor">
-                                <button id="RebootBillAcceptor" class="RebootBillAcceptor__button styleBTNBig"> <img src="/assets/img/monitoring/ПерезагрузитьКупюроприемник.svg"  alt="Перезагрузить Купюроприемник"> Перезагрузить купюроприемник</button>
-                            </div>
-                            <div class="RebootDispenser">
-                                <button id="RebootDispenser" class="RebootDispenser__button styleBTNBig"> <img src="/assets/img/monitoring/ПерезагрузитьДиспенсер.svg"  alt=""> Перезагрузить диспенсер</button>
-                            </div>
-                        </div>        
-                        
-                    </div>
-                    <div class="InfoСar__InfoCarAll">
-                        <form id="APICISInput" class="InfoCarAll__APICISInput">
-                            <label> 
-                                Отправка транзакций
-                                <input type="text" name="" id="">
-                            </label>
-                            <label>
-                                Получение обновлений курсов
-                                <input type="text" name="" id="">
-                            </label>
-                            <label>
-                                Отправка команды о выставлении курса
-                                <input type="text" name="" id="">
-                            </label>
-                            <label>
-                                Ссылка на генерацию QR с приказом на приказ о смене курсов
-                                <input type="text" name="" id="">
-                            </label>
-                            <label>
-                                Инкассация
-                                <input type="text" name="" id="">
-                            </label>
-                            <label>
-                                Подкрепление
-                                <input type="text" name="" id="">
-                            </label>
-                            <button id="BtnAPICISInput" class="BtnAPICISInput">Отправить</button>
-                        </form>
-                        <form id="specificationInput" class="InfoCarAll__specification">
-                            <div class="dropdown">
-                                <div class="select">
-                                    <span>Прошивка</span>
-                                    <i class="fa fa-chevron-left"></i>
-                                    <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
-                                </div>
-                                <input type="hidden" name="gender">
-                                <ul class="dropdown-menu">
-                                    <li id="F56+TBV">F56+TBV</li>
-                                    <li id="F56+iVision100-SS">F56+iVision 100- SS</li>
-                                </ul>
-                            </div> 
-                            <div class="dropdown">
-                                <div class="select">
-                                    <span>Валюта</span>
-                                    <i class="fa fa-chevron-left"></i>
-                                    <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
-                                </div>
-                                <input type="hidden" name="gender">
-                                <ul class="dropdown-menu">
-                                    <li id="USDVolute">USD</li>
-                                    <li id="EURVolute">Eur</li>
-                                    <li id="GBPVolute">GBP</li>
-                                    <li id="UAHVolute">UAH</li>
-                                </ul>
-                            </div> 
-                            <button class="styleBTNInstall">Устоновить</button>
-                        </form>
-                        <div class="InfoCarAll__control">
-                            <div class="Box__controlTitle">
-                                <p>Спецификация</p>
-                            </div>
-                            <div class="Box__controlInfo">
-                                <div class="controlInfo">
-                                    <h1 class="controlInfo__title">Последняя полная перезагрузка машины:</h1>
-                                    <p class="controlInfo__meaning">12.10.2021 12:38</p>
-                                </div>
-                                <div class="controlInfo">
-                                    <h1 class="controlInfo__title">Версия прошивки:</h1>
-                                    <p class="controlInfo__meaning">Текст Текст </p>
-                                </div>
-                                <div class="controlInfo">
-                                    <h1 class="controlInfo__title">Статус принтера:</h1>
-                                    <p class="controlInfo__meaning">Текст Текст </p>
-                                </div>
-                                <div class="controlInfo">
-                                    <h1 class="controlInfo__title">Статус купюроприемника:</h1>
-                                    <p class="controlInfo__meaning">Текст Текст </p>
-                                </div>
-                                <div class="controlInfo">
-                                    <h1 class="controlInfo__title">Диспенсера:</h1>
-                                    <p class="controlInfo__meaning">Текст Текст </p>
-                                </div>
-                                <div class="controlInfo">
-                                    <h1 class="controlInfo__title">Хоппер:</h1>
-                                    <p class="controlInfo__meaning">Текст Текст </p>
-                                </div>
-                                <div class="controlInfo">
-                                    <h1 class="controlInfo__title">Связь:</h1>
-                                    <p class="controlInfo__meaning">Текст Текст </p>
-                                </div>
-                                <div class="controlInfo">
-                                    <h1 class="controlInfo__title">Статус:</h1>
-                                    <p class="controlInfo__meaning">Текст Текст </p>
-                                </div>
-                            </div>                               
-                        </div>
-                        <div class="maintenance__table">
-                            <p class="maintenance__title">Кассеты</p>
-                            <div class="table__header">
-                                <span id="connection">Cash-out 1</span>
-                                <span id="connection">Cash-out 2</span>
-                                <span id="connection">Cash-out 3</span>
-                                <span id="connection">Cash-out 4</span>
-                                <span id="connection">Cash-out 5</span>
-                                <span id="connection">Cash-out 6</span>
-                                <span id="connection">Cash-in </span>
-                               
-                            </div> 
-                            <div class="table__body">
-                                <span id="CashCarOut">
-                                    <div class="CashCarOutBox">
-                                        <div class="cashOutBorder"></div>
-                                        <div class="cashOutBody">
-                                            <p class="cashOutText">100%</p>
-                                        </div>
-                                    </div>
-                                    <div class="cashOutInfo">
-                                        <p class="cashOutInfo__numberBills">261 куп.</p>
-                                        <p class="cashOutInfo__nominal">50 UAH</p>
-                                        <p class="cashOutInfo__finalTotal">9,550 UAH </p>
-                                    </div>
-                                </span>
-                                <span id="CashCarOut">
-                                    <div class="CashCarOutBox">
-                                        <div class="cashOutBorder"></div>
-                                        <div class="cashOutBody">
-                                            <p class="cashOutText">100%</p>
-                                        </div>
-                                    </div>
-                                    <div class="cashOutInfo">
-                                        <p class="cashOutInfo__numberBills">261 куп.</p>
-                                        <p class="cashOutInfo__nominal">100 UAH</p>
-                                        <p class="cashOutInfo__finalTotal">3,100 UAH </p>
-                                    </div>
-                                </span>
-                                <span id="CashCarOut">
-                                    <div class="CashCarOutBox">
-                                        <div class="cashOutBorder"></div>
-                                        <div class="cashOutBody">
-                                            <p class="cashOutText">100%</p>
-                                        </div>
-                                    </div>
-                                    <div class="cashOutInfo">
-                                        <p class="cashOutInfo__numberBills">261 куп.</p>
-                                        <p class="cashOutInfo__nominal">200 UAH</p>
-                                        <p class="cashOutInfo__finalTotal">9,900 UAH </p>
-                                    </div>
-                                </span>
-                                <span id="CashCarOut">
-                                    <div class="CashCarOutBox">
-                                        <div class="cashOutBorder"></div>
-                                        <div class="cashOutBody">
-                                            <p class="cashOutText">100%</p>
-                                        </div>
-                                    </div>
-                                    <div class="cashOutInfo">
-                                        <p class="cashOutInfo__numberBills">261 куп.</p>
-                                        <p class="cashOutInfo__nominal">500 UAH</p>
-                                        <p class="cashOutInfo__finalTotal">9,500 UAH</p>
-                                    </div>
-                                </span>
-                                <span id="CashCarOut">
-                                    <div class="CashCarOutBox">
-                                        <div class="cashOutBorder"></div>
-                                        <div class="cashOutBody">
-                                            <p class="cashOutText">100%</p>
-                                        </div>
-                                    </div>
-                                    <div class="cashOutInfo">
-                                        <p class="cashOutInfo__numberBills">261 куп.</p>
-                                        <p class="cashOutInfo__nominal">500 UAH</p>
-                                        <p class="cashOutInfo__finalTotal">9,500 UAH </p>
-                                    </div>
-                                </span>
-                                <span id="CashCarOut">
-                                    <div class="CashCarOutBox">
-                                        <div class="cashOutBorder"></div>
-                                        <div class="cashOutBody">
-                                            <p class="cashOutText">100%</p>
-                                        </div>
-                                    </div>
-                                    <div class="cashOutInfo">
-                                        <p class="cashOutInfo__numberBills">261 куп.</p>
-                                        <p class="cashOutInfo__nominal">1000 UAH</p>
-                                        <p class="cashOutInfo__finalTotal">9,000 UAH </p>
-                                    </div>
-                                </span>
-                                <span id="CashCarIn">
-                                    <div class="CashCarInBox" >
-                                        <div class="cashInBorder"></div>
-                                        <div class="cashInBody">
-                                            <p class="cashInText">0%</p>
-                                        </div>
-                                    </div>   
-                                    <div class="cashOutInfo">
-                                        <p class="cashOutInfo__nominalUSD">261 куп. USD</p>
-                                        <p class="cashOutInfo__nominalEUR">261 куп. EUR</p>
+                                        <input type="hidden" name="gender">
+                                        <ul class="dropdown-menu">
+                                            <li id="F56+TBV">F56+TBV</li>
+                                            <li id="F56+iVision100-SS">F56+iVision 100- SS</li>
+                                        </ul>
                                     </div> 
-                                </span>
-                            </div>
-                        </div>
-                        <div class="transactions__table">
-                            <p class="transactions__title">Операции</p>
-                            <div class="table__header">
-                                <span id="nameCar">Машина</span>
-                                <span id="operation">Операция</span>
-                                <span id="address">Адрес</span>
-                                <span id="exchangeRate">Курс Обмена</span>
-                                <span id="transactionAmount">Сумма операции и валюта </span>
-                                <span id="exchangeAmount">Сумма на которую обменяли валюта </span>
-                                <span id="Day">Дата</span>
-                                <span id="Time">Время</span>
-                                <span id="BtnEmit"></span>
-                            </div>
-                            <div class="table__bodyTransactions">
-                                <span id="nameCar">pizza-truck</span>
-                                <span id="operation">Jose Tosquias</span>
-                                <span id="address">Ocean Plaza</span>
-                                <span id="exchangeRate">26.420 USD</span>
-                                <span id="transactionAmount">23,000 USD </span>
-                                <span id="exchangeAmount">874.60 UAH </span>
-                                <span id="Day">13.10.2021</span>
-                                <span id="Time">12:46 pm</span>
-                                <button  id="Btn"></button>
-                            </div>
-                            <div id="AllInfoCar" class="AllInfoCar">
-                                <div class="AllInfoCarConatinerText">
-                                    <div class="AllInfoCar__boxInfo">
-                                        <div class="boxInfo__title">Машина</div>
-                                        <div class="boxInfo__meaning">pizza-truck</div>
-                                    </div>
-                                    <div class="AllInfoCar__boxInfo">
-                                        <div class="boxInfo__title">Адрес</div>
-                                        <div class="boxInfo__meaning">
-                                            <h1>Город:</h1>
-                                            <p>Киев</p>
+                                    <div class="dropdown">
+                                        <div class="select">
+                                            <span>Валюта</span>
+                                            <i class="fa fa-chevron-left"></i>
+                                            <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
                                         </div>
-                                        <div class="boxInfo__meaning">
-                                            <h1>Улица:</h1>
-                                            <p>Антоновича, 176</p>
+                                        <input type="hidden" name="gender">
+                                        <ul class="dropdown-menu">
+                                            <li id="USDVolute">USD</li>
+                                            <li id="EURVolute">Eur</li>
+                                            <li id="GBPVolute">GBP</li>
+                                            <li id="UAHVolute">UAH</li>
+                                        </ul>
+                                    </div> 
+                                    <button class="styleBTNInstall">Устоновить</button>
+                                </form>
+                                <div class="InfoCarAll__control">
+                                    <div class="Box__controlTitle">
+                                        <p>Спецификация</p>
+                                    </div>
+                                    <div class="Box__controlInfo">
+                                        <div class="controlInfo">
+                                            <h1 class="controlInfo__title">Последняя полная перезагрузка машины:</h1>
+                                            <p class="controlInfo__meaning">12.10.2021 12:38</p>
                                         </div>
-                                        <div class="boxInfo__meaning">
-                                            <h1>Торговый центр:</h1>
-                                            <p>Ocean Plaza</p>
+                                        <div class="controlInfo">
+                                            <h1 class="controlInfo__title">Версия прошивки:</h1>
+                                            <p class="controlInfo__meaning">Текст Текст </p>
                                         </div>
-                                    </div>
-                                    <div class="AllInfoCar__boxInfo">
-                                        <div class="boxInfo__title">Курс Обмена</div>
-                                        <div class="boxInfo__meaning">26.420 USD</div>
-                                    </div>
-                                    <div class="AllInfoCar__boxInfo">
-                                        <div class="boxInfo__title">Сумма операции и валюта</div>
-                                        <div class="boxInfo__meaning">23,000 USD</div>
-                                    </div>
-                                    <div class="AllInfoCar__boxInfo">
-                                        <div class="boxInfo__title">Сумма на которую обменяли валюта</div>
-                                        <div class="boxInfo__meaning">874.60 UAH</div>
-                                    </div>
-                                    <div class="AllInfoCar__boxInfo">
-                                        <div class="boxInfo__title">Дата</div>
-                                        <div class="boxInfo__meaning">13.10.2021</div>
-                                    </div>
-                                    <div class="AllInfoCar__boxInfo">
-                                        <div class="boxInfo__title">Время</div>
-                                        <div class="boxInfo__meaning">18ч,56мин,13с</div>
-                                    </div>
-                                    <div class="AllInfoCar__boxInfo">
-                                        <div class="boxInfo__title">Контакты Клиента </div>
-                                        <div class="boxInfo__meaning">+380662343209</div>
-                                        <div class="boxInfo__meaning">Vlad@gmail.com</div>
-                                    </div>
-                                    <div class="AllInfoCar__boxInfo">
-                                        <div class="boxInfo__title">Время Фискализации</div>
-                                        <div class="boxInfo__meaning">12:46 pm</div>
-                                    </div>
-                                    <div class="AllInfoCar__boxInfo">
-                                        <div class="boxInfo__title">Статус Транзакции</div>
-                                        <div class="boxInfo__meaning">Выполнено</div>
-                                    </div>
-                                    <div class="AllInfoCar__boxInfo">
-                                        <div class="boxInfo__title">Выдано Валют</div>
-                                        <div class="boxInfo__meaning">
-                                            <div class="meaning__box">
-                                                <div class="meaning__bill">
-                                                    <h1 class="bill__title">Купюра</h1>
-                                                    <div class="bill__body">
-                                                        <div class="body__box">
-                                                            <p>1000 грн:</p>
-                                                            <p>100 шт.</p>
-                                                        </div>
-                                                        <div class="body__box">
-                                                            <p>500 грн:</p>
-                                                            <p>100 шт.</p>
-                                                        </div>
-                                                        <div class="body__box">
-                                                            <p>200 грн:</p>
-                                                            <p>100 шт.</p>
-                                                        </div>
-                                                        <div class="body__box">
-                                                            <p>100 грн:</p>
-                                                            <p>100 шт.</p>
-                                                        </div>
-                                                        <div class="body__box">
-                                                            <p>50 грн:</p>
-                                                            <p>100 шт.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="meaning__bill">
-                                                    <h1 class="bill__title">Монет</h1>
-                                                    <div class="bill__body">
-                                                        <div class="body__box">
-                                                            <p>10 грн:</p>
-                                                            <p>100 шт.</p>
-                                                        </div>
-                                                        <div class="body__box">
-                                                            <p>5 грн:</p>
-                                                            <p>100 шт.</p>
-                                                        </div>
-                                                        <div class="body__box">
-                                                            <p>2 грн:</p>
-                                                            <p>100 шт.</p>
-                                                        </div>
-                                                        <div class="body__box">
-                                                            <p>1 грн:</p>
-                                                            <p>100 шт.</p>
-                                                        </div>
-                                                    </div>
+                                        <div class="controlInfo">
+                                            <h1 class="controlInfo__title">Статус принтера:</h1>
+                                            <p class="controlInfo__meaning">Текст Текст </p>
+                                        </div>
+                                        <div class="controlInfo">
+                                            <h1 class="controlInfo__title">Статус купюроприемника:</h1>
+                                            <p class="controlInfo__meaning">Текст Текст </p>
+                                        </div>
+                                        <div class="controlInfo">
+                                            <h1 class="controlInfo__title">Диспенсера:</h1>
+                                            <p class="controlInfo__meaning">Текст Текст </p>
+                                        </div>
+                                        <div class="controlInfo">
+                                            <h1 class="controlInfo__title">Хоппер:</h1>
+                                            <p class="controlInfo__meaning">Текст Текст </p>
+                                        </div>
+                                        <div class="controlInfo">
+                                            <h1 class="controlInfo__title">Связь:</h1>
+                                            <p class="controlInfo__meaning">Текст Текст </p>
+                                        </div>
+                                        <div class="controlInfo">
+                                            <h1 class="controlInfo__title">Статус:</h1>
+                                            <p class="controlInfo__meaning">Текст Текст </p>
+                                        </div>
+                                    </div>                               
+                                </div>
+                                <div class="maintenance__table">
+                                    <p class="maintenance__title">Кассеты</p>
+                                    <div class="table__header">
+                                        <span id="connection">Cash-out 1</span>
+                                        <span id="connection">Cash-out 2</span>
+                                        <span id="connection">Cash-out 3</span>
+                                        <span id="connection">Cash-out 4</span>
+                                        <span id="connection">Cash-out 5</span>
+                                        <span id="connection">Cash-out 6</span>
+                                        <span id="connection">Cash-in </span>
+                                    
+                                    </div> 
+                                    <div class="table__body">
+                                        <span id="CashCarOut">
+                                            <div class="CashCarOutBox">
+                                                <div class="cashOutBorder"></div>
+                                                <div class="cashOutBody">
+                                                    <p class="cashOutText">100%</p>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="AllInfoCar__boxInfo">
-                                        <div class="boxInfo__title">Выдано Валют</div>
-                                        <div class="boxInfo__meaning">
-                                            <div class="meaning__box">
-                                                <div class="meaning__bill">
-                                                    <h1 class="bill__title">Купюра</h1>
-                                                    <div class="bill__body">
-                                                        <div class="body__box">
-                                                            <p>100 USD:</p>
-                                                            <p>100 шт.</p>
-                                                        </div>
-                                                        <div class="body__box">
-                                                            <p>50 USD:</p>
-                                                            <p>100 шт.</p>
-                                                        </div>
-                                                    </div>
+                                            <div class="cashOutInfo">
+                                                <p class="cashOutInfo__numberBills">261 куп.</p>
+                                                <p class="cashOutInfo__nominal">50 UAH</p>
+                                                <p class="cashOutInfo__finalTotal">9,550 UAH </p>
+                                            </div>
+                                        </span>
+                                        <span id="CashCarOut">
+                                            <div class="CashCarOutBox">
+                                                <div class="cashOutBorder"></div>
+                                                <div class="cashOutBody">
+                                                    <p class="cashOutText">100%</p>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                <div class="AllInfoCarConatinerButton">
-                                    <div class="AllInfoCar__boxInfo">
-                                        <div class="boxInfo__title">Фиксальный номер операции</div>
-                                        <div class="boxInfo__meaning">
-                                            <button class="meaning__imgNextLink">
-                                                <a href="#"> 
-                                                    <img src="/assets/img/link/nextLink.svg" alt="Go to">
-                                                    <p>( 111111 )</p> 
-                                                </a>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="AllInfoCar__boxInfo">
-                                        <div class="boxInfo__meaning">
-                                            <button class="meaning__imgBurgerOptionIcon">
-                                                <img src="/assets/img/burgerOptionIcon/burgerOptionIcon.svg" alt="Option Icon">
-                                                открыть лог операции 
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="AllInfoCar__boxInfo">
-                                        <div class="boxInfo__meaning">
-                                            <button class="meaning__imgCheck">
-                                                <img src="/assets/img/check/check.png" alt="check">
-                                                Чек
-                                            </button>
-                                        </div>
+                                            <div class="cashOutInfo">
+                                                <p class="cashOutInfo__numberBills">261 куп.</p>
+                                                <p class="cashOutInfo__nominal">100 UAH</p>
+                                                <p class="cashOutInfo__finalTotal">3,100 UAH </p>
+                                            </div>
+                                        </span>
+                                        <span id="CashCarOut">
+                                            <div class="CashCarOutBox">
+                                                <div class="cashOutBorder"></div>
+                                                <div class="cashOutBody">
+                                                    <p class="cashOutText">100%</p>
+                                                </div>
+                                            </div>
+                                            <div class="cashOutInfo">
+                                                <p class="cashOutInfo__numberBills">261 куп.</p>
+                                                <p class="cashOutInfo__nominal">200 UAH</p>
+                                                <p class="cashOutInfo__finalTotal">9,900 UAH </p>
+                                            </div>
+                                        </span>
+                                        <span id="CashCarOut">
+                                            <div class="CashCarOutBox">
+                                                <div class="cashOutBorder"></div>
+                                                <div class="cashOutBody">
+                                                    <p class="cashOutText">100%</p>
+                                                </div>
+                                            </div>
+                                            <div class="cashOutInfo">
+                                                <p class="cashOutInfo__numberBills">261 куп.</p>
+                                                <p class="cashOutInfo__nominal">500 UAH</p>
+                                                <p class="cashOutInfo__finalTotal">9,500 UAH</p>
+                                            </div>
+                                        </span>
+                                        <span id="CashCarOut">
+                                            <div class="CashCarOutBox">
+                                                <div class="cashOutBorder"></div>
+                                                <div class="cashOutBody">
+                                                    <p class="cashOutText">100%</p>
+                                                </div>
+                                            </div>
+                                            <div class="cashOutInfo">
+                                                <p class="cashOutInfo__numberBills">261 куп.</p>
+                                                <p class="cashOutInfo__nominal">500 UAH</p>
+                                                <p class="cashOutInfo__finalTotal">9,500 UAH </p>
+                                            </div>
+                                        </span>
+                                        <span id="CashCarOut">
+                                            <div class="CashCarOutBox">
+                                                <div class="cashOutBorder"></div>
+                                                <div class="cashOutBody">
+                                                    <p class="cashOutText">100%</p>
+                                                </div>
+                                            </div>
+                                            <div class="cashOutInfo">
+                                                <p class="cashOutInfo__numberBills">261 куп.</p>
+                                                <p class="cashOutInfo__nominal">1000 UAH</p>
+                                                <p class="cashOutInfo__finalTotal">9,000 UAH </p>
+                                            </div>
+                                        </span>
+                                        <span id="CashCarIn">
+                                            <div class="CashCarInBox" >
+                                                <div class="cashInBorder"></div>
+                                                <div class="cashInBody">
+                                                    <p class="cashInText">0%</p>
+                                                </div>
+                                            </div>   
+                                            <div class="cashOutInfo">
+                                                <p class="cashOutInfo__nominalUSD">261 куп. USD</p>
+                                                <p class="cashOutInfo__nominalEUR">261 куп. EUR</p>
+                                            </div> 
+                                        </span>
                                     </div>
                                 </div>
+                                <div class="transactions__table">
+                                    <p class="transactions__title">Операции</p>
+                                    <div class="table__header">
+                                        <span id="nameCar">Машина</span>
+                                        <span id="operation">Операция</span>
+                                        <span id="address">Адрес</span>
+                                        <span id="exchangeRate">Курс Обмена</span>
+                                        <span id="transactionAmount">Сумма операции и валюта </span>
+                                        <span id="exchangeAmount">Сумма на которую обменяли валюта </span>
+                                        <span id="Day">Дата</span>
+                                        <span id="Time">Время</span>
+                                        <span id="BtnEmit"></span>
+                                    </div>
+                                    <div class="table__bodyTransactions">
+                                        <span id="nameCar">pizza-truck</span>
+                                        <span id="operation">Jose Tosquias</span>
+                                        <span id="address">Ocean Plaza</span>
+                                        <span id="exchangeRate">26.420 USD</span>
+                                        <span id="transactionAmount">23,000 USD </span>
+                                        <span id="exchangeAmount">874.60 UAH </span>
+                                        <span id="Day">13.10.2021</span>
+                                        <span id="Time">12:46 pm</span>
+                                        <button  id="Btn"></button>
+                                    </div>
+                                    <div id="AllInfoCar" class="AllInfoCar">
+                                        <div class="AllInfoCarConatinerText">
+                                            <div class="AllInfoCar__boxInfo">
+                                                <div class="boxInfo__title">Машина</div>
+                                                <div class="boxInfo__meaning">pizza-truck</div>
+                                            </div>
+                                            <div class="AllInfoCar__boxInfo">
+                                                <div class="boxInfo__title">Адрес</div>
+                                                <div class="boxInfo__meaning">
+                                                    <h1>Город:</h1>
+                                                    <p>Киев</p>
+                                                </div>
+                                                <div class="boxInfo__meaning">
+                                                    <h1>Улица:</h1>
+                                                    <p>Антоновича, 176</p>
+                                                </div>
+                                                <div class="boxInfo__meaning">
+                                                    <h1>Торговый центр:</h1>
+                                                    <p>Ocean Plaza</p>
+                                                </div>
+                                            </div>
+                                            <div class="AllInfoCar__boxInfo">
+                                                <div class="boxInfo__title">Курс Обмена</div>
+                                                <div class="boxInfo__meaning">26.420 USD</div>
+                                            </div>
+                                            <div class="AllInfoCar__boxInfo">
+                                                <div class="boxInfo__title">Сумма операции и валюта</div>
+                                                <div class="boxInfo__meaning">23,000 USD</div>
+                                            </div>
+                                            <div class="AllInfoCar__boxInfo">
+                                                <div class="boxInfo__title">Сумма на которую обменяли валюта</div>
+                                                <div class="boxInfo__meaning">874.60 UAH</div>
+                                            </div>
+                                            <div class="AllInfoCar__boxInfo">
+                                                <div class="boxInfo__title">Дата</div>
+                                                <div class="boxInfo__meaning">13.10.2021</div>
+                                            </div>
+                                            <div class="AllInfoCar__boxInfo">
+                                                <div class="boxInfo__title">Время</div>
+                                                <div class="boxInfo__meaning">18ч,56мин,13с</div>
+                                            </div>
+                                            <div class="AllInfoCar__boxInfo">
+                                                <div class="boxInfo__title">Контакты Клиента </div>
+                                                <div class="boxInfo__meaning">+380662343209</div>
+                                                <div class="boxInfo__meaning">Vlad@gmail.com</div>
+                                            </div>
+                                            <div class="AllInfoCar__boxInfo">
+                                                <div class="boxInfo__title">Время Фискализации</div>
+                                                <div class="boxInfo__meaning">12:46 pm</div>
+                                            </div>
+                                            <div class="AllInfoCar__boxInfo">
+                                                <div class="boxInfo__title">Статус Транзакции</div>
+                                                <div class="boxInfo__meaning">Выполнено</div>
+                                            </div>
+                                            <div class="AllInfoCar__boxInfo">
+                                                <div class="boxInfo__title">Выдано Валют</div>
+                                                <div class="boxInfo__meaning">
+                                                    <div class="meaning__box">
+                                                        <div class="meaning__bill">
+                                                            <h1 class="bill__title">Купюра</h1>
+                                                            <div class="bill__body">
+                                                                <div class="body__box">
+                                                                    <p>1000 грн:</p>
+                                                                    <p>100 шт.</p>
+                                                                </div>
+                                                                <div class="body__box">
+                                                                    <p>500 грн:</p>
+                                                                    <p>100 шт.</p>
+                                                                </div>
+                                                                <div class="body__box">
+                                                                    <p>200 грн:</p>
+                                                                    <p>100 шт.</p>
+                                                                </div>
+                                                                <div class="body__box">
+                                                                    <p>100 грн:</p>
+                                                                    <p>100 шт.</p>
+                                                                </div>
+                                                                <div class="body__box">
+                                                                    <p>50 грн:</p>
+                                                                    <p>100 шт.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="meaning__bill">
+                                                            <h1 class="bill__title">Монет</h1>
+                                                            <div class="bill__body">
+                                                                <div class="body__box">
+                                                                    <p>10 грн:</p>
+                                                                    <p>100 шт.</p>
+                                                                </div>
+                                                                <div class="body__box">
+                                                                    <p>5 грн:</p>
+                                                                    <p>100 шт.</p>
+                                                                </div>
+                                                                <div class="body__box">
+                                                                    <p>2 грн:</p>
+                                                                    <p>100 шт.</p>
+                                                                </div>
+                                                                <div class="body__box">
+                                                                    <p>1 грн:</p>
+                                                                    <p>100 шт.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="AllInfoCar__boxInfo">
+                                                <div class="boxInfo__title">Выдано Валют</div>
+                                                <div class="boxInfo__meaning">
+                                                    <div class="meaning__box">
+                                                        <div class="meaning__bill">
+                                                            <h1 class="bill__title">Купюра</h1>
+                                                            <div class="bill__body">
+                                                                <div class="body__box">
+                                                                    <p>100 USD:</p>
+                                                                    <p>100 шт.</p>
+                                                                </div>
+                                                                <div class="body__box">
+                                                                    <p>50 USD:</p>
+                                                                    <p>100 шт.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <div class="AllInfoCarConatinerButton">
+                                            <div class="AllInfoCar__boxInfo">
+                                                <div class="boxInfo__title">Фиксальный номер операции</div>
+                                                <div class="boxInfo__meaning">
+                                                    <button class="meaning__imgNextLink">
+                                                        <a href="#"> 
+                                                            <img src="/assets/img/link/nextLink.svg" alt="Go to">
+                                                            <p>( 111111 )</p> 
+                                                        </a>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="AllInfoCar__boxInfo">
+                                                <div class="boxInfo__meaning">
+                                                    <button class="meaning__imgBurgerOptionIcon">
+                                                        <img src="/assets/img/burgerOptionIcon/burgerOptionIcon.svg" alt="Option Icon">
+                                                        открыть лог операции 
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="AllInfoCar__boxInfo">
+                                                <div class="boxInfo__meaning">
+                                                    <button class="meaning__imgCheck">
+                                                        <img src="/assets/img/check/check.png" alt="check">
+                                                        Чек
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+                
         </main>
 
     </div>

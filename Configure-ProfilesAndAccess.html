@@ -14,7 +14,7 @@
                 <div class="header__logoAndNav">
                     <a href="/Dashboard.html"><img src="/assets/img/header/Logo.svg" alt="Logo" width="100px" class="logoAndNav__imgNav"></a>
                     <nav class="logoAndNav__nav">
-                        <a href="/Transactions.html" class="nav__link active">Операции</a>
+                        <a href="/ConfigureProfilesAndAccess.html" class="nav__link active">Операции</a>
                         <a href="/Maintenance.html" class="nav__link">Обслуживание</a>
                         <a href="/Analyties.html" class="nav__link">Аналитика</a>
                         <a href="/Configure-margin.html" class="nav__link">Настройки </a> 
@@ -160,13 +160,113 @@
         </div>
     </header>
 
-        
     <main>
         <div class="ConfigureProfilesAndAccess">
             <div class="ConfigureProfilesAndAccess__heading">
                 <div class="heading__box">
                     <div class="heading__title"><p>Профили и доступ</p></div> 
-                    
+                </div>
+            </div>
+
+            <div class="ConfigureProfilesAndAccess__table">
+                <div class="table__header">
+                    <span id="Employee">Сотрудник</span>
+                    <span id="Login">Логин</span>
+                    <span id="TemporaryPassword">Временный пароль</span>
+                    <span id="AccessLevel">Уровень доступа</span>
+                    <span id="SSH">SSH основное устройство</span>
+                    <span id="IDPhone">ID смартфона</span>
+                    <span id="BtnEmit"></span>
+                </div>
+                <div class="table__body">
+                    <span id="Employee">Петров П.П</span>
+                    <span id="Login">Petro1991</span>
+                    <span id="TemporaryPassword">Qwer4251rew1</span>
+                    <span id="AccessLevel">Админ</span>
+                    <span id="SSH">ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAklOUpkDHrfHY17SbrmTIpNLTGK9Tjom/BWDSU
+                        GPl+nafzlHDTYW7hdI4yZ5ew18JH4JW9jbhUFrviQzM7xlELEVf4h9lFX5QVkbPppSwg0cda3
+                        Pbv7kOdJ/MTyBlWXFCR+HAo3FXRitBqxiX1nKhXpHAZsMciLq8V6RjsNAQwdsdMFvSlVK/7XA
+                        t3FaoJoAsncM1Q9x5+3V0Ww68/eIFmb1zuUFljQJKprrX88XypNDvjYNby6vw/Pb0rwert/En
+                        mZ+AW4OZPnTPI89ZPmVMLuayrD2cE86Z/il8b+gw3r3+1nKatmIkjn2so1d01QraTlMqVSsbx
+                        NrRFi9wrf+M7Q== schacon@mylaptop.local</span>
+                    <span id="IDPhone">IMEI 35-209900-176148-1</span>
+                    <button  id="Btn"></button>
+                </div>
+                <form id="AllInfoConfigure" class="AllInfoConfigure">
+                    <div class="AllInfoConfigureConatinerText">
+                        <div class="AllInfoConfigure__boxInfo">
+                            <div class="boxInfo__title">Сотрудник</div>
+                            <div class="boxInfo__meaning">
+                                <input type="text" placeholder="*" name="EmployeeFIO" id="EmployeeINPUT">
+                            </div>
+                        </div>
+                        <div class="AllInfoConfigure__boxInfo">
+                            <div class="boxInfo__title">Логин</div>
+                            <div class="boxInfo__meaning">
+                                <input type="text" placeholder="*" name="LoginINPUT" id="LoginINPUT">
+                            </div>
+                        </div>
+                        <div class="AllInfoConfigure__boxInfo">
+                            <div class="boxInfo__title">Временный пароль</div>
+                            <div class="boxInfo__meaning">
+                                <input type="text" placeholder="*" name="TemporaryPasswordINPUT" id="TemporaryPasswordINPUT">
+                            </div>
+                        </div>
+                        <div class="AllInfoConfigure__boxInfo">
+                            <div class="boxInfo__title">Уровень доступа</div>
+                            <div class="boxInfo__meaning">
+                                <div class="dropdown">
+                                    <div class="select">
+                                        <span>Нет доступа </span>
+                                        <i class="fa fa-chevron-left"></i>
+                                        <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
+                                    </div>
+                                    <input type="hidden" name="gender">
+                                    <ul class="dropdown-menu">
+                                        <li id="AllVolute">Админ</li>
+                                        <li id="USDVolute">Технический персонал </li>
+                                        <li id="EURVolute">Главный кассир</li>
+                                        <li id="EURVolute">Бухгалтер</li>
+                                    </ul>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="AllInfoConfigure__boxInfo">
+                            <div class="boxInfo__title">SSH основное устройство</div>
+                            <div class="boxInfo__meaning">
+                                <input type="text" placeholder="*" name="EmployeeFIO" id="INPUT">
+                            </div>
+                        </div>
+                        <div class="AllInfoConfigure__boxInfo">
+                            <div class="boxInfo__title">ID смартфона</div>
+                            <div class="boxInfo__meaning">
+                                <input type="text" placeholder="*" name="EmployeeFIO" id="INPUT">
+                            </div>
+                        </div>
+                    </div>   
+                    <div class="AllInfoConfigureConatinerButton">
+                        <div class="AllInfoConfigure__boxInfo">
+                            <div class="boxInfo__meaning">
+                                <button class="meaning__imgNextLink">
+                                    Сохранить
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="table__body">
+                    <span id="Employee">Петров П.П</span>
+                    <span id="Login">Petro1991</span>
+                    <span id="TemporaryPassword">Qwer4251rew1</span>
+                    <span id="AccessLevel">Админ</span>
+                    <span id="SSH">ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAklOUpkDHrfHY17SbrmTIpNLTGK9Tjom/BWDSU
+                        GPl+nafzlHDTYW7hdI4yZ5ew18JH4JW9jbhUFrviQzM7xlELEVf4h9lFX5QVkbPppSwg0cda3
+                        Pbv7kOdJ/MTyBlWXFCR+HAo3FXRitBqxiX1nKhXpHAZsMciLq8V6RjsNAQwdsdMFvSlVK/7XA
+                        t3FaoJoAsncM1Q9x5+3V0Ww68/eIFmb1zuUFljQJKprrX88XypNDvjYNby6vw/Pb0rwert/En
+                        mZ+AW4OZPnTPI89ZPmVMLuayrD2cE86Z/il8b+gw3r3+1nKatmIkjn2so1d01QraTlMqVSsbx
+                        NrRFi9wrf+M7Q== schacon@mylaptop.local</span>
+                    <span id="IDPhone">IMEI 35-209900-176148-1</span>
+                    <button  id="Btn"></button>
                 </div>
             </div>
         </div>    
@@ -175,5 +275,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>    
     <script src="/assets/js/filter/filter.js"></script> 
     <script src="/assets/js/clickOpen/clickOpenNotification.js"></script>
+    <script src="/assets/js/clickOpen/clickOpenConfigureProfilesAndAccess.js"></script>
 </body>
 </html>
