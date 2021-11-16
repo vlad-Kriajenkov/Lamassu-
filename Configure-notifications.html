@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/scss/css/ConfigureNotifications.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <title>Document</title>
 </head>
 <body>
@@ -30,7 +31,7 @@
                     <div id="windowNotification" class="windowNotification">
                         <div class="windowNotification__header">
                             <p class="header__title">Оповещание</p>
-                            <button id="ShowAllNotification" onclick="showAllInfoNotification()" class="header__buttonShowAll">Посмотреть всё</button>
+                            <button  class="header__buttonShowAll">Просомтреть все</button>
                             <button    class="header__buttonCloseAll">Скрыть все</button>
                             <button class="header__bTnCloseNotification" onclick="shownotification()">
                                 <img class="header__imgNotification" src="/assets/img/notificationblack.svg" alt="notification">
@@ -58,78 +59,75 @@
                                     <button class="warningInfo__buttonCancel"></button>
                                 </div>
                             </div>
-                            <div id="showAllInfoNotification">
-                                <div class="weHaveInfo__warningInfo">
-                                    <div class="cashboxEmptyFlex">
-                                        <img src="/assets/img/Warning/warning.svg" alt="" class="warningInfo__img" width="17px">
-                                        <p class="warningInfo__infoText">Остаток наличных биткойнов низкий</p>
-                                    </div>
-                                    <div class="cashboxEmptyFlex">
-                                        <button class="warningInfo__buttonLink"></button>
-                                        <button class="warningInfo__buttonCancel"></button>
-                                    </div>
+                            <div class="weHaveInfo__warningInfo">
+                                <div class="cashboxEmptyFlex">
+                                    <img src="/assets/img/Warning/warning.svg" alt="" class="warningInfo__img" width="17px">
+                                    <p class="warningInfo__infoText">Остаток наличных биткойнов низкий</p>
                                 </div>
-                                <div class="weHaveInfo__warningInfo">
-                                    <div class="cashboxEmptyFlex">
-                                        <img src="/assets/img/Warning/warning.svg" alt="" class="warningInfo__img" width="17px">
-                                        <p class="warningInfo__infoText">Остаток наличных биткойнов низкий</p>
-                                    </div>
-                                    <div class="cashboxEmptyFlex">
-                                        <button class="warningInfo__buttonLink"></button>
-                                        <button class="warningInfo__buttonCancel"></button>
-                                    </div>
+                                <div class="cashboxEmptyFlex">
+                                    <button class="warningInfo__buttonLink"></button>
+                                    <button class="warningInfo__buttonCancel"></button>
                                 </div>
-                                <div class="weHaveInfo__warningInfo">
-                                    <div class="cashboxEmptyFlex">
-                                        <img src="/assets/img/Warning/warning.svg" alt="" class="warningInfo__img" width="17px">
-                                        <p class="warningInfo__infoText">Остаток наличных биткойнов низкий</p>
-                                    </div>
-                                    <div class="cashboxEmptyFlex">
-                                        <button class="warningInfo__buttonLink"></button>
-                                        <button class="warningInfo__buttonCancel"></button>
-                                    </div>
+                            </div>
+                            <div class="weHaveInfo__warningInfo">
+                                <div class="cashboxEmptyFlex">
+                                    <img src="/assets/img/Warning/warning.svg" alt="" class="warningInfo__img" width="17px">
+                                    <p class="warningInfo__infoText">Остаток наличных биткойнов низкий</p>
                                 </div>
-                                <div class="weHaveInfo__warningInfo">
-                                    <div class="cashboxEmptyFlex">
-                                        <img src="/assets/img/Warning/warning.svg" alt="" class="warningInfo__img" width="17px">
-                                        <p class="warningInfo__infoText">Остаток наличных биткойнов низкий</p>
-                                    </div>
-                                    <div class="cashboxEmptyFlex">
-                                        <button class="warningInfo__buttonLink"></button>
-                                        <button class="warningInfo__buttonCancel"></button>
-                                    </div>
+                                <div class="cashboxEmptyFlex">
+                                    <button class="warningInfo__buttonLink"></button>
+                                    <button class="warningInfo__buttonCancel"></button>
                                 </div>
-                                <div class="weHaveInfo__warningInfo">
-                                    <div class="cashboxEmptyFlex">
-                                        <img src="/assets/img/Warning/warning.svg" alt="" class="warningInfo__img" width="17px">
-                                        <p class="warningInfo__infoText">Остаток наличных биткойнов низкий</p>
-                                    </div>
-                                    <div class="cashboxEmptyFlex">
-                                        <button class="warningInfo__buttonLink"></button>
-                                        <button class="warningInfo__buttonCancel"></button>
-                                    </div>
+                            </div>
+                            <div class="weHaveInfo__warningInfo">
+                                <div class="cashboxEmptyFlex">
+                                    <img src="/assets/img/Warning/warning.svg" alt="" class="warningInfo__img" width="17px">
+                                    <p class="warningInfo__infoText">Остаток наличных биткойнов низкий</p>
                                 </div>
-                                <div class="weHaveInfo__warningInfo">
-                                    <div class="cashboxEmptyFlex">
-                                        <img src="/assets/img/Warning/warning.svg" alt="" class="warningInfo__img" width="17px">
-                                        <p class="warningInfo__infoText">Остаток наличных биткойнов низкий</p>
-                                    </div>
-                                    <div class="cashboxEmptyFlex">
-                                        <button class="warningInfo__buttonLink"></button>
-                                        <button class="warningInfo__buttonCancel"></button>
-                                    </div>
+                                <div class="cashboxEmptyFlex">
+                                    <button class="warningInfo__buttonLink"></button>
+                                    <button class="warningInfo__buttonCancel"></button>
                                 </div>
-                                <div class="weHaveInfo__warningInfo">
-                                    <div class="cashboxEmptyFlex">
-                                        <img src="/assets/img/Warning/warning.svg" alt="" class="warningInfo__img" width="17px">
-                                        <p class="warningInfo__infoText">Остаток наличных биткойнов низкий</p>
-                                    </div>
-                                    <div class="cashboxEmptyFlex">
-                                        <button class="warningInfo__buttonLink"></button>
-                                        <button class="warningInfo__buttonCancel"></button>
-                                    </div>
+                            </div>
+                            <div class="weHaveInfo__warningInfo">
+                                <div class="cashboxEmptyFlex">
+                                    <img src="/assets/img/Warning/warning.svg" alt="" class="warningInfo__img" width="17px">
+                                    <p class="warningInfo__infoText">Остаток наличных биткойнов низкий</p>
                                 </div>
-                                
+                                <div class="cashboxEmptyFlex">
+                                    <button class="warningInfo__buttonLink"></button>
+                                    <button class="warningInfo__buttonCancel"></button>
+                                </div>
+                            </div>
+                            <div class="weHaveInfo__warningInfo">
+                                <div class="cashboxEmptyFlex">
+                                    <img src="/assets/img/Warning/warning.svg" alt="" class="warningInfo__img" width="17px">
+                                    <p class="warningInfo__infoText">Остаток наличных биткойнов низкий</p>
+                                </div>
+                                <div class="cashboxEmptyFlex">
+                                    <button class="warningInfo__buttonLink"></button>
+                                    <button class="warningInfo__buttonCancel"></button>
+                                </div>
+                            </div>
+                            <div class="weHaveInfo__warningInfo">
+                                <div class="cashboxEmptyFlex">
+                                    <img src="/assets/img/Warning/warning.svg" alt="" class="warningInfo__img" width="17px">
+                                    <p class="warningInfo__infoText">Остаток наличных биткойнов низкий</p>
+                                </div>
+                                <div class="cashboxEmptyFlex">
+                                    <button class="warningInfo__buttonLink"></button>
+                                    <button class="warningInfo__buttonCancel"></button>
+                                </div>
+                            </div>
+                            <div class="weHaveInfo__warningInfo">
+                                <div class="cashboxEmptyFlex">
+                                    <img src="/assets/img/Warning/warning.svg" alt="" class="warningInfo__img" width="17px">
+                                    <p class="warningInfo__infoText">Остаток наличных биткойнов низкий</p>
+                                </div>
+                                <div class="cashboxEmptyFlex">
+                                    <button class="warningInfo__buttonLink"></button>
+                                    <button class="warningInfo__buttonCancel"></button>
+                                </div>
                             </div>
                         </div>  
                         <div class="windowNotification__shippingbox">
@@ -138,7 +136,7 @@
                             </button>
                             <div id="formShippin" class="shippingbox__formShippin">
                                 <form class="formShippin__formsSend">
-                                    <input class="formsSend__input" type="email" placeholder="Введите gmail получателя" name="RecipientsEmail" id="RecipientsEmail">
+                                    <input class="formsSend__input" type="email" placeholder="Выберите получателя" name="RecipientsEmail" id="RecipientsEmail">
                                     <input class="formsSend__input" placeholder="Введите текст" type="text" name="senderMessage" id="senderMessage">
                                     <button id="senderButton" class="formsSend__button"><img src="/assets/img/share/share.svg" width="18px" alt="share"></button>
                                 </form>
@@ -166,90 +164,127 @@
             <div class="ConfigureNotifications__heading">
                 <div class="heading__box">
                     <div class="heading__title"><p>Уведомления</p></div> 
+                    
+
                 </div>
+               
             </div>
             <div class="ConfigureNotifications__setup">
-                <h1 class="setup__title">Настройка</h1>
-                <div class="setup__channelSetup">
-                    <div class="channelSetp__title">
-                        <span>Канал</span>
-                        <span>Баланс</span>
-                        <span>Ошибки бух</span>
-                        <span>Ошибки операций</span>
-                        <span>Технические ошибки</span>
-                        <span>Менеджмент</span>
+                    <h1 class="setup__title">Настройка</h1>
+                <div class="setup__box">    
+                    <div class="setup__channelSetup">
+                        <div class="channelSetp__title">
+                            <span>Канал</span>
+                            <span>Баланс</span>
+                            <span>Ошибки бух</span>
+                            <span>Ошибки операций</span>
+                            <span>Технические ошибки</span>
+                            <span>Менеджмент</span>
+                        </div>
+                        <form class="channelSetp__channel">
+                            <span class="channel__title">Смс</span>
+                            <div class="channel__input">     
+                                <span>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </span>
+                                <span>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </span>
+                                <span>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </span>
+                                <span>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </span>
+                                <span>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </span>
+                            </div>    
+                        </form>
+                        <form class="channelSetp__channel">
+                            <span class="channel__title">Центр Увидомления</span>
+                            <div class="channel__input">   
+                                <span>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </span>
+                                <span>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </span>
+                                <span>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </span>
+                                <span>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </span>
+                                <span>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </span>
+                            </div>    
+                        </form>
                     </div>
-                    <form class="channelSetp__channel">
-                        <span class="channel__title">Смс</span>
-                        <div class="channel__input">     
-                            <span>
-                                <label class="switch">
-                                    <input type="checkbox">
-                                    <span class="slider round"></span>
-                                </label>
-                            </span>
-                            <span>
-                                <label class="switch">
-                                    <input type="checkbox">
-                                    <span class="slider round"></span>
-                                </label>
-                            </span>
-                            <span>
-                                <label class="switch">
-                                    <input type="checkbox">
-                                    <span class="slider round"></span>
-                                </label>
-                            </span>
-                            <span>
-                                <label class="switch">
-                                    <input type="checkbox">
-                                    <span class="slider round"></span>
-                                </label>
-                            </span>
-                            <span>
-                                <label class="switch">
-                                    <input type="checkbox">
-                                    <span class="slider round"></span>
-                                </label>
-                            </span>
-                        </div>    
-                    </form>
-                    <form class="channelSetp__channel">
-                        <span class="channel__title">Центр Увидомления</span>
-                        <div class="channel__input">   
-                            <span>
-                                <label class="switch">
-                                    <input type="checkbox">
-                                    <span class="slider round"></span>
-                                </label>
-                            </span>
-                            <span>
-                                <label class="switch">
-                                    <input type="checkbox">
-                                    <span class="slider round"></span>
-                                </label>
-                            </span>
-                            <span>
-                                <label class="switch">
-                                    <input type="checkbox">
-                                    <span class="slider round"></span>
-                                </label>
-                            </span>
-                            <span>
-                                <label class="switch">
-                                    <input type="checkbox">
-                                    <span class="slider round"></span>
-                                </label>
-                            </span>
-                            <span>
-                                <label class="switch">
-                                    <input type="checkbox">
-                                    <span class="slider round"></span>
-                                </label>
-                            </span>
-                        </div>    
-                    </form>
-                </div>
+                    <div class="setup__inputBox" >
+                        <select placeholder="" class="js-example-basic-multipleName" name="states[]" multiple="multiple">
+                            <img src="/assets/img/button/add.svg" width="15px" alt="">
+                            <option value="Андрей">Андрей</option>
+                            <option value="Игорь">Игорь</option>
+                            <option value="Владислав">Владислав</option>
+                            <option value="Александр">Александр</option>
+                            <option value="Николай">Николай</option>
+                            <option value="Дмитрий">Дмитрий</option>
+                            <option value="Томара">Томара</option>
+                        </select>
+                        <select placeholder class="js-example-basic-multipleCar" name="states[]" multiple="multiple">
+                            <option value="0001">0001</option>
+                            <option value="0002">0002</option>
+                            <option value="0003">0003</option>
+                            <option value="0004">0004</option>
+                            <option value="0005">0005</option>
+                            <option value="0006">0006</option>
+                            <option value="0007">0007</option>
+                            <option value="0008">0008</option>
+                            <option value="0009">0009</option>
+                            <option value="0010">0010</option>
+                        </select>
+
+                        <select placeholder class="js-example-basic-multipleCity" name="states[]" multiple="multiple">
+                            <option value="Kiev">Киев</option>
+                            <option value="Kharkov">Харьков</option>
+                            <option value="Lviv">Львов</option>
+                            <option value="Dnepr">Днепр</option>
+                            <option value="Zaporozhye">Запорожье</option>
+                        </select>
+                    </div>
+                </div>    
             </div>
             <div class="ConfigureNotifications__alert">
                 <form class="alert__transaction">
@@ -262,12 +297,12 @@
                             </button>
                         </div>
                         <div id="btnBigSum" class="Sum__btnSaeveAndCancel">
-                            <button class="btnSaeveAndCancel__Saeve">Сахранить</button>
+                            <button class="btnSaeveAndCancel__Saeve">Сохранить </button>
                             <button class="btnSaeveAndCancel__Cancel">Отмена</button>
                         </div>
                     </div>
                     <div class="transaction__alertMe">
-                        <p class="alertMe__title">Предупредить меня на</p>
+                        <p class="alertMe__title">Предупредить сотрудника на</p>
                         <div class="alertMe__meaning ">
                             <p>- UAH</p>
                         </div>
@@ -288,12 +323,12 @@
                             </button>
                         </div>
                         <div id="btnMaxOperetion" class="Sum__btnSaeveAndCancel">
-                            <button class="btnSaeveAndCancel__Saeve">Сахранить</button>
+                            <button class="btnSaeveAndCancel__Saeve">Сохранить </button>
                             <button class="btnSaeveAndCancel__Cancel">Отмена</button>
                         </div>
                     </div>
                     <div class="transaction__alertMe">
-                        <p class="alertMe__title">Предупредить меня на</p>
+                        <p class="alertMe__title">Предупредить сотрудника на</p>
                         <div class="alertMe__meaning ">
                             <p>- UAH</p>
                         </div>
@@ -314,12 +349,12 @@
                             </button>
                         </div>
                         <div id="btnMinOpererion" class="Sum__btnSaeveAndCancel">
-                            <button class="btnSaeveAndCancel__Saeve">Сахранить</button>
+                            <button class="btnSaeveAndCancel__Saeve">Сохранить </button>
                             <button class="btnSaeveAndCancel__Cancel">Отмена</button>
                         </div>
                     </div>
                     <div class="transaction__alertMe">
-                        <p class="alertMe__title">Предупредить меня на</p>
+                        <p class="alertMe__title">Предупредить сотрудника на</p>
                         <div class="alertMe__meaning ">
                             <p>- UAH</p>
                         </div>
@@ -343,7 +378,7 @@
                             </button>
                         </div>
                         <div  class="Sum__btnSaeveAndCancel">
-                            <button class="btnSaeveAndCancel__Saeve">Сахранить</button>
+                            <button class="btnSaeveAndCancel__Saeve">Сохранить </button>
                             <button class="btnSaeveAndCancel__Cancel">Отмена</button>
                         </div>
                     </div>
@@ -359,30 +394,7 @@
                             </span>
                             <div class="transaction__alertMe">
                                 <p class="alertMe__cassets">Cassette 1(Полный)</p>
-                                <p class="alertMe__title">Предупредить меня на</p>
-                                <div class="alertMe__meaning ">
-                                    <p>- купюр</p>
-                                </div>
-                                <div class="alertMe__meaningEdit"> 
-                                    <label class="meaningEdit__lable" >
-                                        <input class="meaningEdit__input" type="number" name="editBigSum" id="editBigSum">
-                                        купюр
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="transaction__Car">
-                            <span id="CashCarOutBottom">
-                                <div class="CashCarOutBoxTop">
-                                    <div class="cashOutBorderBottom"></div>
-                                    <div class="cashOutBodyBottom">
-                                        <p class="cashOutTextBottom">100%</p>
-                                    </div>
-                                </div>
-                            </span>
-                            <div class="transaction__alertMe">
-                                <p class="alertMe__cassets">Cassette 1(Пустой)</p>
-                                <p class="alertMe__title">Предупредить меня на</p>
+                                <p class="alertMe__title">Предупредить сотрудника на</p>
                                 <div class="alertMe__meaning ">
                                     <p>- купюр</p>
                                 </div>
@@ -405,7 +417,7 @@
                             </button>
                         </div>
                         <div  class="Sum__btnSaeveAndCancel">
-                            <button class="btnSaeveAndCancel__Saeve">Сахранить</button>
+                            <button class="btnSaeveAndCancel__Saeve">Сохранить </button>
                             <button class="btnSaeveAndCancel__Cancel">Отмена</button>
                         </div>
                     </div>
@@ -421,30 +433,7 @@
                             </span>
                             <div class="transaction__alertMe">
                                 <p class="alertMe__cassets">Cassette 2(Полный)</p>
-                                <p class="alertMe__title">Предупредить меня на</p>
-                                <div class="alertMe__meaning ">
-                                    <p>- купюр</p>
-                                </div>
-                                <div class="alertMe__meaningEdit"> 
-                                    <label class="meaningEdit__lable" >
-                                        <input class="meaningEdit__input" type="number" name="editBigSum" id="editBigSum">
-                                        купюр
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="transaction__Car">
-                            <span id="CashCarOutBottom">
-                                <div class="CashCarOutBoxTop">
-                                    <div class="cashOutBorderBottom"></div>
-                                    <div class="cashOutBodyBottom">
-                                        <p class="cashOutTextBottom">100%</p>
-                                    </div>
-                                </div>
-                            </span>
-                            <div class="transaction__alertMe">
-                                <p class="alertMe__cassets">Cassette 2(Пустой)</p>
-                                <p class="alertMe__title">Предупредить меня на</p>
+                                <p class="alertMe__title">Предупредить сотрудника на</p>
                                 <div class="alertMe__meaning ">
                                     <p>- купюр</p>
                                 </div>
@@ -467,7 +456,7 @@
                             </button>
                         </div>
                         <div  class="Sum__btnSaeveAndCancel">
-                            <button class="btnSaeveAndCancel__Saeve">Сахранить</button>
+                            <button class="btnSaeveAndCancel__Saeve">Сохранить </button>
                             <button class="btnSaeveAndCancel__Cancel">Отмена</button>
                         </div>
                     </div>
@@ -483,30 +472,7 @@
                             </span>
                             <div class="transaction__alertMe">
                                 <p class="alertMe__cassets">Cassette 3(Полный)</p>
-                                <p class="alertMe__title">Предупредить меня на</p>
-                                <div class="alertMe__meaning ">
-                                    <p>- купюр</p>
-                                </div>
-                                <div class="alertMe__meaningEdit"> 
-                                    <label class="meaningEdit__lable" >
-                                        <input class="meaningEdit__input" type="number" name="editBigSum" id="editBigSum">
-                                        купюр
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="transaction__Car">
-                            <span id="CashCarOutBottom">
-                                <div class="CashCarOutBoxTop">
-                                    <div class="cashOutBorderBottom"></div>
-                                    <div class="cashOutBodyBottom">
-                                        <p class="cashOutTextBottom">100%</p>
-                                    </div>
-                                </div>
-                            </span>
-                            <div class="transaction__alertMe">
-                                <p class="alertMe__cassets">Cassette 3(Пустой)</p>
-                                <p class="alertMe__title">Предупредить меня на</p>
+                                <p class="alertMe__title">Предупредить сотрудника на</p>
                                 <div class="alertMe__meaning ">
                                     <p>- купюр</p>
                                 </div>
@@ -529,7 +495,7 @@
                             </button>
                         </div>
                         <div  class="Sum__btnSaeveAndCancel">
-                            <button class="btnSaeveAndCancel__Saeve">Сахранить</button>
+                            <button class="btnSaeveAndCancel__Saeve">Сохранить </button>
                             <button class="btnSaeveAndCancel__Cancel">Отмена</button>
                         </div>
                     </div>
@@ -545,30 +511,7 @@
                             </span>
                             <div class="transaction__alertMe">
                                 <p class="alertMe__cassets">Cassette 4(Полный)</p>
-                                <p class="alertMe__title">Предупредить меня на</p>
-                                <div class="alertMe__meaning ">
-                                    <p>- купюр</p>
-                                </div>
-                                <div class="alertMe__meaningEdit"> 
-                                    <label class="meaningEdit__lable" >
-                                        <input class="meaningEdit__input" type="number" name="editBigSum" id="editBigSum">
-                                        купюр
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="transaction__Car">
-                            <span id="CashCarOutBottom">
-                                <div class="CashCarOutBoxTop">
-                                    <div class="cashOutBorderBottom"></div>
-                                    <div class="cashOutBodyBottom">
-                                        <p class="cashOutTextBottom">100%</p>
-                                    </div>
-                                </div>
-                            </span>
-                            <div class="transaction__alertMe">
-                                <p class="alertMe__cassets">Cassette 4(Пустой)</p>
-                                <p class="alertMe__title">Предупредить меня на</p>
+                                <p class="alertMe__title">Предупредить сотрудника на</p>
                                 <div class="alertMe__meaning ">
                                     <p>- купюр</p>
                                 </div>
@@ -591,7 +534,7 @@
                             </button>
                         </div>
                         <div  class="Sum__btnSaeveAndCancel">
-                            <button class="btnSaeveAndCancel__Saeve">Сахранить</button>
+                            <button class="btnSaeveAndCancel__Saeve">Сохранить </button>
                             <button class="btnSaeveAndCancel__Cancel">Отмена</button>
                         </div>
                     </div>
@@ -607,30 +550,7 @@
                             </span>
                             <div class="transaction__alertMe">
                                 <p class="alertMe__cassets">Cassette 5(Полный)</p>
-                                <p class="alertMe__title">Предупредить меня на</p>
-                                <div class="alertMe__meaning ">
-                                    <p>- купюр</p>
-                                </div>
-                                <div class="alertMe__meaningEdit"> 
-                                    <label class="meaningEdit__lable" >
-                                        <input class="meaningEdit__input" type="number" name="editBigSum" id="editBigSum">
-                                        купюр
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="transaction__Car">
-                            <span id="CashCarOutBottom">
-                                <div class="CashCarOutBoxTop">
-                                    <div class="cashOutBorderBottom"></div>
-                                    <div class="cashOutBodyBottom">
-                                        <p class="cashOutTextBottom">100%</p>
-                                    </div>
-                                </div>
-                            </span>
-                            <div class="transaction__alertMe">
-                                <p class="alertMe__cassets">Cassette 5(Пустой)</p>
-                                <p class="alertMe__title">Предупредить меня на</p>
+                                <p class="alertMe__title">Предупредить сотрудника на</p>
                                 <div class="alertMe__meaning ">
                                     <p>- купюр</p>
                                 </div>
@@ -653,7 +573,7 @@
                             </button>
                         </div>
                         <div  class="Sum__btnSaeveAndCancel">
-                            <button class="btnSaeveAndCancel__Saeve">Сахранить</button>
+                            <button class="btnSaeveAndCancel__Saeve">Сохранить </button>
                             <button class="btnSaeveAndCancel__Cancel">Отмена</button>
                         </div>
                     </div>
@@ -669,30 +589,7 @@
                             </span>
                             <div class="transaction__alertMe">
                                 <p class="alertMe__cassets">Cassette 6(Полный)</p>
-                                <p class="alertMe__title">Предупредить меня на</p>
-                                <div class="alertMe__meaning ">
-                                    <p>- купюр</p>
-                                </div>
-                                <div class="alertMe__meaningEdit"> 
-                                    <label class="meaningEdit__lable" >
-                                        <input class="meaningEdit__input" type="number" name="editBigSum" id="editBigSum">
-                                        купюр
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="transaction__Car">
-                            <span id="CashCarOutBottom">
-                                <div class="CashCarOutBoxTop">
-                                    <div class="cashOutBorderBottom"></div>
-                                    <div class="cashOutBodyBottom">
-                                        <p class="cashOutTextBottom">100%</p>
-                                    </div>
-                                </div>
-                            </span>
-                            <div class="transaction__alertMe">
-                                <p class="alertMe__cassets">Cassette 6(Пустой)</p>
-                                <p class="alertMe__title">Предупредить меня на</p>
+                                <p class="alertMe__title">Предупредить сотрудника на</p>
                                 <div class="alertMe__meaning ">
                                     <p>- купюр</p>
                                 </div>
@@ -715,7 +612,7 @@
                             </button>
                         </div>
                         <div  class="Sum__btnSaeveAndCancel">
-                            <button class="btnSaeveAndCancel__Saeve">Сахранить</button>
+                            <button class="btnSaeveAndCancel__Saeve">Сохранить </button>
                             <button class="btnSaeveAndCancel__Cancel">Отмена</button>
                         </div>
                     </div>
@@ -731,30 +628,7 @@
                             </span>
                             <div class="transaction__alertMe">
                                 <p class="alertMe__cassets">Cassette 1(Полный)</p>
-                                <p class="alertMe__title">Предупредить меня на</p>
-                                <div class="alertMe__meaning ">
-                                    <p>- купюр</p>
-                                </div>
-                                <div class="alertMe__meaningEdit"> 
-                                    <label class="meaningEdit__lable" >
-                                        <input class="meaningEdit__input" type="number" name="editBigSum" id="editBigSum">
-                                        купюр
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="transaction__Car">
-                            <span id="CashCarOutBottom">
-                                <div class="CashCarOutBoxTop">
-                                    <div class="cashOutBorderBottom"></div>
-                                    <div class="cashOutBodyBottom">
-                                        <p class="cashOutTextBottom">100%</p>
-                                    </div>
-                                </div>
-                            </span>
-                            <div class="transaction__alertMe">
-                                <p class="alertMe__cassets">Cassette 1(Пустой)</p>
-                                <p class="alertMe__title">Предупредить меня на</p>
+                                <p class="alertMe__title">Предупредить сотрудника на</p>
                                 <div class="alertMe__meaning ">
                                     <p>- купюр</p>
                                 </div>
@@ -777,5 +651,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>    
     <script src="/assets/js/filter/filter.js"></script> 
     <script src="/assets/js/clickOpen/clickOpenNotification.js"></script>
+    <script src="/assets/js/filter/sad.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </body>
 </html>

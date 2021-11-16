@@ -346,7 +346,7 @@ main {
 }
 
 #Btn {
-  background: none;
+  width: 110%;
 }
 #Btn img {
   width: 25px;

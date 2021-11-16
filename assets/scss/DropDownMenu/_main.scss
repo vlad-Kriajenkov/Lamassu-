@@ -82,6 +82,8 @@
 .Box{
     display: flex; 
     &__imgCar {
+        width: 260px;
+        height: 350px;
         img{
             width: 260px;
             height: 350px;
@@ -450,6 +452,7 @@
             height:20px;
             margin: 5px 0px 10px 0px;
             border-radius: 6px;
+            background: rgb(250, 233, 211);
             
         }
     }
