@@ -45,7 +45,7 @@ main{
         display: flex;
         align-items: flex-end;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 }
 .heading {
@@ -151,7 +151,8 @@ main{
         margin-right: 20px;
     }
     &__balance {
-        margin-right: 20px;
+        margin-right: 153px;
+            margin-top: 35px;
     }
 }
 .transaction {
