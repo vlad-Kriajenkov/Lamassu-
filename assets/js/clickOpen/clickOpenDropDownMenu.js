@@ -14,10 +14,10 @@ document.getElementById('NameAndAddress').onclick = function() {
 
 
   document.getElementById('APICISBtn').onclick = function() {
-    if(document.getElementById('APICISInput').classList.contains('activeShow')) {
-        document.getElementById('APICISInput').classList.remove('activeShow');
+    if(document.getElementById('APICISInput').classList.contains('activeShowApi')) {
+        document.getElementById('APICISInput').classList.remove('activeShowApi');
     }else
-    document.getElementById('APICISInput').classList.add('activeShow');
+    document.getElementById('APICISInput').classList.add('activeShowApi');
   }
 
   document.getElementById('SpecificationBtn').onclick = function() {

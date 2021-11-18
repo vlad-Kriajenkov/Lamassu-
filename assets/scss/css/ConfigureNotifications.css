@@ -326,7 +326,7 @@ main {
 .transaction__Sum {
   display: flex;
   align-items: center;
-  margin: 15px 0px 0px 0px;
+  margin: 15px 0px 5px 0px;
 }
 .transaction__alertMe {
   margin: 15px 0px 0px 0px;

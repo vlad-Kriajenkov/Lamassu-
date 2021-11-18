@@ -30,8 +30,8 @@
                     <button onclick="shownotification()" class="addMashineAndnotification__buttonnotification"></button>
                     <div id="windowNotification" class="windowNotification">
                         <div class="windowNotification__header">
-                            <p class="header__title">Оповещание</p>
-                            <button  class="header__buttonShowAll">Просомтреть все</button>
+                            <p class="header__title">Оповещения</p>
+                            <button  class="header__buttonShowAll">Просомотреть все</button>
                             <button    class="header__buttonCloseAll">Скрыть все</button>
                             <button class="header__bTnCloseNotification" onclick="shownotification()">
                                 <img class="header__imgNotification" src="/assets/img/notificationblack.svg" alt="notification">
@@ -132,7 +132,7 @@
                         </div>  
                         <div class="windowNotification__shippingbox">
                             <button id="shippingboxbtn" class="shippingbox__button" >
-                                Отправить оповещание
+                                Отправить оповещение
                             </button>
                             <div id="formShippin" class="shippingbox__formShippin">
                                 <form class="formShippin__formsSend">
@@ -177,6 +177,10 @@
                                     <h2 class="value__title">КУРС EUR</h2>
                                     <p class="value__meaning">26.00</p>
                                 </div>
+                                <div class="UpdateAndClosed__value">
+                                    <h2 class="value__title">Операций за день</h2>
+                                    <p class="value__meaning">425</p>
+                                </div>
                             </div>
                             <button class="UpdateAndClosed__buttonClosed">
                                 <img src="/assets/img/button/cancel.svg"  width="18px" alt="Closed">
@@ -186,7 +190,7 @@
                             <div class="InfoСar__InfoCarLocations">
                                 <div class="Box">
                                     <div class="Box__imgCar">
-                                        <img src="/assets/img/CarFoto/CarFoto.jfif" width="260px" height="350px" alt="CarFoto">
+                                        <img src="/assets/img/CarFoto/CarFoto.jfif" width="260px" height="350px" alt="Фотография машины">
                                     </div>
                                     <div class="BoxNameCarAndLoctions">
                                         <div class="Box__NameCar"> 
@@ -202,7 +206,10 @@
                                                 <p class="locations__meaning">Киев. Антоновича, 176. Ocean Plaza</p>
                                             </div>
                                         </div>
-                                        
+                                        <div class="Box__OfficialLocation">
+                                            <h1 class="locations__title">Официальный адрес:</h1>
+                                            <p class="locations__meaning">вфыавывыфвфывфы</p>
+                                        </div>
                                     </div>
                                 </div>
     
@@ -228,34 +235,80 @@
                                     <div class="Edit__NameAndAddress">
                                         <button id="NameAndAddress" class="NameAndAddress__button styleBTNBig"><img src="/assets/img/edit/edit.svg" alt="Увше"> Изменить Имя и Адрес</button>
                                         <div id="NameAndAddressbox" class="NameAndAddress__box">
-                                            <form class="box__nameCar">
-                                                <label class="nameCar__input">
-                                                    Официальное Имя Машины
-                                                    <input type="text" name="Long" id="Long">
-                                                </label>    
-                                                <button class="nameCar__button styleBTN" >Редактировать оф. Имя</button>
-                                            </form>
-                                            <form class="box__editAdrres">    
-                                                <label class="editAdrres__input">
-                                                    Официальный адрес
-                                                    <input type="text" name="Width" id="Width">
-                                                </label>   
-                                                <div class="editAdrres__select">
-                                                    <div class="dropdown">
-                                                        <div class="select">
-                                                            <span>Сегмент местоположения</span>
-                                                            <i class="fa fa-chevron-left"></i>
-                                                            <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
+                                            <div class="NameAndAddress__form">
+                                                <div class="box__title">Официальные данные</div>
+                                                <form class="box__nameCar">
+                                                    <label class="nameCar__input">
+                                                        Официальное Имя Машины
+                                                        <input type="text" name="Long" id="Long">
+                                                    </label>    
+                                                    <button class="nameCar__button styleBTN" >Редактировать оф. Имя</button>
+                                                </form>
+                                                <form class="box__editAdrres">    
+                                                    <label class="editAdrres__input">
+                                                        Официальный адрес
+                                                        <input type="text" name="Width" id="Width">
+                                                    </label>   
+                                                    <div class="editAdrres__select">
+                                                        <div class="dropdown">
+                                                            <div class="select">
+                                                                <span>Сегмент местоположения</span>
+                                                                <i class="fa fa-chevron-left"></i>
+                                                                <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
+                                                            </div>
+                                                            <input type="hidden" name="gender">
+                                                            <ul class="dropdown-menu">
+                                                                <li id="MALL">ТРЦ</li>
+                                                                <li id="Hotels">Отели</li>
+                                                            </ul>
+                                                        </div>   
+                                                    </div>
+                                                    <button class="editAdrres__button styleBTN" >Редактировать оф. адресс</button>
+                                                </form>
+                                            </div>
+                                            <div>
+                                                <div class="box__title">Внутренние данные</div>
+                                                <form class="box__nameCar">
+                                                    <label class="nameCar__input">
+                                                        Внутренние Имя Машины
+                                                        <input type="text" name="Long" id="Long">
+                                                    </label>    
+                                                    <button class="nameCar__button styleBTN" >Редактировать  Имя</button>
+                                                </form>
+                                                <form class="box__editAdrres">    
+                                                    <label class="editAdrres__input">
+                                                        Внутренние адрес
+                                                        <input type="text" name="Width" id="Width">
+                                                    </label>   
+                                                    <div class="editAdrres__select">
+                                                        <div class="dropdown">
+                                                            <div class="select">
+                                                                <span>Сегмент местоположения</span>
+                                                                <i class="fa fa-chevron-left"></i>
+                                                                <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
+                                                            </div>
+                                                            <input type="hidden" name="gender">
+                                                            <ul class="dropdown-menu">
+                                                                <li id="MALL">ТРЦ</li>
+                                                                <li id="Hotels">Отели</li>
+                                                            </ul>
                                                         </div>
-                                                        <input type="hidden" name="gender">
-                                                        <ul class="dropdown-menu">
-                                                            <li id="MALL">ТРЦ</li>
-                                                            <li id="Hotels">Отели</li>
-                                                        </ul>
-                                                    </div>   
-                                                </div>
-                                                <button class="editAdrres__button styleBTN" >Редактировать оф. адресс</button>
-                                            </form>
+                                                        <div class="dropdown">
+                                                            <div class="select">
+                                                                <span>Город</span>
+                                                                <i class="fa fa-chevron-left"></i>
+                                                                <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
+                                                            </div>
+                                                            <input type="hidden" name="gender">
+                                                            <ul class="dropdown-menu">
+                                                                <li id="MALL">Киев</li>
+                                                                <li id="Hotels">Харьков</li>
+                                                            </ul>
+                                                        </div>      
+                                                    </div>
+                                                    <button class="editAdrres__button styleBTN" >Редактировать  адресс</button>
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>                              
                                 </div>

@@ -12,9 +12,9 @@
 }
 .modal-content {
     background-color: #fefefe;
-    // margin: 0px auto;
     padding: 5px;
-    
+    min-height: 100%;
+    overflow-y: auto;
     width: 98%;
     margin: 10px;
 

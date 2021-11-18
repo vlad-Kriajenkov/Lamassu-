@@ -82,8 +82,6 @@
 .Box{
     display: flex; 
     &__imgCar {
-        width: 260px;
-        height: 350px;
         img{
             width: 260px;
             height: 350px;
@@ -140,8 +138,7 @@
     }
 }
 .Box{
-    &__Edit{
-        display: flex;
+    &__Edit{ 
     }
 }
 .Geolocation {
@@ -162,8 +159,8 @@
         visibility: hidden;
         border-radius: 6px;
         box-shadow: 0px 2px 20px rgb(0 0 0 / 25%);
-        width: 100%;
-        transition: opacity 1s linear, visibility 1s linear, max-height 1s linear, padding 1s linear ;
+        // width: 0px;
+        transition:  opacity 1s linear, visibility 1s linear, max-height 1s linear, padding 1s linear ;
     }
 }
 .activeShow{
@@ -171,7 +168,9 @@
     opacity: 1;
     max-height: 100%;
     padding: 10px;
+    // width: 250px;
 }   
+
 
 .LongAndWidth {
     &__box{
@@ -186,7 +185,7 @@
             border-radius: 5px;
             height: 25px;
             margin-top: 5px;
-            width:180px;
+            width: 100%;;
         }
     }
 
@@ -197,7 +196,7 @@
             border-radius: 5px;
             height: 25px;
             margin-top: 5px;
-            width:180px;
+            width: 100%;
         }
     }
     &__button{
@@ -283,7 +282,7 @@
 
     &__box {
         display: flex;
-        flex-direction:column;
+        flex-direction:row;
         text-align: center;
         opacity: 0;
         height: 0px;
@@ -294,14 +293,24 @@
         width: 100%;
         transition: opacity 1s linear, visibility 1s linear, height 1s linear, padding 1s linear ;
     }
+    &__form{
+        margin-right: 20px;
+    }
 }
 .activeShowNameAndAddress{
     visibility: visible;
     opacity: 1;
-    height: 260px;
+    height: 320px;
     padding: 10px;
 }
 .box {
+    &__title{
+        @extend %TextSubparagraphs;
+        font-size: 14px;
+        text-align: left;
+        margin-bottom: 10px;
+
+    }
 
     &__nameCar {
         display: flex;
@@ -477,7 +486,7 @@
     height: 115px;
     padding: 10px;
 }  
-.activeShow{
+.activeShowApi{
     visibility: visible;
     opacity: 1;
     max-height: 100%;

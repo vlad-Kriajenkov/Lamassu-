@@ -164,7 +164,7 @@ header {
   color: #1b2559;
 }
 
-.warningInfo__infoText, .truckEmpty__infoText, .weHaveInfo__buttonCloseAll, .weHaveInfo__buttonShowAll, .controlInfo__title, .InfoCarAll__APICISInput label, .ping__title, .status__title, .locations__title, .value__title {
+.warningInfo__infoText, .truckEmpty__infoText, .weHaveInfo__buttonCloseAll, .weHaveInfo__buttonShowAll, .controlInfo__title, .InfoCarAll__APICISInput label, .box__title, .ping__title, .status__title, .locations__title, .value__title {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
@@ -226,10 +226,6 @@ header {
 .Box {
   display: flex;
 }
-.Box__imgCar {
-  width: 260px;
-  height: 350px;
-}
 .Box__imgCar img {
   width: 260px;
   height: 350px;
@@ -260,10 +256,6 @@ header {
   margin-right: 5px;
 }
 
-.Box__Edit {
-  display: flex;
-}
-
 .Geolocation__button img {
   width: 20px;
   margin-right: 5px;
@@ -276,7 +268,6 @@ header {
   visibility: hidden;
   border-radius: 6px;
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
-  width: 100%;
   transition: opacity 1s linear, visibility 1s linear, max-height 1s linear, padding 1s linear;
 }
 
@@ -299,14 +290,14 @@ header {
   border-radius: 5px;
   height: 25px;
   margin-top: 5px;
-  width: 180px;
+  width: 100%;
 }
 .LongAndWidth__width input {
   border: 1px solid black;
   border-radius: 5px;
   height: 25px;
   margin-top: 5px;
-  width: 180px;
+  width: 100%;
 }
 .LongAndWidth__button {
   margin: 10px auto;
@@ -357,7 +348,7 @@ header {
 }
 .NameAndAddress__box {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   text-align: center;
   opacity: 0;
   height: 0px;
@@ -368,14 +359,22 @@ header {
   width: 100%;
   transition: opacity 1s linear, visibility 1s linear, height 1s linear, padding 1s linear;
 }
+.NameAndAddress__form {
+  margin-right: 20px;
+}
 
 .activeShowNameAndAddress {
   visibility: visible;
   opacity: 1;
-  height: 260px;
+  height: 320px;
   padding: 10px;
 }
 
+.box__title {
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 10px;
+}
 .box__nameCar {
   display: flex;
   flex-direction: column;
@@ -493,7 +492,7 @@ header {
   padding: 10px;
 }
 
-.activeShow {
+.activeShowApi {
   visibility: visible;
   opacity: 1;
   max-height: 100%;
@@ -539,163 +538,12 @@ header {
   margin: 5px 0px 5px 0px;
 }
 
-.Filter__ButtonSearch, .Filter__Car, .Filter__operations, .Filter__status, .Filter__amountInCurrency, .Filter__Volute, .Filter__Data {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 11px;
-  color: silver;
-}
-
-.select__smaller input::-moz-placeholder, .select__more input::-moz-placeholder, .select__rangeSum input::-moz-placeholder, .select__volute input::-moz-placeholder {
+.selectLNG span, .select span {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 800;
   font-size: 12px;
   color: #fff;
-}
-
-.select__smaller input:-ms-input-placeholder, .select__more input:-ms-input-placeholder, .select__rangeSum input:-ms-input-placeholder, .select__volute input:-ms-input-placeholder {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 800;
-  font-size: 12px;
-  color: #fff;
-}
-
-.selectLNG span, .dropdownСar .selectCar input, .select span, .select__smaller input::placeholder, .select__smaller input, .select__more input::placeholder, .select__more input, .select__rangeSum input::placeholder, .select__rangeSum input, .select__volute input::placeholder, .select__range input {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 800;
-  font-size: 12px;
-  color: #fff;
-}
-
-.Filter {
-  display: flex;
-  flex-direction: column;
-}
-.Filter__summTransaction {
-  padding: 5px;
-}
-.Filter__amountInCurrency {
-  position: relative;
-}
-.Filter__Car p {
-  margin-bottom: 5px;
-}
-.Filter__ButtonSearch {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 35px;
-  margin: 0px auto;
-  color: #da6e00;
-  background-color: #fff;
-  border-radius: 2px;
-}
-.Filter__ButtonSearch img {
-  margin-right: 10px;
-}
-.Filter__ButtonSearch:hover {
-  box-shadow: 0 0 8px #cccccc;
-}
-
-.select__mounth {
-  visibility: hidden;
-  position: absolute;
-  top: 20px;
-  left: 210px;
-  display: flex;
-  justify-content: space-between;
-  width: 64%;
-  height: 32px;
-}
-.select__range {
-  visibility: hidden;
-  position: absolute;
-  top: 30.5px;
-  left: 210px;
-  display: flex;
-  justify-content: space-between;
-  width: 64%;
-}
-.select__range input {
-  width: 180px;
-  height: 32px;
-  border-radius: 2px;
-  box-shadow: 0 0 2px #cccccc;
-  padding: 5px;
-  background-color: #da6e00;
-}
-.select__volute {
-  visibility: hidden;
-  position: absolute;
-  top: 22px;
-  left: 200px;
-}
-.select__volute input {
-  width: 180px;
-  height: 32px;
-  border-radius: 2px;
-  box-shadow: 0 0 2px #cccccc;
-  padding: 5px;
-  background-color: #da6e00;
-  color: #fff;
-}
-.select__rangeSum {
-  visibility: hidden;
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  top: 22px;
-  left: 200px;
-  width: 66%;
-}
-.select__rangeSum input {
-  width: 180px;
-  height: 31px;
-  border-radius: 2px;
-  box-shadow: 0 0 2px #cccccc;
-  padding: 5px;
-  background-color: #da6e00;
-}
-.select__more {
-  visibility: hidden;
-  position: absolute;
-  top: 22px;
-  left: 200px;
-}
-.select__more input {
-  width: 180px;
-  height: 31px;
-  border-radius: 2px;
-  box-shadow: 0 0 2px #cccccc;
-  padding: 5px;
-  background-color: #da6e00;
-}
-.select__smaller {
-  visibility: hidden;
-  position: absolute;
-  top: 22px;
-  left: 200px;
-}
-.select__smaller input {
-  width: 180px;
-  height: 31px;
-  border-radius: 2px;
-  box-shadow: 0 0 2px #cccccc;
-  padding: 5px;
-  background-color: #da6e00;
-}
-.select__smaller.active,
-.select__more.active,
-.select__rangeSum.active,
-.select__volute.active,
-.select__mounth.active,
-.select__range.active {
-  visibility: visible;
 }
 
 span.msg,
@@ -723,6 +571,7 @@ span.choose {
   font-size: 14px;
   color: #fff;
   text-align: left;
+  margin-bottom: 5px;
 }
 
 .dropdown .select {
@@ -796,107 +645,6 @@ span.choose {
   font-size: 10px;
 }
 
-/* Стиль Фильтр Машины*/
-.dropdownСar {
-  width: 180px;
-  display: inline-block;
-  background-color: #da6e00;
-  border-radius: 2px;
-  box-shadow: 0 0 2px #cccccc;
-  transition: all 0.5s ease;
-  position: relative;
-  font-size: 10px;
-  color: #fff;
-  height: 100%;
-  text-align: left;
-}
-
-.dropdownСar .selectCar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  padding: 10px;
-}
-
-.dropdownСar .selectCar input {
-  width: 85px;
-  margin-left: 5px;
-}
-
-.dropdownСar .selectCar > i {
-  font-size: 13px;
-  color: #888;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  float: right;
-  line-height: 20px;
-}
-
-.dropdownСar:hover {
-  box-shadow: 0 0 4px #cccccc;
-}
-
-.dropdownСar:active {
-  background-color: #f8f8f8;
-}
-
-.dropdownСar.active:hover,
-.dropdownСar.active {
-  box-shadow: 0 0 4px #cccccc;
-  border-radius: 2px 2px 0 0;
-}
-
-.dropdownСar.active .selectCar > i {
-  transform: rotate(-90deg);
-}
-
-.dropdownСar .dropdown-menuCar {
-  position: absolute;
-  background-color: #da6e00;
-  width: 100%;
-  left: 0;
-  margin-top: 1px;
-  box-shadow: 0 1px 2px #cccccc;
-  border-radius: 0 1px 2px 2px;
-  overflow: hidden;
-  display: none;
-  max-height: 144px;
-  overflow-y: auto;
-  z-index: 9;
-}
-
-.dropdownСar .dropdown-menuCar li {
-  padding: 10px;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
-}
-.dropdownСar .dropdown-menuCar li label {
-  display: flex;
-  align-items: center;
-}
-.dropdownСar .dropdown-menuCar li label input {
-  margin-left: 10px;
-}
-
-.dropdownСar .dropdown-menuCar {
-  padding: 0;
-  list-style: none;
-}
-
-.dropdownСar .dropdown-menuCar li:hover {
-  background-color: #b35a02;
-}
-
-.dropdownСar .dropdown-menuCar li:active {
-  background-color: #b35a02;
-}
-
-.selectCar input {
-  background-color: #da6e00;
-}
-
-/* end*/
 /*Стиль Leng*/
 .dropdownLNG {
   width: 66px;
@@ -1679,6 +1427,8 @@ input:checked + .slider:before {
 .modal-content {
   background-color: #fefefe;
   padding: 5px;
+  min-height: 100%;
+  overflow-y: auto;
   width: 98%;
   margin: 10px;
 }
