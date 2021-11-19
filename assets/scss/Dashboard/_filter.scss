@@ -171,95 +171,60 @@
       background-color: #e2e2e2
   }
 
-/* Стиль Фильтр Машины*/
-.dropdownСar {
-    width: 200px;
-    display: inline-block;
-    background-color: #fff;
-    border-radius: 2px;
+.filterCarBox{
+    margin: 5px 0px 0px 3px;
+}
+
+  .select2{
+    margin-bottom: 10px !important;
+}
+.select2-container--default.select2-container--focus .select2-selection--multiple{
+    border: none !important;
     box-shadow: 0 0 2px rgb(204, 204, 204);
-    transition: all .5s ease;
-    position: relative;
+}
+ 
+  .select2-container--default .select2-selection--multiple{
+    border: none !important;
+    box-shadow: 0 0 2px rgb(204, 204, 204);
+  }
+  
+  .select2-search__field{
+    font-family: 'Montserrat' !important;
+    font-style: normal;
+    font-weight: 100;
+    color:#da6e00;
+    font-size: 10px !important;
+    margin-top: 7px !important;
+  }
+  .select2-search__field::placeholder{
+      color: #da6e00;
+  }
+  
+  .select2-results__options{
+    background-color: #ffff;
+  }
+  .select2-results__option.select2-results__option--selectable{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 100;
     font-size: 10px;
     color: #da6e00;
-    text-align: left;
-    height: 34px;
-    margin-top: 5px;
-    margin-right: 3px;
-    @extend %TextFilter;
-}
-  .dropdownСar .selectCar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    padding: 10px
-    
   }
-  .dropdownСar .selectCar input{
-    @extend %TextFilter;
-      width: 85px;
-      margin-left: 5px;
+  .select2-selection__choice__display{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 10px;
+    color: #da6e00;
   }
-  .dropdownСar .selectCar > i {
-      font-size: 13px;
-      color: #888;
-      cursor: pointer;
-      transition: all .3s ease-in-out;
-      float: right;
-      line-height: 20px
+  .select2-container--default .select2-selection--multiple .select2-selection__choice{
+      background-color:#fff !important;
   }
-  .dropdownСar:hover {
-      box-shadow: 0 0 4px rgb(204, 204, 204)
+  .select2-results__option.select2-results__message{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 10px;
+    color: #da6e00;
   }
-  .dropdownСar:active {
-      background-color: #f8f8f8
-  }
-  .dropdownСar.active:hover,
-  .dropdownСar.active {
-      box-shadow: 0 0 4px rgb(204, 204, 204);
-      border-radius: 2px 2px 0 0;
-    //   background-color: #f8f8f8
-  }
-  .dropdownСar.active .selectCar > i {
-      transform: rotate(-90deg)
-  }
-  .dropdownСar .dropdown-menuCar {
-      position: absolute;
-      background-color: #fff;
-      width: 100%;
-      left: 0;
-      margin-top: 1px;
-      box-shadow: 0 1px 2px rgb(204, 204, 204);
-      border-radius: 0 1px 2px 2px;
-      overflow: hidden;
-      display: none;
-      max-height: 144px;
-      overflow-y: auto;
-      z-index: 9
-  }
-  .dropdownСar .dropdown-menuCar li {
-      padding: 10px;
-      transition: all .2s ease-in-out;
-      cursor: pointer;
-      label{
-        display:flex;
-        align-items:center;
-        input{
-            margin-left: 10px;
-        }
-      }
-  } 
-  .dropdownСar .dropdown-menuCar {
-      padding: 0;
-      list-style: none
-  }
-  .dropdownСar .dropdown-menuCar li:hover {
-      background-color: #fff
-  }
-  .dropdownСar .dropdown-menuCar li:active {
-      background-color: #fff
-  }
-  .selectCar input{
-      background-color:#fff;
-  }
+

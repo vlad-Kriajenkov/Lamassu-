@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/scss/css/Configure-HistoryofMarginChanges.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <title>Document</title>
 </head>
 <body>
@@ -194,56 +195,19 @@
                                 </div>
                                 <div class="Filter__Car">
                                     <p>Машины</p>
-                                    <div class="dropdownСar">
-                                        <div class="selectCar">
-                                            <span>Все</span>
-                                            <input type="search" name="searchDropdownСar" id="searchDropdownСar">
-                                            <i class="fa fa-chevron-left"></i>
-                                            <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
-                                        </div>
-                                        <input type="hidden" name="gender">
-                                        <ul class="dropdown-menuCar">
-                                            <li id="allCar">
-                                                Все
-                                            </li>
-                                            <li id="OneCar">
-                                                <label>
-                                                    0001
-                                                    <input type="checkbox" name="Car001" id="Car001">
-                                                </label>
-                                            </li>
-                                            <li id="OneCar">
-                                                <label>
-                                                    0002
-                                                    <input type="checkbox" name="Car002" id="Car002">
-                                                </label>
-                                            </li>
-                                            <li id="OneCar">
-                                                <label>
-                                                    0003
-                                                    <input type="checkbox" name="Car003" id="Car003">
-                                                </label>
-                                            </li>
-                                            <li id="OneCar">
-                                                <label>
-                                                    0004
-                                                    <input type="checkbox" name="Car004" id="Car004">
-                                                </label>
-                                            </li>
-                                            <li id="OneCar">
-                                                <label>
-                                                    0005
-                                                    <input type="checkbox" name="Car005" id="Car005">
-                                                </label>
-                                            </li>
-                                            <li id="OneCar">
-                                                <label>
-                                                    0006
-                                                    <input type="checkbox" name="Car006" id="Car006">
-                                                </label>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    <select placeholder class="filterCarOrenge"  gname="states[]" multiple="multiple">
+                                        <option value="allCar" selected>Все Машины</option>
+                                        <option value="0001">0001</option>
+                                        <option value="0002">0002</option>
+                                        <option value="0003">0003</option>
+                                        <option value="0004">0004</option>
+                                        <option value="0005">0005</option>
+                                        <option value="0006">0006</option>
+                                        <option value="0007">0007</option> 
+                                        <option value="0008">0008</option>
+                                        <option value="0009">0009</option>
+                                        <option value="0010">0010</option>
+                                    </select>
                                 </div>    
                                 <button class="Filter__ButtonSearch"> <img src="/assets/img/search/search.svg" alt="search"> Поиск</button>
                             </form>
@@ -279,5 +243,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>    
     <script src="/assets/js/filter/filter.js"></script> 
     <script src="/assets/js/clickOpen/clickOpenNotification.js"></script>
+    <script src="/assets/js/filter/sad.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </body>
 </html>

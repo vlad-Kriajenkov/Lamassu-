@@ -555,12 +555,113 @@ header {
   display: none;
 }
 
-.dropdownСar .selectCar input, .dropdownСar {
+.Filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 500px;
+  margin: 0px auto;
+}
+
+.filterBox label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+  border-radius: 2px;
+  box-shadow: 0 0 2px #cccccc;
+  height: 100%;
+  padding: 9px;
   font-family: "Montserrat";
   font-style: normal;
-  font-weight: 700;
-  font-size: 12px;
-  color: #fff;
+  font-weight: 100;
+  font-size: 10px;
+  color: #da6e00;
+}
+
+.filterBox label input::-moz-placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: #da6e00;
+}
+
+.filterBox label input:-ms-input-placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: #da6e00;
+}
+
+.filterBox label input::placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: #da6e00;
+}
+
+.filterBox span {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 200px;
+  border-radius: 2px;
+  box-shadow: 0 0 2px #cccccc;
+  height: 100%;
+}
+
+.filterBox span input::-moz-placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: #da6e00;
+}
+
+.filterBox span input:-ms-input-placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: #da6e00;
+}
+
+.filterBox span input::placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  color: #da6e00;
+}
+
+.filterBox span input {
+  width: 200px;
+  padding: 10px;
+}
+
+.select span {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+}
+
+.dropdown .dropdown-menu li {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+}
+
+.filterBox {
+  margin: 5px;
+}
+
+.dropdown {
+  margin: 5px;
 }
 
 span.msg,
@@ -660,57 +761,50 @@ span.choose {
   background-color: #e2e2e2;
 }
 
-.filterBox label {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 200px;
-  border-radius: 2px;
+.filterCarBox {
+  margin: 5px 0px 0px 3px;
+}
+
+.select2 {
+  margin-bottom: 10px !important;
+}
+
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+  border: none !important;
   box-shadow: 0 0 2px #cccccc;
-  height: 100%;
-  padding: 9px;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
-  color: #da6e00;
 }
 
-.filterBox label input::-moz-placeholder {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
-  color: #da6e00;
-}
-
-.filterBox label input:-ms-input-placeholder {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
-  color: #da6e00;
-}
-
-.filterBox label input::placeholder {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
-  color: #da6e00;
-}
-
-.filterBox span {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 200px;
-  border-radius: 2px;
+.select2-container--default .select2-selection--multiple {
+  border: none !important;
   box-shadow: 0 0 2px #cccccc;
-  height: 32px;
 }
 
-.filterBox span input::-moz-placeholder {
+.select2-search__field {
+  font-family: "Montserrat" !important;
+  font-style: normal;
+  font-weight: 100;
+  color: #da6e00;
+  font-size: 10px !important;
+  margin-top: 7px !important;
+}
+
+.select2-search__field::-moz-placeholder {
+  color: #da6e00;
+}
+
+.select2-search__field:-ms-input-placeholder {
+  color: #da6e00;
+}
+
+.select2-search__field::placeholder {
+  color: #da6e00;
+}
+
+.select2-results__options {
+  background-color: #ffff;
+}
+
+.select2-results__option.select2-results__option--selectable {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
@@ -718,7 +812,7 @@ span.choose {
   color: #da6e00;
 }
 
-.filterBox span input:-ms-input-placeholder {
+.select2-selection__choice__display {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
@@ -726,138 +820,16 @@ span.choose {
   color: #da6e00;
 }
 
-.filterBox span input::placeholder {
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+  background-color: #fff !important;
+}
+
+.select2-results__option.select2-results__message {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
   font-size: 10px;
   color: #da6e00;
-}
-
-.filterBox span input {
-  width: 200px;
-  padding: 10px;
-  height: 32px;
-}
-
-.select span {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
-}
-
-.dropdown .dropdown-menu li {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 10px;
-}
-
-/* Стиль Фильтр Машины*/
-.dropdownСar {
-  width: 200px;
-  display: inline-block;
-  background-color: #fff;
-  border-radius: 2px;
-  box-shadow: 0 0 2px #cccccc;
-  transition: all 0.5s ease;
-  position: relative;
-  font-size: 10px;
-  color: #da6e00;
-  text-align: left;
-  height: 32px;
-}
-
-.dropdownСar .selectCar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  padding: 10px;
-}
-
-.dropdownСar .selectCar input {
-  width: 85px;
-  margin-left: 5px;
-}
-
-.dropdownСar .selectCar > i {
-  font-size: 13px;
-  color: #888;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  float: right;
-  line-height: 20px;
-}
-
-.dropdownСar:hover {
-  box-shadow: 0 0 4px #cccccc;
-}
-
-.dropdownСar:active {
-  background-color: #f8f8f8;
-}
-
-.dropdownСar.active:hover,
-.dropdownСar.active {
-  box-shadow: 0 0 4px #cccccc;
-  border-radius: 2px 2px 0 0;
-}
-
-.dropdownСar.active .selectCar > i {
-  transform: rotate(-90deg);
-}
-
-.dropdownСar .dropdown-menuCar {
-  position: absolute;
-  background-color: #fff;
-  width: 100%;
-  left: 0;
-  margin-top: 1px;
-  box-shadow: 0 1px 2px #cccccc;
-  border-radius: 0 1px 2px 2px;
-  overflow: hidden;
-  display: none;
-  max-height: 144px;
-  overflow-y: auto;
-  z-index: 9;
-}
-
-.dropdownСar .dropdown-menuCar li {
-  padding: 10px;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
-}
-.dropdownСar .dropdown-menuCar li label {
-  display: flex;
-  align-items: center;
-}
-.dropdownСar .dropdown-menuCar li label input {
-  margin-left: 10px;
-}
-
-.dropdownСar .dropdown-menuCar {
-  padding: 0;
-  list-style: none;
-}
-
-.dropdownСar .dropdown-menuCar li:hover {
-  background-color: #fff;
-}
-
-.dropdownСar .dropdown-menuCar li:active {
-  background-color: #fff;
-}
-
-.selectCar input {
-  background-color: #fff;
-}
-
-.filterBox,
-.dropdown,
-.dropdownСar {
-  margin: 5px;
 }
 
 .modal {
@@ -880,6 +852,22 @@ span.choose {
   border-radius: 100px 0px 100px 0px;
   border: 3px solid #da6e00;
   width: 80%;
+}
+
+.maodal-btn {
+  visibility: visible;
+  border-radius: 5px;
+  background-color: #f2e3d4;
+  padding: 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+  margin: 10px auto 0px auto;
 }
 
 .close {

@@ -1,20 +1,46 @@
+
+
+/*Configure-Notifications filter */
 $(document).ready(function() {
-    $('.js-example-basic-multipleName').select2({
+    $('.ConfigureNotificationsName').select2({
         width: "330px",
         placeholder: 'Выберите сотрудника для уведомлений'
     });
 });
 
 $(document).ready(function() {
-    $('.js-example-basic-multipleCar').select2({
+    $('.ConfigureNotificationsCar').select2({
         width: "330px",
         placeholder: 'Назначить сотруднику мишину для контроля'
     }); 
 });
 
 $(document).ready(function() {
-    $('.js-example-basic-multipleCity').select2({
+    $('.ConfigureNotificationsCity').select2({
         width: "330px",
         placeholder: 'Назначить сотруднику мишины по городу'
     });
+}); 
+
+/*Configure-Notifications filter */
+
+$(document).ready(function() {
+    $('.filterCar').select2({
+        width: "200px",
+        
+    }); 
+});
+
+$(document).ready(function() {
+    $('.filterCarOrenge').select2({
+        width: "180px",
+        
+    }); 
+});
+
+$(document).ready(function() {
+    $('.filterCarOrengeLong').select2({
+        width: "100%",
+        
+    }); 
 });

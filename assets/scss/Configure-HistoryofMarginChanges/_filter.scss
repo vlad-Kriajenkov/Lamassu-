@@ -102,7 +102,7 @@
     width: 180px;
     display: inline-block;
     background-color: #da6e00 ;
-    border-radius: 2px;
+    border-radius: 4px;
     box-shadow: 0 0 2px rgb(204, 204, 204);
     transition: all .5s ease;
     position: relative;
@@ -184,246 +184,48 @@
 .dropdown{
     margin: 10px 0px 10px 0px;
 }
-/* Анимация открытия Филтра Машины*/
-  .dropdownСar {
-    width: 180px;
-    display: inline-block;
+
+
+.select2{
+    margin-bottom: 10px !important;
+}
+
+  .select2-container--default .select2-selection--multiple{
+      background-color: #da6e00 !important;
+  }
+  .select2-search__field{
+    font-family: 'Montserrat' !important;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 12px !important;
+    margin-top: 7px !important;
+  }
+  .select2-search__field::placeholder{
+      color: #fff;
+  }
+  .select2-selection__choice__display{
+    color: #da6e00;
+  }
+  .select2-results__options{
     background-color: #da6e00;
-    border-radius: 2px;
-    box-shadow: 0 0 2px rgb(204, 204, 204);
-    transition: all .5s ease;
-    position: relative;
-    font-size: 14px;
+  }
+  .select2-results__option.select2-results__option--selectable{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 10px;
     color: #fff;
-    height: 100%;
-    text-align: left
   }
-  .dropdownСar .selectCar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    padding: 10px
-    
+  .select2-selection__choice__display{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 12px;
   }
-  .dropdownСar .selectCar input{
-    @extend %TextFilter;
-      width: 85px;
-      margin-left: 5px;
+  .select2-results__option.select2-results__message{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 12px;
+    color: #fff;
   }
-  .dropdownСar .selectCar > i {
-      font-size: 13px;
-      color: #888;
-      cursor: pointer;
-      transition: all .3s ease-in-out;
-      float: right;
-      line-height: 20px
-  }
-  .dropdownСar:hover {
-      box-shadow: 0 0 4px rgb(204, 204, 204)
-  }
-  
-  .dropdownСar.active:hover,
-  .dropdownСar.active {
-      box-shadow: 0 0 4px rgb(204, 204, 204);
-      border-radius: 2px 2px 0 0;
-    //   background-color: #f8f8f8
-  }
-  .dropdownСar.active .selectCar > i {
-      transform: rotate(-90deg)
-  }
-  .dropdownСar .dropdown-menuCar {
-      position: absolute;
-      background-color: #da6e00;
-      width: 100%;
-      left: 0;
-      margin-top: 1px;
-      box-shadow: 0 1px 2px rgb(204, 204, 204);
-      border-radius: 0 1px 2px 2px;
-      overflow: hidden;
-      display: none;
-      max-height: 144px;
-      overflow-y: auto;
-      z-index: 9
-  }
-  .dropdownСar .dropdown-menuCar li {
-      padding: 10px;
-      transition: all .2s ease-in-out;
-      cursor: pointer;
-      label{
-        display:flex;
-        align-items:center;
-        input{
-            margin-left: 10px;
-        }
-      }
-  } 
-  .dropdownСar .dropdown-menuCar {
-      padding: 0;
-      list-style: none
-  }
-  .dropdownСar .dropdown-menuCar li:hover {
-      background-color: #b35a02
-  }
-  .dropdownСar .dropdown-menuCar li:active {
-      background-color: #b35a02
-  }
-  .selectCar input{
-      background-color:#da6e00;
-  }
-
-  
-/* All INfo Car */
-
-#AllInfoCar{   
-    @extend %Boreder;
-    height: auto;
-    max-height: 0px;
-    overflow: hidden;
-    visibility: hidden;
-    opacity: 0;
-    flex-wrap: wrap;
-    transition: opacity 1s linear, visibility 1s linear, max-height 1s linear, padding 1s linear ;
-    
-}
-#AllInfoCar.active2{
-    
-    opacity: 1;
-    visibility: visible;
-    max-height: 250px;
-    
-    
-}
-
-
-.AllInfoCar {
-    
-    &__boxInfo {
-        margin: 5px 20px 5px 5px;
-    }
-}
-.AllInfoCarConatinerText{
-    display: flex;
-    flex-wrap: wrap;
-}
-.boxInfo {
-
-    &__title {
-        @extend %TitleParagraph;
-        font-size: 11px;
-        color:#708090;
-        margin-bottom: 5px;
-    }
-
-    &__meaning {
-        @extend %TextSubparagraphs;
-        font-size: 10px;
-        display: flex;
-        align-items: center;
-        margin-bottom: 5px;
-        h1{
-            margin-right: 5px;
-        }
-        
-    }   
-}
-.AllInfoCarConatinerButton{
-    display: flex;
-    align-items: flex-end;
-}
-
-.meaning {
-
-    &__box {
-        display: flex;
-    }
-
-    &__bill {
-        margin-right: 10px;
-    }
-   
-    &__imgNextLink{
-        background: none;
-        a{
-            display: flex;
-            width: 180px;
-            padding: 5px;
-            border-radius: 6px;
-            background-color: #ffd9b3;
-            font-size: 12px;
-            @extend %TextSubparagraphs;
-            img{
-                width: 18px;
-                margin-right: 10px;
-            }
-            
-        }
-       
-    }
-    &__imgBurgerOptionIcon{
-        display: flex;
-        align-items: center;
-        background-color:#ffd9b3;
-        padding: 5px;
-        border-radius: 6px;
-        @extend %TextSubparagraphs;
-        font-size: 10px;
-        img{ 
-            width: 18px;
-        }
-    }
-    &__imgCheck{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        background-color:#ffd9b3;
-        padding: 5px;
-        border-radius: 6px;
-        width: 60px;
-        @extend %TextSubparagraphs;
-        font-size: 10px;
-        img{ 
-            width: 18px;
-        }
-    }
-    &__imgCamera{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        background-color:#ffd9b3;
-        padding: 5px;
-        border-radius: 6px;
-        width: 60px;
-        @extend %TextSubparagraphs;
-        font-size: 10px;
-        img{ 
-            width: 18px;
-        }
-    }
-}
-.bill {
-
-    &__title {
-        margin-bottom: 5px;
-    }
-
-    &__body {
-              
-    }
-}
-.body {
-
-    &__box {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 5px;  
-        p:first-child{
-            margin-right: 5px;
-        }
-    }
-    
-}
-
-
-/* End Main */
