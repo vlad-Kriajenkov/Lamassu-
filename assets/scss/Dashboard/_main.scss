@@ -4,7 +4,7 @@
     padding: 15px;
 }
 
-%TitleParagraph{
+%TitleParagraph{ 
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 100;
@@ -185,6 +185,10 @@ main{
 
     }
 }
+.cashboxEmptyFlex{
+    display: flex;
+    align-items: center;
+}
 .cashboxEmpty {
 
     &__img {
@@ -211,10 +215,7 @@ main{
         height: 12px;
     }
 }
-.cashboxEmptyFlex{
-    display: flex;
-    align-items: center;
-}
+
 .warningInfo {
 
     &__img {
@@ -243,9 +244,7 @@ main{
 #showAllInfoWarning{
     display: none;
 }
-#showAllInfoNotification{
-    display: none;
-}
+
 /* Пункт Состояние Системы */
 
 .notificationAndСondition {

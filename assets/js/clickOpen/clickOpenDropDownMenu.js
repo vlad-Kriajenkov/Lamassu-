@@ -1,3 +1,4 @@
+/* Кнопки изменение данных */
 document.getElementById('Geolocation').onclick = function() {
     if(document.getElementById('LongAndWidth').classList.contains('activeShow')) {
         document.getElementById('LongAndWidth').classList.remove('activeShow');
@@ -18,8 +19,9 @@ document.getElementById('NameAndAddress').onclick = function() {
   }else
   document.getElementById('NameAndAddressbox').classList.add('activeShowNameAndAddress');
 }
+/* */
 
-
+/* кнопки показа информации */
   document.getElementById('APICISBtn').onclick = function() {
     if(document.getElementById('APICISInput').classList.contains('activeShowApi')) {
         document.getElementById('APICISInput').classList.remove('activeShowApi');
@@ -39,7 +41,7 @@ document.getElementById('NameAndAddress').onclick = function() {
     }else
     document.getElementById('InfoCarMoreVisibility').classList.add('activeShowCarMore');
   }
-
+/* */
 
 
 
