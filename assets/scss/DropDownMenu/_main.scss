@@ -203,6 +203,65 @@
         margin: 10px auto;
     }
 }
+.Edit {
+
+    &__moreInfo {
+    }
+}
+.moreInfo {
+
+    &__button {
+        img{
+            width: 18px;
+            margin-right: 10px;
+        }
+    }
+
+    &__infoCar {
+        opacity: 0;
+        height: auto;
+        max-height: 0px;
+        overflow: hidden;
+        visibility: visible;
+        border-radius: 6px;
+        box-shadow: 0px 2px 20px rgb(0 0 0 / 25%);
+        transition:  opacity 1s linear, visibility 1s linear, max-height 1s linear, padding 1s linear ;
+    }
+}
+.activeShowInfoCar{
+    visibility: visible;
+    opacity: 1;
+    max-height: 100%;
+    padding: 10px;
+}   
+
+.styleBTNBig {
+}
+.infoCarBox {
+}
+.infoCar {
+
+    &__title {
+        @extend %TextSubparagraphs;
+        font-size: 14px;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    &__meaning {
+        width: 100%;
+        height: 200px; 
+        resize: none; 
+        border: 1px solid rgb(192, 192, 192);
+        @extend %TextNormal;
+        font-size: 11px
+    }
+
+    &__button {
+    }
+}
+.styleBTN {
+}
 
 
 .Box {
@@ -437,11 +496,33 @@
        }
    }
 }
+.InfoCarMore {
+
+    &__button {
+        img{
+            width: 20px;
+            margin-right: 5px;
+        }
+    }
+}
+.styleBTNBig {
+}
+
+
 
 
 
 .InfoCarAll {
-
+    &__InfoCarMoreVisibility{
+        height: auto;
+        max-height: 0px;
+        overflow: hidden;
+        visibility: visible;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        transition: opacity 1s linear, visibility 1s linear, max-height 1s linear, padding 1s linear ;
+    }
     &__APICISInput {
         height: auto;
         max-height: 0px;
@@ -480,6 +561,8 @@
         transition: opacity 1s linear, visibility 1s linear, height 1s linear, padding 1s linear ;
     }
 }
+
+
 .activeShowSpecification{
     visibility: visible;
     opacity: 1;
@@ -492,6 +575,26 @@
     max-height: 100%;
     padding: 10px;
 }   
+.activeShowCarMore{
+    visibility: visible;
+    opacity: 1;
+    max-height: 100%;
+    padding: 6px;
+}   
+.InfoCarMoreVisibility {
+
+    &__title {
+        @extend %TextSubparagraphs;
+        font-size: 12px;
+        margin-bottom: 5px
+    }
+
+    &__meaning {
+        @extend %TextNormal;
+    }
+}
+
+
 .BtnAPICISInput{
     padding: 5px;
     border-radius: 5px;

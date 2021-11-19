@@ -227,10 +227,6 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 10px;
 }
 
-main {
-  height: 600px;
-}
-
 .ConfigureNotifications {
   width: 1200px;
   margin: 0px auto;
@@ -245,6 +241,10 @@ main {
   align-items: flex-end;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+.ConfigureNotifications__cassets {
+  display: flex;
+  flex-direction: column;
 }
 
 .heading__box {
@@ -317,7 +317,12 @@ main {
 }
 .alert__balance {
   margin-right: 153px;
-  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.alert-box {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .transaction__title {

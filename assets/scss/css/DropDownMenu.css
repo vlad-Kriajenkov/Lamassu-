@@ -164,7 +164,7 @@ header {
   color: #1b2559;
 }
 
-.warningInfo__infoText, .truckEmpty__infoText, .weHaveInfo__buttonCloseAll, .weHaveInfo__buttonShowAll, .controlInfo__title, .InfoCarAll__APICISInput label, .box__title, .ping__title, .status__title, .locations__title, .value__title {
+.warningInfo__infoText, .truckEmpty__infoText, .weHaveInfo__buttonCloseAll, .weHaveInfo__buttonShowAll, .controlInfo__title, .InfoCarMoreVisibility__title, .InfoCarAll__APICISInput label, .box__title, .ping__title, .status__title, .infoCar__title, .locations__title, .value__title {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
@@ -172,7 +172,7 @@ header {
   color: #a9a9a9;
 }
 
-.styleBTNBig, .styleBTN, .controlInfo__meaning, .BtnAPICISInput, .editAdrres__input, .nameCar__input, .ping__meaning, .Allinfo__sttusInfoWarning, .Allinfo__sttusInfoNormal, .LongAndWidth__width, .LongAndWidth__long, .Edit__title, .locations__meaning, .value__meaning {
+.styleBTNBig, .styleBTN, .controlInfo__meaning, .BtnAPICISInput, .InfoCarMoreVisibility__meaning, .editAdrres__input, .nameCar__input, .ping__meaning, .Allinfo__sttusInfoWarning, .Allinfo__sttusInfoNormal, .infoCar__meaning, .LongAndWidth__width, .LongAndWidth__long, .Edit__title, .locations__meaning, .value__meaning {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
@@ -303,6 +303,40 @@ header {
   margin: 10px auto;
 }
 
+.moreInfo__button img {
+  width: 18px;
+  margin-right: 10px;
+}
+.moreInfo__infoCar {
+  opacity: 0;
+  height: auto;
+  max-height: 0px;
+  overflow: hidden;
+  visibility: visible;
+  border-radius: 6px;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
+  transition: opacity 1s linear, visibility 1s linear, max-height 1s linear, padding 1s linear;
+}
+
+.activeShowInfoCar {
+  visibility: visible;
+  opacity: 1;
+  max-height: 100%;
+  padding: 10px;
+}
+
+.infoCar__title {
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.infoCar__meaning {
+  width: 100%;
+  height: 200px;
+  resize: none;
+  border: 1px solid silver;
+  font-size: 11px;
+}
 .status__title {
   font-size: 14px;
   margin: 10px 0px 5px 0px;
@@ -452,6 +486,21 @@ header {
   margin-right: 5px;
 }
 
+.InfoCarMore__button img {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.InfoCarAll__InfoCarMoreVisibility {
+  height: auto;
+  max-height: 0px;
+  overflow: hidden;
+  visibility: visible;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 1s linear, visibility 1s linear, max-height 1s linear, padding 1s linear;
+}
 .InfoCarAll__APICISInput {
   height: auto;
   max-height: 0px;
@@ -499,6 +548,17 @@ header {
   padding: 10px;
 }
 
+.activeShowCarMore {
+  visibility: visible;
+  opacity: 1;
+  max-height: 100%;
+  padding: 6px;
+}
+
+.InfoCarMoreVisibility__title {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
 .BtnAPICISInput {
   padding: 5px;
   border-radius: 5px;

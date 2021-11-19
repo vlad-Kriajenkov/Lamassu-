@@ -9,7 +9,7 @@ $(document).ready(function() {
     $('.js-example-basic-multipleCar').select2({
         width: "330px",
         placeholder: 'Назначить сотруднику мишину для контроля'
-    });
+    }); 
 });
 
 $(document).ready(function() {

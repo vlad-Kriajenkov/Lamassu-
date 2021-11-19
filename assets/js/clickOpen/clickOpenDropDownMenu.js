@@ -5,6 +5,13 @@ document.getElementById('Geolocation').onclick = function() {
     document.getElementById('LongAndWidth').classList.add('activeShow');
   }
 
+  document.getElementById('moreInfo').onclick = function() {
+    if(document.getElementById('infoCar').classList.contains('activeShowInfoCar')) {
+        document.getElementById('infoCar').classList.remove('activeShowInfoCar');
+    }else
+    document.getElementById('infoCar').classList.add('activeShowInfoCar');
+  }
+
 document.getElementById('NameAndAddress').onclick = function() {
   if(document.getElementById('NameAndAddressbox').classList.contains('activeShowNameAndAddress')) {
       document.getElementById('NameAndAddressbox').classList.remove('activeShowNameAndAddress');
@@ -26,8 +33,12 @@ document.getElementById('NameAndAddress').onclick = function() {
     }else
     document.getElementById('specificationInput').classList.add('activeShowSpecification');
   }
-
-
+  document.getElementById('InfoCarMorebtn').onclick = function() {
+    if(document.getElementById('InfoCarMoreVisibility').classList.contains('activeShowCarMore')) {
+        document.getElementById('InfoCarMoreVisibility').classList.remove('activeShowCarMore');
+    }else
+    document.getElementById('InfoCarMoreVisibility').classList.add('activeShowCarMore');
+  }
 
 
 

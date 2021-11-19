@@ -216,7 +216,7 @@
                             
                                 <div class="Box__Edit">
                                     <div class="Edit__Geolocation">
-                                        <button id="Geolocation" class="Geolocation__button styleBTNBig"><img src="/assets/img/monitoring/ГеолокационныеДанные.svg" alt=""> Геолокационные данные</button>
+                                        <button id="Geolocation" class="Geolocation__button styleBTNBig"><img src="/assets/img/monitoring/ГеолокационныеДанные.svg" alt="Изменить"> Геолокационные данные</button>
                                         <div id="LongAndWidth" class="Geolocation__LongAndWidth">
                                             <form class="LongAndWidth__box">
                                                 <label class="LongAndWidth__long">
@@ -229,11 +229,20 @@
                                                 </label>    
                                                 <button class="LongAndWidth__button styleBTN" >Отправить</button>
                                             </form>
-                                            
+                                        </div>
+                                    </div>  
+                                    <div class="Edit__moreInfo">
+                                        <button id="moreInfo" class="moreInfo__button styleBTNBig"><img src="/assets/img/edit/edit.svg" alt="Изменить">Доп информация о машине</button>
+                                        <div id="infoCar" class="moreInfo__infoCar">
+                                            <form class="infoCarBox">
+                                                <div class="infoCar__title">Введите Доп информацию о машине</div>   
+                                                <textarea class="infoCar__meaning"></textarea>
+                                                <button class="infoCar__button styleBTN" >Сохранить</button>
+                                            </form>
                                         </div>
                                     </div>  
                                     <div class="Edit__NameAndAddress">
-                                        <button id="NameAndAddress" class="NameAndAddress__button styleBTNBig"><img src="/assets/img/edit/edit.svg" alt="Увше"> Изменить Имя и Адрес</button>
+                                        <button id="NameAndAddress" class="NameAndAddress__button styleBTNBig"><img src="/assets/img/edit/edit.svg" alt="Изменить"> Изменить Имя и Адрес</button>
                                         <div id="NameAndAddressbox" class="NameAndAddress__box">
                                             <div class="NameAndAddress__form">
                                                 <div class="box__title">Официальные данные</div>
@@ -249,20 +258,6 @@
                                                         Официальный адрес
                                                         <input type="text" name="Width" id="Width">
                                                     </label>   
-                                                    <div class="editAdrres__select">
-                                                        <div class="dropdown">
-                                                            <div class="select">
-                                                                <span>Сегмент местоположения</span>
-                                                                <i class="fa fa-chevron-left"></i>
-                                                                <img src="/assets/img/arrow/arrowDown.svg" width="12px" alt="Arrow Down">
-                                                            </div>
-                                                            <input type="hidden" name="gender">
-                                                            <ul class="dropdown-menu">
-                                                                <li id="MALL">ТРЦ</li>
-                                                                <li id="Hotels">Отели</li>
-                                                            </ul>
-                                                        </div>   
-                                                    </div>
                                                     <button class="editAdrres__button styleBTN" >Редактировать оф. адресс</button>
                                                 </form>
                                             </div>
@@ -367,10 +362,17 @@
                                     <div class="RebootDispenser">
                                         <button id="RebootDispenser" class="RebootDispenser__button styleBTNBig"> <img src="/assets/img/monitoring/ПерезагрузитьДиспенсер.svg"  alt=""> Перезагрузить диспенсер</button>
                                     </div>
+                                    <div class="InfoCarMore">
+                                        <button id="InfoCarMorebtn" class="InfoCarMore__button styleBTNBig"><img src="/assets/img/Info/info.svg" alt=""> Доп информация о машине</button>
+                                    </div>
                                 </div>        
                                 
                             </div>
                             <div class="InfoСar__InfoCarAll">
+                                <div id="InfoCarMoreVisibility" class="InfoCarAll__InfoCarMoreVisibility">
+                                    <div class="InfoCarMoreVisibility__title">Дополнительная информация о машине</div>
+                                    <div class="InfoCarMoreVisibility__meaning">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium minus cupiditate at ea officia molestias vero veritatis repudiandae voluptates fuga voluptatem quos laudantium odit minima, ab iste iusto veniam qui!</div>
+                                </div>
                                 <form id="APICISInput" class="InfoCarAll__APICISInput">
                                     <label> 
                                         Отправка транзакций
